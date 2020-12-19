@@ -11,3 +11,4 @@ parameters:
 
     ignoreErrors:
         - '~^Variable \$\w+ might not be defined\.$~'
+        - '~^Constructor of class TCPDF has an unused parameter \$diskcache\.$~'

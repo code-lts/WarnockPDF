@@ -5469,27 +5469,6 @@ class TCPDF {
 			$xdk = $xdx * $k;
 			// print text
 			$s .= sprintf('BT %F %F Td [(%s)] TJ ET', $xdk, (($this->h - $basefonty) * $k), $txt2);
-			if (isset($uniblock)) {
-				// print overlapping characters as separate string
-				$xshift = 0; // horizontal shift
-				$ty = (($this->h - $basefonty + (0.2 * $this->FontSize)) * $k);
-				$spw = (($w - $txwidth - $this->cell_padding['L'] - $this->cell_padding['R']) / ($ns?$ns:1));
-				foreach ($uniblock as $uk => $uniarr) {
-					if (($uk % 2) == 0) {
-						// x space to skip
-						if ($spacewidth != 0) {
-							// justification shift
-							$xshift += (count(array_keys($uniarr, 32)) * $spw);
-						}
-						$xshift += $this->GetArrStringWidth($uniarr); // + shift justification
-					} else {
-						// character to print
-						$topchr = TCPDF_FONTS::arrUTF8ToUTF16BE($uniarr, false);
-						$topchr = TCPDF_STATIC::_escape($topchr);
-						$s .= sprintf(' BT %F %F Td [(%s)] TJ ET', ($xdk + ($xshift * $k)), $ty, $topchr);
-					}
-				}
-			}
 			if ($this->underline) {
 				$s .= ' '.$this->_dounderlinew($xdx, $basefonty, $width);
 			}
@@ -7181,7 +7160,7 @@ class TCPDF {
 		} else {
 			$ximg = $x;
 		}
-		
+
 		if ($ismask OR $hidden) {
 			// image is not displayed
 			return $info['i'];
@@ -9137,6 +9116,7 @@ class TCPDF {
 		foreach ($this->imagekeys as $file) {
 			$info = $this->getImageBuffer($file);
 			// set object for alternate images array
+			$altoid = null;
 			if ((!$this->pdfa_mode) AND isset($info['altimgs']) AND !empty($info['altimgs'])) {
 				$altoid = $this->_newobj();
 				$out = '[';
@@ -9184,7 +9164,7 @@ class TCPDF {
 				$out .= ' /Decode [1 0 1 0 1 0 1 0]';
 			}
 			$out .= ' /BitsPerComponent '.$info['bpc'];
-			if (isset($altoid) AND ($altoid > 0)) {
+			if ($altoid > 0) {
 				// reference to alternate images dictionary
 				$out .= ' /Alternates '.$altoid.' 0 R';
 			}
@@ -15010,9 +14990,7 @@ class TCPDF {
 		// translate
 		$this->_out(sprintf('%F %F %F %F %F %F cm', 1, 0, 0, 1, $dx, $dy + ($this->hPt - (2 * $y * $k) - ($y2 - $y1))));
 		// scale
-		if (isset($scale_x)) {
-			$this->_out(sprintf('%F %F %F %F %F %F cm', $scale_x, 0, 0, $scale_y, $x1 * (1 - $scale_x), $y2 * (1 - $scale_y)));
-		}
+		$this->_out(sprintf('%F %F %F %F %F %F cm', $scale_x, 0, 0, $scale_y, $x1 * (1 - $scale_x), $y2 * (1 - $scale_y)));
 		// handle pc/unix/mac line endings
 		$lines = preg_split('/[\r\n]+/si', $data, -1, PREG_SPLIT_NO_EMPTY);
 		$u=0;
@@ -18497,7 +18475,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 						$strrest = $this->Write($this->lasth, $dom[$key]['value'], '', $wfill, '', false, 0, true, $firstblock, 0, $wadj);
 						// restore default direction
 						if ($reverse_dir AND ($wadj == 0)) {
-							$this->x = $xws;
+							$this->x = $xws; // @phpstan-ignore-line
 							$this->rtl = !$this->rtl;
 							$reverse_dir = false;
 						}
@@ -22986,22 +22964,22 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 		$f = ($this->h - $oy) * $this->k * (1 - $svgscale_y);
 		$this->_out(sprintf('%F %F %F %F %F %F cm', $svgscale_x, 0, 0, $svgscale_y, ($e + $svgoffset_x), ($f + $svgoffset_y)));
 		// creates a new XML parser to be used by the other XML functions
-		$this->parser = xml_parser_create('UTF-8');
+		$parser = xml_parser_create('UTF-8');
 		// the following function allows to use parser inside object
-		xml_set_object($this->parser, $this);
+		xml_set_object($parser, $this);
 		// disable case-folding for this XML parser
-		xml_parser_set_option($this->parser, XML_OPTION_CASE_FOLDING, 0);
+		xml_parser_set_option($parser, XML_OPTION_CASE_FOLDING, 0);
 		// sets the element handler functions for the XML parser
-		xml_set_element_handler($this->parser, 'startSVGElementHandler', 'endSVGElementHandler');
+		xml_set_element_handler($parser, 'startSVGElementHandler', 'endSVGElementHandler');
 		// sets the character data handler function for the XML parser
-		xml_set_character_data_handler($this->parser, 'segSVGContentHandler');
+		xml_set_character_data_handler($parser, 'segSVGContentHandler');
 		// start parsing an XML document
-		if (!xml_parse($this->parser, $svgdata)) {
-			$error_message = sprintf('SVG Error: %s at line %d', xml_error_string(xml_get_error_code($this->parser)), xml_get_current_line_number($this->parser));
+		if (!xml_parse($parser, $svgdata)) {
+			$error_message = sprintf('SVG Error: %s at line %d', xml_error_string(xml_get_error_code($parser)), xml_get_current_line_number($parser));
 			$this->Error($error_message);
 		}
 		// free this XML parser
-		xml_parser_free($this->parser);
+		xml_parser_free($parser);
 		// restore previous graphic state
 		$this->_out($this->epsmarker.'Q');
 		// restore graphic vars
