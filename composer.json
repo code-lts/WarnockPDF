@@ -24,6 +24,9 @@
   "require": {
     "php": ">=5.3.0"
   },
+  "require-dev": {
+    "phpstan/phpstan": "^0.12.58"
+  },
   "autoload": {
     "classmap": [
       "config",
