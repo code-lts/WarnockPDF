@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : ara.php
-// Begin       : 2010-10-26
-// Last Update : 2010-10-26
 //
-// Description : Language module for TCPDF
+// Description : Language module for WarnockPDF
 //               (contains translated texts)
 //               Arabic
 //
@@ -18,9 +15,9 @@
 //============================================================+
 
 /**
- * TCPDF language file (contains translated texts).
- * @package com.tecnick.tcpdf
- * @brief TCPDF language file: Arabic
+ * WarnockPDF language file (contains translated texts).
+ *
+ * @brief language file: Arabic
  * @author Nicola Asuni
  * @since 2010-10-26
  */
@@ -38,7 +35,3 @@ $l['a_meta_language'] = 'ar';
 
 // TRANSLATIONS --------------------------------------
 $l['w_page'] = 'صفحة';
-
-//============================================================+
-// END OF FILE
-//============================================================+

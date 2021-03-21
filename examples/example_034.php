@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_034.php
-// Begin       : 2008-07-18
-// Last Update : 2013-05-14
 //
-// Description : Example 034 for TCPDF class
+// Description : Example 034 for WarnockPDF library
 //               Clipping
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Clipping
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Clipping
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -90,7 +87,3 @@ $pdf->StopTransform();
 
 //Close and output PDF document
 $pdf->Output('example_034.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

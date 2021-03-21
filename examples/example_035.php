@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_035.php
-// Begin       : 2008-07-22
-// Last Update : 2013-05-14
 //
-// Description : Example 035 for TCPDF class
+// Description : Example 035 for WarnockPDF library
 //               Line styles with cells and multicells
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Line styles with cells and multicells
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Line styles with cells and multicells
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -105,7 +102,3 @@ $pdf->MultiCell(60, 4, $text, 1, 'C', 1, 1);
 
 //Close and output PDF document
 $pdf->Output('example_035.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

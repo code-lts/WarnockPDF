@@ -1,12 +1,11 @@
 {
-  "name": "tecnickcom/tcpdf",
+  "name": "code-lts/warnockpdf",
   "version": "6.3.5",
-  "homepage": "http://www.tcpdf.org/",
   "type": "library",
-  "description": "TCPDF is a PHP class for generating PDF documents and barcodes.",
+  "description": "WarnockPDF is a PHP library for generating PDF documents and barcodes.",
   "keywords": [
     "PDF",
-    "tcpdf",
+    "WarnockPDF",
     "PDFD32000-2008",
     "qrcode",
     "datamatrix",
@@ -17,8 +16,7 @@
   "authors": [
     {
       "name": "Nicola Asuni",
-      "email": "info@tecnick.com",
-      "role": "lead"
+      "email": "info@tecnick.com"
     }
   ],
   "require": {

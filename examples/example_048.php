@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_048.php
-// Begin       : 2009-03-20
-// Last Update : 2013-05-14
 //
-// Description : Example 048 for TCPDF class
+// Description : Example 048 for WarnockPDF library
 //               HTML tables and table headers
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: HTML tables and table headers
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: HTML tables and table headers
  * @author Nicola Asuni
  * @since 2009-03-20
  */
@@ -307,7 +304,3 @@ $pdf->writeHTML($tbl, true, false, false, false, '');
 
 //Close and output PDF document
 $pdf->Output('example_048.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

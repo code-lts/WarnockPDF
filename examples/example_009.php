@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_009.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 009 for TCPDF class
+// Description : Example 009 for WarnockPDF library
 //               Test Image
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Test Image
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Test Image
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -140,7 +137,3 @@ $pdf->Image('images/image_demo.jpg', '', '', 40, 40, '', '', '', false, 300, '',
 
 //Close and output PDF document
 $pdf->Output('example_009.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

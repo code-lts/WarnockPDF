@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_031.php
-// Begin       : 2008-06-09
-// Last Update : 2013-05-14
 //
-// Description : Example 031 for TCPDF class
+// Description : Example 031 for WarnockPDF library
 //               Pie Chart
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Pie Chart
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Pie Chart
  * @author Nicola Asuni
  * @since 2008-06-09
  */
@@ -97,7 +94,3 @@ $pdf->Text(120, 115, 'RED');
 
 //Close and output PDF document
 $pdf->Output('example_031.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

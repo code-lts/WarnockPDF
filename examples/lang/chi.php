@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : chi.php
-// Begin       : 2010-10-26
-// Last Update : 2010-10-26
 //
-// Description : Language module for TCPDF
+// Description : Language module for WarnockPDF
 //               (contains translated texts)
 //               Chinese (Simplified)
 //
@@ -18,9 +15,9 @@
 //============================================================+
 
 /**
- * TCPDF language file (contains translated texts).
- * @package com.tecnick.tcpdf
- * @brief TCPDF language file: Chinese (Simplified)
+ * WarnockPDF language file (contains translated texts).
+ *
+ * @brief language file: Chinese (Simplified)
  * @author Nicola Asuni
  * @since 2010-10-26
  */
@@ -38,7 +35,3 @@ $l['a_meta_language'] = 'cn';
 
 // TRANSLATIONS --------------------------------------
 $l['w_page'] = '页面';
-
-//============================================================+
-// END OF FILE
-//============================================================+

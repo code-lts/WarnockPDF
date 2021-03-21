@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_059.php
-// Begin       : 2010-05-06
-// Last Update : 2013-05-14
 //
-// Description : Example 059 for TCPDF class
+// Description : Example 059 for WarnockPDF library
 //               Table Of Content using HTML templates.
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Table Of Content using HTML templates.
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Table Of Content using HTML templates.
  * @author Nicola Asuni
  * @since 2010-05-06
  */
@@ -184,7 +181,3 @@ $pdf->endTOCPage();
 
 //Close and output PDF document
 $pdf->Output('example_059.pdf', 'D');
-
-//============================================================+
-// END OF FILE
-//============================================================+

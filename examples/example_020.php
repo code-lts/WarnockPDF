@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_020.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 020 for TCPDF class
+// Description : Example 020 for WarnockPDF library
 //               Two columns composed by MultiCell of different
 //               heights
 //
@@ -18,17 +15,17 @@
 //============================================================+
 
 /**
-* Creates an example PDF TEST document using TCPDF
-* @package com.tecnick.tcpdf
-* @abstract TCPDF - Example: Two columns composed by MultiCell of different heights
-* @author Nicola Asuni
-* @since 2008-03-04
-*/
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Two columns composed by MultiCell of different heights
+ * @author Nicola Asuni
+ * @since 2008-03-04
+ */
 
 // Include the main TCPDF library (search for installation path).
 require_once('tcpdf_include.php');
 
-// extend TCPF with custom functions
+// extend class with custom functions
 class MYPDF extends TCPDF {
 
 	public function MultiRow($left, $right) {
@@ -140,7 +137,3 @@ $pdf->lastPage();
 
 //Close and output PDF document
 $pdf->Output('example_020.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

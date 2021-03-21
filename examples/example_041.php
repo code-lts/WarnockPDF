@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_041.php
-// Begin       : 2008-12-07
-// Last Update : 2013-05-14
 //
-// Description : Example 041 for TCPDF class
+// Description : Example 041 for WarnockPDF library
 //               Annotation - FileAttachment
 //
 // Author: Nicola Asuni
@@ -17,8 +14,8 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
+ * Creates an example PDF TEST document using WarnockPDF
+ *
  * @abstract TCPDF - Annotation - FileAttachment
  * @author Nicola Asuni
  * @since 2008-12-07
@@ -84,7 +81,3 @@ $pdf->Annotation(85, 27, 5, 5, 'text file', array('Subtype'=>'FileAttachment', '
 
 //Close and output PDF document
 $pdf->Output('example_041.pdf', 'D');
-
-//============================================================+
-// END OF FILE
-//============================================================+

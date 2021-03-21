@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_026.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 026 for TCPDF class
+// Description : Example 026 for WarnockPDF library
 //               Text Rendering Modes and Text Clipping
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Text Rendering Modes and Text Clipping
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Text Rendering Modes and Text Clipping
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -139,7 +136,3 @@ $pdf->writeHTML($html, true, 0, true, 0);
 
 //Close and output PDF document
 $pdf->Output('example_026.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

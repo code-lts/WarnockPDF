@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_038.php
-// Begin       : 2008-09-15
-// Last Update : 2013-05-14
 //
-// Description : Example 038 for TCPDF class
+// Description : Example 038 for WarnockPDF library
 //               CID-0 CJK unembedded font
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: CID-0 CJK unembedded font
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: CID-0 CJK unembedded font
  * @author Nicola Asuni
  * @since 2008-09-15
  */
@@ -86,7 +83,3 @@ $pdf->Write(0, $txt, '', 0, 'L', true, 0, false, false, 0);
 
 //Close and output PDF document
 $pdf->Output('example_038.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_033.php
-// Begin       : 2008-06-24
-// Last Update : 2013-05-14
 //
-// Description : Example 033 for TCPDF class
+// Description : Example 033 for WarnockPDF library
 //               Mixed font types
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Mixed font types
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Mixed font types
  * @author Nicola Asuni
  * @since 2008-06-24
  */
@@ -99,7 +96,3 @@ $pdf->MultiCell(80, 0, "[CID-0 font] : Cras eros leo, porttitor porta, accumsan 
 
 //Close and output PDF document
 $pdf->Output('example_033.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

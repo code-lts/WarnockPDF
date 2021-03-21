@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_053.php
-// Begin       : 2009-09-02
-// Last Update : 2013-05-14
 //
-// Description : Example 053 for TCPDF class
+// Description : Example 053 for WarnockPDF library
 //               Javascript example.
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Javascript example.
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Javascript example.
  * @author Nicola Asuni
  * @since 2009-09-02
  */
@@ -102,7 +99,3 @@ $pdf->IncludeJS($js);
 
 //Close and output PDF document
 $pdf->Output('example_053.pdf', 'D');
-
-//============================================================+
-// END OF FILE
-//============================================================+

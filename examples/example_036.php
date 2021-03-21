@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_036.php
-// Begin       : 2008-08-08
-// Last Update : 2013-05-14
 //
-// Description : Example 036 for TCPDF class
+// Description : Example 036 for WarnockPDF library
 //               Annotations
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Annotations
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Annotations
  * @author Nicola Asuni
  * @since 2008-08-08
  */
@@ -83,7 +80,3 @@ $pdf->Annotation(83, 27, 10, 10, "Text annotation example\naccented letters test
 
 //Close and output PDF document
 $pdf->Output('example_036.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

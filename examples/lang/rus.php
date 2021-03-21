@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : rus.php
-// Begin       : 2004-03-03
-// Last Update : 2012-07-25
 //
-// Description : Language module for TCPDF
+// Description : Language module for WarnockPDF
 //               (contains translated texts)
 //               Russian
 //
@@ -18,9 +15,9 @@
 //============================================================+
 
 /**
- * TCPDF language file (contains translated texts).
- * @package com.tecnick.tcpdf
- * @brief TCPDF language file: Russian
+ * WarnockPDF language file (contains translated texts).
+ *
+ * @brief language file: Russian
  * @author Nicola Asuni
  * @since 2004-03-03
  */
@@ -38,7 +35,3 @@ $l['a_meta_language'] = 'ru';
 
 // TRANSLATIONS --------------------------------------
 $l['w_page'] = 'страница';
-
-//============================================================+
-// END OF FILE
-//============================================================+

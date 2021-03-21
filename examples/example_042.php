@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_042.php
-// Begin       : 2008-12-23
-// Last Update : 2013-05-14
 //
-// Description : Example 042 for TCPDF class
+// Description : Example 042 for WarnockPDF library
 //               Test Image with alpha channel
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Test Image with alpha channel
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Test Image with alpha channel
  * @author Nicola Asuni
  * @since 2008-12-23
  */
@@ -96,7 +93,3 @@ $pdf->Image('images/img.png', 50, 140, 100, '', '', 'http://www.tcpdf.org', '', 
 
 //Close and output PDF document
 $pdf->Output('example_042.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

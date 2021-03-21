@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_043.php
-// Begin       : 2009-01-02
-// Last Update : 2013-05-14
 //
-// Description : Example 043 for TCPDF class
+// Description : Example 043 for WarnockPDF library
 //               Disk caching
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Disk caching
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Disk caching
  * @author Nicola Asuni
  * @since 2009-01-02
  */
@@ -79,7 +76,3 @@ $pdf->MultiCell(0, 0, 'DISK CACHING TEST: check the parameters of the class cons
 
 //Close and output PDF document
 $pdf->Output('example_043.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

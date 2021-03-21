@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_063.php
-// Begin       : 2010-09-29
-// Last Update : 2013-05-14
 //
-// Description : Example 063 for TCPDF class
+// Description : Example 063 for WarnockPDF library
 //               Text stretching and spacing (tracking)
 //
 // Author: Nicola Asuni
@@ -17,14 +14,14 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Text stretching and spacing (tracking)
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Text stretching and spacing (tracking)
  * @author Nicola Asuni
  * @since 2010-09-29
  */
 
-// Include the main TCPDF library (search for installation path).
+// Include the main WarnockPDF library (search for installation path).
 require_once('tcpdf_include.php');
 
 // create new PDF document
@@ -125,7 +122,3 @@ $pdf->setFontSpacing(0);
 
 //Close and output PDF document
 $pdf->Output('example_063.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

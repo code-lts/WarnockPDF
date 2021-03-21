@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_061.php
-// Begin       : 2010-05-24
-// Last Update : 2014-01-25
 //
-// Description : Example 061 for TCPDF class
+// Description : Example 061 for WarnockPDF library
 //               XHTML + CSS
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: XHTML + CSS
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: XHTML + CSS
  * @author Nicola Asuni
  * @since 2010-05-25
  */
@@ -258,7 +255,3 @@ $pdf->lastPage();
 
 //Close and output PDF document
 $pdf->Output('example_061.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

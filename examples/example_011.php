@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_011.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 011 for TCPDF class
+// Description : Example 011 for WarnockPDF library
 //               Colored Table (very simple table)
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Colored Table
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Colored Table
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -132,7 +129,3 @@ $pdf->ColoredTable($header, $data);
 
 // close and output PDF document
 $pdf->Output('example_011.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

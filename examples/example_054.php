@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_054.php
-// Begin       : 2009-09-07
-// Last Update : 2013-05-14
 //
-// Description : Example 054 for TCPDF class
+// Description : Example 054 for WarnockPDF library
 //               XHTML Forms
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: XHTML Forms
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: XHTML Forms
  * @author Nicola Asuni
  * @since 2009-09-07
  */
@@ -122,7 +119,3 @@ $pdf->lastPage();
 
 //Close and output PDF document
 $pdf->Output('example_054.pdf', 'D');
-
-//============================================================+
-// END OF FILE
-//============================================================+

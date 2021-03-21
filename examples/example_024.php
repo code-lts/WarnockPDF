@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_024.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 024 for TCPDF class
+// Description : Example 024 for WarnockPDF library
 //               Object Visibility and Layers
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Object Visibility and Layers
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Object Visibility and Layers
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -134,7 +131,3 @@ $pdf->endLayer();
 
 //Close and output PDF document
 $pdf->Output('example_024.pdf', 'D');
-
-//============================================================+
-// END OF FILE
-//============================================================+

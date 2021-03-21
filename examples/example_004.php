@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_004.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 004 for TCPDF class
+// Description : Example 004 for WarnockPDF library
 //               Cell stretching
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Cell stretching
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Cell stretching
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -115,7 +112,3 @@ for ($stretching = 90; $stretching <= 110; $stretching += 10) {
 
 //Close and output PDF document
 $pdf->Output('example_004.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_008.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 008 for TCPDF class
+// Description : Example 008 for WarnockPDF library
 //               Include external UTF-8 text file
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Include external UTF-8 text file
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Include external UTF-8 text file
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -91,7 +88,3 @@ $pdf->Write(5, $utf8text, '', 0, '', false, 0, false, false, 0);
 
 //Close and output PDF document
 $pdf->Output('example_008.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

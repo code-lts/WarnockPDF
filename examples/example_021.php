@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_021.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 021 for TCPDF class
+// Description : Example 021 for WarnockPDF library
 //               WriteHTML text flow
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: WriteHTML text flow.
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: WriteHTML text flow.
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -85,7 +82,3 @@ $pdf->lastPage();
 
 //Close and output PDF document
 $pdf->Output('example_021.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

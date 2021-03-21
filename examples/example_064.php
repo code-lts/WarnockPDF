@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_064.php
-// Begin       : 2010-10-13
-// Last Update : 2013-05-14
 //
-// Description : Example 064 for TCPDF class
+// Description : Example 064 for WarnockPDF library
 //               No-write page regions
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: No-write page regions
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: No-write page regions
  * @author Nicola Asuni
  * @since 2010-10-14
  */
@@ -170,7 +167,3 @@ $pdf->MultiCell(0, 0, $txt, 0, 'J', false, 1, '', '', true, 0, false, true, 0, '
 
 //Close and output PDF document
 $pdf->Output('example_064.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

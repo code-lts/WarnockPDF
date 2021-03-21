@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_003.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 003 for TCPDF class
+// Description : Example 003 for WarnockPDF library
 //               Custom Header and Footer
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Custom Header and Footer
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Custom Header and Footer
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -112,7 +109,3 @@ $pdf->Write(0, $txt, '', 0, 'C', true, 0, false, false, 0);
 
 //Close and output PDF document
 $pdf->Output('example_003.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

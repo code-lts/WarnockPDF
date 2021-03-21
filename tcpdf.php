@@ -1,31 +1,26 @@
 <?php
 //============================================================+
-// File name   : tcpdf.php
-// Version     : 6.3.2
-// Begin       : 2002-08-03
-// Last Update : 2019-09-20
 // Author      : Nicola Asuni - Tecnick.com LTD - www.tecnick.com - info@tecnick.com
 // License     : GNU-LGPL v3 (http://www.gnu.org/copyleft/lesser.html)
 // -------------------------------------------------------------------
 // Copyright (C) 2002-2019 Nicola Asuni - Tecnick.com LTD
 //
-// This file is part of TCPDF software library.
+// This file is part of WarnockPDF software library.
 //
-// TCPDF is free software: you can redistribute it and/or modify it
+// WarnockPDF is free software: you can redistribute it and/or modify it
 // under the terms of the GNU Lesser General Public License as
 // published by the Free Software Foundation, either version 3 of the
 // License, or (at your option) any later version.
 //
-// TCPDF is distributed in the hope that it will be useful, but
+// WarnockPDF is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // See the GNU Lesser General Public License for more details.
 //
-// You should have received a copy of the License
-// along with TCPDF. If not, see
-// <http://www.tecnick.com/pagefiles/tcpdf/LICENSE.TXT>.
+// You should have received a copy of the GNU Lesser General Public License
+// along with WarnockPDF. If not, see <http://www.gnu.org/licenses/>.
 //
-// See LICENSE.TXT file for more information.
+// See LICENSE file for more information.
 // -------------------------------------------------------------------
 //
 // Description :
@@ -102,31 +97,31 @@
  * <li>PDF/A-1b support.</li>
  * </ul>
  * Tools to encode your unicode fonts are on fonts/utils directory.</p>
- * @package com.tecnick.tcpdf
+ *
  * @author Nicola Asuni
  * @version 6.3.2
  */
 
-// TCPDF configuration
+// configuration
 require_once(dirname(__FILE__).'/tcpdf_autoconfig.php');
-// TCPDF static font methods and data
+// static font methods and data
 require_once(dirname(__FILE__).'/include/tcpdf_font_data.php');
-// TCPDF static font methods and data
+// static font methods and data
 require_once(dirname(__FILE__).'/include/tcpdf_fonts.php');
-// TCPDF static color methods and data
+// static color methods and data
 require_once(dirname(__FILE__).'/include/tcpdf_colors.php');
-// TCPDF static image methods and data
+// static image methods and data
 require_once(dirname(__FILE__).'/include/tcpdf_images.php');
-// TCPDF static methods and data
+// static methods and data
 require_once(dirname(__FILE__).'/include/tcpdf_static.php');
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 /**
- * @class TCPDF
+ *
  * PHP class for generating PDF documents without requiring external extensions.
  * TCPDF project (http://www.tcpdf.org) has been originally derived in 2002 from the Public Domain FPDF class by Olivier Plathey (http://www.fpdf.org), but now is almost entirely rewritten.<br>
- * @package com.tecnick.tcpdf
+ *
  * @brief PHP class for generating PDF documents without requiring external extensions.
  * @version 6.3.2
  * @author Nicola Asuni - info@tecnick.com
@@ -24578,7 +24573,3 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	// --- END SVG METHODS -----------------------------------------------------
 
 } // END OF TCPDF CLASS
-
-//============================================================+
-// END OF FILE
-//============================================================+

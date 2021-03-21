@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_014.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 014 for TCPDF class
+// Description : Example 014 for WarnockPDF library
 //               Javascript Form and user rights (only works on Adobe Acrobat)
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Javascript Form and user rights (only works on Adobe Acrobat)
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Javascript Form and user rights (only works on Adobe Acrobat)
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -188,7 +185,3 @@ $pdf->IncludeJS($js);
 
 //Close and output PDF document
 $pdf->Output('example_014.pdf', 'D');
-
-//============================================================+
-// END OF FILE
-//============================================================+

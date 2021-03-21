@@ -1,43 +1,38 @@
 #!/usr/bin/env php
 <?php
 //============================================================+
-// File name   : tcpdf_addfont.php
-// Version     : 1.0.002
-// Begin       : 2013-05-13
-// Last Update : 2013-08-05
 // Authors     : Nicola Asuni - Tecnick.com LTD - www.tecnick.com - info@tecnick.com
 //               Remi Collet
 // License     : GNU-LGPL v3 (http://www.gnu.org/copyleft/lesser.html)
 // -------------------------------------------------------------------
 // Copyright (C) 2011-2013 Nicola Asuni - Tecnick.com LTD
 //
-// This file is part of TCPDF software library.
+// This file is part of WarnockPDF software library.
 //
-// TCPDF is free software: you can redistribute it and/or modify it
+// WarnockPDF is free software: you can redistribute it and/or modify it
 // under the terms of the GNU Lesser General Public License as
 // published by the Free Software Foundation, either version 3 of the
 // License, or (at your option) any later version.
 //
-// TCPDF is distributed in the hope that it will be useful, but
+// WarnockPDF is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // See the GNU Lesser General Public License for more details.
 //
-// You should have received a copy of the License
-// along with TCPDF. If not, see
-// <http://www.tecnick.com/pagefiles/tcpdf/LICENSE.TXT>.
+// You should have received a copy of the GNU Lesser General Public License
+// along with WarnockPDF. If not, see <http://www.gnu.org/licenses/>.
 //
-// See LICENSE.TXT file for more information.
+// See LICENSE file for more information.
 // -------------------------------------------------------------------
 //
-// Description : This is a command line script to generate TCPDF fonts.
+// Description : This is a command line script to generate WarnockPDF fonts.
 //
 //============================================================+
 
 /**
  * @file
- * This is a command line script to generate TCPDF fonts.<br>
- * @package com.tecnick.tcpdf
+ * This is a command line script to generate WarnockPDF fonts.<br>
+ *
  * @version 1.0.000
  */
 
@@ -46,8 +41,8 @@ if (php_sapi_name() != 'cli') {
   exit(1);
 }
 
-$tcpdf_include_dirs = array(realpath(dirname(__FILE__).'/../tcpdf.php'), '/usr/share/php/tcpdf/tcpdf.php', '/usr/share/tcpdf/tcpdf.php', '/usr/share/php-tcpdf/tcpdf.php', '/var/www/tcpdf/tcpdf.php', '/var/www/html/tcpdf/tcpdf.php', '/usr/local/apache2/htdocs/tcpdf/tcpdf.php');
-foreach ($tcpdf_include_dirs as $tcpdf_include_path) {
+$library_include_dirs = array(realpath(dirname(__FILE__).'/../tcpdf.php'), '/usr/share/php/tcpdf/tcpdf.php', '/usr/share/tcpdf/tcpdf.php', '/usr/share/php-tcpdf/tcpdf.php', '/var/www/tcpdf/tcpdf.php', '/var/www/html/tcpdf/tcpdf.php', '/usr/local/apache2/htdocs/tcpdf/tcpdf.php');
+foreach ($library_include_dirs as $tcpdf_include_path) {
 	if (@file_exists($tcpdf_include_path)) {
 		require_once($tcpdf_include_path);
 		break;
@@ -238,7 +233,7 @@ if (!is_dir($options['outpath']) OR !is_writable($options['outpath'])) {
 	exit(3);
 }
 
-echo "\n>>> Converting fonts for TCPDF:\n";
+echo "\n>>> Converting fonts for WarnockPDF:\n";
 
 echo '*** Output dir set to '.$options['outpath']."\n";
 
@@ -263,7 +258,3 @@ if ($errors) {
 
 echo ">>> Process successfully completed!\n\n";
 exit(0);
-
-//============================================================+
-// END OF FILE
-//============================================================+

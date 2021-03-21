@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_016.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 016 for TCPDF class
+// Description : Example 016 for WarnockPDF library
 //               Document Encryption / Security
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Document Encryption / Security
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Document Encryption / Security
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -128,7 +125,3 @@ $pdf->Write(0, $txt, '', 0, 'L', true, 0, false, false, 0);
 
 //Close and output PDF document
 $pdf->Output('example_016.pdf', 'D');
-
-//============================================================+
-// END OF FILE
-//============================================================+

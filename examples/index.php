@@ -6,16 +6,16 @@ echo '<'.'?'.'xml version="1.0" encoding="UTF-8"'.'?'.'>';
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
 
 <head>
-<title>TCPDF Examples</title>
+<title>WarnockPDF Examples</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="description" content="TCPDF is a PHP class for generating PDF documents on the fly" />
+<meta name="description" content="WarnockPDF is a PHP class for generating PDF documents on the fly" />
 <meta name="author" content="Nicola Asuni" />
-<meta name="keywords" content="Examples, TCPDF, PDF, PHP class" />
+<meta name="keywords" content="Examples, WarnockPDF, PDF, PHP class" />
 </head>
 
 <body>
 
-<h1>TCPDF Examples</h1>
+<h1>WarnockPDF Examples</h1>
 
 <h2>PDF</h2>
 
@@ -68,7 +68,7 @@ echo '<'.'?'.'xml version="1.0" encoding="UTF-8"'.'?'.'>';
 <li>Text hyphenation: [<a href="example_046.php" title="PDF [new window]" target="_blank">PDF</a>]</li>
 <li>Transactions and UNDO: [<a href="example_047.php" title="PDF [new window]" target="_blank">PDF</a>]</li>
 <li>Table header and rowspan: [<a href="example_048.php" title="PDF [new window]" target="_blank">PDF</a>]</li>
-<li>TCPDF methods in HTML: [<a href="example_049.php" title="PDF [new window]" target="_blank">PDF</a>]</li>
+<li>WarnockPDF methods in HTML: [<a href="example_049.php" title="PDF [new window]" target="_blank">PDF</a>]</li>
 <li>2D Barcode (QR-Code, Datamatrix ECC200 and PDF417): [<a href="example_050.php" title="PDF [new window]" target="_blank">PDF</a>]</li>
 <li>Full page background: [<a href="example_051.php" title="PDF [new window]" target="_blank">PDF</a>]</li>
 <li>Digital Signature Certification: [<a href="example_052.php" title="PDF [new window]" target="_blank">PDF</a>]</li>

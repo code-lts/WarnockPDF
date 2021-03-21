@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_032.php
-// Begin       : 2008-06-09
-// Last Update : 2013-06-19
 //
-// Description : Example 032 for TCPDF class
+// Description : Example 032 for WarnockPDF library
 //               EPS/AI image
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: EPS/AI image
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: EPS/AI image
  * @author Nicola Asuni
  * @since 2008-06-09
  */
@@ -85,7 +82,3 @@ $pdf->ImageEps('images/tcpdf_box.ai', 10, 40, 150, '', 'http://www.tcpdf.org', t
 
 //Close and output PDF document
 $pdf->Output('example_032.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

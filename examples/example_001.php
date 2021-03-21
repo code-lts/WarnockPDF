@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_001.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 001 for TCPDF class
+// Description : Example 001 for WarnockPDF library
 //               Default Header and Footer
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Default Header and Footer
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Default Header and Footer
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -100,7 +97,3 @@ $pdf->writeHTMLCell(0, 0, '', '', $html, 0, 1, 0, true, '', true);
 // Close and output PDF document
 // This method has several options, check the source code documentation for more information.
 $pdf->Output('example_001.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

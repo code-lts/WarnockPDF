@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : ger.php
-// Begin       : 2004-03-03
-// Last Update : 2010-11-16
 //
-// Description : Language module for TCPDF
+// Description : Language module for WarnockPDF
 //               (contains translated texts)
 //               German
 //
@@ -18,9 +15,9 @@
 //============================================================+
 
 /**
- * TCPDF language file (contains translated texts).
- * @package com.tecnick.tcpdf
- * @brief TCPDF language file: German
+ * WarnockPDF language file (contains translated texts).
+ *
+ * @brief language file: German
  * @author Nicola Asuni
  * @since 2004-03-03
  */
@@ -38,7 +35,3 @@ $l['a_meta_language'] = 'de';
 
 // TRANSLATIONS --------------------------------------
 $l['w_page'] = 'Seite';
-
-//============================================================+
-// END OF FILE
-//============================================================+

@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_010.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 010 for TCPDF class
+// Description : Example 010 for WarnockPDF library
 //               Text on multiple columns
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Text on multiple columns
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Text on multiple columns
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -144,7 +141,3 @@ $pdf->PrintChapter(2, 'LOREM IPSUM [HTML]', 'data/chapter_demo_2.txt', true);
 
 //Close and output PDF document
 $pdf->Output('example_010.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

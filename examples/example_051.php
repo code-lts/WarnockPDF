@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_051.php
-// Begin       : 2009-04-16
-// Last Update : 2013-05-14
 //
-// Description : Example 051 for TCPDF class
+// Description : Example 051 for WarnockPDF library
 //               Full page background
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Full page background
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Full page background
  * @author Nicola Asuni
  * @since 2009-04-16
  */
@@ -139,7 +136,3 @@ $pdf->writeHTML($html, true, false, true, false, '');
 
 //Close and output PDF document
 $pdf->Output('example_051.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_049.php
-// Begin       : 2009-04-03
-// Last Update : 2014-12-10
 //
-// Description : Example 049 for TCPDF class
+// Description : Example 049 for WarnockPDF library
 //               WriteHTML with TCPDF callback functions
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: WriteHTML with TCPDF callback functions
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: WriteHTML with TCPDF callback functions
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -120,7 +117,3 @@ $pdf->lastPage();
 
 //Close and output PDF document
 $pdf->Output('example_049.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

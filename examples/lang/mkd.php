@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : mkd.php
-// Begin       : 2004-03-03
-// Last Update : 2010-10-26
 //
-// Description : Language module for TCPDF
+// Description : Language module for WarnockPDF
 //               (contains translated texts)
 //               Macedonian
 //
@@ -18,9 +15,9 @@
 //============================================================+
 
 /**
- * TCPDF language file (contains translated texts).
- * @package com.tecnick.tcpdf
- * @brief TCPDF language file: Macedonian
+ * WarnockPDF language file (contains translated texts).
+ *
+ * @brief language file: Macedonian
  * @author Nicola Asuni
  * @since 2004-03-03
  */
@@ -38,7 +35,3 @@ $l['a_meta_language'] = 'mk';
 
 // TRANSLATIONS --------------------------------------
 $l['w_page'] = 'страница';
-
-//============================================================+
-// END OF FILE
-//============================================================+

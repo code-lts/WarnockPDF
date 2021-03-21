@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : bul.php
-// Begin       : 2004-03-03
-// Last Update : 2013-05-13
 //
-// Description : Language module for TCPDF
+// Description : Language module for WarnockPDF
 //               (contains translated texts)
 //               Bulgarian
 //
@@ -18,9 +15,9 @@
 //============================================================+
 
 /**
- * TCPDF language file (contains translated texts).
- * @package com.tecnick.tcpdf
- * @brief TCPDF language file: Bulgarian
+ * WarnockPDF language file (contains translated texts).
+ *
+ * @brief language file: Bulgarian
  * @author Nicola Asuni
  * @since 2012-03-22
  */
@@ -38,7 +35,3 @@ $l['a_meta_language'] = 'bg';
 
 // TRANSLATIONS --------------------------------------
 $l['w_page'] = 'страница';
-
-//============================================================+
-// END OF FILE
-//============================================================+

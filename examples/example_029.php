@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_029.php
-// Begin       : 2008-06-09
-// Last Update : 2013-05-14
 //
-// Description : Example 029 for TCPDF class
+// Description : Example 029 for WarnockPDF library
 //               Set PDF viewer display preferences.
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Set PDF viewer display preferences.
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Set PDF viewer display preferences.
  * @author Nicola Asuni
  * @since 2008-06-09
  */
@@ -118,7 +115,3 @@ $pdf->Cell(0, 12, 'DISPLAY PREFERENCES - PAGE 3', 0, 0, 'C');
 
 //Close and output PDF document
 $pdf->Output('example_029.pdf', 'D');
-
-//============================================================+
-// END OF FILE
-//============================================================+

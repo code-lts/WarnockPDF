@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_047.php
-// Begin       : 2009-03-19
-// Last Update : 2013-05-14
 //
-// Description : Example 047 for TCPDF class
+// Description : Example 047 for WarnockPDF library
 //               Transactions
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Transactions
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Transactions
  * @author Nicola Asuni
  * @since 2009-03-19
  */
@@ -111,7 +108,3 @@ $pdf->commitTransaction();
 
 //Close and output PDF document
 $pdf->Output('example_047.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

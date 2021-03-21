@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_027.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 027 for TCPDF class
+// Description : Example 027 for WarnockPDF library
 //               1D Barcodes
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: 1D Barcodes.
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: 1D Barcodes.
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -412,7 +409,3 @@ $pdf->write1DBarcode('CODE 39 E+', 'C39E+', '', '', 120, 25, 0.4, $style, 'N');
 
 //Close and output PDF document
 $pdf->Output('example_027.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_015.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 015 for TCPDF class
+// Description : Example 015 for WarnockPDF library
 //               Bookmarks (Table of Content)
 //               and Named Destinations.
 //
@@ -18,9 +15,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Bookmarks (Table of Content)
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Bookmarks (Table of Content)
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -155,7 +152,3 @@ $pdf->Bookmark('External URL', 0, 0, '', 'B', array(0,0,255), -1, 'http://www.tc
 
 //Close and output PDF document
 $pdf->Output('example_015.pdf', 'D');
-
-//============================================================+
-// END OF FILE
-//============================================================+

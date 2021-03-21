@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_012.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 012 for TCPDF class
+// Description : Example 012 for WarnockPDF library
 //               Graphic Functions
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Graphic Functions
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Graphic Functions
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -199,7 +196,3 @@ $pdf->Ellipse($xc, $yc, 30, 15, 45, 45, 90, 'D', array(), array(), 2);
 
 //Close and output PDF document
 $pdf->Output('example_012.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

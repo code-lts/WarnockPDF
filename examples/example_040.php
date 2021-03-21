@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_040.php
-// Begin       : 2008-10-28
-// Last Update : 2013-05-14
 //
-// Description : Example 040 for TCPDF class
+// Description : Example 040 for WarnockPDF library
 //               Booklet mode (double-sided pages)
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Booklet mode (double-sided pages)
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Booklet mode (double-sided pages)
  * @author Nicola Asuni
  * @since 2008-10-28
  */
@@ -110,7 +107,3 @@ $pdf->Cell(0, 0, 'PAGE 4', 1, 1, 'C');
 
 //Close and output PDF document
 $pdf->Output('example_040.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

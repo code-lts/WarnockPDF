@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_018.php
-// Begin       : 2008-03-06
-// Last Update : 2013-05-14
 //
-// Description : Example 018 for TCPDF class
+// Description : Example 018 for WarnockPDF library
 //               RTL document with Persian language
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: RTL document with Persian language
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: RTL document with Persian language
  * @author Nicola Asuni
  * @since 2008-03-06
  */
@@ -122,7 +119,3 @@ $pdf->WriteHTML($htmlcontent2, true, 0, true, 0);
 
 //Close and output PDF document
 $pdf->Output('example_018.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

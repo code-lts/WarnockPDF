@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_045.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 045 for TCPDF class
+// Description : Example 045 for WarnockPDF library
 //               Bookmarks and Table of Content
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Bookmarks and Table of Content
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Bookmarks and Table of Content
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -134,7 +131,3 @@ $pdf->endTOCPage();
 
 //Close and output PDF document
 $pdf->Output('example_045.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

@@ -1,8 +1,5 @@
 <?php
 //============================================================+
-// File name   : tcpdf_barcodes_2d_include.php
-// Begin       : 2013-05-19
-// Last Update : 2013-05-19
 //
 // Description : Search and include the TCPDF Barcode 1D class.
 //
@@ -17,7 +14,7 @@
 
 /**
  * Search and include the TCPDF Barcode 2D class.
- * @package com.tecnick.tcpdf
+ *
  * @abstract TCPDF - Include the main class.
  * @author Nicola Asuni
  * @since 2013-05-19
@@ -31,7 +28,3 @@ foreach ($tcpdf_barcodes_2d_include_dirs as $tcpdf_barcodes_2d_include_path) {
 		break;
 	}
 }
-
-//============================================================+
-// END OF FILE
-//============================================================+

@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_055.php
-// Begin       : 2009-10-21
-// Last Update : 2014-12-10
 //
-// Description : Example 055 for TCPDF class
+// Description : Example 055 for WarnockPDF library
 //               Display all characters available on core fonts.
 //
 // Author: Nicola Asuni
@@ -18,8 +15,8 @@
 
 /**
  * Display all characters available on core fonts.
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: XHTML Forms
+ *
+ * @abstract WarnockPDF - Example: XHTML Forms
  * @author Nicola Asuni
  * @since 2009-10-21
  */
@@ -109,7 +106,3 @@ foreach($core_fonts as $font) {
 
 //Close and output PDF document
 $pdf->Output('example_055.pdf', 'D');
-
-//============================================================+
-// END OF FILE
-//============================================================+

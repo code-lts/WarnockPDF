@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_017.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 017 for TCPDF class
+// Description : Example 017 for WarnockPDF library
 //               Two independent columns with MultiCell
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Two independent columns with MultiCell
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Two independent columns with MultiCell
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -111,7 +108,3 @@ $pdf->lastPage();
 
 //Close and output PDF document
 $pdf->Output('example_017.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

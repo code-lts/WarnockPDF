@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_005.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 005 for TCPDF class
+// Description : Example 005 for WarnockPDF library
 //               Multicell
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Multicell
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Multicell
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -152,7 +149,3 @@ $pdf->lastPage();
 
 //Close and output PDF document
 $pdf->Output('example_005.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

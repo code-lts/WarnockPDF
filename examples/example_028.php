@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_028.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 028 for TCPDF class
+// Description : Example 028 for WarnockPDF library
 //               Changing page formats
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: changing page formats
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: changing page formats
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -132,7 +129,3 @@ $pdf->lastPage();
 
 //Close and output PDF document
 $pdf->Output('example_028.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

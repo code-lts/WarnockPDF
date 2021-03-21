@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : ind.php
-// Begin       : 2004-03-03
-// Last Update : 2010-10-26
 //
-// Description : Language module for TCPDF
+// Description : Language module for WarnockPDF
 //               (contains translated texts)
 //               Irish
 //
@@ -18,9 +15,9 @@
 //============================================================+
 
 /**
- * TCPDF language file (contains translated texts).
- * @package com.tecnick.tcpdf
- * @brief TCPDF language file: Irish
+ * WarnockPDF language file (contains translated texts).
+ *
+ * @brief language file: Irish
  * @author Nicola Asuni
  * @since 2004-03-03
  */
@@ -38,7 +35,3 @@ $l['a_meta_language'] = 'ga';
 
 // TRANSLATIONS --------------------------------------
 $l['w_page'] = 'leathanach';
-
-//============================================================+
-// END OF FILE
-//============================================================+

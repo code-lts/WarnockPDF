@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_057.php
-// Begin       : 2010-04-03
-// Last Update : 2013-05-14
 //
-// Description : Example 057 for TCPDF class
+// Description : Example 057 for WarnockPDF library
 //               Cell vertical alignments
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Cell vertical alignments
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Cell vertical alignments
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -262,7 +259,3 @@ $pdf->lastPage();
 
 //Close and output PDF document
 $pdf->Output('example_057.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

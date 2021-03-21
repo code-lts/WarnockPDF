@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_056.php
-// Begin       : 2010-03-26
-// Last Update : 2013-09-30
 //
-// Description : Example 056 for TCPDF class
+// Description : Example 056 for WarnockPDF library
 //               Crop marks and color registration bars
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Crop marks and color registration bars
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Crop marks and color registration bars
  * @author Nicola Asuni
  * @since 2010-03-26
  */
@@ -127,7 +124,3 @@ $pdf->registrationMarkCMYK(150, 155, 8);
 
 //Close and output PDF document
 $pdf->Output('example_056.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

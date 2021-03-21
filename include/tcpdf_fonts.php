@@ -1,47 +1,43 @@
 <?php
 //============================================================+
-// File name   : tcpdf_fonts.php
-// Version     : 1.1.0
-// Begin       : 2008-01-01
-// Last Update : 2014-12-10
 // Author      : Nicola Asuni - Tecnick.com LTD - www.tecnick.com - info@tecnick.com
 // License     : GNU-LGPL v3 (http://www.gnu.org/copyleft/lesser.html)
 // -------------------------------------------------------------------
 // Copyright (C) 2008-2014 Nicola Asuni - Tecnick.com LTD
 //
-// This file is part of TCPDF software library.
+// This file is part of WarnockPDF software library.
 //
-// TCPDF is free software: you can redistribute it and/or modify it
+// WarnockPDF is free software: you can redistribute it and/or modify it
 // under the terms of the GNU Lesser General Public License as
 // published by the Free Software Foundation, either version 3 of the
 // License, or (at your option) any later version.
 //
-// TCPDF is distributed in the hope that it will be useful, but
+// WarnockPDF is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // See the GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with TCPDF.  If not, see <http://www.gnu.org/licenses/>.
+// along with WarnockPDF. If not, see <http://www.gnu.org/licenses/>.
 //
-// See LICENSE.TXT file for more information.
+// See LICENSE file for more information.
 // -------------------------------------------------------------------
 //
-// Description :Font methods for TCPDF library.
+// Description :Font methods for WarnockPDF library.
 //
 //============================================================+
 
 /**
  * @file
- * Unicode data and font methods for TCPDF library.
+ * Unicode data and font methods for WarnockPDF library.
  * @author Nicola Asuni
- * @package com.tecnick.tcpdf
+ *
  */
 
 /**
- * @class TCPDF_FONTS
- * Font methods for TCPDF library.
- * @package com.tecnick.tcpdf
+ *
+ * Font methods for WarnockPDF library.
+ *
  * @version 1.1.0
  * @author Nicola Asuni - info@tecnick.com
  */
@@ -822,7 +818,7 @@ class TCPDF_FONTS {
 		}
 		// ---------- create php font file ----------
 		$pfile = '<'.'?'.'php'."\n";
-		$pfile .= '// TCPDF FONT FILE DESCRIPTION'."\n";
+		$pfile .= '// LIBRARY FONT FILE DESCRIPTION'."\n";
 		$pfile .= '$type=\''.$fmetric['type'].'\';'."\n";
 		$pfile .= '$name=\''.$fmetric['name'].'\';'."\n";
 		$pfile .= '$up='.$fmetric['underlinePosition'].';'."\n";
@@ -2648,7 +2644,3 @@ class TCPDF_FONTS {
 	}
 
 } // END OF TCPDF_FONTS CLASS
-
-//============================================================+
-// END OF FILE
-//============================================================+

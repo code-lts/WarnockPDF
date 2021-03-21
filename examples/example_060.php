@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_060.php
-// Begin       : 2010-05-17
-// Last Update : 2013-05-14
 //
-// Description : Example 060 for TCPDF class
+// Description : Example 060 for WarnockPDF library
 //               Advanced page settings.
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Advanced page settings.
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Advanced page settings.
  * @author Nicola Asuni
  * @since 2010-05-17
  */
@@ -102,7 +99,3 @@ $pdf->Cell(0, 12, 'Second Page', 1, 1, 'C');
 
 //Close and output PDF document
 $pdf->Output('example_060.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

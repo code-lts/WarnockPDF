@@ -1,8 +1,5 @@
 <?php
 //============================================================+
-// File name   : tcpdf_config.php
-// Begin       : 2004-06-11
-// Last Update : 2014-12-11
 //
 // Description : Configuration file for TCPDF.
 // Author      : Nicola Asuni - Tecnick.com LTD - www.tecnick.com - info@tecnick.com
@@ -10,28 +7,28 @@
 // -------------------------------------------------------------------
 // Copyright (C) 2004-2014  Nicola Asuni - Tecnick.com LTD
 //
-// This file is part of TCPDF software library.
+// This file is part of WarnockPDF software library.
 //
-// TCPDF is free software: you can redistribute it and/or modify it
+// WarnockPDF is free software: you can redistribute it and/or modify it
 // under the terms of the GNU Lesser General Public License as
 // published by the Free Software Foundation, either version 3 of the
 // License, or (at your option) any later version.
 //
-// TCPDF is distributed in the hope that it will be useful, but
+// WarnockPDF is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // See the GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with TCPDF.  If not, see <http://www.gnu.org/licenses/>.
+// along with WarnockPDF. If not, see <http://www.gnu.org/licenses/>.
 //
-// See LICENSE.TXT file for more information.
+// See LICENSE file for more information.
 //============================================================+
 
 /**
  * Configuration file for TCPDF.
  * @author Nicola Asuni
- * @package com.tecnick.tcpdf
+ *
  * @version 4.9.005
  * @since 2004-10-27
  */
@@ -221,7 +218,3 @@ define('K_TCPDF_THROW_EXCEPTION_ERROR', false);
  * Default timezone for datetime functions
  */
 define('K_TIMEZONE', 'UTC');
-
-//============================================================+
-// END OF FILE
-//============================================================+

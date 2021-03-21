@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_023.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 023 for TCPDF class
+// Description : Example 023 for WarnockPDF library
 //               Page Groups
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Page Groups.
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Page Groups.
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -107,7 +104,3 @@ $pdf->Cell(0, 10, 'This is the fourth page of group 2', 0, 1, 'L');
 
 //Close and output PDF document
 $pdf->Output('example_023.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

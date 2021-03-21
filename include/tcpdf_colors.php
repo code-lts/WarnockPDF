@@ -1,30 +1,26 @@
 <?php
 //============================================================+
-// File name   : tcpdf_colors.php
-// Version     : 1.0.004
-// Begin       : 2002-04-09
-// Last Update : 2014-04-25
 // Author      : Nicola Asuni - Tecnick.com LTD - www.tecnick.com - info@tecnick.com
 // License     : GNU-LGPL v3 (http://www.gnu.org/copyleft/lesser.html)
 // -------------------------------------------------------------------
 // Copyright (C) 2002-2013  Nicola Asuni - Tecnick.com LTD
 //
-// This file is part of TCPDF software library.
+// This file is part of WarnockPDF software library.
 //
-// TCPDF is free software: you can redistribute it and/or modify it
+// WarnockPDF is free software: you can redistribute it and/or modify it
 // under the terms of the GNU Lesser General Public License as
 // published by the Free Software Foundation, either version 3 of the
 // License, or (at your option) any later version.
 //
-// TCPDF is distributed in the hope that it will be useful, but
+// WarnockPDF is distributed in the hope that it will be useful, but
 // WITHOUT ANY WARRANTY; without even the implied warranty of
 // MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 // See the GNU Lesser General Public License for more details.
 //
 // You should have received a copy of the GNU Lesser General Public License
-// along with TCPDF.  If not, see <http://www.gnu.org/licenses/>.
+// along with WarnockPDF. If not, see <http://www.gnu.org/licenses/>.
 //
-// See LICENSE.TXT file for more information.
+// See LICENSE file for more information.
 // -------------------------------------------------------------------
 //
 // Description : Array of WEB safe colors
@@ -33,15 +29,15 @@
 
 /**
  * @file
- * PHP color class for TCPDF
+ * PHP color class for WarnockPDF
  * @author Nicola Asuni
- * @package com.tecnick.tcpdf
+ *
  */
 
 /**
- * @class TCPDF_COLORS
- * PHP color class for TCPDF
- * @package com.tecnick.tcpdf
+ *
+ * PHP color class for WarnockPDF
+ *
  * @version 1.0.004
  * @author Nicola Asuni - info@tecnick.com
  */
@@ -456,7 +452,3 @@ class TCPDF_COLORS {
 
 
 } // END OF TCPDF_COLORS CLASS
-
-//============================================================+
-// END OF FILE
-//============================================================+

@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_046.php
-// Begin       : 2009-02-28
-// Last Update : 2013-05-14
 //
-// Description : Example 046 for TCPDF class
+// Description : Example 046 for WarnockPDF library
 //               Text Hyphenation
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: text Hyphenation
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: text Hyphenation
  * @author Nicola Asuni
  * @since 2009-02-28
  */
@@ -117,7 +114,3 @@ $pdf->writeHTMLCell(50, 0, '', '', $html, 1, 1, 0, true, 'J');
 
 //Close and output PDF document
 $pdf->Output('example_046.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

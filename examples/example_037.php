@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_037.php
-// Begin       : 2008-09-12
-// Last Update : 2013-09-30
 //
-// Description : Example 037 for TCPDF class
+// Description : Example 037 for WarnockPDF library
 //               Spot colors
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Spot colors.
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Spot colors.
  * @author Nicola Asuni
  * @since 2008-09-12
  */
@@ -141,7 +138,3 @@ $pdf->Text(73, $starty + 8, 'My TCPDF Yellow');
 
 //Close and output PDF document
 $pdf->Output('example_037.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

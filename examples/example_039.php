@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_039.php
-// Begin       : 2008-10-16
-// Last Update : 2014-01-13
 //
-// Description : Example 039 for TCPDF class
+// Description : Example 039 for WarnockPDF library
 //               HTML justification
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: HTML justification
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: HTML justification
  * @author Nicola Asuni
  * @since 2008-10-18
  */
@@ -98,7 +95,3 @@ $pdf->lastPage();
 
 //Close and output PDF document
 $pdf->Output('example_039.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_050.php
-// Begin       : 2009-04-09
-// Last Update : 2013-05-14
 //
-// Description : Example 050 for TCPDF class
+// Description : Example 050 for WarnockPDF library
 //               2D Barcodes
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: 2D barcodes.
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: 2D barcodes.
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -204,7 +201,3 @@ $pdf->Text(140, 205, 'QRCODE H - NO PADDING');
 
 //Close and output PDF document
 $pdf->Output('example_050.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

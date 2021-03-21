@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_025.php
-// Begin       : 2008-03-04
-// Last Update : 2013-05-14
 //
-// Description : Example 025 for TCPDF class
+// Description : Example 025 for WarnockPDF library
 //               Object Transparency
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Object Transparency
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Object Transparency
  * @author Nicola Asuni
  * @since 2008-03-04
  */
@@ -112,7 +109,3 @@ $pdf->SetAlpha(1);
 
 //Close and output PDF document
 $pdf->Output('example_025.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+

@@ -1,10 +1,7 @@
 <?php
 //============================================================+
-// File name   : example_044.php
-// Begin       : 2009-01-02
-// Last Update : 2013-05-14
 //
-// Description : Example 044 for TCPDF class
+// Description : Example 044 for WarnockPDF library
 //               Move, copy and delete pages
 //
 // Author: Nicola Asuni
@@ -17,9 +14,9 @@
 //============================================================+
 
 /**
- * Creates an example PDF TEST document using TCPDF
- * @package com.tecnick.tcpdf
- * @abstract TCPDF - Example: Move, copy and delete pages
+ * Creates an example PDF TEST document using WarnockPDF
+ *
+ * @abstract WarnockPDF - Example: Move, copy and delete pages
  * @author Nicola Asuni
  * @since 2009-01-02
  */
@@ -122,7 +119,3 @@ $pdf->copyPage(2);
 
 //Close and output PDF document
 $pdf->Output('example_044.pdf', 'I');
-
-//============================================================+
-// END OF FILE
-//============================================================+
