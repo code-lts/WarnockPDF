@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 052 for WarnockPDF library
-//               Certification Signature (experimental)
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 052 for WarnockPDF library
+ *
+ * @description Certification Signature (experimental)
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF TEST document using WarnockPDF

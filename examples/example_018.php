@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 018 for WarnockPDF library
-//               RTL document with Persian language
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 018 for WarnockPDF library
+ *
+ * @description RTL document with Persian language
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF TEST document using WarnockPDF

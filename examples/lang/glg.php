@@ -1,18 +1,12 @@
 <?php
-//============================================================+
-//
-// Description : Language module for WarnockPDF
-//               (contains translated texts)
-//               Galician
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * This file is part of the WarnockPDF library.
+ *
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ * @copyright Nicola Asuni - Tecnick.com LTD
+ * @description Language module for WarnockPDF - Galician
+ */
 
 /**
  * WarnockPDF language file (contains translated texts).

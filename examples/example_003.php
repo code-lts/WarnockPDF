@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 003 for WarnockPDF library
-//               Custom Header and Footer
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 003 for WarnockPDF library
+ *
+ * @description Custom Header and Footer
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF TEST document using WarnockPDF

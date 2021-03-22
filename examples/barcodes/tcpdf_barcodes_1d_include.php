@@ -1,16 +1,12 @@
 <?php
-//============================================================+
-//
-// Description : Search and include the TCPDF Barcode 1D class.
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * This file is part of the WarnockPDF library.
+ *
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ * @copyright Nicola Asuni - Tecnick.com LTD
+ * @description Search and include the TCPDF Barcode 1D class.
+ */
 
 /**
  * Search and include the TCPDF Barcode 1D class.

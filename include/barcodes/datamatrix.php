@@ -1,43 +1,20 @@
 <?php
-//============================================================+
-// Author      : Nicola Asuni - Tecnick.com LTD - www.tecnick.com - info@tecnick.com
-// License     : GNU-LGPL v3 (http://www.gnu.org/copyleft/lesser.html)
-// -------------------------------------------------------------------
-// Copyright (C) 2010-2014  Nicola Asuni - Tecnick.com LTD
-//
-// This file is part of WarnockPDF software library.
-//
-// WarnockPDF is free software: you can redistribute it and/or modify it
-// under the terms of the GNU Lesser General Public License as
-// published by the Free Software Foundation, either version 3 of the
-// License, or (at your option) any later version.
-//
-// WarnockPDF is distributed in the hope that it will be useful, but
-// WITHOUT ANY WARRANTY; without even the implied warranty of
-// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
-// See the GNU Lesser General Public License for more details.
-//
-// You should have received a copy of the GNU Lesser General Public License
-// along with WarnockPDF. If not, see <http://www.gnu.org/licenses/>.
-//
-// See LICENSE file for more information.
-// -------------------------------------------------------------------
-//
-// DESCRIPTION :
-//
-// Class to create DataMatrix ECC 200 barcode arrays for TCPDF class.
-// DataMatrix (ISO/IEC 16022:2006) is a 2-dimensional bar code.
-//============================================================+
+/**
+ * This file is part of the WarnockPDF library.
+ *
+ * Class to create DataMatrix ECC 200 barcode arrays for TCPDF class.
+ * DataMatrix (ISO/IEC 16022:2006) is a 2-dimensional bar code.
+ *
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ * @copyright 2010-2014 Nicola Asuni - Tecnick.com LTD
+ * @description Class to create DataMatrix ECC 200 barcode arrays for TCPDF class.
+ * @description DataMatrix (ISO/IEC 16022:2006) is a 2-dimensional bar code.
+ */
 
 /**
-* @file
-* Class to create DataMatrix ECC 200 barcode arrays for TCPDF class.
-* DataMatrix (ISO/IEC 16022:2006) is a 2-dimensional bar code.
-*
-* 
-* @author Nicola Asuni
-* @version 1.0.008
-*/
+ * @version 1.0.008
+ */
 
 // custom definitions
 if (!defined('DATAMATRIXDEFS')) {

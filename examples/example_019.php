@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 019 for WarnockPDF library
-//               Non unicode with alternative config file
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 019 for WarnockPDF library
+ *
+ * @description Non unicode with alternative config file
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF TEST document using WarnockPDF

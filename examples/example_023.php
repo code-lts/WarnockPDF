@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 023 for WarnockPDF library
-//               Page Groups
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 023 for WarnockPDF library
+ *
+ * @description Page Groups
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF TEST document using WarnockPDF

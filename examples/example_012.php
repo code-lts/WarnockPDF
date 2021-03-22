@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 012 for WarnockPDF library
-//               Graphic Functions
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 012 for WarnockPDF library
+ *
+ * @description Graphic Functions
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF TEST document using WarnockPDF

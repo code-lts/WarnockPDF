@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 065 for WarnockPDF library
-//               Creates an example PDF/A-1b document using WarnockPDF
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 065 for WarnockPDF library
+ *
+ * @description Creates an example PDF/A-1b document using WarnockPDF
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF/A-1b document using WarnockPDF

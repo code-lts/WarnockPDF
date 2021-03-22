@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 033 for WarnockPDF library
-//               Mixed font types
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 033 for WarnockPDF library
+ *
+ * @description Mixed font types
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF TEST document using WarnockPDF

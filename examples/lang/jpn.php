@@ -1,18 +1,13 @@
 <?php
-//============================================================+
-//
-// Description : Language module for WarnockPDF
-//               (contains translated texts)
-//               Japanese
-//
-// Author: Nicola Asuni - Translation by redcocker
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * This file is part of the WarnockPDF library.
+ *
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ * @copyright Nicola Asuni - Tecnick.com LTD
+ * @copyright Translation by redcocker
+ * @description Language module for WarnockPDF - Japanese
+ */
 
 /**
  * WarnockPDF language file (contains translated texts).

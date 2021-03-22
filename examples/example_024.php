@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 024 for WarnockPDF library
-//               Object Visibility and Layers
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 024 for WarnockPDF library
+ *
+ * @description Object Visibility and Layers
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF TEST document using WarnockPDF

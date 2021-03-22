@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 060 for WarnockPDF library
-//               Advanced page settings.
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 060 for WarnockPDF library
+ *
+ * @description Advanced page settings.
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF TEST document using WarnockPDF

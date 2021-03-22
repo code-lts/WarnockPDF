@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 064 for WarnockPDF library
-//               No-write page regions
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 064 for WarnockPDF library
+ *
+ * @description No-write page regions
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Creates an example PDF TEST document using WarnockPDF

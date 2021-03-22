@@ -1,17 +1,11 @@
 <?php
-//============================================================+
-//
-// Description : Example 055 for WarnockPDF library
-//               Display all characters available on core fonts.
-//
-// Author: Nicola Asuni
-//
-// (c) Copyright:
-//               Nicola Asuni
-//               Tecnick.com LTD
-//               www.tecnick.com
-//               info@tecnick.com
-//============================================================+
+/**
+ * Example 055 for WarnockPDF library
+ *
+ * @description Display all characters available on core fonts.
+ * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
+ * @license LGPL-3.0
+ */
 
 /**
  * Display all characters available on core fonts.
