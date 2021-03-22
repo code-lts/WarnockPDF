@@ -1,5 +1,27 @@
 # Changelog
 
+## [7.0.x] - YYYY-MM-DD
+
+### Changes
+
+- Forked and renamed the project to WarnockPDF
+- Rename changelog to markdown format
+- Improved the README
+- Cleaned up and update links of the LICENSE
+- Adjusted the php composer version
+- Cleaned up the headers of source files
+
+### Improvements
+
+- Added a testing and coverage script
+- Added GitHub actions to cover all PHP versions supported
+
+### Fixes
+
+- General fixes and PHP 8 deprecation fixes
+- Check if the file exists before calling unlink
+- Second parameter of TCPDF::cell() must be a number
+
 ## [6.3.5] - 2020-02-14
 
 - Fixed curly braces in pdf417

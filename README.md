@@ -16,6 +16,11 @@
 
 PHP library for generating PDF documents on-the-fly.
 
+## Project name
+
+While reading the [Adobe page](https://acrobat.adobe.com/us/en/acrobat/about-adobe-pdf.html) about how they invented the PDF in 1991 I found out that the Adobe co-founder Dr. John Warnock launched the paper-to-digital revolution with the PDF.
+The project is named WarnockPDF for this reason.
+
 ### Main Features
 
 * no external libraries are required for the basic functions;
