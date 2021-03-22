@@ -11,10 +11,6 @@ fi
 EXAMPLE_FILES="$(find examples/ -type f -name 'example*.php' \
                 -not -path '*/barcodes/*' \
                 -not -wholename 'examples/example_006.php' \
-                -not -wholename 'examples/example_008.php' \
-                -not -wholename 'examples/example_032.php' \
-                -not -wholename 'examples/example_039.php' \
-                -not -wholename 'examples/example_058.php' \
                 | sort -df)"
 TEMP_FOLDER="$(mktemp -d /tmp/WarnockPDF-tests.XXXXXXXXX)"
 OUTPUT_FILE="${TEMP_FOLDER}/output.pdf"
@@ -27,9 +23,11 @@ echo "Temporary folder: ${TEMP_FOLDER}"
 
 FAILED_FLAG=0
 
+cd "${ROOT_DIR}/examples"
+
 for file in $EXAMPLE_FILES; do
     echo "File: $file"
-    php -l $file > /dev/null
+    php -l "${ROOT_DIR}/$file" > /dev/null
     if [ $? -eq 0 ]; then
         echo "File-lint-passed: $file"
     fi
@@ -37,7 +35,7 @@ for file in $EXAMPLE_FILES; do
         -d error_reporting=-1 \
         -d pcov.directory="${ROOT_DIR}" \
         -d auto_prepend_file="${TESTS_DIR}/coverage.php" \
-        "$file" 1> "${OUTPUT_FILE}" 2> "${OUTPUT_FILE_ERROR}"
+        "${ROOT_DIR}/$file" 1> "${OUTPUT_FILE}" 2> "${OUTPUT_FILE_ERROR}"
     if [ $? -eq 0 ]; then
         echo "File-run-passed: $file"
         ERROR_LOGS="$(cat "${OUTPUT_FILE_ERROR}")"
@@ -65,6 +63,8 @@ for file in $EXAMPLE_FILES; do
         echo "File-run-failed: $file"
     fi
 done
+
+cd - > /dev/null
 
 rm -rf "${TEMP_FOLDER}"
 
