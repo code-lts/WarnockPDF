@@ -19,9 +19,7 @@ jobs:
                 php-version: ["5.3", "5.4", "5.5", "5.6", "7.1", "7.2", "7.3", "7.4", "8.0"]
                 os: [ubuntu-latest]
                 include:
-                  - php-version: "8.1"
-                    experimental: true
-                    runs-on: ubuntu-latest
+                    - { php-version: '8.1', experimental: true, os: ubuntu-latest }
         steps:
             - uses: actions/checkout@v2
             - name: Install pdfinfo
