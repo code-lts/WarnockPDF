@@ -21,6 +21,7 @@
 - General fixes and PHP 8 deprecation fixes
 - Check if the file exists before calling unlink
 - Second parameter of TCPDF::cell() must be a number
+- Fixed "Trying to access array offset on value of type bool" on TCPDF_STATIC::isValidURL
 
 ## [6.3.5] - 2020-02-14
 
