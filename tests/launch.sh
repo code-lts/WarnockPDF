@@ -22,6 +22,12 @@ OUTPUT_FILE_ERROR="${TEMP_FOLDER}/errors.txt"
 ROOT_DIR="$(php -r 'echo realpath(dirname(__FILE__));')"
 TESTS_DIR="${ROOT_DIR}/tests/"
 
+ENABLE_PCOV="-dextension=pcov.so"
+if [ "$(php -r 'echo PHP_MAJOR_VERSION;')" = "5" ];then
+    # pcov does not exist for PHP 5
+    ENABLE_PCOV=""
+fi
+
 echo "Root folder: ${ROOT_DIR}"
 echo "Temporary folder: ${TEMP_FOLDER}"
 
@@ -36,7 +42,7 @@ for file in $EXAMPLE_FILES; do
         echo "File-lint-passed: $file"
     fi
     set +e
-    php -n -dextension=gd.so -dextension=pcov.so \
+    php -n -dextension=gd.so ${ENABLE_PCOV} \
         -d display_errors=on \
         -d error_reporting=-1 \
         -d pcov.directory="${ROOT_DIR}" \
@@ -79,7 +85,7 @@ for file in $EXAMPLE_BARCODE_FILES; do
         echo "File-lint-passed: $file"
     fi
     set +e
-    php -n -dextension=bcmath.so -dextension=pcov.so \
+    php -n -dextension=bcmath.so ${ENABLE_PCOV} \
         -d display_errors=on \
         -d error_reporting=-1 \
         -d pcov.directory="${ROOT_DIR}" \
