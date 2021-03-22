@@ -7,6 +7,10 @@
 * **license**        https://www.gnu.org/licenses/lgpl-3.0.html GNU-LGPL v3 (see LICENSE)
 * **source**         https://github.com/code-lts/WarnockPDF
 
+## Code status
+
+[![codecov](https://codecov.io/gh/code-lts/WarnockPDF/branch/main/graph/badge.svg)](https://codecov.io/gh/code-lts/WarnockPDF)
+[![Run tests](https://github.com/code-lts/WarnockPDF/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/code-lts/WarnockPDF/actions/workflows/tests.yml)
 
 ## Description
 
