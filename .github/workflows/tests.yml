@@ -38,4 +38,3 @@ jobs:
               with:
                 flags: php-${{ matrix.php-version }}-${{ matrix.os }}
                 name: php-${{ matrix.php-version }}-${{ matrix.os }}
-                files: tests/coverage.lcov

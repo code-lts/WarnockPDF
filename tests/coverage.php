@@ -10,9 +10,9 @@ class ____CoverageObject {
     {
         \pcov\stop();
         $coverageFile = dirname(__FILE__) . '/coverage.lcov';
-        $covData = \pcov\collect(\pcov\exclusive, [
+        $covData = \pcov\collect(\pcov\exclusive, array(
             __FILE__
-        ]);
+        ));
         $coverageData = '';
         foreach ($covData as $file => $coverageForFile) {
             $coverageData .= 'SF:' . $file . "\n";
