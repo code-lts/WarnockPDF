@@ -67,8 +67,8 @@ class TCPDF_PARSER {
 
 	/**
 	 * Parse a PDF document an return an array of objects.
-	 * @param $data (string) PDF data to parse.
-	 * @param $cfg (array) Array of configuration parameters:
+	 * @param string $data PDF data to parse.
+	 * @param array $cfg Array of configuration parameters:
 	 * 			'die_for_errors' : if true termitate the program execution in case of error, otherwise thows an exception;
 	 * 			'ignore_filter_decoding_errors' : if true ignore filter decoding errors;
 	 * 			'ignore_missing_filter_decoders' : if true ignore missing filter decoding errors.
@@ -106,7 +106,7 @@ class TCPDF_PARSER {
 
 	/**
 	 * Set the configuration parameters.
-	 * @param $cfg (array) Array of configuration parameters:
+	 * @param array $cfg Array of configuration parameters:
 	 * 			'die_for_errors' : if true termitate the program execution in case of error, otherwise thows an exception;
 	 * 			'ignore_filter_decoding_errors' : if true ignore filter decoding errors;
 	 * 			'ignore_missing_filter_decoders' : if true ignore missing filter decoding errors.
@@ -136,8 +136,8 @@ class TCPDF_PARSER {
 
 	/**
 	 * Get Cross-Reference (xref) table and trailer data from PDF document data.
-	 * @param $offset (int) xref offset (if know).
-	 * @param $xref (array) previous xref array (if any).
+	 * @param int $offset xref offset (if know).
+	 * @param array $xref previous xref array (if any).
 	 * @return Array containing xref and trailer data.
 	 * @protected
 	 * @since 1.0.000 (2011-05-24)
@@ -178,8 +178,8 @@ class TCPDF_PARSER {
 
 	/**
 	 * Decode the Cross-Reference section
-	 * @param $startxref (int) Offset at which the xref section starts (position of the 'xref' keyword).
-	 * @param $xref (array) Previous xref array (if any).
+	 * @param int $startxref Offset at which the xref section starts (position of the 'xref' keyword).
+	 * @param array $xref Previous xref array (if any).
 	 * @return Array containing xref and trailer data.
 	 * @protected
 	 * @since 1.0.000 (2011-06-20)
@@ -250,8 +250,8 @@ class TCPDF_PARSER {
 
 	/**
 	 * Decode the Cross-Reference Stream section
-	 * @param $startxref (int) Offset at which the xref section starts.
-	 * @param $xref (array) Previous xref array (if any).
+	 * @param int $startxref Offset at which the xref section starts.
+	 * @param array $xref Previous xref array (if any).
 	 * @return Array containing xref and trailer data.
 	 * @protected
 	 * @since 1.0.003 (2013-03-16)
@@ -465,7 +465,7 @@ class TCPDF_PARSER {
 
 	/**
 	 * Get object type, raw value and offset to next object
-	 * @param $offset (int) Object offset.
+	 * @param int $offset Object offset.
 	 * @return array containing object type, raw value and offset to next object
 	 * @protected
 	 * @since 1.0.000 (2011-06-20)
@@ -643,9 +643,9 @@ class TCPDF_PARSER {
 
 	/**
 	 * Get content of indirect object.
-	 * @param $obj_ref (string) Object number and generation number separated by underscore character.
-	 * @param $offset (int) Object offset.
-	 * @param $decoding (boolean) If true decode streams.
+	 * @param string $obj_ref Object number and generation number separated by underscore character.
+	 * @param int $offset Object offset.
+	 * @param boolean $decoding If true decode streams.
 	 * @return array containing object data.
 	 * @protected
 	 * @since 1.0.000 (2011-05-24)
@@ -688,7 +688,7 @@ class TCPDF_PARSER {
 
 	/**
 	 * Get the content of object, resolving indect object reference if necessary.
-	 * @param $obj (string) Object value.
+	 * @param string $obj Object value.
 	 * @return array containing object data.
 	 * @protected
 	 * @since 1.0.000 (2011-06-26)
@@ -710,8 +710,8 @@ class TCPDF_PARSER {
 
 	/**
 	 * Decode the specified stream.
-	 * @param $sdic (array) Stream's dictionary array.
-	 * @param $stream (string) Stream to decode.
+	 * @param array $sdic Stream's dictionary array.
+	 * @param string $stream Stream to decode.
 	 * @return array containing decoded stream data and remaining filters.
 	 * @protected
 	 * @since 1.0.000 (2011-06-22)
@@ -772,7 +772,7 @@ class TCPDF_PARSER {
 
 	/**
 	 * Throw an exception or print an error message and die if the K_TCPDF_PARSER_THROW_EXCEPTION_ERROR constant is set to true.
-	 * @param $msg (string) The error message
+	 * @param string $msg The error message
 	 * @public
 	 * @since 1.0.000 (2011-05-23)
 	 */
