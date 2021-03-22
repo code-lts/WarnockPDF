@@ -29,7 +29,7 @@ jobs:
               with:
                   php-version: ${{ matrix.php-version }}
                   coverage: pcov
-                  extensions: bcmath
+                  extensions: bcmath, imagick, gd
                   ini-values: display_errors=on, error_reporting=-1
             - name: List php modules
               run: php -m

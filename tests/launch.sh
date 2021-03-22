@@ -28,6 +28,12 @@ if [ "$(php -r 'echo PHP_MAJOR_VERSION;')" = "5" ];then
     ENABLE_PCOV=""
 fi
 
+IMAGICK_OR_GD="-dextension=gd.so"
+if [ "$(php -r 'echo PHP_MAJOR_VERSION . PHP_MINOR_VERSION;')" = "53" ];then
+    # pcov does not exist for PHP 5
+    IMAGICK_OR_GD="-dextension=imagick.so"
+fi
+
 echo "Root folder: ${ROOT_DIR}"
 echo "Temporary folder: ${TEMP_FOLDER}"
 
@@ -44,7 +50,7 @@ for file in $EXAMPLE_FILES; do
     set +e
     php -n \
         -d date.timezone=UTC \
-        -d extension=gd.so ${ENABLE_PCOV} \
+        ${IMAGICK_OR_GD} ${ENABLE_PCOV} \
         -d display_errors=on \
         -d error_reporting=-1 \
         -d pcov.directory="${ROOT_DIR}" \
