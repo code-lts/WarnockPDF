@@ -11,10 +11,16 @@ jobs:
     test-php:
         name: Test on php ${{ matrix.php-version }} and ${{ matrix.os }}
         runs-on: ${{ matrix.os }}
+        continue-on-error: ${{ matrix.experimental }}
         strategy:
+            fail-fast: false
             matrix:
-                php-version: ["5.3", "5.4", "5.5", "5.6", "7.1", "7.2", "7.3", "7.4", "8.0", "8.1"]
+                experimental: [false]
+                php-version: ["5.3", "5.4", "5.5", "5.6", "7.1", "7.2", "7.3", "7.4", "8.0"]
                 os: [ubuntu-latest]
+                include:
+                  - php-version: "8.1"
+                    experimental: true
         steps:
             - uses: actions/checkout@v2
             - name: Install pdfinfo
@@ -25,6 +31,7 @@ jobs:
                   php-version: ${{ matrix.php-version }}
                   coverage: pcov
                   extensions: bcmath
+                  ini-values: display_errors=on, error_reporting=-1
             - name: List php modules
               run: php -m
             - name: Cache module
