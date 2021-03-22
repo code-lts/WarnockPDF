@@ -17,6 +17,8 @@ jobs:
                 os: [ubuntu-latest]
         steps:
             - uses: actions/checkout@v2
+            - name: Install pdfinfo
+              run: sudo apt-get install -y pdfinfo
             - name: Use php ${{ matrix.php-version }}
               uses: shivammathur/setup-php@v2
               with:
@@ -31,3 +33,9 @@ jobs:
               run: composer install --no-interaction
             - name: Run php tests
               run: ./tests/launch.sh
+            - name: Send coverage
+              uses: codecov/codecov-action@v1
+              with:
+                flags: php-${{ matrix.php-version }}-${{ matrix.os }}
+                name: php-${{ matrix.php-version }}-${{ matrix.os }}
+                files: tests/coverage.lcov

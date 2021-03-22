@@ -9,19 +9,20 @@ class ____CoverageObject {
     public function __destruct()
     {
         \pcov\stop();
-        $coverageFile = dirname(__FILE__) . '/coverage.json';
-        $coverage = [];
-        if (file_exists($coverageFile)) {
-            $coverage = json_decode(file_get_contents($coverageFile));
-        }
+        $coverageFile = dirname(__FILE__) . '/coverage.lcov';
         $covData = \pcov\collect(\pcov\exclusive, [
             __FILE__
         ]);
-        $coverage[] = [
-            'run_end' => time(),
-            'data' => $covData,
-        ];
-        file_put_contents($coverageFile, json_encode($coverage, JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES), LOCK_EX);
+        $coverageData = '';
+        foreach ($covData as $file => $coverageForFile) {
+            $coverageData .= 'SF:' . $file . "\n";
+            $coverageData .= 'TN:' . $_SERVER['PHP_SELF'] . "\n";
+            foreach ($coverageForFile as $line => $coverageValue) {
+                $coverageData .= 'DA:' . $line . ',' . $coverageValue . "\n";
+            }
+            $coverageData .= 'end_of_record' . "\n";
+        }
+        file_put_contents($coverageFile, $coverageData, LOCK_EX | FILE_APPEND);
     }
 }
 

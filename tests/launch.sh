@@ -1,6 +1,6 @@
 #!/bin/sh
 
-set -e
+set -ex
 
 command -v pdfinfo > /dev/null
 if [ $? -gt 0 ]; then
