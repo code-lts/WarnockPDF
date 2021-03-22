@@ -12,6 +12,10 @@ EXAMPLE_FILES="$(find examples/ -type f -name 'example*.php' \
                 -not -path '*/barcodes/*' \
                 -not -wholename 'examples/example_006.php' \
                 | sort -df)"
+
+EXAMPLE_BARCODE_FILES="$(find examples/barcodes -type f -name 'example*.php' \
+                | sort -df)"
+
 TEMP_FOLDER="$(mktemp -d /tmp/WarnockPDF-tests.XXXXXXXXX)"
 OUTPUT_FILE="${TEMP_FOLDER}/output.pdf"
 OUTPUT_FILE_ERROR="${TEMP_FOLDER}/errors.txt"
@@ -31,7 +35,9 @@ for file in $EXAMPLE_FILES; do
     if [ $? -eq 0 ]; then
         echo "File-lint-passed: $file"
     fi
-    php -d display_errors=on \
+    set +e
+    php -n -dextension=gd.so -dextension=pcov.so \
+        -d display_errors=on \
         -d error_reporting=-1 \
         -d pcov.directory="${ROOT_DIR}" \
         -d auto_prepend_file="${TESTS_DIR}/coverage.php" \
@@ -41,6 +47,7 @@ for file in $EXAMPLE_FILES; do
         ERROR_LOGS="$(cat "${OUTPUT_FILE_ERROR}")"
         if [ ! -z "${ERROR_LOGS}" ]; then
             FAILED_FLAG=1
+            set -e
             echo "Logs: $file"
             echo "---------------------------"
             echo "${ERROR_LOGS}"
@@ -62,6 +69,37 @@ for file in $EXAMPLE_FILES; do
     else
         echo "File-run-failed: $file"
     fi
+    set -e
+done
+
+for file in $EXAMPLE_BARCODE_FILES; do
+    echo "File: $file"
+    php -l "${ROOT_DIR}/$file" > /dev/null
+    if [ $? -eq 0 ]; then
+        echo "File-lint-passed: $file"
+    fi
+    set +e
+    php -n -dextension=bcmath.so -dextension=pcov.so \
+        -d display_errors=on \
+        -d error_reporting=-1 \
+        -d pcov.directory="${ROOT_DIR}" \
+        -d auto_prepend_file="${TESTS_DIR}/coverage.php" \
+        "${ROOT_DIR}/$file" 1> "${OUTPUT_FILE}" 2> "${OUTPUT_FILE_ERROR}"
+    if [ $? -eq 0 ]; then
+        echo "File-run-passed: $file"
+        ERROR_LOGS="$(cat "${OUTPUT_FILE_ERROR}")"
+        if [ ! -z "${ERROR_LOGS}" ]; then
+            FAILED_FLAG=1
+            set -e
+            echo "Logs: $file"
+            echo "---------------------------"
+            echo "${ERROR_LOGS}"
+            echo "---------------------------"
+        fi
+    else
+        echo "File-run-failed: $file"
+    fi
+    set -e
 done
 
 cd - > /dev/null
