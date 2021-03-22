@@ -114,7 +114,7 @@ $pdf->AddPage();
 $header = array('Country', 'Capital', 'Area (sq km)', 'Pop. (thousands)');
 
 // data loading
-$data = $pdf->LoadData('data/table_data_demo.txt');
+$data = $pdf->LoadData(dirname(__FILE__) .'/data/table_data_demo.txt');
 
 // print colored table
 $pdf->ColoredTable($header, $data);

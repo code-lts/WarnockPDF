@@ -6,6 +6,8 @@
  * @license LGPL-3.0
  * @copyright 2008-2014 Nicola Asuni - Tecnick.com LTD
  * @description PHP class to creates array representations for common 1D barcodes to be used with WarnockPDF.
+ *
+ * @php-extension bcmath for bcadd
  */
 
 /**

@@ -66,7 +66,7 @@ class MC_TCPDF extends TCPDF {
 	 */
 	public function ChapterBody($file, $mode=false) {
 		$this->selectColumn();
-		// get esternal file content
+		// get external file content
 		$content = file_get_contents($file, false);
 		// set font
 		$this->SetFont('times', '', 9);
@@ -126,10 +126,10 @@ if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
 // ---------------------------------------------------------
 
 // print TEXT
-$pdf->PrintChapter(1, 'LOREM IPSUM [TEXT]', 'data/chapter_demo_1.txt', false);
+$pdf->PrintChapter(1, 'LOREM IPSUM [TEXT]', dirname(__FILE__) .'/data/chapter_demo_1.txt', false);
 
 // print HTML
-$pdf->PrintChapter(2, 'LOREM IPSUM [HTML]', 'data/chapter_demo_2.txt', true);
+$pdf->PrintChapter(2, 'LOREM IPSUM [HTML]', dirname(__FILE__) .'/data/chapter_demo_2.txt', true);
 
 // ---------------------------------------------------------
 

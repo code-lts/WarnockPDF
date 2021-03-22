@@ -19,6 +19,8 @@
  * @license LGPL-3.0
  * @copyright 2010-2013 Nicola Asuni - Tecnick.com LTD
  * @description Two columns composed by MultiCell of different
+ *
+ * @php-extension bcmath for bcadd
  */
 
 /**
