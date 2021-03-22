@@ -16,7 +16,8 @@
 
 PHP library for generating PDF documents on-the-fly.
 
-### Main Features:
+### Main Features
+
 * no external libraries are required for the basic functions;
 * all standard page formats, custom page formats, custom margins and units of measure;
 * UTF-8 Unicode and Right-To-Left languages;
@@ -24,7 +25,7 @@ PHP library for generating PDF documents on-the-fly.
 * font subsetting;
 * methods to publish some XHTML + CSS code, Javascript and Forms;
 * images, graphic (geometric figures) and transformation methods;
-* supports JPEG, PNG and SVG images natively, all images supported by GD (GD, GD2, GD2PART, GIF, JPEG, PNG, BMP, XBM, XPM) and all images supported via ImagMagick (http://www.imagemagick.org/script/formats.php)
+* supports JPEG, PNG and SVG images natively, all images supported by GD (GD, GD2, GD2PART, GIF, JPEG, PNG, BMP, XBM, XPM) and all images supported via ImageMagick (http://www.imagemagick.org/script/formats.php)
 * 1D and 2D barcodes: CODE 39, ANSI MH10.8M-1983, USD-3, 3 of 9, CODE 93, USS-93, Standard 2 of 5, Interleaved 2 of 5, CODE 128 A/B/C, 2 and 5 Digits UPC-Based Extension, EAN 8, EAN 13, UPC-A, UPC-E, MSI, POSTNET, PLANET, RMS4CC (Royal Mail 4-state Customer Code), CBC (Customer Bar Code), KIX (Klant index - Customer index), Intelligent Mail Barcode, Onecode, USPS-B-3200, CODABAR, CODE 11, PHARMACODE, PHARMACODE TWO-TRACKS, Datamatrix, QR-Code, PDF417;
 * JPEG and PNG ICC profiles, Grayscale, RGB, CMYK, Spot Colors and Transparencies;
 * automatic page header and footer management;
@@ -45,7 +46,7 @@ PHP library for generating PDF documents on-the-fly.
 * Layers and object visibility.
 * PDF/A-1b support.
 
-### Third party fonts:
+### Third party fonts
 
 This library may include third party font files released with different licenses.
 
@@ -67,7 +68,7 @@ Link : http://dejavu-fonts.org
 The binary files (.z) that begins with the prefix "ae" have been extracted from the Arabeyes.org collection (GNU-GPLv2).
 Link : http://projects.arabeyes.org/
 
-### ICC profile:
+### ICC profile
 
 WarnockPDF includes the sRGB.icc profile from the icc-profiles-free Debian package:
 https://packages.debian.org/source/stable/icc-profiles-free
