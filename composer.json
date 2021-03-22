@@ -1,6 +1,6 @@
 {
   "name": "code-lts/warnockpdf",
-  "version": "6.3.5",
+  "version": "7.0.0",
   "type": "library",
   "description": "WarnockPDF is a PHP library for generating PDF documents and barcodes.",
   "keywords": [

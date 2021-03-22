@@ -69,7 +69,7 @@ require_once(dirname(__FILE__).'/include/tcpdf_static.php');
  * TCPDF project (http://www.tcpdf.org) has been originally derived in 2002 from the Public Domain FPDF class by Olivier Plathey (http://www.fpdf.org), but now is almost entirely rewritten.<br>
  *
  * @brief PHP class for generating PDF documents without requiring external extensions.
- * @version 6.3.2
+ * @version 7.0.0
  * @IgnoreAnnotation("protected")
  * @IgnoreAnnotation("public")
  * @IgnoreAnnotation("pre")
