@@ -18,6 +18,7 @@ class ____CoverageObject {
             $coverageData .= 'SF:' . $file . "\n";
             $coverageData .= 'TN:' . $_SERVER['PHP_SELF'] . "\n";
             foreach ($coverageForFile as $line => $coverageValue) {
+                $coverageValue = $coverageValue === -1 ? 0 : $coverageValue;
                 $coverageData .= 'DA:' . $line . ',' . $coverageValue . "\n";
             }
             $coverageData .= 'end_of_record' . "\n";
