@@ -24,6 +24,9 @@ jobs:
               with:
                   php-version: ${{ matrix.php-version }}
                   coverage: pcov
+                  extensions: bcmath
+            - name: List php modules
+              run: php -m
             - name: Cache module
               uses: actions/cache@v2
               with:
