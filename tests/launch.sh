@@ -42,7 +42,9 @@ for file in $EXAMPLE_FILES; do
         echo "File-lint-passed: $file"
     fi
     set +e
-    php -n -dextension=gd.so ${ENABLE_PCOV} \
+    php -n \
+        -d date.timezone=UTC \
+        -d extension=gd.so ${ENABLE_PCOV} \
         -d display_errors=on \
         -d error_reporting=-1 \
         -d pcov.directory="${ROOT_DIR}" \
@@ -85,7 +87,9 @@ for file in $EXAMPLE_BARCODE_FILES; do
         echo "File-lint-passed: $file"
     fi
     set +e
-    php -n -dextension=bcmath.so ${ENABLE_PCOV} \
+    php -n \
+        -d date.timezone=UTC \
+        -d extension=bcmath.so ${ENABLE_PCOV} \
         -d display_errors=on \
         -d error_reporting=-1 \
         -d pcov.directory="${ROOT_DIR}" \
