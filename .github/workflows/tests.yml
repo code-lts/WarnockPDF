@@ -1,0 +1,33 @@
+name: Run tests
+
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+
+jobs:
+    test-php:
+        name: Test on php ${{ matrix.php-version }} and ${{ matrix.os }}
+        runs-on: ${{ matrix.os }}
+        strategy:
+            matrix:
+                php-version: ["5.3", "5.4", "5.5", "5.6", "7.1", "7.2", "7.3", "7.4", "8.0", "8.1"]
+                os: [ubuntu-latest]
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use php ${{ matrix.php-version }}
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-version }}
+                  coverage: pcov
+            - name: Cache module
+              uses: actions/cache@v2
+              with:
+                  path: ~/.composer/cache/
+                  key: composer-cache
+            - name: Install dependencies
+              run: composer install --no-interaction
+            - name: Run php tests
+              run: ./tests/launch.sh
