@@ -590,8 +590,3 @@ parameters:
 			count: 3
 			path: tcpdf_parser.php
 
-		-
-			message: "#^Constant K_PATH_FONTS not found\\.$#"
-			count: 1
-			path: tools/tcpdf_addfont.php
-
