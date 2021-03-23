@@ -1,12 +1,15 @@
 #!/bin/sh
 
-set -e
 
 command -v pdfinfo > /dev/null
 if [ $? -gt 0 ]; then
     echo "pdfinfo could not be found"
+    echo "On Debian based systems you can run: apt install -y poppler-utils"
     exit 1
 fi
+
+# Only start here, the command checking can exit code > 0
+set -e
 
 EXAMPLE_FILES="$(find examples/ -type f -name 'example*.php' \
                 -not -path '*/barcodes/*' \
@@ -22,16 +25,18 @@ OUTPUT_FILE_ERROR="${TEMP_FOLDER}/errors.txt"
 ROOT_DIR="$(php -r 'echo realpath(dirname(__FILE__));')"
 TESTS_DIR="${ROOT_DIR}/tests/"
 
-ENABLE_PCOV="-dextension=pcov.so"
-if [ "$(php -r 'echo PHP_MAJOR_VERSION;')" = "5" ];then
-    # pcov does not exist for PHP 5
-    ENABLE_PCOV=""
-fi
-
+COVERAGE_EXTENSION="-d extension=pcov.so"
 IMAGICK_OR_GD="-dextension=gd.so"
-if [ "$(php -r 'echo PHP_MAJOR_VERSION . PHP_MINOR_VERSION;')" = "53" ];then
+if [ "$(php -r 'echo PHP_MAJOR_VERSION;')" = "5" ];then
+    X_DEBUG_EXT="$(find $(php -r 'echo ini_get("extension_dir");') -type f -name 'xdebug.so')"
+    echo "Xdebug found at: ${X_DEBUG_EXT}"
     # pcov does not exist for PHP 5
-    IMAGICK_OR_GD="-dextension=imagick.so"
+    COVERAGE_EXTENSION="-d zend_extension=${X_DEBUG_EXT} -d xdebug.mode=coverage"
+
+    if [ "$(php -r 'echo PHP_MINOR_VERSION;')" = "3" ];then
+        # pcov does not exist for PHP 5
+        IMAGICK_OR_GD="-dextension=imagick.so"
+    fi
 fi
 
 echo "Root folder: ${ROOT_DIR}"
@@ -50,7 +55,7 @@ for file in $EXAMPLE_FILES; do
     set +e
     php -n \
         -d date.timezone=UTC \
-        ${IMAGICK_OR_GD} ${ENABLE_PCOV} \
+        ${IMAGICK_OR_GD} ${COVERAGE_EXTENSION} \
         -d display_errors=on \
         -d error_reporting=-1 \
         -d pcov.directory="${ROOT_DIR}" \
@@ -95,7 +100,7 @@ for file in $EXAMPLE_BARCODE_FILES; do
     set +e
     php -n \
         -d date.timezone=UTC \
-        -d extension=bcmath.so ${ENABLE_PCOV} \
+        -d extension=bcmath.so ${COVERAGE_EXTENSION} \
         -d display_errors=on \
         -d error_reporting=-1 \
         -d pcov.directory="${ROOT_DIR}" \
