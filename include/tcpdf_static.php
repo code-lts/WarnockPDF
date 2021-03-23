@@ -220,13 +220,13 @@ class TCPDF_STATIC {
 
 	/**
 	 * Determine whether a string is empty.
-	 * @param string $str string to be checked
+	 * @param string|null $str string to be checked
 	 * @return bool true if string is empty
 	 * @since 4.5.044 (2009-04-16)
 	 * @public static
 	 */
 	public static function empty_string($str) {
-		return (is_null($str) OR (is_string($str) AND (strlen($str) == 0)));
+		return ($str === null OR (is_string($str) AND (strlen($str) == 0)));
 	}
 
 	/**
@@ -1240,7 +1240,8 @@ class TCPDF_STATIC {
 							if ($attrib[1] == ':') { // pseudo-element
 								// pseudo-elements are not supported!
 								// (::first-line, ::first-letter, ::before, ::after)
-							} else { // pseudo-class
+							} else { // phpcs:ignore Generic.CodeAnalysis.EmptyStatement.DetectedElse
+								// pseudo-class
 								// pseudo-classes are not supported!
 								// (:root, :nth-child(n), :nth-last-child(n), :nth-of-type(n), :nth-last-of-type(n), :first-child, :last-child, :first-of-type, :last-of-type, :only-child, :only-of-type, :empty, :link, :visited, :active, :hover, :focus, :target, :lang(fr), :enabled, :disabled, :checked)
 							}

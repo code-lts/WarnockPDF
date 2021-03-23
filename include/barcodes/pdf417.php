@@ -511,7 +511,7 @@ class PDF417 {
 	 */
 	public function __construct($code, $ecl=-1, $aspectratio=2, $macro=array()) {
 		$barcode_array = array();
-		if ((is_null($code)) OR ($code == '\0') OR ($code == '')) {
+		if (($code === null) OR ($code == '\0') OR ($code == '')) {
 			return false;
 		}
 		// get the input sequence array

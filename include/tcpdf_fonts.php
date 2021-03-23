@@ -2177,7 +2177,7 @@ class TCPDF_FONTS {
 			} elseif ($ta[$i] == TCPDF_FONT_DATA::$uni_PDF) {
 				// X7. With each PDF, determine the matching embedding or override code. If there was a valid matching code, restore (pop) the last remembered (pushed) embedding level and directional override.
 				if (count($remember)) {
-					$last = count($remember ) - 1;
+					$last = count($remember) - 1;
 					if (($remember[$last]['num'] == TCPDF_FONT_DATA::$uni_RLE) OR
 						($remember[$last]['num'] == TCPDF_FONT_DATA::$uni_LRE) OR
 						($remember[$last]['num'] == TCPDF_FONT_DATA::$uni_RLO) OR

@@ -207,7 +207,7 @@ class Datamatrix {
 	 */
 	public function __construct($code) {
 		$barcode_array = array();
-		if ((is_null($code)) OR ($code == '\0') OR ($code == '')) {
+		if (($code === null) OR ($code == '\0') OR ($code == '')) {
 			return false;
 		}
 		// get data codewords

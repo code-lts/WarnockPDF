@@ -23,11 +23,13 @@
         <exclude name="Generic.Functions.FunctionCallArgumentSpacing.SpaceBeforeComma"/>
         <exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma"/>
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedElseif"/>
+        <exclude name="Generic.Metrics.NestingLevel.MaxExceeded"/>
         <exclude name="Generic.WhiteSpace.IncrementDecrementSpacing.SpaceAfterIncrement"/><!-- To be fixed -->
         <exclude name="Generic.PHP.LowerCaseKeyword.Found"/><!-- To be fixed -->
         <exclude name="Generic.PHP.LowerCaseConstant.Found"/><!-- To be fixed -->
         <exclude name="Generic.Formatting.SpaceAfterCast.NoSpace"/><!-- To be fixed -->
 
+        <exclude name="Squiz.PHP.DisallowSizeFunctionsInLoops.Found"/>
         <exclude name="Squiz.Strings.DoubleQuoteUsage.NotRequired"/>
         <exclude name="Squiz.Strings.ConcatenationSpacing.PaddingFound"/>
         <exclude name="Squiz.WhiteSpace.OperatorSpacing.NoSpaceAfter"/>
@@ -54,6 +56,7 @@
         <exclude name="Squiz.WhiteSpace.SemicolonSpacing.Incorrect"/><!-- To be fixed -->
         <exclude name="Squiz.WhiteSpace.LogicalOperatorSpacing.TooMuchSpaceBefore"/>
         <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.CloseBracketLine"/>
+        <exclude name="Squiz.PHP.NonExecutableCode.Unreachable"/><!-- To be fixed -->
 
         <exclude name="SlevomatCodingStandard.TypeHints.LongTypeHints.UsedLongTypeHint"/><!-- To be fixed -->
 
@@ -84,6 +87,7 @@
         <exclude name="PSR2.Methods.FunctionClosingBrace.SpacingBeforeClose"/>
         <exclude name="PSR2.Files.EndFileNewline.NoneFound"/><!-- To be fixed -->
         <exclude name="PSR2.ControlStructures.SwitchDeclaration.SpaceBeforeColonCASE"/>
+        <exclude name="PSR2.ControlStructures.SwitchDeclaration.TerminatingComment"/><!-- Investigate -->
 
         <exclude name="PEAR.Functions.FunctionDeclaration.Indent"/>
         <exclude name="PEAR.Functions.FunctionCallSignature.SpaceBeforeOpenBracket"/>
@@ -112,6 +116,7 @@
         <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
         <exclude name="Generic.Classes.DuplicateClassName.Found"/>
         <exclude name="Generic.Metrics.NestingLevel.TooHigh"/>
+        <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedIf"/>
     </rule>
 
 </ruleset>

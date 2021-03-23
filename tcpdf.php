@@ -816,6 +816,8 @@ class TCPDF {
 	 * Array with additional document-wide usage rights for the document.
 	 * @protected
 	 * @since 5.8.014 (2010-08-23)
+	 *
+	 * @var array
 	 */
 	protected $ur = array();
 
@@ -830,6 +832,8 @@ class TCPDF {
 	 * Array of page numbers were a new page group was started (the page numbers are the keys of the array).
 	 * @protected
 	 * @since 3.0.000 (2008-03-27)
+	 *
+	 * @var array
 	 */
 	protected $newpagegroup = array();
 
@@ -837,6 +841,8 @@ class TCPDF {
 	 * Array that contains the number of pages in each page group.
 	 * @protected
 	 * @since 3.0.000 (2008-03-27)
+	 *
+	 * @var array
 	 */
 	protected $pagegroups = array();
 
@@ -1812,8 +1818,9 @@ class TCPDF {
 		if ($pdfa != false) {
 			$this->pdfa_mode = true;
 			$this->pdfa_version = $pdfa;  // 1 or 3
-		} else
+		} else {
 			$this->pdfa_mode = false;
+		}
 
 		$this->force_srgb = false;
 		// set language direction
@@ -2228,7 +2235,8 @@ class TCPDF {
 			$this->wPt = $this->fwPt;
 			$this->hPt = $this->fhPt;
 		}
-		if ((abs($this->pagedim[$this->page]['MediaBox']['urx'] - $this->hPt) < $this->feps) AND (abs($this->pagedim[$this->page]['MediaBox']['ury'] - $this->wPt) < $this->feps)){
+
+		if ((abs($this->pagedim[$this->page]['MediaBox']['urx'] - $this->hPt) < $this->feps) AND (abs($this->pagedim[$this->page]['MediaBox']['ury'] - $this->wPt) < $this->feps)) {
 			// swap X and Y coordinates (change page orientation)
 			$this->pagedim = TCPDF_STATIC::swapPageBoxCoordinates($this->page, $this->pagedim);
 		}
@@ -4800,7 +4808,7 @@ class TCPDF {
 	 * @see Annotation()
 	 */
 	protected function _putEmbeddedFiles() {
-		if ($this->pdfa_mode && $this->pdfa_version != 3)  {
+		if ($this->pdfa_mode && $this->pdfa_version != 3) {
 			// embedded files are not allowed in PDF/A mode version 1 and 2
 			return;
 		}
@@ -6115,13 +6123,14 @@ class TCPDF {
 			if (($c != 160)
 					AND (($c == 173)
 						OR preg_match($this->re_spaces, TCPDF_FONTS::unichr($c, $this->isunicode))
-						OR (($c == 45)
+						OR
+						(	($c == 45)
 							AND ($i > 0) AND ($i < ($length - 1))
 							AND @preg_match('/[\p{L}]/'.$this->re_space['m'], TCPDF_FONTS::unichr($chars[($i - 1)], $this->isunicode))
 							AND @preg_match('/[\p{L}]/'.$this->re_space['m'], TCPDF_FONTS::unichr($chars[($i + 1)], $this->isunicode))
 						)
 					)
-				) {
+			) {
 				$lastSeparator = $i;
 			}
 			if ((($sum + $charWidth) > $wmax) OR ($c == 10)) {
@@ -7232,7 +7241,7 @@ class TCPDF {
 				$imgalpha = imagecreate($wpx, $hpx);
 				// generate gray scale palette (0 -> 255)
 				for ($c = 0; $c < 256; ++$c) {
-					ImageColorAllocate($imgalpha, $c, $c, $c);
+					imagecolorallocate($imgalpha, $c, $c, $c);
 				}
 				// extract alpha channel
 				for ($xpx = 0; $xpx < $wpx; ++$xpx) {
@@ -7703,7 +7712,7 @@ class TCPDF {
 			self::$cleaned_ids[$this->file_id] = true;
 			// remove all temporary files
 			if ($handle = @opendir(K_PATH_CACHE)) {
-				while ( false !== ( $file_name = readdir( $handle ) ) ) {
+				while (false !== ($file_name = readdir($handle))) {
 					if (strpos($file_name, '__tcpdf_'.$this->file_id.'_') === 0) {
 						unlink(K_PATH_CACHE.$file_name);
 					}
@@ -13542,7 +13551,7 @@ class TCPDF {
 		if (empty($page)) {
 			$page = $this->page + 1;
 		}
-		$this->newpagegroup[$page] = sizeof($this->newpagegroup) + 1;
+		$this->newpagegroup[$page] = count($this->newpagegroup) + 1;
 	}
 
 	/**
@@ -14555,7 +14564,7 @@ class TCPDF {
 	 * @since 3.1.000 (2008-06-09)
 	 * @protected
 	 */
-	function _putshaders() {
+	protected function _putshaders() {
 		if ($this->pdfa_mode) {
 			return;
 		}
@@ -15553,7 +15562,7 @@ class TCPDF {
 		// number of barcode columns and rows
 		$rows = $arrcode['num_rows'];
 		$cols = $arrcode['num_cols'];
-		if (($rows <= 0) || ($cols <= 0)){
+		if (($rows <= 0) || ($cols <= 0)) {
 			$this->Error('Error in 2D barcode string');
 		}
 		// module width and height
@@ -20391,7 +20400,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 			case 'square': {
 				$l = $size / 3;
 				$lspace += $l;
-				if ($this->rtl) {;
+				if ($this->rtl) {
 					$this->x += $lspace;
 				} else {
 					$this->x -= $lspace;
@@ -20402,7 +20411,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 			case 'img': {
 				// 1=>type, 2=>width, 3=>height, 4=>image.ext
 				$lspace += $img[2];
-				if ($this->rtl) {;
+				if ($this->rtl) {
 					$this->x += $lspace;
 				} else {
 					$this->x -= $lspace;
@@ -21020,7 +21029,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 		unset($this->bordermrk[$page]);
 		unset($this->cntmrk[$page]);
 		foreach ($this->pageobjects[$page] as $oid) {
-			if (isset($this->offsets[$oid])){
+			if (isset($this->offsets[$oid])) {
 				unset($this->offsets[$oid]);
 			}
 		}
@@ -21101,7 +21110,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 			unset($this->bordermrk[$this->numpages]);
 			unset($this->cntmrk[$this->numpages]);
 			foreach ($this->pageobjects[$this->numpages] as $oid) {
-				if (isset($this->offsets[$oid])){
+				if (isset($this->offsets[$oid])) {
 					unset($this->offsets[$oid]);
 				}
 			}
@@ -21233,7 +21242,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 		}
 		if (isset($this->newpagegroup[$page])) {
 			// start a new group
-			$this->newpagegroup[$this->page] = sizeof($this->newpagegroup) + 1;
+			$this->newpagegroup[$this->page] = count($this->newpagegroup) + 1;
 			$this->currpagegroup = $this->newpagegroup[$this->page];
 			$this->pagegroups[$this->currpagegroup] = 1;
 		} elseif (isset($this->currpagegroup) AND ($this->currpagegroup > 0)) {
@@ -23623,7 +23632,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 								} else {
 									$root = sqrt($numerator / (($rx2 * $ya2) + ($ry2 * $xa2)));
 								}
-								if ($fa == $fs){
+								if ($fa == $fs) {
 									$root *= -1;
 								}
 								$cax = $root * (($rx * $ya) / $ry);
@@ -23694,7 +23703,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	protected function removeTagNamespace($name) {
 		if(strpos($name, ':') !== false) {
 			$parts = explode(':', $name);
-			return $parts[(sizeof($parts) - 1)];
+			return $parts[(count($parts) - 1)];
 		}
 		return $name;
 	}
@@ -23834,7 +23843,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 					$tmp = array();
 					preg_match_all("/[0-9]+/", $attribs['viewBox'], $tmp);
 					$tmp = $tmp[0];
-					if (sizeof($tmp) == 4) {
+					if (count($tmp) == 4) {
 						$vx = $tmp[0];
 						$vy = $tmp[1];
 						$vw = $tmp[2];
@@ -23850,7 +23859,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 							} else {
 								preg_match_all('/[a-zA-Z]+/', $attribs['preserveAspectRatio'], $tmp);
 								$tmp = $tmp[0];
-								if ((sizeof($tmp) == 2) AND (strlen($tmp[0]) == 8) AND (in_array($tmp[1], array('meet', 'slice', 'none')))) {
+								if ((count($tmp) == 2) AND (strlen($tmp[0]) == 8) AND (in_array($tmp[1], array('meet', 'slice', 'none')))) {
 									$aspectX = substr($tmp[0], 0, 4);
 									$aspectY = substr($tmp[0], 4, 4);
 									$fit = $tmp[1];
@@ -24381,7 +24390,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 */
 	protected function endSVGElementHandler($parser, $name) {
 		$name = $this->removeTagNamespace($name);
-		if ($this->svgdefsmode AND !in_array($name, array('defs', 'clipPath', 'linearGradient', 'radialGradient', 'stop'))) {;
+		if ($this->svgdefsmode AND !in_array($name, array('defs', 'clipPath', 'linearGradient', 'radialGradient', 'stop'))) {
 			if (end($this->svgdefs) !== FALSE) {
 				$last_svgdefs_id = key($this->svgdefs);
 				if (isset($this->svgdefs[$last_svgdefs_id]['attribs']['child_elements'])) {
