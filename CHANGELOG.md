@@ -24,6 +24,10 @@
 - Fixed "Trying to access array offset on value of type bool" on TCPDF_STATIC::isValidURL
 - Fixed a PHP 8.1 type error with TCPDF_STATIC::pregSplit on preg_split
 
+### Removed
+
+- TCPDF_STATIC::{get,set}_mqr (magic_quotes_runtime has been DEPRECATED in PHP 5.3.0 and REMOVED in PHP 5.4.0)
+
 ## [6.3.5] - 2020-02-14
 
 - Fixed curly braces in pdf417
