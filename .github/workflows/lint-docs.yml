@@ -1,6 +1,6 @@
 name: lint php documentation
 
-on: 
+on:
   push:
   pull_request:
     types: [opened, synchronize, reopened]
@@ -13,7 +13,7 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - name: lint php documentation
-              uses: sudo-bot/action-doctum@v5
+              uses: sudo-bot/action-doctum@dev
               with:
                   config-file: scripts/doctum.php
                   method: "parse"
