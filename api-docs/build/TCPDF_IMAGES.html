@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>TCPDF_IMAGES | WarnockPDF</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
+
+    <body id="class" data-name="class:TCPDF_IMAGES" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">WarnockPDF</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            TCPDF_IMAGES
+                
+        </h1>
+    </div>
+
+    <p>        class
+    <strong>TCPDF_IMAGES</strong>        (<a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Static image methods used by the TCPDF class.</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_svginheritprop">
+                    static                                                            
+                </td>
+                <td>$svginheritprop</td>
+                <td class="last">Array of hinheritable SVG properties.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getImageFileType">getImageFileType</a>(string $imgfile, array $iminfo = array())
+        
+                                            <p>Return the image type given the file name or array returned by getimagesize() function.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setGDImageTransparency">setGDImageTransparency</a>(image $new_image, image $image)
+        
+                                            <p>Set the transparency for the given GD image.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__toPNG">_toPNG</a>(image $image, string $tempfile)
+        
+                                            <p>Convert the loaded image to a PNG and then return a structure for the PDF creator.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__toJPEG">_toJPEG</a>(image $image, int $quality, string $tempfile)
+        
+                                            <p>Convert the loaded image to a JPEG and then return a structure for the PDF creator.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__parsejpeg">_parsejpeg</a>(string $file)
+        
+                                            <p>Extract info from a JPEG file without using the GD library.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__parsepng">_parsepng</a>(string $file)
+        
+                                            <p>Extract info from a PNG file without using the GD library.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getImageFileType">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L46">at line 46</a></div>
+        <code>        static            string
+    <strong>getImageFileType</strong>(string $imgfile, array $iminfo = array())
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the image type given the file name or array returned by getimagesize() function.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$imgfile</td>
+                <td>image file name</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$iminfo</td>
+                <td>array of image information returned by getimagesize() function.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setGDImageTransparency">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L74">at line 74</a></div>
+        <code>        static            
+    <strong>setGDImageTransparency</strong>(image $new_image, image $image)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the transparency for the given GD image.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>image</td>
+                <td>$new_image</td>
+                <td>GD image object</td>
+            </tr>
+                    <tr>
+                <td>image</td>
+                <td>$image</td>
+                <td>GD image object.
+return GD image object.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__toPNG">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L99">at line 99</a></div>
+        <code>        static            
+    <strong>_toPNG</strong>(image $image, string $tempfile)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert the loaded image to a PNG and then return a structure for the PDF creator.</p>                    <p>This function requires GD library and write access to the directory defined on K_PATH_CACHE constant.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>image</td>
+                <td>$image</td>
+                <td>Image object.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tempfile</td>
+                <td>Temporary file name.
+return image PNG image object.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__toJPEG">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L122">at line 122</a></div>
+        <code>        static            
+    <strong>_toJPEG</strong>(image $image, int $quality, string $tempfile)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert the loaded image to a JPEG and then return a structure for the PDF creator.</p>                    <p>This function requires GD library and write access to the directory defined on K_PATH_CACHE constant.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>image</td>
+                <td>$image</td>
+                <td>Image object.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$quality</td>
+                <td>JPEG quality.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$tempfile</td>
+                <td>Temporary file name.
+return image JPEG image object.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__parsejpeg">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L137">at line 137</a></div>
+        <code>        static            array
+    <strong>_parsejpeg</strong>(string $file)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Extract info from a JPEG file without using the GD library.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>image file to parse</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__parsepng">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L216">at line 216</a></div>
+        <code>        static            array
+    <strong>_parsepng</strong>(string $file)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Extract info from a PNG file without using the GD library.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>image file to parse</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.            <br/>This documentation is for <a href="https://github.com/code-lts/WarnockPDF#readme" rel="noreferrer noopener" target="_blank">WarnockPDF</a> the fork of TCPDF.</div></div>
+    </div>
+    </body>
+
+</html>

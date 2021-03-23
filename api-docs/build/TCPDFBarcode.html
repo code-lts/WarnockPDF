@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>TCPDFBarcode | WarnockPDF</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
+
+    <body id="class" data-name="class:TCPDFBarcode" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">WarnockPDF</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            TCPDFBarcode
+                
+        </h1>
+    </div>
+
+    <p>        class
+    <strong>TCPDFBarcode</strong>        (<a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>PHP class to creates array representations for common 1D barcodes to be used with WarnockPDF.<br></p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_barcode_array">
+                                        protected                                        
+                </td>
+                <td>$barcode_array</td>
+                <td class="last">Array representation of barcode.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $code, string $type)
+        
+                                            <p>This is the class constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBarcodeArray">getBarcodeArray</a>()
+        
+                                            <p>Return an array representations of barcode.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBarcodeSVG">getBarcodeSVG</a>(int $w = 2, int $h = 30, string $color = &#039;black&#039;)
+        
+                                            <p>Send barcode as SVG image object to the standard output.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBarcodeSVGcode">getBarcodeSVGcode</a>(int $w = 2, int $h = 30, string $color = &#039;black&#039;)
+        
+                                            <p>Return a SVG string representation of barcode.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBarcodeHTML">getBarcodeHTML</a>(int $w = 2, int $h = 30, string $color = &#039;black&#039;)
+        
+                                            <p>Return an HTML representation of barcode.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBarcodePNG">getBarcodePNG</a>(int $w = 2, int $h = 30, array $color = array(0, 0, 0))
+        
+                                            <p>Send a PNG image representation of barcode (requires GD or Imagick library).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    image
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBarcodePngData">getBarcodePngData</a>(int $w = 2, int $h = 30, array $color = array(0, 0, 0))
+        
+                                            <p>Return a PNG image representation of barcode (requires GD or Imagick library).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setBarcode">setBarcode</a>(string $code, string $type)
+        
+                                            <p>Set the barcode.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_code39">barcode_code39</a>(string $code, bool $extended = false, bool $checksum = false)
+        
+                                            <p>CODE 39 - ANSI MH10.8M-1983 - USD-3 - 3 of 9.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    encoded
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encode_code39_ext">encode_code39_ext</a>(string $code)
+        
+                                            <p>Encode a string to be used for CODE 39 Extended mode.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    char
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checksum_code39">checksum_code39</a>(string $code)
+        
+                                            <p>Calculate CODE 39 checksum (modulo 43).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_code93">barcode_code93</a>(string $code)
+        
+                                            <p>CODE 93 - USS-93
+Compact code similar to Code 39</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checksum_code93">checksum_code93</a>(string $code)
+        
+                                            <p>Calculate CODE 93 checksum (modulo 47).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checksum_s25">checksum_s25</a>(string $code)
+        
+                                            <p>Checksum for standard 2 of 5 barcodes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_msi">barcode_msi</a>(string $code, bool $checksum = false)
+        
+                                            <p>MSI.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_s25">barcode_s25</a>(string $code, bool $checksum = false)
+        
+                                            <p>Standard 2 of 5 barcodes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_binseq_to_array">binseq_to_array</a>(string $seq, array $bararray)
+        
+                                            <p>Convert binary barcode sequence to WarnockPDF barcode array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_i25">barcode_i25</a>(string $code, bool $checksum = false)
+        
+                                            <p>Interleaved 2 of 5 barcodes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_c128">barcode_c128</a>(string $code, string $type = &#039;&#039;)
+        
+                                            <p>C128 barcodes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get128ABsequence">get128ABsequence</a>(string $code)
+        
+                                            <p>Split text code in A/B sequence for 128 code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_eanupc">barcode_eanupc</a>(string $code, string $len = 13)
+        
+                                            <p>EAN13 and UPC-A barcodes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_eanext">barcode_eanext</a>(string $code, string $len = 5)
+        
+                                            <p>UPC-Based Extensions
+2-Digit Ext.: Used to indicate magazines and newspaper issue numbers
+5-Digit Ext.: Used to mark suggested retail price of books</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_postnet">barcode_postnet</a>(string $code, bool $planet = false)
+        
+                                            <p>POSTNET and PLANET barcodes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_rms4cc">barcode_rms4cc</a>(string $code, bool $kix = false)
+        
+                                            <p>RMS4CC - CBC - KIX
+RMS4CC (Royal Mail 4-state Customer Code) - CBC (Customer Bar Code) - KIX (Klant index - Customer index)
+RM4SCC is the name of the barcode symbology used by the Royal Mail for its Cleanmail service.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_codabar">barcode_codabar</a>(string $code)
+        
+                                            <p>CODABAR barcodes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_code11">barcode_code11</a>(string $code)
+        
+                                            <p>CODE11 barcodes.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_pharmacode">barcode_pharmacode</a>(string $code)
+        
+                                            <p>Pharmacode
+Contains digits (0 to 9)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_pharmacode2t">barcode_pharmacode2t</a>(string $code)
+        
+                                            <p>Pharmacode two-track
+Contains digits (0 to 9)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_imb">barcode_imb</a>(string $code)
+        
+                                            <p>IMB - Intelligent Mail Barcode - Onecode - USPS-B-3200
+(requires PHP bcmath extension)
+Intelligent Mail barcode is a 65-bar code for use on mail in the United States.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_barcode_imb_pre">barcode_imb_pre</a>(string $code)
+        
+                                            <p>IMB - Intelligent Mail Barcode - Onecode - USPS-B-3200</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_dec_to_hex">dec_to_hex</a>(string $number)
+        
+                                            <p>Convert large integer number to hexadecimal representation.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_hex_to_dec">hex_to_dec</a>(string $hex)
+        
+                                            <p>Convert large hexadecimal number to decimal representation (string).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_imb_crc11fcs">imb_crc11fcs</a>(string $code_arr)
+        
+                                            <p>Intelligent Mail Barcode calculation of Frame Check Sequence</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_imb_reverse_us">imb_reverse_us</a>(int $num)
+        
+                                            <p>Reverse unsigned short value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_imb_tables">imb_tables</a>(int $n, int $size)
+        
+                                            <p>generate Nof13 tables used for Intelligent Mail Barcode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L51">at line 51</a></div>
+        <code>                    
+    <strong>__construct</strong>(string $code, string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>This is the class constructor.</p>                    <p>Return an array representations for common 1D barcodes:</p>
+
+<ul>
+<li>$arrcode['code'] code to be printed on text label</li>
+<li>$arrcode['maxh'] max barcode height</li>
+<li>$arrcode['maxw'] max barcode width</li>
+<li>$arrcode['bcode'][$k] single bar or space in $k position</li>
+<li>$arrcode['bcode'][$k]['t'] bar type: true = bar, false = space.</li>
+<li>$arrcode['bcode'][$k]['w'] bar width in units.</li>
+<li>$arrcode['bcode'][$k]['h'] bar height in units.</li>
+<li>$arrcode['bcode'][$k]['p'] bar top position (0 = top, 1 = middle)</li></ul>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to print</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>type of barcode:</p>
+
+<ul><li>C39 : CODE 39 - ANSI MH10.8M-1983 - USD-3 - 3 of 9.</li><li>C39+ : CODE 39 with checksum</li><li>C39E : CODE 39 EXTENDED</li><li>C39E+ : CODE 39 EXTENDED + CHECKSUM</li><li>C93 : CODE 93 - USS-93</li><li>S25 : Standard 2 of 5</li><li>S25+ : Standard 2 of 5 + CHECKSUM</li><li>I25 : Interleaved 2 of 5</li><li>I25+ : Interleaved 2 of 5 + CHECKSUM</li><li>C128 : CODE 128</li><li>C128A : CODE 128 A</li><li>C128B : CODE 128 B</li><li>C128C : CODE 128 C</li><li>EAN2 : 2-Digits UPC-Based Extension</li><li>EAN5 : 5-Digits UPC-Based Extension</li><li>EAN8 : EAN 8</li><li>EAN13 : EAN 13</li><li>UPCA : UPC-A</li><li>UPCE : UPC-E</li><li>MSI : MSI (Variation of Plessey code)</li><li>MSI+ : MSI + CHECKSUM (modulo 11)</li><li>POSTNET : POSTNET</li><li>PLANET : PLANET</li><li>RMS4CC : RMS4CC (Royal Mail 4-state Customer Code) - CBC (Customer Bar Code)</li><li>KIX : KIX (Klant index - Customer index)</li><li>IMB: Intelligent Mail Barcode - Onecode - USPS-B-3200</li><li>CODABAR : CODABAR</li><li>CODE11 : CODE 11</li><li>PHARMA : PHARMACODE</li><li>PHARMA2T : PHARMACODE TWO-TRACKS</li></ul>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBarcodeArray">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L60">at line 60</a></div>
+        <code>                    array
+    <strong>getBarcodeArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return an array representations of barcode.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBarcodeSVG">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L71">at line 71</a></div>
+        <code>                    
+    <strong>getBarcodeSVG</strong>(int $w = 2, int $h = 30, string $color = &#039;black&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send barcode as SVG image object to the standard output.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$w</td>
+                <td>Minimum width of a single bar in user units.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$h</td>
+                <td>Height of barcode in user units.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$color</td>
+                <td>Foreground color (in SVG format) for bar elements (background is transparent).</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBarcodeSVGcode">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L92">at line 92</a></div>
+        <code>                    string
+    <strong>getBarcodeSVGcode</strong>(int $w = 2, int $h = 30, string $color = &#039;black&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a SVG string representation of barcode.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$w</td>
+                <td>Minimum width of a single bar in user units.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$h</td>
+                <td>Height of barcode in user units.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$color</td>
+                <td>Foreground color (in SVG format) for bar elements (background is transparent).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBarcodeHTML">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L125">at line 125</a></div>
+        <code>                    string
+    <strong>getBarcodeHTML</strong>(int $w = 2, int $h = 30, string $color = &#039;black&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return an HTML representation of barcode.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$w</td>
+                <td>Width of a single bar element in pixels.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$h</td>
+                <td>Height of a single bar element in pixels.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$color</td>
+                <td>Foreground color for bar elements (background is transparent).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBarcodePNG">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L150">at line 150</a></div>
+        <code>                    
+    <strong>getBarcodePNG</strong>(int $w = 2, int $h = 30, array $color = array(0, 0, 0))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Send a PNG image representation of barcode (requires GD or Imagick library).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$w</td>
+                <td>Width of a single bar element in pixels.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$h</td>
+                <td>Height of a single bar element in pixels.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$color</td>
+                <td>RGB (0-255) foreground color for bar elements (background is transparent).</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBarcodePngData">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L170">at line 170</a></div>
+        <code>                    image
+    <strong>getBarcodePngData</strong>(int $w = 2, int $h = 30, array $color = array(0, 0, 0))
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a PNG image representation of barcode (requires GD or Imagick library).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$w</td>
+                <td>Width of a single bar element in pixels.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$h</td>
+                <td>Height of a single bar element in pixels.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$color</td>
+                <td>RGB (0-255) foreground color for bar elements (background is transparent).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>image</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setBarcode">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L227">at line 227</a></div>
+        <code>                    array
+    <strong>setBarcode</strong>(string $code, string $type)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set the barcode.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to print</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>type of barcode:</p>
+
+<ul><li>C39 : CODE 39 - ANSI MH10.8M-1983 - USD-3 - 3 of 9.</li><li>C39+ : CODE 39 with checksum</li><li>C39E : CODE 39 EXTENDED</li><li>C39E+ : CODE 39 EXTENDED + CHECKSUM</li><li>C93 : CODE 93 - USS-93</li><li>S25 : Standard 2 of 5</li><li>S25+ : Standard 2 of 5 + CHECKSUM</li><li>I25 : Interleaved 2 of 5</li><li>I25+ : Interleaved 2 of 5 + CHECKSUM</li><li>C128 : CODE 128</li><li>C128A : CODE 128 A</li><li>C128B : CODE 128 B</li><li>C128C : CODE 128 C</li><li>EAN2 : 2-Digits UPC-Based Extension</li><li>EAN5 : 5-Digits UPC-Based Extension</li><li>EAN8 : EAN 8</li><li>EAN13 : EAN 13</li><li>UPCA : UPC-A</li><li>UPCE : UPC-E</li><li>MSI : MSI (Variation of Plessey code)</li><li>MSI+ : MSI + CHECKSUM (modulo 11)</li><li>POSTNET : POSTNET</li><li>PLANET : PLANET</li><li>RMS4CC : RMS4CC (Royal Mail 4-state Customer Code) - CBC (Customer Bar Code)</li><li>KIX : KIX (Klant index - Customer index)</li><li>IMB: Intelligent Mail Barcode - Onecode - USPS-B-3200</li><li>IMBPRE: Pre-processed Intelligent Mail Barcode - Onecode - USPS-B-3200, using only F,A,D,T letters</li><li>CODABAR : CODABAR</li><li>CODE11 : CODE 11</li><li>PHARMA : PHARMACODE</li><li>PHARMA2T : PHARMACODE TWO-TRACKS</li></ul>
+</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_code39">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L371">at line 371</a></div>
+        <code>            protected        array
+    <strong>barcode_code39</strong>(string $code, bool $extended = false, bool $checksum = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>CODE 39 - ANSI MH10.8M-1983 - USD-3 - 3 of 9.</p>                    <p>General-purpose code in very wide use world-wide</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$extended</td>
+                <td>if true uses the extended mode.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$checksum</td>
+                <td>if true add a checksum to the code.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encode_code39_ext">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L464">at line 464</a></div>
+        <code>            protected        encoded
+    <strong>encode_code39_ext</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encode a string to be used for CODE 39 Extended mode.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>encoded</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checksum_code39">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L515">at line 515</a></div>
+        <code>            protected        char
+    <strong>checksum_code39</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate CODE 39 checksum (modulo 43).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>char</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_code93">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L538">at line 538</a></div>
+        <code>            protected        array
+    <strong>barcode_code93</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>CODE 93 - USS-93
+Compact code similar to Code 39</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checksum_code93">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L666">at line 666</a></div>
+        <code>            protected        string
+    <strong>checksum_code93</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Calculate CODE 93 checksum (modulo 47).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checksum_s25">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L715">at line 715</a></div>
+        <code>            protected        int
+    <strong>checksum_s25</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Checksum for standard 2 of 5 barcodes.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to process.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_msi">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L741">at line 741</a></div>
+        <code>            protected        array
+    <strong>barcode_msi</strong>(string $code, bool $checksum = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>MSI.</p>                    <p>Variation of Plessey code, with similar applications
+Contains digits (0 to 9) and encodes the data only in the width of bars.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$checksum</td>
+                <td>if true add a checksum to the code (modulo 11)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_s25">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L800">at line 800</a></div>
+        <code>            protected        array
+    <strong>barcode_s25</strong>(string $code, bool $checksum = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Standard 2 of 5 barcodes.</p>                    <p>Used in airline ticket marking, photofinishing
+Contains digits (0 to 9) and encodes the data only in the width of bars.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$checksum</td>
+                <td>if true add a checksum to the code</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_binseq_to_array">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L841">at line 841</a></div>
+        <code>            protected        array
+    <strong>binseq_to_array</strong>(string $seq, array $bararray)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert binary barcode sequence to WarnockPDF barcode array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$seq</td>
+                <td>barcode as binary sequence.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bararray</td>
+                <td>barcode array to fill up</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_i25">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L871">at line 871</a></div>
+        <code>            protected        array
+    <strong>barcode_i25</strong>(string $code, bool $checksum = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Interleaved 2 of 5 barcodes.</p>                    <p>Compact numeric code, widely used in industry, air cargo
+Contains digits (0 to 9) and encodes the data in the width of both bars and spaces.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$checksum</td>
+                <td>if true add a checksum to the code</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_c128">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L935">at line 935</a></div>
+        <code>            protected        array
+    <strong>barcode_c128</strong>(string $code, string $type = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>C128 barcodes.</p>                    <p>Very capable code, excellent density, high reliability; in very wide use world-wide</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$type</td>
+                <td>barcode type: A, B, C or empty for automatic switch (AUTO mode)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get128ABsequence">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L1265">at line 1265</a></div>
+        <code>            protected        array
+    <strong>get128ABsequence</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Split text code in A/B sequence for 128 code</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to split.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_eanupc">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L1304">at line 1304</a></div>
+        <code>            protected        array
+    <strong>barcode_eanupc</strong>(string $code, string $len = 13)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>EAN13 and UPC-A barcodes.</p>                    <p>EAN13: European Article Numbering international retail product code
+UPC-A: Universal product code seen on almost all retail products in the USA and Canada
+UPC-E: Short version of UPC symbol</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$len</td>
+                <td>barcode type: 6 = UPC-E, 8 = EAN8, 13 = EAN13, 12 = UPC-A</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_eanext">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L1497">at line 1497</a></div>
+        <code>            protected        array
+    <strong>barcode_eanext</strong>(string $code, string $len = 5)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>UPC-Based Extensions
+2-Digit Ext.: Used to indicate magazines and newspaper issue numbers
+5-Digit Ext.: Used to mark suggested retail price of books</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$len</td>
+                <td>barcode type: 2 = 2-Digit, 5 = 5-Digit</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_postnet">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L1572">at line 1572</a></div>
+        <code>            protected        array
+    <strong>barcode_postnet</strong>(string $code, bool $planet = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>POSTNET and PLANET barcodes.</p>                    <p>Used by U.S. Postal Service for automated mail sorting</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>zip code to represent. Must be a string containing a zip code of the form DDDDD or DDDDD-DDDD.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$planet</td>
+                <td>if true print the PLANET barcode, otherwise print POSTNET</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_rms4cc">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L1645">at line 1645</a></div>
+        <code>            protected        array
+    <strong>barcode_rms4cc</strong>(string $code, bool $kix = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>RMS4CC - CBC - KIX
+RMS4CC (Royal Mail 4-state Customer Code) - CBC (Customer Bar Code) - KIX (Klant index - Customer index)
+RM4SCC is the name of the barcode symbology used by the Royal Mail for its Cleanmail service.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to print</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$kix</td>
+                <td>if true prints the KIX variation (doesn't use the start and end symbols, and the checksum) - in this case the house number must be sufficed with an X and placed at the end of the code.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_codabar">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L1796">at line 1796</a></div>
+        <code>            protected        array
+    <strong>barcode_codabar</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>CODABAR barcodes.</p>                    <p>Older code often used in library systems, sometimes in blood banks</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_code11">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L1852">at line 1852</a></div>
+        <code>            protected        array
+    <strong>barcode_code11</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>CODE11 barcodes.</p>                    <p>Used primarily for labeling telecommunications equipment</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_pharmacode">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L1943">at line 1943</a></div>
+        <code>            protected        array
+    <strong>barcode_pharmacode</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pharmacode
+Contains digits (0 to 9)</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_pharmacode2t">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L1969">at line 1969</a></div>
+        <code>            protected        array
+    <strong>barcode_pharmacode2t</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pharmacode two-track
+Contains digits (0 to 9)</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_imb">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L2031">at line 2031</a></div>
+        <code>            protected        array
+    <strong>barcode_imb</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>IMB - Intelligent Mail Barcode - Onecode - USPS-B-3200
+(requires PHP bcmath extension)
+Intelligent Mail barcode is a 65-bar code for use on mail in the United States.</p>                    <p>The fields are described as follows:</p>
+
+<ul><li>The Barcode Identifier shall be assigned by USPS to encode the presort identification that is currently printed in human readable form on the optional endorsement line (OEL) as well as for future USPS use. This shall be two digits, with the second digit in the range of 0–4. The allowable encoding ranges shall be 00–04, 10–14, 20–24, 30–34, 40–44, 50–54, 60–64, 70–74, 80–84, and 90–94.</li><li>The Service Type Identifier shall be assigned by USPS for any combination of services requested on the mailpiece. The allowable encoding range shall be 000http://it2.php.net/manual/en/function.dechex.php–999. Each 3-digit value shall correspond to a particular mail class with a particular combination of service(s). Each service program, such as OneCode Confirm and OneCode ACS, shall provide the list of Service Type Identifier values.</li><li>The Mailer or Customer Identifier shall be assigned by USPS as a unique, 6 or 9 digit number that identifies a business entity. The allowable encoding range for the 6 digit Mailer ID shall be 000000- 899999, while the allowable encoding range for the 9 digit Mailer ID shall be 900000000-999999999.</li><li>The Serial or Sequence Number shall be assigned by the mailer for uniquely identifying and tracking mailpieces. The allowable encoding range shall be 000000000–999999999 when used with a 6 digit Mailer ID and 000000-999999 when used with a 9 digit Mailer ID. e. The Delivery Point ZIP Code shall be assigned by the mailer for routing the mailpiece. This shall replace POSTNET for routing the mailpiece to its final delivery point. The length may be 0, 5, 9, or 11 digits. The allowable encoding ranges shall be no ZIP Code, 00000–99999,  000000000–999999999, and 00000000000–99999999999.</li></ul>
+</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to print, separate the ZIP (routing code) from the rest using a minus char '-' (BarcodeID_ServiceTypeID_MailerID_SerialNumber-RoutingCode)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_barcode_imb_pre">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L2156">at line 2156</a></div>
+        <code>            protected        array
+    <strong>barcode_imb_pre</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>IMB - Intelligent Mail Barcode - Onecode - USPS-B-3200</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>pre-formatted IMB barcode (65 chars "FADT")</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_dec_to_hex">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L2206">at line 2206</a></div>
+        <code>                    string
+    <strong>dec_to_hex</strong>(string $number)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert large integer number to hexadecimal representation.</p>                    <p>(requires PHP bcmath extension)</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$number</td>
+                <td>number to convert specified as a string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_hex_to_dec">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L2230">at line 2230</a></div>
+        <code>                    string
+    <strong>hex_to_dec</strong>(string $hex)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert large hexadecimal number to decimal representation (string).</p>                    <p>(requires PHP bcmath extension)</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$hex</td>
+                <td>hexadecimal number to convert specified as a string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_imb_crc11fcs">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L2247">at line 2247</a></div>
+        <code>            protected        int
+    <strong>imb_crc11fcs</strong>(string $code_arr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Intelligent Mail Barcode calculation of Frame Check Sequence</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code_arr</td>
+                <td>array of hexadecimal values (13 bytes holding 102 bits right justified).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_imb_reverse_us">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L2283">at line 2283</a></div>
+        <code>            protected        int
+    <strong>imb_reverse_us</strong>(int $num)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reverse unsigned short value</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$num</td>
+                <td>value to reversr</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_imb_tables">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L2300">at line 2300</a></div>
+        <code>            protected        array
+    <strong>imb_tables</strong>(int $n, int $size)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>generate Nof13 tables used for Intelligent Mail Barcode</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$n</td>
+                <td>is the type of table: 2 for 2of13 table, 5 for 5of13table</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>size of table (78 for n=2 and 1287 for n=5)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.            <br/>This documentation is for <a href="https://github.com/code-lts/WarnockPDF#readme" rel="noreferrer noopener" target="_blank">WarnockPDF</a> the fork of TCPDF.</div></div>
+    </div>
+    </body>
+
+</html>

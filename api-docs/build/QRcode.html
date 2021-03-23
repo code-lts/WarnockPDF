@@ -1,0 +1,5578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>QRcode | WarnockPDF</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
+
+    <body id="class" data-name="class:QRcode" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">WarnockPDF</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            QRcode
+                
+        </h1>
+    </div>
+
+    <p>        class
+    <strong>QRcode</strong>        (<a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Class to create QR-code arrays for WarnockPDF class.</p>            <p>QR Code symbol is a 2D barcode that can be scanned by handy terminals such as a mobile phone with CCD.
+The capacity of QR Code is up to 7000 digits or 4000 characters, and has high robustness.
+This class supports QR Code model 2, described in JIS (Japanese Industrial Standards) X0510:2004 or ISO/IEC 18004.
+Currently the following features are not supported: ECI and FNC1 mode, Micro QR Code, QR Code model 1, Structured mode.</p>
+
+<p>This class is derived from "PHP QR Code encoder" by Dominik Dzienia (http://phpqrcode.sourceforge.net/) based on "libqrencode C library 3.1.1." by Kentaro Fukuchi (http://megaui.net/fukuchi/works/qrencode/index.en.html), contains Reed-Solomon code written by Phil Karn, KA9Q. QR Code is registered trademark of DENSO WAVE INCORPORATED (http://www.denso-wave.com/qrcode/index-e.html).
+Please read comments on this class source file for full copyright and license information.</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_barcode_array">
+                                        protected                                        
+                </td>
+                <td>$barcode_array</td>
+                <td class="last">Barcode array to be returned which is readable by WarnockPDF.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_version">
+                                        protected                                        
+                </td>
+                <td>$version</td>
+                <td class="last">QR code version. Size of QRcode is defined as version. Version is from 1 to 40. Version 1 is 21<em>21 matrix. And 4 modules increases whenever 1 version increases. So version 40 is 177</em>177 matrix.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_level">
+                                        protected                                        
+                </td>
+                <td>$level</td>
+                <td class="last">Levels of error correction. See definitions for possible values.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_hint">
+                                        protected                                        
+                </td>
+                <td>$hint</td>
+                <td class="last">Encoding mode.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_casesensitive">
+                                        protected                                        
+                </td>
+                <td>$casesensitive</td>
+                <td class="last">Boolean flag, if true the input string will be converted to uppercase.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_structured">
+                                        protected                                        
+                </td>
+                <td>$structured</td>
+                <td class="last">Structured QR code (not supported yet).</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_data">
+                                        protected                                        
+                </td>
+                <td>$data</td>
+                <td class="last">Mask data.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_width">
+                                        protected                                        
+                </td>
+                <td>$width</td>
+                <td class="last">Width.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_frame">
+                                        protected                                        
+                </td>
+                <td>$frame</td>
+                <td class="last">Frame.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_x">
+                                        protected                                        
+                </td>
+                <td>$x</td>
+                <td class="last">X position of bit.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_y">
+                                        protected                                        
+                </td>
+                <td>$y</td>
+                <td class="last">Y position of bit.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dir">
+                                        protected                                        
+                </td>
+                <td>$dir</td>
+                <td class="last">Direction.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_bit">
+                                        protected                                        
+                </td>
+                <td>$bit</td>
+                <td class="last">Single bit value.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_datacode">
+                                        protected                                        
+                </td>
+                <td>$datacode</td>
+                <td class="last">Data code.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_ecccode">
+                                        protected                                        
+                </td>
+                <td>$ecccode</td>
+                <td class="last">Error correction code.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_blocks">
+                                        protected                                        
+                </td>
+                <td>$blocks</td>
+                <td class="last">Blocks.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rsblocks">
+                                        protected                                        
+                </td>
+                <td>$rsblocks</td>
+                <td class="last">Reed-Solomon blocks.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_count">
+                                        protected                                        
+                </td>
+                <td>$count</td>
+                <td class="last">Counter.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dataLength">
+                                        protected                                        
+                </td>
+                <td>$dataLength</td>
+                <td class="last">Data length.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_eccLength">
+                                        protected                                        
+                </td>
+                <td>$eccLength</td>
+                <td class="last">Error correction length.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_b1">
+                                        protected                                        
+                </td>
+                <td>$b1</td>
+                <td class="last">Value b1.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_runLength">
+                                        protected                                        
+                </td>
+                <td>$runLength</td>
+                <td class="last">Run length.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dataStr">
+                                        protected                                        
+                </td>
+                <td>$dataStr</td>
+                <td class="last">Input data string.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_items">
+                                        protected                                        
+                </td>
+                <td>$items</td>
+                <td class="last">Input items.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rsitems">
+                                        protected                                        
+                </td>
+                <td>$rsitems</td>
+                <td class="last">Reed-Solomon items.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_frames">
+                                        protected                                        
+                </td>
+                <td>$frames</td>
+                <td class="last">Array of frames.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_anTable">
+                                        protected                                        
+                </td>
+                <td>$anTable</td>
+                <td class="last">Alphabet-numeric convesion table.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_capacity">
+                                        protected                                        
+                </td>
+                <td>$capacity</td>
+                <td class="last">Array Table of the capacity of symbols.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_lengthTableBits">
+                                        protected                                        
+                </td>
+                <td>$lengthTableBits</td>
+                <td class="last">Array Length indicator.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_eccTable">
+                                        protected                                        
+                </td>
+                <td>$eccTable</td>
+                <td class="last">Array Table of the error correction code (Reed-Solomon block).</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_alignmentPattern">
+                                        protected                                        
+                </td>
+                <td>$alignmentPattern</td>
+                <td class="last">Array Positions of alignment patterns.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_versionPattern">
+                                        protected                                        
+                </td>
+                <td>$versionPattern</td>
+                <td class="last">Array Version information pattern (BCH coded).</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_formatInfo">
+                                        protected                                        
+                </td>
+                <td>$formatInfo</td>
+                <td class="last">Array Format information</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $code, string $eclevel = &#039;L&#039;)
+        
+                                            <p>This is the class constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBarcodeArray">getBarcodeArray</a>()
+        
+                                            <p>Returns a barcode array which is readable by WarnockPDF</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_binarize">binarize</a>(array $frame)
+        
+                                            <p>Convert the frame in binary form</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeString">encodeString</a>(string $string)
+        
+                                            <p>Encode the input string to QR code</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeMask">encodeMask</a>(int $mask)
+        
+                                            <p>Encode mask</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_setFrameAt">setFrameAt</a>(array $at, int $val)
+        
+                                            <p>Set frame value at specified position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    value
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFrameAt">getFrameAt</a>(array $at)
+        
+                                            <p>Get frame value at specified position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getNextPosition">getNextPosition</a>()
+        
+                                            <p>Return the next frame position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init">init</a>(array $spec)
+        
+                                            <p>Initialize code.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getCode">getCode</a>()
+        
+                                            <p>Return Reed-Solomon block code.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_writeFormatInformation">writeFormatInformation</a>(int $width, array $frame, array $mask, int $level)
+        
+                                            <p>Write Format Information on frame and returns the number of black bits</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mask0">mask0</a>(int $x, int $y)
+        
+                                            <p>mask0</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mask1">mask1</a>(int $x, int $y)
+        
+                                            <p>mask1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mask2">mask2</a>(int $x, int $y)
+        
+                                            <p>mask2</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mask3">mask3</a>(int $x, int $y)
+        
+                                            <p>mask3</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mask4">mask4</a>(int $x, int $y)
+        
+                                            <p>mask4</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mask5">mask5</a>(int $x, int $y)
+        
+                                            <p>mask5</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mask6">mask6</a>(int $x, int $y)
+        
+                                            <p>mask6</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mask7">mask7</a>(int $x, int $y)
+        
+                                            <p>mask7</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_generateMaskNo">generateMaskNo</a>(int $maskNo, int $width, array $frame)
+        
+                                            <p>Return bitmask</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_makeMaskNo">makeMaskNo</a>(int $maskNo, int $width, int $s, int $d, bool $maskGenOnly = false)
+        
+                                            <p>makeMaskNo</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_makeMask">makeMask</a>(int $width, array $frame, int $maskNo, int $level)
+        
+                                            <p>makeMask</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_calcN1N3">calcN1N3</a>(int $length)
+        
+                                            <p>calcN1N3</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_evaluateSymbol">evaluateSymbol</a>(int $width, array $frame)
+        
+                                            <p>evaluateSymbol</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mask">mask</a>(int $width, array $frame, int $level)
+        
+                                            <p>mask</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isdigitat">isdigitat</a>(string $str, int $pos)
+        
+                                            <p>Return true if the character at specified position is a number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isalnumat">isalnumat</a>(string $str, int $pos)
+        
+                                            <p>Return true if the character at specified position is an alphanumeric character</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_identifyMode">identifyMode</a>(int $pos)
+        
+                                            <p>identifyMode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_eatNum">eatNum</a>()
+        
+                                            <p>eatNum</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_eatAn">eatAn</a>()
+        
+                                            <p>eatAn</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_eatKanji">eatKanji</a>()
+        
+                                            <p>eatKanji</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_eat8">eat8</a>()
+        
+                                            <p>eat8</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    (int)
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_splitString">splitString</a>()
+        
+                                            <p>splitString</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_toUpper">toUpper</a>()
+        
+                                            <p>toUpper</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newInputItem">newInputItem</a>(int $mode, int $size, array $data, array $bstream = null)
+        
+                                            <p>newInputItem</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeModeNum">encodeModeNum</a>(array $inputitem, int $version)
+        
+                                            <p>encodeModeNum</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeModeAn">encodeModeAn</a>(array $inputitem, int $version)
+        
+                                            <p>encodeModeAn</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeMode8">encodeMode8</a>(array $inputitem, int $version)
+        
+                                            <p>encodeMode8</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeModeKanji">encodeModeKanji</a>(array $inputitem, int $version)
+        
+                                            <p>encodeModeKanji</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeModeStructure">encodeModeStructure</a>(array $inputitem)
+        
+                                            <p>encodeModeStructure</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encodeBitStream">encodeBitStream</a>(array $inputitem, int $version)
+        
+                                            <p>encodeBitStream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    items
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendNewInputItem">appendNewInputItem</a>(arrray $items, int $mode, int $size, array $data)
+        
+                                            <p>Append data to an input object.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_insertStructuredAppendHeader">insertStructuredAppendHeader</a>(array $items, int $size, int $index, int $parity)
+        
+                                            <p>insertStructuredAppendHeader</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_calcParity">calcParity</a>(array $items)
+        
+                                            <p>calcParity</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkModeNum">checkModeNum</a>(int $size, array $data)
+        
+                                            <p>checkModeNum</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    value
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lookAnTable">lookAnTable</a>(int $c)
+        
+                                            <p>Look up the alphabet-numeric convesion table (see JIS X0510:2004, pp.19).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkModeAn">checkModeAn</a>(int $size, array $data)
+        
+                                            <p>checkModeAn</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_estimateBitsModeNum">estimateBitsModeNum</a>(int $size)
+        
+                                            <p>estimateBitsModeNum</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_estimateBitsModeAn">estimateBitsModeAn</a>(int $size)
+        
+                                            <p>estimateBitsModeAn</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_estimateBitsMode8">estimateBitsMode8</a>(int $size)
+        
+                                            <p>estimateBitsMode8</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_estimateBitsModeKanji">estimateBitsModeKanji</a>(int $size)
+        
+                                            <p>estimateBitsModeKanji</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_checkModeKanji">checkModeKanji</a>(int $size, array $data)
+        
+                                            <p>checkModeKanji</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_check">check</a>(int $mode, int $size, array $data)
+        
+                                            <p>Validate the input data.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_estimateBitStreamSize">estimateBitStreamSize</a>(array $items, int $version)
+        
+                                            <p>estimateBitStreamSize</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_estimateVersion">estimateVersion</a>(array $items)
+        
+                                            <p>estimateVersion</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lengthOfCode">lengthOfCode</a>(int $mode, int $version, int $bits)
+        
+                                            <p>lengthOfCode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createBitStream">createBitStream</a>(array $items)
+        
+                                            <p>createBitStream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_convertData">convertData</a>(array $items)
+        
+                                            <p>convertData</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendPaddingBit">appendPaddingBit</a>(array $bstream)
+        
+                                            <p>Append Padding Bit to bitstream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_mergeBitStream">mergeBitStream</a>(array $items)
+        
+                                            <p>mergeBitStream</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBitStream">getBitStream</a>(int $items)
+        
+                                            <p>Returns a stream of bits.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getByteStream">getByteStream</a>(int $items)
+        
+                                            <p>Pack all bit streams padding bits into a byte array.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_allocate">allocate</a>(int $setLength)
+        
+                                            <p>Return an array with zeros</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newFromNum">newFromNum</a>(int $bits, int $num)
+        
+                                            <p>Return new bitstream from number</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newFromBytes">newFromBytes</a>(int $size, array $data)
+        
+                                            <p>Return new bitstream from bytes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendBitstream">appendBitstream</a>(array $bitstream, array $append)
+        
+                                            <p>Append one bitstream to another</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendNum">appendNum</a>(array $bitstream, int $bits, int $num)
+        
+                                            <p>Append one bitstream created from number to another</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_appendBytes">appendBytes</a>(array $bitstream, int $size, array $data)
+        
+                                            <p>Append one bitstream created from bytes to another</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_bitstreamToByte">bitstreamToByte</a>(array $bstream)
+        
+                                            <p>Convert bitstream to bytes</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_qrstrset">qrstrset</a>(array $srctab, int $x, int $y, string $repl, int $replLen = false)
+        
+                                            <p>Replace a value on the array at the specified position</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getDataLength">getDataLength</a>(int $version, int $level)
+        
+                                            <p>Return maximum data code length (bytes) for the version.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getECCLength">getECCLength</a>(int $version, int $level)
+        
+                                            <p>Return maximum error correction code length (bytes) for the version.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getWidth">getWidth</a>(int $version)
+        
+                                            <p>Return the width of the symbol for the version.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getRemainder">getRemainder</a>(int $version)
+        
+                                            <p>Return the numer of remainder bits.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMinimumVersion">getMinimumVersion</a>(int $size, int $level)
+        
+                                            <p>Return a version number that satisfies the input code length.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lengthIndicator">lengthIndicator</a>(int $mode, int $version)
+        
+                                            <p>Return the size of length indicator for the mode and version.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_maximumWords">maximumWords</a>(int $mode, int $version)
+        
+                                            <p>Return the maximum length for the mode and version.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getEccSpec">getEccSpec</a>(int $version, int $level, array $spec)
+        
+                                            <p>Return an array of ECC specification.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putAlignmentMarker">putAlignmentMarker</a>(array $frame, int $ox, int $oy)
+        
+                                            <p>Put an alignment marker.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putAlignmentPattern">putAlignmentPattern</a>(int $version, array $frame, int $width)
+        
+                                            <p>Put an alignment pattern.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    BCH
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getVersionPattern">getVersionPattern</a>(int $version)
+        
+                                            <p>Return BCH encoded version information pattern that is used for the symbol of version 7 or greater. Use lower 18 bits.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    BCH
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFormatInfo">getFormatInfo</a>(array $mask, int $level)
+        
+                                            <p>Return BCH encoded format information pattern.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_putFinderPattern">putFinderPattern</a>(array $frame, int $ox, int $oy)
+        
+                                            <p>Put a finder pattern.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_createFrame">createFrame</a>(int $version)
+        
+                                            <p>Return a copy of initialized frame.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_newFrame">newFrame</a>(int $version)
+        
+                                            <p>Set new frame for the specified version.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rsBlockNum">rsBlockNum</a>(array $spec)
+        
+                                            <p>Return block number 0</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rsBlockNum1">rsBlockNum1</a>(array $spec)
+        
+                                            <p>Return block number 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rsDataCodes1">rsDataCodes1</a>(array $spec)
+        
+                                            <p>Return data codes 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rsEccCodes1">rsEccCodes1</a>(array $spec)
+        
+                                            <p>Return ecc codes 1</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rsBlockNum2">rsBlockNum2</a>(array $spec)
+        
+                                            <p>Return block number 2</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rsDataCodes2">rsDataCodes2</a>(array $spec)
+        
+                                            <p>Return data codes 2</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rsEccCodes2">rsEccCodes2</a>(array $spec)
+        
+                                            <p>Return ecc codes 2</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rsDataLength">rsDataLength</a>(array $spec)
+        
+                                            <p>Return data length</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_rsEccLength">rsEccLength</a>(array $spec)
+        
+                                            <p>Return ecc length</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init_rs">init_rs</a>(int $symsize, int $gfpoly, int $fcr, int $prim, int $nroots, int $pad)
+        
+                                            <p>Initialize a Reed-Solomon codec and add it to existing rsitems</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_modnn">modnn</a>(array $rs, int $x)
+        
+                                            <p>modnn</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_init_rs_char">init_rs_char</a>(int $symsize, int $gfpoly, int $fcr, int $prim, int $nroots, int $pad)
+        
+                                            <p>Initialize a Reed-Solomon codec and returns an array of values.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    parity
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_encode_rs_char">encode_rs_char</a>(array $rs, array $data, array $parity)
+        
+                                            <p>Encode a Reed-Solomon codec and returns the parity array</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L615">at line 615</a></div>
+        <code>                    
+    <strong>__construct</strong>(string $code, string $eclevel = &#039;L&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>This is the class constructor.</p>                    <p>Creates a QRcode object</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>code to represent using QRcode</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$eclevel</td>
+                <td>error level:</p>
+
+<ul><li>L : About 7% or less errors can be corrected.</li><li>M : About 15% or less errors can be corrected.</li><li>Q : About 25% or less errors can be corrected.</li><li>H : About 30% or less errors can be corrected.</li></ul>
+</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBarcodeArray">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L656">at line 656</a></div>
+        <code>                    array
+    <strong>getBarcodeArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a barcode array which is readable by WarnockPDF</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_binarize">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L665">at line 665</a></div>
+        <code>            protected        array
+    <strong>binarize</strong>(array $frame)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert the frame in binary form</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$frame</td>
+                <td>array to binarize</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeString">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L680">at line 680</a></div>
+        <code>            protected        
+    <strong>encodeString</strong>(string $string)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encode the input string to QR code</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$string</td>
+                <td>input string to encode</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeMask">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L696">at line 696</a></div>
+        <code>            protected        
+    <strong>encodeMask</strong>(int $mask)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encode mask</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$mask</td>
+                <td>masking mode</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setFrameAt">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L762">at line 762</a></div>
+        <code>            protected        
+    <strong>setFrameAt</strong>(array $at, int $val)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set frame value at specified position</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$at</td>
+                <td>x,y position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$val</td>
+                <td>value of the character to set</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFrameAt">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L771">at line 771</a></div>
+        <code>            protected        value
+    <strong>getFrameAt</strong>(array $at)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get frame value at specified position</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$at</td>
+                <td>x,y position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>value</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getNextPosition">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L779">at line 779</a></div>
+        <code>            protected        array
+    <strong>getNextPosition</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the next frame position</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L835">at line 835</a></div>
+        <code>            protected        int
+    <strong>init</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize code.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td>array of ECC specification</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getCode">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L886">at line 886</a></div>
+        <code>            protected        array
+    <strong>getCode</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return Reed-Solomon block code.</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_writeFormatInformation">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L917">at line 917</a></div>
+        <code>            protected        int
+    <strong>writeFormatInformation</strong>(int $width, array $frame, array $mask, int $level)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Write Format Information on frame and returns the number of black bits</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td>frame width</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$frame</td>
+                <td>frame</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$mask</td>
+                <td>masking mode</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td>error correction level</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mask0">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L959">at line 959</a></div>
+        <code>            protected        int
+    <strong>mask0</strong>(int $x, int $y)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>mask0</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>X position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td>Y position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mask1">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L969">at line 969</a></div>
+        <code>            protected        int
+    <strong>mask1</strong>(int $x, int $y)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>mask1</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>X position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td>Y position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mask2">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L979">at line 979</a></div>
+        <code>            protected        int
+    <strong>mask2</strong>(int $x, int $y)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>mask2</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>X position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td>Y position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mask3">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L989">at line 989</a></div>
+        <code>            protected        int
+    <strong>mask3</strong>(int $x, int $y)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>mask3</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>X position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td>Y position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mask4">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L999">at line 999</a></div>
+        <code>            protected        int
+    <strong>mask4</strong>(int $x, int $y)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>mask4</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>X position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td>Y position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mask5">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1009">at line 1009</a></div>
+        <code>            protected        int
+    <strong>mask5</strong>(int $x, int $y)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>mask5</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>X position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td>Y position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mask6">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1019">at line 1019</a></div>
+        <code>            protected        int
+    <strong>mask6</strong>(int $x, int $y)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>mask6</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>X position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td>Y position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mask7">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1029">at line 1029</a></div>
+        <code>            protected        int
+    <strong>mask7</strong>(int $x, int $y)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>mask7</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>X position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td>Y position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_generateMaskNo">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1040">at line 1040</a></div>
+        <code>            protected        array
+    <strong>generateMaskNo</strong>(int $maskNo, int $width, array $frame)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return bitmask</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$maskNo</td>
+                <td>mask number</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td>width</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$frame</td>
+                <td>frame</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeMaskNo">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1064">at line 1064</a></div>
+        <code>            protected        int
+    <strong>makeMaskNo</strong>(int $maskNo, int $width, int $s, int $d, bool $maskGenOnly = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>makeMaskNo</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$maskNo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$s</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$d</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$maskGenOnly</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_makeMask">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1091">at line 1091</a></div>
+        <code>            protected        array
+    <strong>makeMask</strong>(int $width, array $frame, int $maskNo, int $level)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>makeMask</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$frame</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$maskNo</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_calcN1N3">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1103">at line 1103</a></div>
+        <code>            protected        int
+    <strong>calcN1N3</strong>(int $length)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>calcN1N3</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_evaluateSymbol">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1134">at line 1134</a></div>
+        <code>            protected        int
+    <strong>evaluateSymbol</strong>(int $width, array $frame)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>evaluateSymbol</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$frame</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mask">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1196">at line 1196</a></div>
+        <code>            protected        array
+    <strong>mask</strong>(int $width, array $frame, int $level)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>mask</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$frame</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isdigitat">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1238">at line 1238</a></div>
+        <code>            protected        bool
+    <strong>isdigitat</strong>(string $str, int $pos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return true if the character at specified position is a number</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>string</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pos</td>
+                <td>characted position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isalnumat">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1251">at line 1251</a></div>
+        <code>            protected        bool
+    <strong>isalnumat</strong>(string $str, int $pos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return true if the character at specified position is an alphanumeric character</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>string</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pos</td>
+                <td>characted position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_identifyMode">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1263">at line 1263</a></div>
+        <code>            protected        int
+    <strong>identifyMode</strong>(int $pos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>identifyMode</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$pos</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_eatNum">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1288">at line 1288</a></div>
+        <code>            protected        int
+    <strong>eatNum</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>eatNum</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_eatAn">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1320">at line 1320</a></div>
+        <code>            protected        int
+    <strong>eatAn</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>eatAn</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_eatKanji">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1359">at line 1359</a></div>
+        <code>            protected        int
+    <strong>eatKanji</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>eatKanji</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_eat8">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1373">at line 1373</a></div>
+        <code>            protected        int
+    <strong>eat8</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>eat8</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_splitString">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1422">at line 1422</a></div>
+        <code>            protected        (int)
+    <strong>splitString</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>splitString</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>(int)</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_toUpper">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1461">at line 1461</a></div>
+        <code>            protected        
+    <strong>toUpper</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>toUpper</p>                                                </div>
+                <div class="tags">
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newInputItem">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1490">at line 1490</a></div>
+        <code>            protected        array
+    <strong>newInputItem</strong>(int $mode, int $size, array $data, array $bstream = null)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>newInputItem</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$bstream</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeModeNum">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1512">at line 1512</a></div>
+        <code>            protected        array
+    <strong>encodeModeNum</strong>(array $inputitem, int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>encodeModeNum</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$inputitem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeModeAn">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1541">at line 1541</a></div>
+        <code>            protected        array
+    <strong>encodeModeAn</strong>(array $inputitem, int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>encodeModeAn</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$inputitem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeMode8">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1564">at line 1564</a></div>
+        <code>            protected        array
+    <strong>encodeMode8</strong>(array $inputitem, int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>encodeMode8</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$inputitem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeModeKanji">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1580">at line 1580</a></div>
+        <code>            protected        array
+    <strong>encodeModeKanji</strong>(array $inputitem, int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>encodeModeKanji</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$inputitem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeModeStructure">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1603">at line 1603</a></div>
+        <code>            protected        array
+    <strong>encodeModeStructure</strong>(array $inputitem)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>encodeModeStructure</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$inputitem</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encodeBitStream">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1618">at line 1618</a></div>
+        <code>            protected        array
+    <strong>encodeBitStream</strong>(array $inputitem, int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>encodeBitStream</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$inputitem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendNewInputItem">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1673">at line 1673</a></div>
+        <code>            protected        items
+    <strong>appendNewInputItem</strong>(arrray $items, int $mode, int $size, array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append data to an input object.</p>                    <p>The data is copied and appended to the input object.</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>arrray</td>
+                <td>$items</td>
+                <td>input items</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>encoding mode.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>size of data (byte).</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>array of input data.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>items</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_insertStructuredAppendHeader">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1689">at line 1689</a></div>
+        <code>            protected        array
+    <strong>insertStructuredAppendHeader</strong>(array $items, int $size, int $index, int $parity)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>insertStructuredAppendHeader</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$parity</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_calcParity">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1707">at line 1707</a></div>
+        <code>            protected        int
+    <strong>calcParity</strong>(array $items)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>calcParity</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkModeNum">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1725">at line 1725</a></div>
+        <code>            protected        bool
+    <strong>checkModeNum</strong>(int $size, array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>checkModeNum</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lookAnTable">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1739">at line 1739</a></div>
+        <code>            protected        value
+    <strong>lookAnTable</strong>(int $c)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Look up the alphabet-numeric convesion table (see JIS X0510:2004, pp.19).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$c</td>
+                <td>character value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>value</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkModeAn">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1749">at line 1749</a></div>
+        <code>            protected        bool
+    <strong>checkModeAn</strong>(int $size, array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>checkModeAn</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_estimateBitsModeNum">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1763">at line 1763</a></div>
+        <code>            protected        int
+    <strong>estimateBitsModeNum</strong>(int $size)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>estimateBitsModeNum</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_estimateBitsModeAn">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1784">at line 1784</a></div>
+        <code>            protected        int
+    <strong>estimateBitsModeAn</strong>(int $size)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>estimateBitsModeAn</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_estimateBitsMode8">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1797">at line 1797</a></div>
+        <code>            protected        int
+    <strong>estimateBitsMode8</strong>(int $size)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>estimateBitsMode8</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_estimateBitsModeKanji">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1806">at line 1806</a></div>
+        <code>            protected        int
+    <strong>estimateBitsModeKanji</strong>(int $size)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>estimateBitsModeKanji</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_checkModeKanji">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1816">at line 1816</a></div>
+        <code>            protected        bool
+    <strong>checkModeKanji</strong>(int $size, array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>checkModeKanji</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_check">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1836">at line 1836</a></div>
+        <code>            protected        bool
+    <strong>check</strong>(int $mode, int $size, array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Validate the input data.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>encoding mode.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>size of data (byte).</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>data to validate</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_estimateBitStreamSize">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1869">at line 1869</a></div>
+        <code>            protected        int
+    <strong>estimateBitStreamSize</strong>(array $items, int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>estimateBitStreamSize</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_estimateVersion">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1912">at line 1912</a></div>
+        <code>            protected        int
+    <strong>estimateVersion</strong>(array $items)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>estimateVersion</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lengthOfCode">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1933">at line 1933</a></div>
+        <code>            protected        int
+    <strong>lengthOfCode</strong>(int $mode, int $version, int $bits)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>lengthOfCode</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$bits</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createBitStream">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1988">at line 1988</a></div>
+        <code>            protected        array
+    <strong>createBitStream</strong>(array $items)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>createBitStream</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_convertData">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2003">at line 2003</a></div>
+        <code>            protected        array
+    <strong>convertData</strong>(array $items)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>convertData</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendPaddingBit">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2032">at line 2032</a></div>
+        <code>            protected        array
+    <strong>appendPaddingBit</strong>(array $bstream)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append Padding Bit to bitstream</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bstream</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_mergeBitStream">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2065">at line 2065</a></div>
+        <code>            protected        array
+    <strong>mergeBitStream</strong>(array $items)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>mergeBitStream</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$items</td>
+                <td>items</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBitStream">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2082">at line 2082</a></div>
+        <code>            protected        array
+    <strong>getBitStream</strong>(int $items)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a stream of bits.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getByteStream">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2092">at line 2092</a></div>
+        <code>            protected        array
+    <strong>getByteStream</strong>(int $items)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Pack all bit streams padding bits into a byte array.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$items</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allocate">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2106">at line 2106</a></div>
+        <code>            protected        array
+    <strong>allocate</strong>(int $setLength)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return an array with zeros</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$setLength</td>
+                <td>array size</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newFromNum">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2116">at line 2116</a></div>
+        <code>            protected        array
+    <strong>newFromNum</strong>(int $bits, int $num)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return new bitstream from number</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$bits</td>
+                <td>number of bits</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$num</td>
+                <td>number</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newFromBytes">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2136">at line 2136</a></div>
+        <code>            protected        array
+    <strong>newFromBytes</strong>(int $size, array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return new bitstream from bytes</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>size</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>bytes</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendBitstream">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2160">at line 2160</a></div>
+        <code>            protected        array
+    <strong>appendBitstream</strong>(array $bitstream, array $append)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append one bitstream to another</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bitstream</td>
+                <td>original bitstream</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$append</td>
+                <td>bitstream to append</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendNum">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2177">at line 2177</a></div>
+        <code>            protected        array
+    <strong>appendNum</strong>(array $bitstream, int $bits, int $num)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append one bitstream created from number to another</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bitstream</td>
+                <td>original bitstream</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$bits</td>
+                <td>number of bits</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$num</td>
+                <td>number</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_appendBytes">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2192">at line 2192</a></div>
+        <code>            protected        array
+    <strong>appendBytes</strong>(array $bitstream, int $size, array $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Append one bitstream created from bytes to another</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bitstream</td>
+                <td>original bitstream</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>size</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>bytes</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_bitstreamToByte">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2205">at line 2205</a></div>
+        <code>            protected        array
+    <strong>bitstreamToByte</strong>(array $bstream)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert bitstream to bytes</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$bstream</td>
+                <td>original bitstream</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_qrstrset">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2250">at line 2250</a></div>
+        <code>            protected        array
+    <strong>qrstrset</strong>(array $srctab, int $x, int $y, string $repl, int $replLen = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Replace a value on the array at the specified position</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$srctab</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>X position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$y</td>
+                <td>Y position</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$repl</td>
+                <td>value to replace</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$replLen</td>
+                <td>length of the repl string</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDataLength">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2261">at line 2261</a></div>
+        <code>            protected        int
+    <strong>getDataLength</strong>(int $version, int $level)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return maximum data code length (bytes) for the version.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td>error correction level</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getECCLength">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2271">at line 2271</a></div>
+        <code>            protected        int
+    <strong>getECCLength</strong>(int $version, int $level)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return maximum error correction code length (bytes) for the version.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td>error correction level</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getWidth">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2280">at line 2280</a></div>
+        <code>            protected        int
+    <strong>getWidth</strong>(int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the width of the symbol for the version.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getRemainder">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2289">at line 2289</a></div>
+        <code>            protected        int
+    <strong>getRemainder</strong>(int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the numer of remainder bits.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMinimumVersion">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2299">at line 2299</a></div>
+        <code>            protected        int
+    <strong>getMinimumVersion</strong>(int $size, int $level)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a version number that satisfies the input code length.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$size</td>
+                <td>input code length (bytes)</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td>error correction level</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lengthIndicator">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2316">at line 2316</a></div>
+        <code>            protected        int
+    <strong>lengthIndicator</strong>(int $mode, int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the size of length indicator for the mode and version.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>encoding mode</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_maximumWords">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2336">at line 2336</a></div>
+        <code>            protected        int
+    <strong>maximumWords</strong>(int $mode, int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the maximum length for the mode and version.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>encoding mode</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getEccSpec">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2362">at line 2362</a></div>
+        <code>            protected        array
+    <strong>getEccSpec</strong>(int $version, int $level, array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return an array of ECC specification.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td>error correction level</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td>an array of ECC specification contains as following: {# of type1 blocks, # of data code, # of ecc code, # of type2 blocks, # of data code}</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putAlignmentMarker">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2393">at line 2393</a></div>
+        <code>            protected        array
+    <strong>putAlignmentMarker</strong>(array $frame, int $ox, int $oy)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put an alignment marker.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$frame</td>
+                <td>frame</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ox</td>
+                <td>X center coordinate of the pattern</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$oy</td>
+                <td>Y center coordinate of the pattern</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putAlignmentPattern">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2416">at line 2416</a></div>
+        <code>            protected        array
+    <strong>putAlignmentPattern</strong>(int $version, array $frame, int $width)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put an alignment pattern.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$frame</td>
+                <td>frame</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$width</td>
+                <td>width</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVersionPattern">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2456">at line 2456</a></div>
+        <code>            protected        BCH
+    <strong>getVersionPattern</strong>(int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return BCH encoded version information pattern that is used for the symbol of version 7 or greater. Use lower 18 bits.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>BCH</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFormatInfo">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2469">at line 2469</a></div>
+        <code>            protected        BCH
+    <strong>getFormatInfo</strong>(array $mask, int $level)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return BCH encoded format information pattern.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$mask</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$level</td>
+                <td>error correction level</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>BCH</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_putFinderPattern">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2486">at line 2486</a></div>
+        <code>            protected        array
+    <strong>putFinderPattern</strong>(array $frame, int $ox, int $oy)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Put a finder pattern.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$frame</td>
+                <td>frame</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ox</td>
+                <td>X center coordinate of the pattern</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$oy</td>
+                <td>Y center coordinate of the pattern</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_createFrame">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2507">at line 2507</a></div>
+        <code>            protected        array
+    <strong>createFrame</strong>(int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return a copy of initialized frame.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_newFrame">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2572">at line 2572</a></div>
+        <code>            protected        array
+    <strong>newFrame</strong>(int $version)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Set new frame for the specified version.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$version</td>
+                <td>version</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rsBlockNum">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2590">at line 2590</a></div>
+        <code>            protected        int
+    <strong>rsBlockNum</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return block number 0</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rsBlockNum1">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2599">at line 2599</a></div>
+        <code>            protected        int
+    <strong>rsBlockNum1</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return block number 1</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rsDataCodes1">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2608">at line 2608</a></div>
+        <code>            protected        int
+    <strong>rsDataCodes1</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return data codes 1</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rsEccCodes1">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2617">at line 2617</a></div>
+        <code>            protected        int
+    <strong>rsEccCodes1</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return ecc codes 1</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rsBlockNum2">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2626">at line 2626</a></div>
+        <code>            protected        int
+    <strong>rsBlockNum2</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return block number 2</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rsDataCodes2">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2635">at line 2635</a></div>
+        <code>            protected        int
+    <strong>rsDataCodes2</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return data codes 2</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rsEccCodes2">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2644">at line 2644</a></div>
+        <code>            protected        int
+    <strong>rsEccCodes2</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return ecc codes 2</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rsDataLength">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2653">at line 2653</a></div>
+        <code>            protected        int
+    <strong>rsDataLength</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return data length</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rsEccLength">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2662">at line 2662</a></div>
+        <code>            protected        int
+    <strong>rsEccLength</strong>(array $spec)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return ecc length</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$spec</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init_rs">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2680">at line 2680</a></div>
+        <code>            protected        array
+    <strong>init_rs</strong>(int $symsize, int $gfpoly, int $fcr, int $prim, int $nroots, int $pad)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize a Reed-Solomon codec and add it to existing rsitems</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$symsize</td>
+                <td>symbol size, bits</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$gfpoly</td>
+                <td>Field generator polynomial coefficients</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$fcr</td>
+                <td>first root of RS code generator polynomial, index form</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$prim</td>
+                <td>primitive element to generate polynomial roots</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nroots</td>
+                <td>RS code generator polynomial degree (number of roots)</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pad</td>
+                <td>padding bytes at front of shortened block</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_modnn">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2703">at line 2703</a></div>
+        <code>            protected        int
+    <strong>modnn</strong>(array $rs, int $x)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>modnn</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$rs</td>
+                <td>RS values</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$x</td>
+                <td>X position</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_init_rs_char">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2721">at line 2721</a></div>
+        <code>            protected        array
+    <strong>init_rs_char</strong>(int $symsize, int $gfpoly, int $fcr, int $prim, int $nroots, int $pad)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Initialize a Reed-Solomon codec and returns an array of values.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$symsize</td>
+                <td>symbol size, bits</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$gfpoly</td>
+                <td>Field generator polynomial coefficients</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$fcr</td>
+                <td>first root of RS code generator polynomial, index form</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$prim</td>
+                <td>primitive element to generate polynomial roots</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nroots</td>
+                <td>RS code generator polynomial degree (number of roots)</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pad</td>
+                <td>padding bytes at front of shortened block</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_encode_rs_char">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2805">at line 2805</a></div>
+        <code>            protected        parity
+    <strong>encode_rs_char</strong>(array $rs, array $data, array $parity)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Encode a Reed-Solomon codec and returns the parity array</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$rs</td>
+                <td>RS values</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td>data</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$parity</td>
+                <td>parity</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>parity</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.            <br/>This documentation is for <a href="https://github.com/code-lts/WarnockPDF#readme" rel="noreferrer noopener" target="_blank">WarnockPDF</a> the fork of TCPDF.</div></div>
+    </div>
+    </body>
+
+</html>

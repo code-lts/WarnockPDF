@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Datamatrix | WarnockPDF</title>
+
+            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
+        <script src="js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="js/bootstrap.min.js"></script>
+        <script src="js/typeahead.min.js"></script>
+        <script src="doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
+
+    <body id="class" data-name="class:Datamatrix" data-root-path="">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">WarnockPDF</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="classes.html">Classes</a></li>
+                    <li><a href="interfaces.html">Interfaces</a></li>
+                    <li><a href="traits.html">Traits</a></li>
+                    <li><a href="doc-index.html">Index</a></li>
+                    <li><a href="search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                            <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Datamatrix
+                
+        </h1>
+    </div>
+
+    <p>        class
+    <strong>Datamatrix</strong>        (<a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>*
+Class to create DataMatrix ECC 200 barcode arrays for TCPDF class.</p>            <p>DataMatrix (ISO/IEC 16022:2006) is a 2-dimensional bar code.</p>                    </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_barcode_array">
+                                        protected                                        
+                </td>
+                <td>$barcode_array</td>
+                <td class="last">Barcode array to be returned which is readable by TCPDF.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_last_enc">
+                                        protected                                        
+                </td>
+                <td>$last_enc</td>
+                <td class="last">Store last used encoding for data codewords.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_symbattr">
+                                        protected                                        
+                </td>
+                <td>$symbattr</td>
+                <td class="last">Table of Data Matrix ECC 200 Symbol Attributes:</p>
+
+<ul>
+<li>total matrix rows (including finder pattern)</li>
+<li>total matrix cols (including finder pattern)</li>
+<li>total matrix rows (without finder pattern)</li>
+<li>total matrix cols (without finder pattern)</li>
+<li>region data rows (with finder pattern)</li>
+<li>region data col (with finder pattern)</li>
+<li>region data rows (without finder pattern)</li>
+<li>region data col (without finder pattern)</li>
+<li>horizontal regions</li>
+<li>vertical regions</li>
+<li>regions</li>
+<li>data codewords</li>
+<li>error codewords</li>
+<li>blocks</li>
+<li>data codewords per block</li>
+<li>error codewords per block</li>
+</ul>
+</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_chset_id">
+                                        protected                                        
+                </td>
+                <td>$chset_id</td>
+                <td class="last">Map encodation modes whit character sets.</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_chset">
+                                        protected                                        
+                </td>
+                <td>$chset</td>
+                <td class="last">Basic set of characters for each encodation mode.</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method___construct">__construct</a>(string $code)
+        
+                                            <p>This is the class constructor.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getBarcodeArray">getBarcodeArray</a>()
+        
+                                            <p>Returns a barcode array which is readable by TCPDF</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getGFProduct">getGFProduct</a>(int $a, int $b, array $log, array $alog, array $gf)
+        
+                                            <p>Product of two numbers in a Power-of-Two Galois Field</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getErrorCorrection">getErrorCorrection</a>(array $wd, int $nb, int $nd, int $nc, int $gf = 256, int $pp = 301)
+        
+                                            <p>Add error correction codewords to data codewords array (ANNEX E).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    pad
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get253StateCodeword">get253StateCodeword</a>(int $cwpad, int $cwpos)
+        
+                                            <p>Return the 253-state codeword</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    pad
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_get255StateCodeword">get255StateCodeword</a>(int $cwpad, int $cwpos)
+        
+                                            <p>Return the 255-state codeword</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_isCharMode">isCharMode</a>(int $chr, int $mode)
+        
+                                            <p>Returns true if the char belongs to the selected mode</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_lookAheadTest">lookAheadTest</a>(string $data, int $pos, int $mode)
+        
+                                            <p>The look-ahead test scans the data to be encoded to find the best mode (Annex P - steps from J to S).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getSwitchEncodingCodeword">getSwitchEncodingCodeword</a>(int $mode)
+        
+                                            <p>Get the switching codeword to a new encoding mode (latch codeword)</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    number
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getMaxDataCodewords">getMaxDataCodewords</a>(int $numcw)
+        
+                                            <p>Choose the minimum matrix size and return the max number of data codewords.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getHighLevelEncoding">getHighLevelEncoding</a>(string $data)
+        
+                                            <p>Get high level encoding using the minimum symbol data characters for ECC 200</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_placeModule">placeModule</a>(array $marr, int $nrow, int $ncol, int $row, int $col, int $chr, int $bit)
+        
+                                            <p>Places "chr+bit" with appropriate wrapping within array[].</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_placeUtah">placeUtah</a>(array $marr, int $nrow, int $ncol, int $row, int $col, int $chr)
+        
+                                            <p>Places the 8 bits of a utah-shaped symbol character.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_placeCornerA">placeCornerA</a>(array $marr, int $nrow, int $ncol, int $chr)
+        
+                                            <p>Places the 8 bits of the first special corner case.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_placeCornerB">placeCornerB</a>(array $marr, int $nrow, int $ncol, int $chr)
+        
+                                            <p>Places the 8 bits of the second special corner case.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_placeCornerC">placeCornerC</a>(array $marr, int $nrow, int $ncol, int $chr)
+        
+                                            <p>Places the 8 bits of the third special corner case.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_placeCornerD">placeCornerD</a>(array $marr, int $nrow, int $ncol, int $chr)
+        
+                                            <p>Places the 8 bits of the fourth special corner case.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getPlacementMap">getPlacementMap</a>(int $nrow, int $ncol)
+        
+                                            <p>Build a placement map.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L208">at line 208</a></div>
+        <code>                    
+    <strong>__construct</strong>(string $code)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>This is the class constructor.</p>                    <p>Creates a datamatrix object</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$code</td>
+                <td>Code to represent using Datamatrix.</td>
+            </tr>
+            </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getBarcodeArray">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L325">at line 325</a></div>
+        <code>                    array
+    <strong>getBarcodeArray</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a barcode array which is readable by TCPDF</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getGFProduct">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L339">at line 339</a></div>
+        <code>            protected        int
+    <strong>getGFProduct</strong>(int $a, int $b, array $log, array $alog, array $gf)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Product of two numbers in a Power-of-Two Galois Field</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$a</td>
+                <td>first number to multiply.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$b</td>
+                <td>second number to multiply.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$log</td>
+                <td>Log table.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$alog</td>
+                <td>Anti-Log table.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$gf</td>
+                <td>Number of Factors of the Reed-Solomon polynomial.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getErrorCorrection">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L357">at line 357</a></div>
+        <code>            protected        array
+    <strong>getErrorCorrection</strong>(array $wd, int $nb, int $nd, int $nc, int $gf = 256, int $pp = 301)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Add error correction codewords to data codewords array (ANNEX E).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$wd</td>
+                <td>Array of datacodewords.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nb</td>
+                <td>Number of blocks.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nd</td>
+                <td>Number of data codewords per block.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nc</td>
+                <td>Number of correction codewords per block.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$gf</td>
+                <td>numner of fields on log/antilog table (power of 2).</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pp</td>
+                <td>The value of its prime modulus polynomial (301 for ECC200).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get253StateCodeword">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L419">at line 419</a></div>
+        <code>            protected        pad
+    <strong>get253StateCodeword</strong>(int $cwpad, int $cwpos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the 253-state codeword</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$cwpad</td>
+                <td>Pad codeword.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$cwpos</td>
+                <td>Number of data codewords from the beginning of encoded data.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>pad</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_get255StateCodeword">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L434">at line 434</a></div>
+        <code>            protected        pad
+    <strong>get255StateCodeword</strong>(int $cwpad, int $cwpos)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return the 255-state codeword</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$cwpad</td>
+                <td>Pad codeword.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$cwpos</td>
+                <td>Number of data codewords from the beginning of encoded data.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>pad</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isCharMode">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L449">at line 449</a></div>
+        <code>            protected        bool
+    <strong>isCharMode</strong>(int $chr, int $mode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns true if the char belongs to the selected mode</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$chr</td>
+                <td>Character (byte) to check.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>Current encoding mode.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_lookAheadTest">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L496">at line 496</a></div>
+        <code>            protected        int
+    <strong>lookAheadTest</strong>(string $data, int $pos, int $mode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>The look-ahead test scans the data to be encoded to find the best mode (Annex P - steps from J to S).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>data to encode</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$pos</td>
+                <td>current position</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>current encoding mode</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getSwitchEncodingCodeword">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L626">at line 626</a></div>
+        <code>            protected        int
+    <strong>getSwitchEncodingCodeword</strong>(int $mode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get the switching codeword to a new encoding mode (latch codeword)</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$mode</td>
+                <td>New encoding mode.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMaxDataCodewords">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L665">at line 665</a></div>
+        <code>            protected        number
+    <strong>getMaxDataCodewords</strong>(int $numcw)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Choose the minimum matrix size and return the max number of data codewords.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$numcw</td>
+                <td>Number of current codewords.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>number</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getHighLevelEncoding">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L680">at line 680</a></div>
+        <code>            protected        array
+    <strong>getHighLevelEncoding</strong>(string $data)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get high level encoding using the minimum symbol data characters for ECC 200</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td>data to encode</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeModule">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L956">at line 956</a></div>
+        <code>            protected        array
+    <strong>placeModule</strong>(array $marr, int $nrow, int $ncol, int $row, int $col, int $chr, int $bit)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Places "chr+bit" with appropriate wrapping within array[].</p>                    <p>(Annex F - ECC 200 symbol character placement)</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$marr</td>
+                <td>Array of symbols.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nrow</td>
+                <td>Number of rows.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ncol</td>
+                <td>Number of columns.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$row</td>
+                <td>Row number.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$col</td>
+                <td>Column number.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$chr</td>
+                <td>Char byte.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$bit</td>
+                <td>Bit.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeUtah">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L981">at line 981</a></div>
+        <code>            protected        array
+    <strong>placeUtah</strong>(array $marr, int $nrow, int $ncol, int $row, int $col, int $chr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Places the 8 bits of a utah-shaped symbol character.</p>                    <p>(Annex F - ECC 200 symbol character placement)</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$marr</td>
+                <td>Array of symbols.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nrow</td>
+                <td>Number of rows.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ncol</td>
+                <td>Number of columns.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$row</td>
+                <td>Row number.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$col</td>
+                <td>Column number.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$chr</td>
+                <td>Char byte.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeCornerA">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L1003">at line 1003</a></div>
+        <code>            protected        array
+    <strong>placeCornerA</strong>(array $marr, int $nrow, int $ncol, int $chr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Places the 8 bits of the first special corner case.</p>                    <p>(Annex F - ECC 200 symbol character placement)</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$marr</td>
+                <td>Array of symbols.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nrow</td>
+                <td>Number of rows.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ncol</td>
+                <td>Number of columns.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$chr</td>
+                <td>Char byte.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeCornerB">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L1025">at line 1025</a></div>
+        <code>            protected        array
+    <strong>placeCornerB</strong>(array $marr, int $nrow, int $ncol, int $chr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Places the 8 bits of the second special corner case.</p>                    <p>(Annex F - ECC 200 symbol character placement)</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$marr</td>
+                <td>Array of symbols.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nrow</td>
+                <td>Number of rows.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ncol</td>
+                <td>Number of columns.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$chr</td>
+                <td>Char byte.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeCornerC">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L1047">at line 1047</a></div>
+        <code>            protected        array
+    <strong>placeCornerC</strong>(array $marr, int $nrow, int $ncol, int $chr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Places the 8 bits of the third special corner case.</p>                    <p>(Annex F - ECC 200 symbol character placement)</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$marr</td>
+                <td>Array of symbols.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nrow</td>
+                <td>Number of rows.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ncol</td>
+                <td>Number of columns.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$chr</td>
+                <td>Char byte.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_placeCornerD">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L1069">at line 1069</a></div>
+        <code>            protected        array
+    <strong>placeCornerD</strong>(array $marr, int $nrow, int $ncol, int $chr)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Places the 8 bits of the fourth special corner case.</p>                    <p>(Annex F - ECC 200 symbol character placement)</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$marr</td>
+                <td>Array of symbols.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$nrow</td>
+                <td>Number of rows.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ncol</td>
+                <td>Number of columns.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$chr</td>
+                <td>Char byte.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getPlacementMap">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/datamatrix.php#L1089">at line 1089</a></div>
+        <code>            protected        array
+    <strong>getPlacementMap</strong>(int $nrow, int $ncol)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Build a placement map.</p>                    <p>(Annex F - ECC 200 symbol character placement)</p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$nrow</td>
+                <td>Number of rows.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$ncol</td>
+                <td>Number of columns.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.            <br/>This documentation is for <a href="https://github.com/code-lts/WarnockPDF#readme" rel="noreferrer noopener" target="_blank">WarnockPDF</a> the fork of TCPDF.</div></div>
+    </div>
+    </body>
+
+</html>
