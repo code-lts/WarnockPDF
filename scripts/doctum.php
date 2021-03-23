@@ -13,6 +13,7 @@ $iterator = Finder::create()
     ->notPath('vendor')
     ->notPath('tests')
     ->notPath('examples')
+    ->notName('tcpdf_font_data.php')
     ->in($rootDir);
 
 return new Doctum($iterator, [
