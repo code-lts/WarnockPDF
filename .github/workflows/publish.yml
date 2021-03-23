@@ -3,6 +3,7 @@ name: Publish Api documentation to GitHub pages
 on:
     repository_dispatch:
         types: run-build-api-docs
+    workflow_dispatch:
     schedule:
         - cron: "00 12 * * *"
 
