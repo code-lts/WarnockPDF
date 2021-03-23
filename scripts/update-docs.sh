@@ -13,7 +13,10 @@ ${SUDO_BIN:-sudo} rm -rf ./build
 git checkout gh-pages
 git ls-files ./api-docs/ | xargs -r -n 1 rm
 rm -rfd ./api-docs/*
-mv "${TEMP_DIR}"/build ./api-docs
+if [ ! -d ./api-docs ]; then
+    mkdir ./api-docs
+fi
+mv "${TEMP_DIR}"/build/* ./api-docs/
 rm -rf "${TEMP_DIR}"
 
 # Force update the CNAME just in case
