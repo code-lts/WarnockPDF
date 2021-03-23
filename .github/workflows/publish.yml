@@ -1,0 +1,34 @@
+name: Publish to GitHub pages
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    publish-pages:
+        environment:
+            name: API docs
+            url: https://warnockpdf.long-term.support/api-docs/
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v2
+              with:
+                  fetch-depth: 0
+                  ssh-key: ${{ secrets.SSH_KEY_DEPLOY }}
+            - name: build php documentation
+              uses: sudo-bot/action-doctum@dev
+              with:
+                  config-file: scripts/doctum.php
+                  method: "render"
+                  cli-args: "--output-format=github --no-ansi --no-progress -v --ignore-parse-errors"
+            - name: Import GPG key
+              uses: crazy-max/ghaction-import-gpg@c8906e451f398a510633c8bf0d6150b2fb2cb7c9
+              with:
+                  gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+                  passphrase: ${{ secrets.GPG_PASSPHRASE }}
+                  git-user-signingkey: true
+                  git-commit-gpgsign: true
+            - name: Push changes
+              run: ./scripts/update-docs.sh
