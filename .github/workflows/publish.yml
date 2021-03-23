@@ -1,9 +1,10 @@
-name: Publish to GitHub pages
+name: Publish Api documentation to GitHub pages
 
 on:
-    push:
-        branches:
-            - main
+    repository_dispatch:
+        types: run-build-api-docs
+    schedule:
+        - cron: "00 12 * * *"
 
 jobs:
     publish-pages:
@@ -21,7 +22,7 @@ jobs:
               uses: sudo-bot/action-doctum@dev
               with:
                   config-file: scripts/doctum.php
-                  method: "render"
+                  method: "update"
                   cli-args: "--output-format=github --no-ansi --no-progress -v --ignore-parse-errors"
             - name: Import GPG key
               uses: crazy-max/ghaction-import-gpg@c8906e451f398a510633c8bf0d6150b2fb2cb7c9
