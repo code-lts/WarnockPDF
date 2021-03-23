@@ -72,14 +72,14 @@ define('ENC_ASCII_EXT', 6);
 define('ENC_ASCII_NUM', 7);
 
 /**
-* *
-* Class to create DataMatrix ECC 200 barcode arrays for TCPDF class.
-* DataMatrix (ISO/IEC 16022:2006) is a 2-dimensional bar code.
-*
-* 
-* @author Nicola Asuni
-* @version 1.0.004
-*/
+ *
+ * Class to create DataMatrix ECC 200 barcode arrays for TCPDF class.
+ * DataMatrix (ISO/IEC 16022:2006) is a 2-dimensional bar code.
+ *
+ *
+ * @author Nicola Asuni
+ * @version 1.0.004
+ */
 class Datamatrix {
 
 	/**
