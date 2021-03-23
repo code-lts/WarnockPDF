@@ -786,9 +786,7 @@ class TCPDF_STATIC {
 		if (isset($prop['charLimit'])) {
 			$opt['maxlen'] = intval($prop['charLimit']);
 		}
-		if (!isset($ff)) {
-			$ff = 0; // default value
-		}
+		$ff = 0;
 		// readonly: The read-only characteristic of a field. If a field is read-only, the user can see the field but cannot change it.
 		if (isset($prop['readonly']) AND ($prop['readonly'] == 'true')) {
 			$ff += 1 << 0;

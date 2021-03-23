@@ -110,7 +110,16 @@ if (!is_array($argv)) {
 }
 
 // initialize the array of options
-$options = array('type'=>'', 'enc'=>'', 'flags'=>32, 'outpath'=>K_PATH_FONTS, 'platid'=>3, 'encid'=>1, 'addcbbox'=>false, 'link'=>false);
+$options = array(
+	'type' => '',
+	'enc' => '',
+	'flags' => 32,
+	'outpath' => K_PATH_FONTS,// @phpstan-ignore-line
+	'platid' => 3,
+	'encid' => 1,
+	'addcbbox' => false,
+	'link' => false
+);
 
 // short input options
 $sopt = '';
