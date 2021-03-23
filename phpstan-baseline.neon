@@ -579,14 +579,3 @@ parameters:
 			message: "#^Variable \\$bar might not be defined\\.$#"
 			count: 2
 			path: tcpdf_barcodes_2d.php
-
-		-
-			message: "#^Variable \\$startxref might not be defined\\.$#"
-			count: 4
-			path: tcpdf_parser.php
-
-		-
-			message: "#^Variable \\$wb might not be defined\\.$#"
-			count: 3
-			path: tcpdf_parser.php
-

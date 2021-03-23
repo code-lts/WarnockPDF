@@ -15,6 +15,7 @@
 
 - Added a testing and coverage script
 - Added GitHub actions to cover all PHP versions supported
+- Applied a coding-standard: wdes/coding-standard
 
 ### Fixes
 
@@ -27,6 +28,9 @@
 ### Removed
 
 - TCPDF_STATIC::{get,set}_mqr (magic_quotes_runtime has been DEPRECATED in PHP 5.3.0 and REMOVED in PHP 5.4.0)
+- TCPDF_IMPORT class (it was not finished since 2013 and under development in 2013)
+- TCPDF_PARSER class (it was used by TCPDF_IMPORT)
+- TCPDF_FILTERS class (it was used by TCPDF_PARSER, and created in 2013, and never really changed)
 
 ## [6.3.5] - 2020-02-14
 
