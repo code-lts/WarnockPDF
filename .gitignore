@@ -3,6 +3,8 @@
 .idea/
 nbproject/
 
+.php_cs
+
 cache
 *.cache
 *.cache.*
