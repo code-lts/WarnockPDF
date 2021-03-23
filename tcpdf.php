@@ -3666,7 +3666,7 @@ class TCPDF {
 
 	/**
 	 * Returns the array of spot colors.
-	 * @return (array) Spot colors array.
+	 * @return array Spot colors array.
 	 * @public
 	 * @since 6.0.038 (2013-09-30)
 	 */
@@ -3699,7 +3699,7 @@ class TCPDF {
 	 * @param string $type Type of object affected by this color: ('draw', 'fill', 'text').
 	 * @param string $name Name of the spot color.
 	 * @param float $tint Intensity of the color (from 0 to 100 ; 100 = full intensity by default).
-	 * @return (string) PDF color command.
+	 * @return string PDF color command.
 	 * @public
 	 * @since 5.9.125 (2011-10-03)
 	 */
@@ -3784,7 +3784,7 @@ class TCPDF {
 	 * @param string $type Type of object affected by this color: ('draw', 'fill', 'text').
 	 * @param array $color Array of colors (1=gray, 3=RGB, 4=CMYK or 5=spotcolor=CMYK+name values).
 	 * @param boolean $ret If true do not send the PDF command.
-	 * @return (string) The PDF command or empty string.
+	 * @return string The PDF command or empty string.
 	 * @public
 	 * @since 3.1.000 (2008-06-11)
 	 */
@@ -3859,7 +3859,7 @@ class TCPDF {
 	 * @param float $col4 KEY (BLACK) color for CMYK (0-100).
 	 * @param boolean $ret If true do not send the command.
 	 * @param string $name spot color name (if any)
-	 * @return (string) The PDF command or empty string.
+	 * @return string The PDF command or empty string.
 	 * @public
 	 * @since 5.9.125 (2011-10-03)
 	 */
@@ -3965,7 +3965,7 @@ class TCPDF {
 	 * @param float $col4 KEY (BLACK) color for CMYK (0-100).
 	 * @param boolean $ret If true do not send the command.
 	 * @param string $name Spot color name (if any).
-	 * @return (string) The PDF command.
+	 * @return string The PDF command.
 	 * @public
 	 * @since 1.3
 	 * @see SetFillColorArray(), SetDrawColor(), SetTextColor(), Rect(), Cell(), MultiCell()
@@ -3982,7 +3982,7 @@ class TCPDF {
 	 * @param float $col4 KEY (BLACK) color for CMYK (0-100).
 	 * @param boolean $ret If true do not send the command.
 	 * @param string $name Spot color name (if any).
-	 * @return (string) Empty string.
+	 * @return string Empty string.
 	 * @public
 	 * @since 1.3
 	 * @see SetTextColorArray(), SetDrawColor(), SetFillColor(), Text(), Cell(), MultiCell()
@@ -4576,7 +4576,7 @@ class TCPDF {
 	 * @param mixed $char Character to check (integer value or string)
 	 * @param string $font Font name (family name).
 	 * @param string $style Font style.
-	 * @return (boolean) true if the char is defined, false otherwise.
+	 * @return boolean true if the char is defined, false otherwise.
 	 * @public
 	 * @since 5.9.153 (2012-03-28)
 	 */
@@ -4603,7 +4603,7 @@ class TCPDF {
 	 * @param string $font Font name (family name).
 	 * @param string $style Font style.
 	 * @param array $subs Array of possible character substitutions. The key is the character to check (integer value) and the value is a single intege value or an array of possible substitutes.
-	 * @return (string) Processed text.
+	 * @return string Processed text.
 	 * @public
 	 * @since 5.9.153 (2012-03-28)
 	 */
@@ -9483,7 +9483,7 @@ class TCPDF {
 
 	/**
 	 * Put XMP data object and return ID.
-	 * @return (int) The object ID.
+	 * @return int The object ID.
 	 * @since 5.9.121 (2011-09-28)
 	 * @protected
 	 */
@@ -10190,7 +10190,7 @@ class TCPDF {
 
 	/**
 	 * Returns document creation timestamp in seconds.
-	 * @return (int) Creation timestamp in seconds.
+	 * @return int Creation timestamp in seconds.
 	 * @public
 	 * @since 5.9.152 (2012-03-23)
 	 */
@@ -10200,7 +10200,7 @@ class TCPDF {
 
 	/**
 	 * Returns document modification timestamp in seconds.
-	 * @return (int) Modfication timestamp in seconds.
+	 * @return int Modfication timestamp in seconds.
 	 * @public
 	 * @since 5.9.152 (2012-03-23)
 	 */
@@ -12187,7 +12187,7 @@ class TCPDF {
 	 * @param float $y Y position in user units of the destiantion on the selected page (default = -1 = current position; 0 = page start;).
 	 * @param $page (int|string) Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.
 	 * @param float $x X position in user units of the destiantion on the selected page (default = -1 = current position;).
-	 * @return (string) Stripped named destination identifier or false in case of error.
+	 * @return string Stripped named destination identifier or false in case of error.
 	 * @public
 	 * @author Christian Deligant, Nicola Asuni
 	 * @since 5.9.097 (2011-06-23)
@@ -12230,7 +12230,7 @@ class TCPDF {
 
 	/**
 	 * Return the Named Destination array.
-	 * @return (array) Named Destination array.
+	 * @return array Named Destination array.
 	 * @public
 	 * @author Nicola Asuni
 	 * @since 5.9.097 (2011-06-23)
@@ -13467,7 +13467,7 @@ class TCPDF {
 	 * @param float $h Height of the signature area.
 	 * @param int $page option page number (if < 0 the current page is used).
 	 * @param string $name Name of the signature.
-	 * @return (array) Array defining page and rectangle coordinates of signature appearance.
+	 * @return array Array defining page and rectangle coordinates of signature appearance.
 	 * @protected
 	 * @author Nicola Asuni
 	 * @since 5.9.101 (2011-07-06)
@@ -13527,7 +13527,7 @@ class TCPDF {
 	 * NOT YET IMPLEMENTED
 	 * Request TSA for a timestamp
 	 * @param string $signature Digital signature as binary string
-	 * @return (string) Timestamped digital signature
+	 * @return string Timestamped digital signature
 	 * @protected
 	 * @author Richard Stockinger
 	 * @since 6.0.090 (2014-06-16)

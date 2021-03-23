@@ -1417,7 +1417,7 @@ class QRcode {
 
 	/**
 	 * splitString
-	 * @return (int)
+	 * @return int
 	 */
 	 protected function splitString() {
 		while (strlen($this->dataStr) > 0) {

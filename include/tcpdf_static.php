@@ -566,7 +566,7 @@ class TCPDF_STATIC {
 	/**
 	 * Encode a name object.
 	 * @param string $name Name object to encode.
-	 * @return (string) Encoded name object.
+	 * @return string Encoded name object.
 	 * @author Nicola Asuni
 	 * @since 5.9.097 (2011-06-23)
 	 * @public static
@@ -2498,7 +2498,7 @@ class TCPDF_STATIC {
 	/**
 	 * Get the canonical page layout mode.
 	 * @param string $layout The page layout. Possible values are:<ul><li>SinglePage Display one page at a time</li><li>OneColumn Display the pages in one column</li><li>TwoColumnLeft Display the pages in two columns, with odd-numbered pages on the left</li><li>TwoColumnRight Display the pages in two columns, with odd-numbered pages on the right</li><li>TwoPageLeft (PDF 1.5) Display the pages two at a time, with odd-numbered pages on the left</li><li>TwoPageRight (PDF 1.5) Display the pages two at a time, with odd-numbered pages on the right</li></ul>
-	 * @return (string) Canonical page layout name.
+	 * @return string Canonical page layout name.
 	 * @public static
 	 */
 	public static function getPageLayoutMode($layout='SinglePage') {
@@ -2541,7 +2541,7 @@ class TCPDF_STATIC {
 	/**
 	 * Get the canonical page layout mode.
 	 * @param string $mode A name object specifying how the document should be displayed when opened:<ul><li>UseNone Neither document outline nor thumbnail images visible</li><li>UseOutlines Document outline visible</li><li>UseThumbs Thumbnail images visible</li><li>FullScreen Full-screen mode, with no menu bar, window controls, or any other window visible</li><li>UseOC (PDF 1.5) Optional content group panel visible</li><li>UseAttachments (PDF 1.6) Attachments panel visible</li></ul>
-	 * @return (string) Canonical page mode name.
+	 * @return string Canonical page mode name.
 	 * @public static
 	 */
 	public static function getPageMode($mode='UseNone') {
