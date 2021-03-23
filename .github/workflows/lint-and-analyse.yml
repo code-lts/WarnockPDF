@@ -8,6 +8,27 @@ on:
       - main
 
 jobs:
+    lint-php:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use php 7.2
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: 7.2
+                  tools: composer:v2
+            - name: Validate composer.json and composer.lock
+              run: composer validate
+            - name: Cache module
+              uses: actions/cache@v2
+              with:
+                  path: ~/.composer/cache/
+                  key: composer-cache
+            - name: Install wdes/coding-standard
+              run: composer require wdes/coding-standard
+            - name: Lint files
+              run: ./vendor/bin/phpcs
+
     analyse-php:
         runs-on: ubuntu-latest
         steps:
