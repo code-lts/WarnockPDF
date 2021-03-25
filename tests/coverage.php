@@ -12,8 +12,8 @@ if (extension_loaded('pcov')) {
             $rootDir = realpath(dirname(__FILE__) . '/../') . '/';
             $coverageFile = $rootDir . 'tests/coverage.lcov';
             $covData = \pcov\collect(\pcov\exclusive, array(
-            __FILE__
-        ));
+                __FILE__
+            ));
             $coverageData = '';
             foreach ($covData as $file => $coverageForFile) {
                 $coverageData .= 'SF:' . $file . "\n";

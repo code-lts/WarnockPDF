@@ -48,6 +48,7 @@
         <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"/>
         <exclude name="Squiz.ControlStructures.ControlSignature.SpaceAfterCloseParenthesis"/>
         <exclude name="Squiz.ControlStructures.ForLoopDeclaration.SpacingBeforeFirst"/>
+        <exclude name="Squiz.WhiteSpace.FunctionSpacing.BeforeFirst"/>
         <exclude name="Squiz.WhiteSpace.FunctionSpacing.AfterLast"/>
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>

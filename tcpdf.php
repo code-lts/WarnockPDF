@@ -13629,15 +13629,7 @@ class TCPDF
      * @author Nicola Asuni
      * @since 2.9.000 (2008-03-26)
      */
-    public function setUserRights(
-        $enable = true,
-        $document = '/FullSave',
-        $annots = '/Create/Delete/Modify/Copy/Import/Export',
-        $form = '/Add/Delete/FillIn/Import/Export/SubmitStandalone/SpawnTemplate',
-        $signature = '/Modify',
-        $ef = '/Create/Delete/Modify/Import',
-        $formex = ''
-    )
+    public function setUserRights($enable = true, $document = '/FullSave', $annots = '/Create/Delete/Modify/Copy/Import/Export', $form = '/Add/Delete/FillIn/Import/Export/SubmitStandalone/SpawnTemplate', $signature = '/Modify', $ef = '/Create/Delete/Modify/Import', $formex = '')
     {
         $this->ur['enabled'] = $enable;
         $this->ur['document'] = $document;
