@@ -8,7 +8,7 @@ on:
       - main
 
 jobs:
-    lint-php:
+    phpcs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
@@ -28,6 +28,25 @@ jobs:
               run: composer require wdes/coding-standard
             - name: Lint files
               run: ./vendor/bin/phpcs
+
+    php-cs-fixer:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use php 7.4
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: 7.4
+                  tools: composer:v2
+            - name: Cache module
+              uses: actions/cache@v2
+              with:
+                  path: ~/.composer/cache/
+                  key: composer-cache
+            - name: Install PHP CS Fixer
+              run: composer require --dev friendsofphp/php-cs-fixer
+            - name: Lint files
+              run: ./vendor/bin/php-cs-fixer fix --diff --dry-run -v
 
     analyse-php:
         runs-on: ubuntu-latest
