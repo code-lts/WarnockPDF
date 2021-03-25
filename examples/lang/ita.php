@@ -19,7 +19,7 @@
 // Italian
 
 global $l;
-$l = Array();
+$l = array();
 
 // PAGE META DESCRIPTORS --------------------------------------
 

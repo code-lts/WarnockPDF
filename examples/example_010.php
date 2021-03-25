@@ -22,7 +22,8 @@ require_once('tcpdf_include.php');
 /**
  * Extend TCPDF to work with multiple columns
  */
-class MC_TCPDF extends TCPDF {
+class MC_TCPDF extends TCPDF
+{
 
     /**
      * Print chapter
@@ -32,7 +33,8 @@ class MC_TCPDF extends TCPDF {
      * @param boolean $mode if true the chapter body is in HTML, otherwise in simple text.
      * @public
      */
-    public function PrintChapter($num, $title, $file, $mode = false) {
+    public function PrintChapter($num, $title, $file, $mode = false)
+    {
         // add a new page
         $this->AddPage();
         // disable existing columns
@@ -51,7 +53,8 @@ class MC_TCPDF extends TCPDF {
      * @param string $title chapter title
      * @public
      */
-    public function ChapterTitle($num, $title) {
+    public function ChapterTitle($num, $title)
+    {
         $this->SetFont('helvetica', '', 14);
         $this->SetFillColor(200, 220, 255);
         $this->Cell(180, 6, 'Chapter ' . $num . ' : ' . $title, 0, 1, '', 1);
@@ -64,7 +67,8 @@ class MC_TCPDF extends TCPDF {
      * @param boolean $mode if true the chapter body is in HTML, otherwise in simple text.
      * @public
      */
-    public function ChapterBody($file, $mode = false) {
+    public function ChapterBody($file, $mode = false)
+    {
         $this->selectColumn();
         // get external file content
         $content = file_get_contents($file, false);
@@ -100,8 +104,8 @@ $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE . ' 010', PDF_HEADER_STRING);
 
 // set header and footer fonts
-$pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
-$pdf->setFooterFont(Array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+$pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+$pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
 
 // set default monospaced font
 $pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
@@ -112,7 +116,7 @@ $pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
 $pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
 // set auto page breaks
-$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+$pdf->SetAutoPageBreak(true, PDF_MARGIN_BOTTOM);
 
 // set image scale factor
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
