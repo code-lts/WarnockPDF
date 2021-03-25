@@ -48,7 +48,7 @@ jobs:
             - name: Lint files
               run: ./vendor/bin/php-cs-fixer fix --diff --dry-run -v
 
-    analyse-php:
+    phpstan:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v2
@@ -66,3 +66,14 @@ jobs:
               run: composer require phpstan/phpstan
             - name: Analyse files
               run: ./vendor/bin/phpstan --memory-limit=1G
+
+    doctum:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+            - name: lint php documentation
+              uses: sudo-bot/action-doctum@dev
+              with:
+                  config-file: scripts/doctum.php
+                  method: "parse"
+                  cli-args: "--output-format=github --no-ansi --no-progress -v --ignore-parse-errors"
