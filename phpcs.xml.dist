@@ -6,6 +6,8 @@
     <arg name="colors"/>
     <!-- Make sniff report relative -->
     <arg name="basepath" value="."/>
+    <!-- Store results in a cache file -->
+    <arg name="cache" value=".php_cs.cache"/>
 
     <file>.</file>
     <exclude-pattern>*/tmp/*</exclude-pattern>
@@ -29,10 +31,6 @@
         <exclude name="Squiz.PHP.DisallowSizeFunctionsInLoops.Found"/>
         <exclude name="Squiz.Strings.DoubleQuoteUsage.NotRequired"/>
         <exclude name="Squiz.Strings.ConcatenationSpacing.PaddingFound"/>
-        <exclude name="Squiz.WhiteSpace.OperatorSpacing.NoSpaceAfter"/>
-        <exclude name="Squiz.WhiteSpace.OperatorSpacing.NoSpaceBefore"/>
-        <exclude name="Squiz.WhiteSpace.OperatorSpacing.SpacingBefore"/>
-        <exclude name="Squiz.WhiteSpace.OperatorSpacing.SpacingAfter"/>
         <exclude name="Squiz.WhiteSpace.FunctionSpacing.After"/>
         <exclude name="Squiz.WhiteSpace.FunctionSpacing.Before"/>
         <exclude name="Squiz.Classes.ValidClassName.NotCamelCaps"/>
@@ -45,18 +43,16 @@
         <exclude name="Squiz.ControlStructures.ControlSignature.NewlineAfterOpenBrace"/>
         <exclude name="Squiz.ControlStructures.ControlSignature.SpaceAfterCloseParenthesis"/>
         <exclude name="Squiz.ControlStructures.ForLoopDeclaration.SpacingBeforeFirst"/>
+	<exclude name="Squiz.WhiteSpace.FunctionSpacing.BeforeFirst"/>
         <exclude name="Squiz.WhiteSpace.FunctionSpacing.AfterLast"/>
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
         <exclude name="Squiz.WhiteSpace.ScopeClosingBrace.Indent"/>
         <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine"/>
         <exclude name="Squiz.WhiteSpace.SemicolonSpacing.Incorrect"/><!-- To be fixed -->
-        <exclude name="Squiz.WhiteSpace.LogicalOperatorSpacing.TooMuchSpaceBefore"/>
         <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.CloseBracketLine"/>
         <exclude name="Squiz.PHP.NonExecutableCode.Unreachable"/><!-- To be fixed -->
 
-        <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceBefore"/>
-        <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter"/>
         <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock"/>
         <exclude name="PSR12.Classes.ClosingBrace.StatementAfter"/>
         <exclude name="PSR12.ControlStructures.ControlStructureSpacing.FirstExpressionLine"/>

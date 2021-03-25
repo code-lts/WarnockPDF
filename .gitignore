@@ -1,4 +1,8 @@
 .vscode
 .idea
+phpcs.xml
 phpstan.neon
+.php_cs.cache
 vendor
+composer.lock
+
