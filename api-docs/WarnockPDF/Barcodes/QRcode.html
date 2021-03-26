@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>QRcode | WarnockPDF</title>
+    <title>WarnockPDF\Barcodes\QRcode | WarnockPDF</title>
 
-            <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="css/doctum.css">
-        <link rel="stylesheet" type="text/css" href="fonts/doctum-font.css">
-        <script src="js/jquery-3.5.1.slim.min.js"></script>
-        <script async defer src="js/bootstrap.min.js"></script>
-        <script src="js/typeahead.min.js"></script>
-        <script src="doctum.js"></script>
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     </head>
 
-    <body id="class" data-name="class:QRcode" data-root-path="">
+    <body id="class" data-name="class:WarnockPDF_Barcodes_QRcode" data-root-path="../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="search.html">
+                <form id="search-form" action="../../search.html">
             <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -44,46 +44,51 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">WarnockPDF</a>
+                <a class="navbar-brand" href="../../index.html">WarnockPDF</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
-                    <li><a href="classes.html">Classes</a></li>
-                    <li><a href="namespaces.html">Namespaces</a></li>
-                    <li><a href="interfaces.html">Interfaces</a></li>
-                    <li><a href="traits.html">Traits</a></li>
-                    <li><a href="doc-index.html">Index</a></li>
-                    <li><a href="search.html">Search</a></li>
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-                            <div id="page-content">
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../WarnockPDF.html">WarnockPDF</a></li><li class="backslash">\</li><li><a href="../../WarnockPDF/Barcodes.html">Barcodes</a></li><li class="backslash">\</li><li>QRcode</li>
+            </ol>
+        </div>
+                <div id="page-content">
                 
     <div class="page-header">
         <h1>
             QRcode
-                <small><sup><span class="label label-danger">deprecated</span></sup></small>
+                
         </h1>
     </div>
 
     <p>        class
-    <strong>QRcode</strong>        extends <a href="WarnockPDF/Barcodes/QRcode.html"><abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a>        (<a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php">View source</a>)
+    <strong>QRcode</strong>        (<a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php">View source</a>)
 </p>
 
         
-            <p>
-                <small><sup><span class="label label-danger">deprecated</span></sup></small>
-                            <tr>
-                    <td>7.0.0</td>
-                    <td>This file will be removed in next major version</td>
-                </tr>
-                    </p>
     
 
             <div class="description">
-            <p>This is a legacy support class</p>                                </div>
+            <p>Class to create QR-code arrays for WarnockPDF class.</p>            <p>QR Code symbol is a 2D barcode that can be scanned by handy terminals such as a mobile phone with CCD.
+The capacity of QR Code is up to 7000 digits or 4000 characters, and has high robustness.
+This class supports QR Code model 2, described in JIS (Japanese Industrial Standards) X0510:2004 or ISO/IEC 18004.
+Currently the following features are not supported: ECI and FNC1 mode, Micro QR Code, QR Code model 1, Structured mode.</p>
+
+<p>This class is derived from "PHP QR Code encoder" by Dominik Dzienia (http://phpqrcode.sourceforge.net/) based on "libqrencode C library 3.1.1." by Kentaro Fukuchi (http://megaui.net/fukuchi/works/qrencode/index.en.html), contains Reed-Solomon code written by Phil Karn, KA9Q. QR Code is registered trademark of DENSO WAVE INCORPORATED (http://www.denso-wave.com/qrcode/index-e.html).
+Please read comments on this class source file for full copyright and license information.</p>                    </div>
     
     
     
@@ -96,8 +101,7 @@
                 </td>
                 <td>$barcode_array</td>
                 <td class="last">Barcode array to be returned which is readable by WarnockPDF.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_barcode_array">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_version">
@@ -105,8 +109,7 @@
                 </td>
                 <td>$version</td>
                 <td class="last">QR code version. Size of QRcode is defined as version. Version is from 1 to 40. Version 1 is 21<em>21 matrix. And 4 modules increases whenever 1 version increases. So version 40 is 177</em>177 matrix.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_version">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_level">
@@ -114,8 +117,7 @@
                 </td>
                 <td>$level</td>
                 <td class="last">Levels of error correction. See definitions for possible values.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_level">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_hint">
@@ -123,8 +125,7 @@
                 </td>
                 <td>$hint</td>
                 <td class="last">Encoding mode.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_hint">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_casesensitive">
@@ -132,8 +133,7 @@
                 </td>
                 <td>$casesensitive</td>
                 <td class="last">Boolean flag, if true the input string will be converted to uppercase.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_casesensitive">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_structured">
@@ -141,8 +141,7 @@
                 </td>
                 <td>$structured</td>
                 <td class="last">Structured QR code (not supported yet).</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_structured">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_data">
@@ -150,8 +149,7 @@
                 </td>
                 <td>$data</td>
                 <td class="last">Mask data.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_data">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_width">
@@ -159,8 +157,7 @@
                 </td>
                 <td>$width</td>
                 <td class="last">Width.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_width">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_frame">
@@ -168,8 +165,7 @@
                 </td>
                 <td>$frame</td>
                 <td class="last">Frame.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_frame">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_x">
@@ -177,8 +173,7 @@
                 </td>
                 <td>$x</td>
                 <td class="last">X position of bit.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_x">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_y">
@@ -186,8 +181,7 @@
                 </td>
                 <td>$y</td>
                 <td class="last">Y position of bit.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_y">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_dir">
@@ -195,8 +189,7 @@
                 </td>
                 <td>$dir</td>
                 <td class="last">Direction.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_dir">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_bit">
@@ -204,8 +197,7 @@
                 </td>
                 <td>$bit</td>
                 <td class="last">Single bit value.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_bit">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_datacode">
@@ -213,8 +205,7 @@
                 </td>
                 <td>$datacode</td>
                 <td class="last">Data code.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_datacode">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_ecccode">
@@ -222,8 +213,7 @@
                 </td>
                 <td>$ecccode</td>
                 <td class="last">Error correction code.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_ecccode">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_blocks">
@@ -231,8 +221,7 @@
                 </td>
                 <td>$blocks</td>
                 <td class="last">Blocks.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_blocks">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_rsblocks">
@@ -240,8 +229,7 @@
                 </td>
                 <td>$rsblocks</td>
                 <td class="last">Reed-Solomon blocks.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_rsblocks">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_count">
@@ -249,8 +237,7 @@
                 </td>
                 <td>$count</td>
                 <td class="last">Counter.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_count">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_dataLength">
@@ -258,8 +245,7 @@
                 </td>
                 <td>$dataLength</td>
                 <td class="last">Data length.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_dataLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_eccLength">
@@ -267,8 +253,7 @@
                 </td>
                 <td>$eccLength</td>
                 <td class="last">Error correction length.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_eccLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_b1">
@@ -276,8 +261,7 @@
                 </td>
                 <td>$b1</td>
                 <td class="last">Value b1.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_b1">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_runLength">
@@ -285,8 +269,7 @@
                 </td>
                 <td>$runLength</td>
                 <td class="last">Run length.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_runLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_dataStr">
@@ -294,8 +277,7 @@
                 </td>
                 <td>$dataStr</td>
                 <td class="last">Input data string.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_dataStr">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_items">
@@ -303,8 +285,7 @@
                 </td>
                 <td>$items</td>
                 <td class="last">Input items.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_items">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_rsitems">
@@ -312,8 +293,7 @@
                 </td>
                 <td>$rsitems</td>
                 <td class="last">Reed-Solomon items.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_rsitems">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_frames">
@@ -321,8 +301,7 @@
                 </td>
                 <td>$frames</td>
                 <td class="last">Array of frames.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_frames">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_anTable">
@@ -330,8 +309,7 @@
                 </td>
                 <td>$anTable</td>
                 <td class="last">Alphabet-numeric conversion table.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_anTable">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_capacity">
@@ -339,8 +317,7 @@
                 </td>
                 <td>$capacity</td>
                 <td class="last">Array Table of the capacity of symbols.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_capacity">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_lengthTableBits">
@@ -348,8 +325,7 @@
                 </td>
                 <td>$lengthTableBits</td>
                 <td class="last">Array Length indicator.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_lengthTableBits">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_eccTable">
@@ -357,8 +333,7 @@
                 </td>
                 <td>$eccTable</td>
                 <td class="last">Array Table of the error correction code (Reed-Solomon block).</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_eccTable">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_alignmentPattern">
@@ -366,8 +341,7 @@
                 </td>
                 <td>$alignmentPattern</td>
                 <td class="last">Array Positions of alignment patterns.</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_alignmentPattern">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_versionPattern">
@@ -375,8 +349,7 @@
                 </td>
                 <td>$versionPattern</td>
                 <td class="last">Array Version information pattern (BCH coded).</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_versionPattern">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
                     <tr>
                 <td class="type" id="property_formatInfo">
@@ -384,8 +357,7 @@
                 </td>
                 <td>$formatInfo</td>
                 <td class="last">Array Format information</td>
-                <td><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#property_formatInfo">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></td>
+                <td></td>
             </tr>
             </table>
 
@@ -401,8 +373,7 @@
                     <a href="#method___construct">__construct</a>(string $code, string $eclevel = &#039;L&#039;)
         
                                             <p>This is the class constructor.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method___construct">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -412,8 +383,7 @@
                     <a href="#method_getBarcodeArray">getBarcodeArray</a>()
         
                                             <p>Returns a barcode array which is readable by WarnockPDF</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getBarcodeArray">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -423,8 +393,7 @@
                     <a href="#method_binarize">binarize</a>(array $frame)
         
                                             <p>Convert the frame in binary form</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_binarize">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -434,8 +403,7 @@
                     <a href="#method_encodeString">encodeString</a>(string $string)
         
                                             <p>Encode the input string to QR code</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_encodeString">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -445,8 +413,7 @@
                     <a href="#method_encodeMask">encodeMask</a>(int $mask)
         
                                             <p>Encode mask</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_encodeMask">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -456,8 +423,7 @@
                     <a href="#method_setFrameAt">setFrameAt</a>(array $at, int $val)
         
                                             <p>Set frame value at specified position</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_setFrameAt">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -467,8 +433,7 @@
                     <a href="#method_getFrameAt">getFrameAt</a>(array $at)
         
                                             <p>Get frame value at specified position</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getFrameAt">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -478,8 +443,7 @@
                     <a href="#method_getNextPosition">getNextPosition</a>()
         
                                             <p>Return the next frame position</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getNextPosition">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -489,8 +453,7 @@
                     <a href="#method_init">init</a>(array $spec)
         
                                             <p>Initialize code.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_init">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -500,8 +463,7 @@
                     <a href="#method_getCode">getCode</a>()
         
                                             <p>Return Reed-Solomon block code.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getCode">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -511,8 +473,7 @@
                     <a href="#method_writeFormatInformation">writeFormatInformation</a>(int $width, array $frame, array $mask, int $level)
         
                                             <p>Write Format Information on frame and returns the number of black bits</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_writeFormatInformation">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -522,8 +483,7 @@
                     <a href="#method_mask0">mask0</a>(int $x, int $y)
         
                                             <p>mask0</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_mask0">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -533,8 +493,7 @@
                     <a href="#method_mask1">mask1</a>(int $x, int $y)
         
                                             <p>mask1</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_mask1">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -544,8 +503,7 @@
                     <a href="#method_mask2">mask2</a>(int $x, int $y)
         
                                             <p>mask2</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_mask2">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -555,8 +513,7 @@
                     <a href="#method_mask3">mask3</a>(int $x, int $y)
         
                                             <p>mask3</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_mask3">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -566,8 +523,7 @@
                     <a href="#method_mask4">mask4</a>(int $x, int $y)
         
                                             <p>mask4</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_mask4">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -577,8 +533,7 @@
                     <a href="#method_mask5">mask5</a>(int $x, int $y)
         
                                             <p>mask5</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_mask5">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -588,8 +543,7 @@
                     <a href="#method_mask6">mask6</a>(int $x, int $y)
         
                                             <p>mask6</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_mask6">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -599,8 +553,7 @@
                     <a href="#method_mask7">mask7</a>(int $x, int $y)
         
                                             <p>mask7</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_mask7">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -610,8 +563,7 @@
                     <a href="#method_generateMaskNo">generateMaskNo</a>(int $maskNo, int $width, array $frame)
         
                                             <p>Return bitmask</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_generateMaskNo">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -621,8 +573,7 @@
                     <a href="#method_makeMaskNo">makeMaskNo</a>(int $maskNo, int $width, int $s, int $d, bool $maskGenOnly = false)
         
                                             <p>makeMaskNo</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_makeMaskNo">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -632,8 +583,7 @@
                     <a href="#method_makeMask">makeMask</a>(int $width, array $frame, int $maskNo, int $level)
         
                                             <p>makeMask</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_makeMask">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -643,8 +593,7 @@
                     <a href="#method_calcN1N3">calcN1N3</a>(int $length)
         
                                             <p>calcN1N3</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_calcN1N3">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -654,8 +603,7 @@
                     <a href="#method_evaluateSymbol">evaluateSymbol</a>(int $width, array $frame)
         
                                             <p>evaluateSymbol</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_evaluateSymbol">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -665,8 +613,7 @@
                     <a href="#method_mask">mask</a>(int $width, array $frame, int $level)
         
                                             <p>mask</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_mask">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -676,8 +623,7 @@
                     <a href="#method_isdigitat">isdigitat</a>(string $str, int $pos)
         
                                             <p>Return true if the character at specified position is a number</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_isdigitat">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -687,8 +633,7 @@
                     <a href="#method_isalnumat">isalnumat</a>(string $str, int $pos)
         
                                             <p>Return true if the character at specified position is an alphanumeric character</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_isalnumat">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -698,8 +643,7 @@
                     <a href="#method_identifyMode">identifyMode</a>(int $pos)
         
                                             <p>identifyMode</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_identifyMode">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -709,8 +653,7 @@
                     <a href="#method_eatNum">eatNum</a>()
         
                                             <p>eatNum</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_eatNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -720,8 +663,7 @@
                     <a href="#method_eatAn">eatAn</a>()
         
                                             <p>eatAn</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_eatAn">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -731,8 +673,7 @@
                     <a href="#method_eatKanji">eatKanji</a>()
         
                                             <p>eatKanji</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_eatKanji">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -742,8 +683,7 @@
                     <a href="#method_eat8">eat8</a>()
         
                                             <p>eat8</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_eat8">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -753,8 +693,7 @@
                     <a href="#method_splitString">splitString</a>()
         
                                             <p>splitString</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_splitString">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -764,8 +703,7 @@
                     <a href="#method_toUpper">toUpper</a>()
         
                                             <p>toUpper</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_toUpper">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -775,8 +713,7 @@
                     <a href="#method_newInputItem">newInputItem</a>(int $mode, int $size, array $data, array $bstream = null)
         
                                             <p>newInputItem</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_newInputItem">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -786,8 +723,7 @@
                     <a href="#method_encodeModeNum">encodeModeNum</a>(array $inputitem, int $version)
         
                                             <p>encodeModeNum</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_encodeModeNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -797,8 +733,7 @@
                     <a href="#method_encodeModeAn">encodeModeAn</a>(array $inputitem, int $version)
         
                                             <p>encodeModeAn</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_encodeModeAn">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -808,8 +743,7 @@
                     <a href="#method_encodeMode8">encodeMode8</a>(array $inputitem, int $version)
         
                                             <p>encodeMode8</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_encodeMode8">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -819,8 +753,7 @@
                     <a href="#method_encodeModeKanji">encodeModeKanji</a>(array $inputitem, int $version)
         
                                             <p>encodeModeKanji</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_encodeModeKanji">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -830,8 +763,7 @@
                     <a href="#method_encodeModeStructure">encodeModeStructure</a>(array $inputitem)
         
                                             <p>encodeModeStructure</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_encodeModeStructure">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -841,8 +773,7 @@
                     <a href="#method_encodeBitStream">encodeBitStream</a>(array $inputitem, int $version)
         
                                             <p>encodeBitStream</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_encodeBitStream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -852,8 +783,7 @@
                     <a href="#method_appendNewInputItem">appendNewInputItem</a>(array $items, int $mode, int $size, array $data)
         
                                             <p>Append data to an input object.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_appendNewInputItem">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -863,8 +793,7 @@
                     <a href="#method_insertStructuredAppendHeader">insertStructuredAppendHeader</a>(array $items, int $size, int $index, int $parity)
         
                                             <p>insertStructuredAppendHeader</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_insertStructuredAppendHeader">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -874,8 +803,7 @@
                     <a href="#method_calcParity">calcParity</a>(array $items)
         
                                             <p>calcParity</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_calcParity">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -885,8 +813,7 @@
                     <a href="#method_checkModeNum">checkModeNum</a>(int $size, array $data)
         
                                             <p>checkModeNum</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_checkModeNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -896,8 +823,7 @@
                     <a href="#method_lookAnTable">lookAnTable</a>(int $c)
         
                                             <p>Look up the alphabet-numeric conversion table (see JIS X0510:2004, pp.19).</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_lookAnTable">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -907,8 +833,7 @@
                     <a href="#method_checkModeAn">checkModeAn</a>(int $size, array $data)
         
                                             <p>checkModeAn</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_checkModeAn">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -918,8 +843,7 @@
                     <a href="#method_estimateBitsModeNum">estimateBitsModeNum</a>(int $size)
         
                                             <p>estimateBitsModeNum</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_estimateBitsModeNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -929,8 +853,7 @@
                     <a href="#method_estimateBitsModeAn">estimateBitsModeAn</a>(int $size)
         
                                             <p>estimateBitsModeAn</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_estimateBitsModeAn">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -940,8 +863,7 @@
                     <a href="#method_estimateBitsMode8">estimateBitsMode8</a>(int $size)
         
                                             <p>estimateBitsMode8</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_estimateBitsMode8">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -951,8 +873,7 @@
                     <a href="#method_estimateBitsModeKanji">estimateBitsModeKanji</a>(int $size)
         
                                             <p>estimateBitsModeKanji</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_estimateBitsModeKanji">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -962,8 +883,7 @@
                     <a href="#method_checkModeKanji">checkModeKanji</a>(int $size, array $data)
         
                                             <p>checkModeKanji</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_checkModeKanji">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -973,8 +893,7 @@
                     <a href="#method_check">check</a>(int $mode, int $size, array $data)
         
                                             <p>Validate the input data.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_check">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -984,8 +903,7 @@
                     <a href="#method_estimateBitStreamSize">estimateBitStreamSize</a>(array $items, int $version)
         
                                             <p>estimateBitStreamSize</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_estimateBitStreamSize">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -995,8 +913,7 @@
                     <a href="#method_estimateVersion">estimateVersion</a>(array $items)
         
                                             <p>estimateVersion</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_estimateVersion">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1006,8 +923,7 @@
                     <a href="#method_lengthOfCode">lengthOfCode</a>(int $mode, int $version, int $bits)
         
                                             <p>lengthOfCode</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_lengthOfCode">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1017,8 +933,7 @@
                     <a href="#method_createBitStream">createBitStream</a>(array $items)
         
                                             <p>createBitStream</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_createBitStream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1028,8 +943,7 @@
                     <a href="#method_convertData">convertData</a>(array $items)
         
                                             <p>convertData</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_convertData">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1039,8 +953,7 @@
                     <a href="#method_appendPaddingBit">appendPaddingBit</a>(array $bstream)
         
                                             <p>Append Padding Bit to bitstream</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_appendPaddingBit">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1050,8 +963,7 @@
                     <a href="#method_mergeBitStream">mergeBitStream</a>(array $items)
         
                                             <p>mergeBitStream</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_mergeBitStream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1061,8 +973,7 @@
                     <a href="#method_getBitStream">getBitStream</a>(int $items)
         
                                             <p>Returns a stream of bits.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getBitStream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1072,8 +983,7 @@
                     <a href="#method_getByteStream">getByteStream</a>(int $items)
         
                                             <p>Pack all bit streams padding bits into a byte array.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getByteStream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1083,8 +993,7 @@
                     <a href="#method_allocate">allocate</a>(int $setLength)
         
                                             <p>Return an array with zeros</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_allocate">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1094,8 +1003,7 @@
                     <a href="#method_newFromNum">newFromNum</a>(int $bits, int $num)
         
                                             <p>Return new bitstream from number</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_newFromNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1105,8 +1013,7 @@
                     <a href="#method_newFromBytes">newFromBytes</a>(int $size, array $data)
         
                                             <p>Return new bitstream from bytes</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_newFromBytes">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1116,8 +1023,7 @@
                     <a href="#method_appendBitstream">appendBitstream</a>(array $bitstream, array $append)
         
                                             <p>Append one bitstream to another</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_appendBitstream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1127,8 +1033,7 @@
                     <a href="#method_appendNum">appendNum</a>(array $bitstream, int $bits, int $num)
         
                                             <p>Append one bitstream created from number to another</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_appendNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1138,8 +1043,7 @@
                     <a href="#method_appendBytes">appendBytes</a>(array $bitstream, int $size, array $data)
         
                                             <p>Append one bitstream created from bytes to another</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_appendBytes">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1149,8 +1053,7 @@
                     <a href="#method_bitstreamToByte">bitstreamToByte</a>(array $bstream)
         
                                             <p>Convert bitstream to bytes</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_bitstreamToByte">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1160,8 +1063,7 @@
                     <a href="#method_qrstrset">qrstrset</a>(array $srctab, int $x, int $y, string $repl, int $replLen = false)
         
                                             <p>Replace a value on the array at the specified position</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_qrstrset">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1171,8 +1073,7 @@
                     <a href="#method_getDataLength">getDataLength</a>(int $version, int $level)
         
                                             <p>Return maximum data code length (bytes) for the version.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getDataLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1182,8 +1083,7 @@
                     <a href="#method_getECCLength">getECCLength</a>(int $version, int $level)
         
                                             <p>Return maximum error correction code length (bytes) for the version.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getECCLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1193,8 +1093,7 @@
                     <a href="#method_getWidth">getWidth</a>(int $version)
         
                                             <p>Return the width of the symbol for the version.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getWidth">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1204,8 +1103,7 @@
                     <a href="#method_getRemainder">getRemainder</a>(int $version)
         
                                             <p>Return the numer of remainder bits.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getRemainder">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1215,8 +1113,7 @@
                     <a href="#method_getMinimumVersion">getMinimumVersion</a>(int $size, int $level)
         
                                             <p>Return a version number that satisfies the input code length.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getMinimumVersion">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1226,8 +1123,7 @@
                     <a href="#method_lengthIndicator">lengthIndicator</a>(int $mode, int $version)
         
                                             <p>Return the size of length indicator for the mode and version.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_lengthIndicator">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1237,8 +1133,7 @@
                     <a href="#method_maximumWords">maximumWords</a>(int $mode, int $version)
         
                                             <p>Return the maximum length for the mode and version.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_maximumWords">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1248,8 +1143,7 @@
                     <a href="#method_getEccSpec">getEccSpec</a>(int $version, int $level, array $spec)
         
                                             <p>Return an array of ECC specification.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getEccSpec">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1259,8 +1153,7 @@
                     <a href="#method_putAlignmentMarker">putAlignmentMarker</a>(array $frame, int $ox, int $oy)
         
                                             <p>Put an alignment marker.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_putAlignmentMarker">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1270,8 +1163,7 @@
                     <a href="#method_putAlignmentPattern">putAlignmentPattern</a>(int $version, array $frame, int $width)
         
                                             <p>Put an alignment pattern.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_putAlignmentPattern">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1281,8 +1173,7 @@
                     <a href="#method_getVersionPattern">getVersionPattern</a>(int $version)
         
                                             <p>Return BCH encoded version information pattern that is used for the symbol of version 7 or greater. Use lower 18 bits.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getVersionPattern">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1292,8 +1183,7 @@
                     <a href="#method_getFormatInfo">getFormatInfo</a>(array $mask, int $level)
         
                                             <p>Return BCH encoded format information pattern.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_getFormatInfo">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1303,8 +1193,7 @@
                     <a href="#method_putFinderPattern">putFinderPattern</a>(array $frame, int $ox, int $oy)
         
                                             <p>Put a finder pattern.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_putFinderPattern">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1314,8 +1203,7 @@
                     <a href="#method_createFrame">createFrame</a>(int $version)
         
                                             <p>Return a copy of initialized frame.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_createFrame">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1325,8 +1213,7 @@
                     <a href="#method_newFrame">newFrame</a>(int $version)
         
                                             <p>Set new frame for the specified version.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_newFrame">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1336,8 +1223,7 @@
                     <a href="#method_rsBlockNum">rsBlockNum</a>(array $spec)
         
                                             <p>Return block number 0</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_rsBlockNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1347,8 +1233,7 @@
                     <a href="#method_rsBlockNum1">rsBlockNum1</a>(array $spec)
         
                                             <p>Return block number 1</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_rsBlockNum1">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1358,8 +1243,7 @@
                     <a href="#method_rsDataCodes1">rsDataCodes1</a>(array $spec)
         
                                             <p>Return data codes 1</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_rsDataCodes1">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1369,8 +1253,7 @@
                     <a href="#method_rsEccCodes1">rsEccCodes1</a>(array $spec)
         
                                             <p>Return ecc codes 1</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_rsEccCodes1">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1380,8 +1263,7 @@
                     <a href="#method_rsBlockNum2">rsBlockNum2</a>(array $spec)
         
                                             <p>Return block number 2</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_rsBlockNum2">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1391,8 +1273,7 @@
                     <a href="#method_rsDataCodes2">rsDataCodes2</a>(array $spec)
         
                                             <p>Return data codes 2</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_rsDataCodes2">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1402,8 +1283,7 @@
                     <a href="#method_rsEccCodes2">rsEccCodes2</a>(array $spec)
         
                                             <p>Return ecc codes 2</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_rsEccCodes2">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1413,8 +1293,7 @@
                     <a href="#method_rsDataLength">rsDataLength</a>(array $spec)
         
                                             <p>Return data length</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_rsDataLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1424,8 +1303,7 @@
                     <a href="#method_rsEccLength">rsEccLength</a>(array $spec)
         
                                             <p>Return ecc length</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_rsEccLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1435,8 +1313,7 @@
                     <a href="#method_init_rs">init_rs</a>(int $symsize, int $gfpoly, int $fcr, int $prim, int $nroots, int $pad)
         
                                             <p>Initialize a Reed-Solomon codec and add it to existing rsitems</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_init_rs">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1446,8 +1323,7 @@
                     <a href="#method_modnn">modnn</a>(array $rs, int $x)
         
                                             <p>modnn</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_modnn">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1457,8 +1333,7 @@
                     <a href="#method_init_rs_char">init_rs_char</a>(int $symsize, int $gfpoly, int $fcr, int $prim, int $nroots, int $pad)
         
                                             <p>Initialize a Reed-Solomon codec and returns an array of values.</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_init_rs_char">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1468,8 +1343,7 @@
                     <a href="#method_encode_rs_char">encode_rs_char</a>(array $rs, array $data, array $parity)
         
                                             <p>Encode a Reed-Solomon codec and returns the parity array</p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="WarnockPDF/Barcodes/QRcode.html#method_encode_rs_char">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
             </div>
 
@@ -1479,8 +1353,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method___construct">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L592">at line 592</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L592">at line 592</a></div>
         <code>                    
     <strong>__construct</strong>(string $code, string $eclevel = &#039;L&#039;)
         </code>
@@ -1519,8 +1392,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getBarcodeArray">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getBarcodeArray">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L633">at line 633</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L633">at line 633</a></div>
         <code>                    array
     <strong>getBarcodeArray</strong>()
         </code>
@@ -1550,8 +1422,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_binarize">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_binarize">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L642">at line 642</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L642">at line 642</a></div>
         <code>            protected        array
     <strong>binarize</strong>(array $frame)
         </code>
@@ -1591,8 +1462,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeString">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_encodeString">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L658">at line 658</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L658">at line 658</a></div>
         <code>            protected        null|void
     <strong>encodeString</strong>(string $string)
         </code>
@@ -1632,8 +1502,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeMask">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_encodeMask">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L675">at line 675</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L675">at line 675</a></div>
         <code>            protected        null|void
     <strong>encodeMask</strong>(int $mask)
         </code>
@@ -1673,8 +1542,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setFrameAt">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_setFrameAt">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L741">at line 741</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L741">at line 741</a></div>
         <code>            protected        
     <strong>setFrameAt</strong>(array $at, int $val)
         </code>
@@ -1710,8 +1578,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFrameAt">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getFrameAt">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L750">at line 750</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L750">at line 750</a></div>
         <code>            protected        int
     <strong>getFrameAt</strong>(array $at)
         </code>
@@ -1751,8 +1618,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getNextPosition">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getNextPosition">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L758">at line 758</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L758">at line 758</a></div>
         <code>            protected        array
     <strong>getNextPosition</strong>()
         </code>
@@ -1782,8 +1648,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_init">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_init">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L814">at line 814</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L814">at line 814</a></div>
         <code>            protected        int
     <strong>init</strong>(array $spec)
         </code>
@@ -1823,8 +1688,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getCode">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getCode">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L865">at line 865</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L865">at line 865</a></div>
         <code>            protected        array
     <strong>getCode</strong>()
         </code>
@@ -1854,8 +1718,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_writeFormatInformation">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_writeFormatInformation">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L896">at line 896</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L896">at line 896</a></div>
         <code>            protected        int
     <strong>writeFormatInformation</strong>(int $width, array $frame, array $mask, int $level)
         </code>
@@ -1910,8 +1773,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mask0">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_mask0">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L938">at line 938</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L938">at line 938</a></div>
         <code>            protected        int
     <strong>mask0</strong>(int $x, int $y)
         </code>
@@ -1956,8 +1818,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mask1">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_mask1">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L948">at line 948</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L948">at line 948</a></div>
         <code>            protected        int
     <strong>mask1</strong>(int $x, int $y)
         </code>
@@ -2002,8 +1863,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mask2">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_mask2">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L958">at line 958</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L958">at line 958</a></div>
         <code>            protected        int
     <strong>mask2</strong>(int $x, int $y)
         </code>
@@ -2048,8 +1908,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mask3">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_mask3">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L968">at line 968</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L968">at line 968</a></div>
         <code>            protected        int
     <strong>mask3</strong>(int $x, int $y)
         </code>
@@ -2094,8 +1953,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mask4">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_mask4">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L978">at line 978</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L978">at line 978</a></div>
         <code>            protected        int
     <strong>mask4</strong>(int $x, int $y)
         </code>
@@ -2140,8 +1998,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mask5">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_mask5">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L988">at line 988</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L988">at line 988</a></div>
         <code>            protected        int
     <strong>mask5</strong>(int $x, int $y)
         </code>
@@ -2186,8 +2043,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mask6">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_mask6">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L998">at line 998</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L998">at line 998</a></div>
         <code>            protected        int
     <strong>mask6</strong>(int $x, int $y)
         </code>
@@ -2232,8 +2088,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mask7">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_mask7">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1008">at line 1008</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1008">at line 1008</a></div>
         <code>            protected        int
     <strong>mask7</strong>(int $x, int $y)
         </code>
@@ -2278,8 +2133,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_generateMaskNo">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_generateMaskNo">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1019">at line 1019</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1019">at line 1019</a></div>
         <code>            protected        array
     <strong>generateMaskNo</strong>(int $maskNo, int $width, array $frame)
         </code>
@@ -2329,8 +2183,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_makeMaskNo">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_makeMaskNo">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1043">at line 1043</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1043">at line 1043</a></div>
         <code>            protected        int
     <strong>makeMaskNo</strong>(int $maskNo, int $width, int $s, int $d, bool $maskGenOnly = false)
         </code>
@@ -2390,8 +2243,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_makeMask">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_makeMask">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1070">at line 1070</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1070">at line 1070</a></div>
         <code>            protected        array
     <strong>makeMask</strong>(int $width, array $frame, int $maskNo, int $level)
         </code>
@@ -2446,8 +2298,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_calcN1N3">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_calcN1N3">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1082">at line 1082</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1082">at line 1082</a></div>
         <code>            protected        int
     <strong>calcN1N3</strong>(int $length)
         </code>
@@ -2487,8 +2338,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_evaluateSymbol">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_evaluateSymbol">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1113">at line 1113</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1113">at line 1113</a></div>
         <code>            protected        int
     <strong>evaluateSymbol</strong>(int $width, array $frame)
         </code>
@@ -2533,8 +2383,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mask">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_mask">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1175">at line 1175</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1175">at line 1175</a></div>
         <code>            protected        array
     <strong>mask</strong>(int $width, array $frame, int $level)
         </code>
@@ -2584,8 +2433,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isdigitat">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_isdigitat">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1217">at line 1217</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1217">at line 1217</a></div>
         <code>            protected        bool
     <strong>isdigitat</strong>(string $str, int $pos)
         </code>
@@ -2630,8 +2478,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isalnumat">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_isalnumat">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1230">at line 1230</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1230">at line 1230</a></div>
         <code>            protected        bool
     <strong>isalnumat</strong>(string $str, int $pos)
         </code>
@@ -2676,8 +2523,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_identifyMode">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_identifyMode">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1242">at line 1242</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1242">at line 1242</a></div>
         <code>            protected        int
     <strong>identifyMode</strong>(int $pos)
         </code>
@@ -2717,8 +2563,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_eatNum">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_eatNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1267">at line 1267</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1267">at line 1267</a></div>
         <code>            protected        int
     <strong>eatNum</strong>()
         </code>
@@ -2748,8 +2593,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_eatAn">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_eatAn">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1299">at line 1299</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1299">at line 1299</a></div>
         <code>            protected        int
     <strong>eatAn</strong>()
         </code>
@@ -2779,8 +2623,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_eatKanji">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_eatKanji">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1338">at line 1338</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1338">at line 1338</a></div>
         <code>            protected        int
     <strong>eatKanji</strong>()
         </code>
@@ -2810,8 +2653,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_eat8">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_eat8">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1352">at line 1352</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1352">at line 1352</a></div>
         <code>            protected        int
     <strong>eat8</strong>()
         </code>
@@ -2841,8 +2683,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_splitString">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_splitString">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1401">at line 1401</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1401">at line 1401</a></div>
         <code>            protected        int
     <strong>splitString</strong>()
         </code>
@@ -2872,8 +2713,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_toUpper">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_toUpper">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1440">at line 1440</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1440">at line 1440</a></div>
         <code>            protected        
     <strong>toUpper</strong>()
         </code>
@@ -2894,8 +2734,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_newInputItem">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_newInputItem">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1469">at line 1469</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1469">at line 1469</a></div>
         <code>            protected        array
     <strong>newInputItem</strong>(int $mode, int $size, array $data, array $bstream = null)
         </code>
@@ -2950,8 +2789,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeModeNum">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_encodeModeNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1491">at line 1491</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1491">at line 1491</a></div>
         <code>            protected        array
     <strong>encodeModeNum</strong>(array $inputitem, int $version)
         </code>
@@ -2996,8 +2834,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeModeAn">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_encodeModeAn">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1520">at line 1520</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1520">at line 1520</a></div>
         <code>            protected        array
     <strong>encodeModeAn</strong>(array $inputitem, int $version)
         </code>
@@ -3042,8 +2879,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeMode8">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_encodeMode8">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1543">at line 1543</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1543">at line 1543</a></div>
         <code>            protected        array
     <strong>encodeMode8</strong>(array $inputitem, int $version)
         </code>
@@ -3088,8 +2924,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeModeKanji">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_encodeModeKanji">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1559">at line 1559</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1559">at line 1559</a></div>
         <code>            protected        array
     <strong>encodeModeKanji</strong>(array $inputitem, int $version)
         </code>
@@ -3134,8 +2969,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeModeStructure">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_encodeModeStructure">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1582">at line 1582</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1582">at line 1582</a></div>
         <code>            protected        array
     <strong>encodeModeStructure</strong>(array $inputitem)
         </code>
@@ -3175,8 +3009,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeBitStream">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_encodeBitStream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1597">at line 1597</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1597">at line 1597</a></div>
         <code>            protected        array
     <strong>encodeBitStream</strong>(array $inputitem, int $version)
         </code>
@@ -3221,8 +3054,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_appendNewInputItem">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_appendNewInputItem">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1652">at line 1652</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1652">at line 1652</a></div>
         <code>            protected        array
     <strong>appendNewInputItem</strong>(array $items, int $mode, int $size, array $data)
         </code>
@@ -3277,8 +3109,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_insertStructuredAppendHeader">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_insertStructuredAppendHeader">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1668">at line 1668</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1668">at line 1668</a></div>
         <code>            protected        array
     <strong>insertStructuredAppendHeader</strong>(array $items, int $size, int $index, int $parity)
         </code>
@@ -3333,8 +3164,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_calcParity">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_calcParity">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1686">at line 1686</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1686">at line 1686</a></div>
         <code>            protected        int
     <strong>calcParity</strong>(array $items)
         </code>
@@ -3374,8 +3204,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkModeNum">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_checkModeNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1704">at line 1704</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1704">at line 1704</a></div>
         <code>            protected        bool
     <strong>checkModeNum</strong>(int $size, array $data)
         </code>
@@ -3420,8 +3249,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_lookAnTable">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_lookAnTable">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1718">at line 1718</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1718">at line 1718</a></div>
         <code>            protected        int
     <strong>lookAnTable</strong>(int $c)
         </code>
@@ -3461,8 +3289,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkModeAn">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_checkModeAn">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1728">at line 1728</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1728">at line 1728</a></div>
         <code>            protected        bool
     <strong>checkModeAn</strong>(int $size, array $data)
         </code>
@@ -3507,8 +3334,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateBitsModeNum">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_estimateBitsModeNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1742">at line 1742</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1742">at line 1742</a></div>
         <code>            protected        int
     <strong>estimateBitsModeNum</strong>(int $size)
         </code>
@@ -3548,8 +3374,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateBitsModeAn">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_estimateBitsModeAn">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1763">at line 1763</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1763">at line 1763</a></div>
         <code>            protected        int
     <strong>estimateBitsModeAn</strong>(int $size)
         </code>
@@ -3589,8 +3414,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateBitsMode8">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_estimateBitsMode8">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1776">at line 1776</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1776">at line 1776</a></div>
         <code>            protected        int
     <strong>estimateBitsMode8</strong>(int $size)
         </code>
@@ -3630,8 +3454,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateBitsModeKanji">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_estimateBitsModeKanji">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1785">at line 1785</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1785">at line 1785</a></div>
         <code>            protected        int
     <strong>estimateBitsModeKanji</strong>(int $size)
         </code>
@@ -3671,8 +3494,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_checkModeKanji">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_checkModeKanji">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1795">at line 1795</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1795">at line 1795</a></div>
         <code>            protected        bool
     <strong>checkModeKanji</strong>(int $size, array $data)
         </code>
@@ -3717,8 +3539,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_check">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_check">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1815">at line 1815</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1815">at line 1815</a></div>
         <code>            protected        bool
     <strong>check</strong>(int $mode, int $size, array $data)
         </code>
@@ -3768,8 +3589,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateBitStreamSize">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_estimateBitStreamSize">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1848">at line 1848</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1848">at line 1848</a></div>
         <code>            protected        int
     <strong>estimateBitStreamSize</strong>(array $items, int $version)
         </code>
@@ -3814,8 +3634,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateVersion">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_estimateVersion">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1891">at line 1891</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1891">at line 1891</a></div>
         <code>            protected        int
     <strong>estimateVersion</strong>(array $items)
         </code>
@@ -3855,8 +3674,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_lengthOfCode">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_lengthOfCode">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1912">at line 1912</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1912">at line 1912</a></div>
         <code>            protected        int
     <strong>lengthOfCode</strong>(int $mode, int $version, int $bits)
         </code>
@@ -3906,8 +3724,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createBitStream">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_createBitStream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1967">at line 1967</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1967">at line 1967</a></div>
         <code>            protected        array
     <strong>createBitStream</strong>(array $items)
         </code>
@@ -3947,8 +3764,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_convertData">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_convertData">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1982">at line 1982</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L1982">at line 1982</a></div>
         <code>            protected        array
     <strong>convertData</strong>(array $items)
         </code>
@@ -3988,8 +3804,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_appendPaddingBit">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_appendPaddingBit">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2011">at line 2011</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2011">at line 2011</a></div>
         <code>            protected        array
     <strong>appendPaddingBit</strong>(array $bstream)
         </code>
@@ -4029,8 +3844,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_mergeBitStream">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_mergeBitStream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2044">at line 2044</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2044">at line 2044</a></div>
         <code>            protected        array
     <strong>mergeBitStream</strong>(array $items)
         </code>
@@ -4070,8 +3884,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getBitStream">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getBitStream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2061">at line 2061</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2061">at line 2061</a></div>
         <code>            protected        array
     <strong>getBitStream</strong>(int $items)
         </code>
@@ -4111,8 +3924,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getByteStream">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getByteStream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2071">at line 2071</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2071">at line 2071</a></div>
         <code>            protected        array
     <strong>getByteStream</strong>(int $items)
         </code>
@@ -4152,8 +3964,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_allocate">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_allocate">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2085">at line 2085</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2085">at line 2085</a></div>
         <code>            protected        array
     <strong>allocate</strong>(int $setLength)
         </code>
@@ -4193,8 +4004,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_newFromNum">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_newFromNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2095">at line 2095</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2095">at line 2095</a></div>
         <code>            protected        array
     <strong>newFromNum</strong>(int $bits, int $num)
         </code>
@@ -4239,8 +4049,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_newFromBytes">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_newFromBytes">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2115">at line 2115</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2115">at line 2115</a></div>
         <code>            protected        array
     <strong>newFromBytes</strong>(int $size, array $data)
         </code>
@@ -4285,8 +4094,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_appendBitstream">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_appendBitstream">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2139">at line 2139</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2139">at line 2139</a></div>
         <code>            protected        array
     <strong>appendBitstream</strong>(array $bitstream, array $append)
         </code>
@@ -4331,8 +4139,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_appendNum">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_appendNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2156">at line 2156</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2156">at line 2156</a></div>
         <code>            protected        array
     <strong>appendNum</strong>(array $bitstream, int $bits, int $num)
         </code>
@@ -4382,8 +4189,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_appendBytes">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_appendBytes">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2171">at line 2171</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2171">at line 2171</a></div>
         <code>            protected        array
     <strong>appendBytes</strong>(array $bitstream, int $size, array $data)
         </code>
@@ -4433,8 +4239,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_bitstreamToByte">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_bitstreamToByte">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2184">at line 2184</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2184">at line 2184</a></div>
         <code>            protected        array
     <strong>bitstreamToByte</strong>(array $bstream)
         </code>
@@ -4474,8 +4279,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_qrstrset">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_qrstrset">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2229">at line 2229</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2229">at line 2229</a></div>
         <code>            protected        array
     <strong>qrstrset</strong>(array $srctab, int $x, int $y, string $repl, int $replLen = false)
         </code>
@@ -4535,8 +4339,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getDataLength">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getDataLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2240">at line 2240</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2240">at line 2240</a></div>
         <code>            protected        int
     <strong>getDataLength</strong>(int $version, int $level)
         </code>
@@ -4581,8 +4384,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getECCLength">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getECCLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2250">at line 2250</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2250">at line 2250</a></div>
         <code>            protected        int
     <strong>getECCLength</strong>(int $version, int $level)
         </code>
@@ -4627,8 +4429,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getWidth">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getWidth">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2259">at line 2259</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2259">at line 2259</a></div>
         <code>            protected        int
     <strong>getWidth</strong>(int $version)
         </code>
@@ -4668,8 +4469,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getRemainder">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getRemainder">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2268">at line 2268</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2268">at line 2268</a></div>
         <code>            protected        int
     <strong>getRemainder</strong>(int $version)
         </code>
@@ -4709,8 +4509,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMinimumVersion">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getMinimumVersion">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2278">at line 2278</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2278">at line 2278</a></div>
         <code>            protected        int
     <strong>getMinimumVersion</strong>(int $size, int $level)
         </code>
@@ -4755,8 +4554,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_lengthIndicator">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_lengthIndicator">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2295">at line 2295</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2295">at line 2295</a></div>
         <code>            protected        int
     <strong>lengthIndicator</strong>(int $mode, int $version)
         </code>
@@ -4801,8 +4599,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_maximumWords">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_maximumWords">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2315">at line 2315</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2315">at line 2315</a></div>
         <code>            protected        int
     <strong>maximumWords</strong>(int $mode, int $version)
         </code>
@@ -4847,8 +4644,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getEccSpec">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getEccSpec">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2341">at line 2341</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2341">at line 2341</a></div>
         <code>            protected        array
     <strong>getEccSpec</strong>(int $version, int $level, array $spec)
         </code>
@@ -4898,8 +4694,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_putAlignmentMarker">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_putAlignmentMarker">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2372">at line 2372</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2372">at line 2372</a></div>
         <code>            protected        array
     <strong>putAlignmentMarker</strong>(array $frame, int $ox, int $oy)
         </code>
@@ -4949,8 +4744,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_putAlignmentPattern">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_putAlignmentPattern">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2395">at line 2395</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2395">at line 2395</a></div>
         <code>            protected        array
     <strong>putAlignmentPattern</strong>(int $version, array $frame, int $width)
         </code>
@@ -5000,8 +4794,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVersionPattern">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getVersionPattern">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2435">at line 2435</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2435">at line 2435</a></div>
         <code>            protected        int
     <strong>getVersionPattern</strong>(int $version)
         </code>
@@ -5041,8 +4834,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getFormatInfo">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_getFormatInfo">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2448">at line 2448</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2448">at line 2448</a></div>
         <code>            protected        int
     <strong>getFormatInfo</strong>(array $mask, int $level)
         </code>
@@ -5087,8 +4879,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_putFinderPattern">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_putFinderPattern">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2465">at line 2465</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2465">at line 2465</a></div>
         <code>            protected        array
     <strong>putFinderPattern</strong>(array $frame, int $ox, int $oy)
         </code>
@@ -5138,8 +4929,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_createFrame">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_createFrame">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2486">at line 2486</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2486">at line 2486</a></div>
         <code>            protected        array
     <strong>createFrame</strong>(int $version)
         </code>
@@ -5179,8 +4969,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_newFrame">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_newFrame">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2551">at line 2551</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2551">at line 2551</a></div>
         <code>            protected        array
     <strong>newFrame</strong>(int $version)
         </code>
@@ -5220,8 +5009,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rsBlockNum">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_rsBlockNum">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2569">at line 2569</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2569">at line 2569</a></div>
         <code>            protected        int
     <strong>rsBlockNum</strong>(array $spec)
         </code>
@@ -5261,8 +5049,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rsBlockNum1">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_rsBlockNum1">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2578">at line 2578</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2578">at line 2578</a></div>
         <code>            protected        int
     <strong>rsBlockNum1</strong>(array $spec)
         </code>
@@ -5302,8 +5089,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rsDataCodes1">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_rsDataCodes1">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2587">at line 2587</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2587">at line 2587</a></div>
         <code>            protected        int
     <strong>rsDataCodes1</strong>(array $spec)
         </code>
@@ -5343,8 +5129,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rsEccCodes1">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_rsEccCodes1">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2596">at line 2596</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2596">at line 2596</a></div>
         <code>            protected        int
     <strong>rsEccCodes1</strong>(array $spec)
         </code>
@@ -5384,8 +5169,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rsBlockNum2">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_rsBlockNum2">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2605">at line 2605</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2605">at line 2605</a></div>
         <code>            protected        int
     <strong>rsBlockNum2</strong>(array $spec)
         </code>
@@ -5425,8 +5209,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rsDataCodes2">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_rsDataCodes2">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2614">at line 2614</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2614">at line 2614</a></div>
         <code>            protected        int
     <strong>rsDataCodes2</strong>(array $spec)
         </code>
@@ -5466,8 +5249,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rsEccCodes2">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_rsEccCodes2">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2623">at line 2623</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2623">at line 2623</a></div>
         <code>            protected        int
     <strong>rsEccCodes2</strong>(array $spec)
         </code>
@@ -5507,8 +5289,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rsDataLength">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_rsDataLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2632">at line 2632</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2632">at line 2632</a></div>
         <code>            protected        int
     <strong>rsDataLength</strong>(array $spec)
         </code>
@@ -5548,8 +5329,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rsEccLength">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_rsEccLength">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2641">at line 2641</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2641">at line 2641</a></div>
         <code>            protected        int
     <strong>rsEccLength</strong>(array $spec)
         </code>
@@ -5589,8 +5369,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_init_rs">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_init_rs">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2659">at line 2659</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2659">at line 2659</a></div>
         <code>            protected        array
     <strong>init_rs</strong>(int $symsize, int $gfpoly, int $fcr, int $prim, int $nroots, int $pad)
         </code>
@@ -5655,8 +5434,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_modnn">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_modnn">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2682">at line 2682</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2682">at line 2682</a></div>
         <code>            protected        int
     <strong>modnn</strong>(array $rs, int $x)
         </code>
@@ -5701,8 +5479,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_init_rs_char">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_init_rs_char">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2700">at line 2700</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2700">at line 2700</a></div>
         <code>            protected        array
     <strong>init_rs_char</strong>(int $symsize, int $gfpoly, int $fcr, int $prim, int $nroots, int $pad)
         </code>
@@ -5767,8 +5544,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_encode_rs_char">
-        <div class="location">in <a href="WarnockPDF/Barcodes/QRcode.html#method_encode_rs_char">
-<abbr title="WarnockPDF\Barcodes\QRcode">QRcode</abbr></a> <a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2784">at line 2784</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php#L2784">at line 2784</a></div>
         <code>            protected        array
     <strong>encode_rs_char</strong>(array $rs, array $data, array $parity)
         </code>

@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>WarnockPDF\Fonts | WarnockPDF</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../fonts/doctum-font.css">
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../js/bootstrap.min.js"></script>
+        <script src="../js/typeahead.min.js"></script>
+        <script src="../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    </head>
+
+    <body id="class" data-name="class:WarnockPDF_Fonts" data-root-path="../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">WarnockPDF</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                    <li><a href="../namespaces.html">Namespaces</a></li>
+                    <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../WarnockPDF.html">WarnockPDF</a></li><li class="backslash">\</li><li>Fonts</li>
+            </ol>
+        </div>
+                <div id="page-content">
+                
+    <div class="page-header">
+        <h1>
+            Fonts
+                
+        </h1>
+    </div>
+
+    <p>        class
+    <strong>Fonts</strong>        (<a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php">View source</a>)
+</p>
+
+        
+    
+
+            <div class="description">
+            <p>Font methods for WarnockPDF library.</p>                                </div>
+    
+    
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_cache_uniord">
+                    static                    protected                                        
+                </td>
+                <td>$cache_uniord</td>
+                <td class="last">Static cache used for speed up uniord performances</td>
+                <td></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|false
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_addTTFfont">addTTFfont</a>(string $fontfile, string $fonttype = &#039;&#039;, string $enc = &#039;&#039;, int $flags = 32, string $outpath = &#039;&#039;, int $platid = 3, int $encid = 1, bool $addcbbox = false, bool $link = false)
+        
+                                            <p>Convert and add the selected TrueType or Type1 font to the fonts folder (that must be writeable).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__getTTFtableChecksum">_getTTFtableChecksum</a>(string $table, int $length)
+        
+                                            <p>Returs the checksum of a TTF table.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__getTrueTypeFontSubset">_getTrueTypeFontSubset</a>(string $font, array $subsetchars)
+        
+                                            <p>Returns a subset of the TrueType font data without the unused glyphs.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__putfontwidths">_putfontwidths</a>(array $font, int $cidoffset = 0)
+        
+                                            <p>Outputs font widths</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_updateCIDtoGIDmap">updateCIDtoGIDmap</a>(string $map, int $cid, int $gid)
+        
+                                            <p>Update the CIDToGIDMap string with a new value.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method__getfontpath">_getfontpath</a>()
+        
+                                            <p>Return fonts path</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFontFullPath">getFontFullPath</a>(string $file, string $fontdir = false)
+        
+                                            <p>Return font full path</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;float
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getFontRefSize">getFontRefSize</a>(string $size, float $refsize = 12)
+        
+                                            <p>Get a reference font size.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unichr">unichr</a>(int $c, bool $unicode = true)
+        
+                                            <p>Returns the unicode caracter specified by the value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unichrUnicode">unichrUnicode</a>(int $c)
+        
+                                            <p>Returns the unicode caracter specified by UTF-8 value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_unichrASCII">unichrASCII</a>(int $c)
+        
+                                            <p>Returns the unicode caracter specified by ASCII value</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_arrUTF8ToUTF16BE">arrUTF8ToUTF16BE</a>(array $unicode, bool $setbom = false)
+        
+                                            <p>Converts array of UTF-8 characters to UTF16-BE string.<br>
+Based on: http://www.faqs.org/rfcs/rfc2781.html</p>
+
+<p>&lt;</p>
+
+<p>pre>
+  Encoding UTF-16:</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_UTF8ArrayToUniArray">UTF8ArrayToUniArray</a>(array $ta, bool $isunicode = true)
+        
+                                            <p>Convert an array of UTF8 values to array of unicode characters</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_UTF8ArrSubString">UTF8ArrSubString</a>(string $strarr, int $start = &#039;&#039;, int $end = &#039;&#039;, bool $unicode = true)
+        
+                                            <p>Extract a slice of the $strarr array and return it as string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_UniArrSubString">UniArrSubString</a>(string $uniarr, int $start = &#039;&#039;, int $end = &#039;&#039;)
+        
+                                            <p>Extract a slice of the $uniarr array and return it as string.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_UTF8ArrToLatin1Arr">UTF8ArrToLatin1Arr</a>(array $unicode)
+        
+                                            <p>Converts UTF-8 characters array to array of Latin1 characters array<br></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_UTF8ArrToLatin1">UTF8ArrToLatin1</a>(array $unicode)
+        
+                                            <p>Converts UTF-8 characters array to array of Latin1 string<br></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_uniord">uniord</a>(string $uch)
+        
+                                            <p>Converts UTF-8 character to integer value.<br>
+Uses the getUniord() method if the value is not cached.</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_getUniord">getUniord</a>(string $uch)
+        
+                                            <p>Converts UTF-8 character to integer value.<br>
+Invalid byte sequences will be replaced with 0xFFFD (replacement character)<br>
+Based on: http://www.faqs.org/rfcs/rfc3629.html</p>
+
+<p>&lt;</p>
+
+<p>pre>
+   Char. number range  |        UTF-8 octet sequence
+      (hexadecimal)    |              (binary)
+   --------------------+-----------------------------------------------
+   0000 0000-0000 007F | 0xxxxxxx
+   0000 0080-0000 07FF | 110xxxxx 10xxxxxx
+   0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx
+   0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</p>
+
+<hr />
+</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_UTF8StringToArray">UTF8StringToArray</a>(string $str, bool $isunicode, array $currentfont)
+        
+                                            <p>Converts UTF-8 strings to codepoints array.<br>
+Invalid byte sequences will be replaced with 0xFFFD (replacement character)<br></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_UTF8ToLatin1">UTF8ToLatin1</a>(string $str, bool $isunicode, array $currentfont)
+        
+                                            <p>Converts UTF-8 strings to Latin1 when using the standard 14 core fonts.<br></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_UTF8ToUTF16BE">UTF8ToUTF16BE</a>(string $str, bool $setbom, bool $isunicode, array $currentfont)
+        
+                                            <p>Converts UTF-8 strings to UTF16-BE.<br></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_utf8StrRev">utf8StrRev</a>(string $str, bool $setbom, bool $forcertl, bool $isunicode, array $currentfont)
+        
+                                            <p>Reverse the RLT substrings using the Bidirectional Algorithm (http://unicode.org/reports/tr9/).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_utf8StrArrRev">utf8StrArrRev</a>(array $arr, string $str, bool $setbom, bool $forcertl, bool $isunicode, array $currentfont)
+        
+                                            <p>Reverse the RLT substrings array using the Bidirectional Algorithm (http://unicode.org/reports/tr9/).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8 type">
+                    <a href="#method_utf8Bidi">utf8Bidi</a>(array $ta, string $str, bool $forcertl, bool $isunicode, array $currentfont)
+        
+                                            <p>Reverse the RLT substrings using the Bidirectional Algorithm (http://unicode.org/reports/tr9/).</p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_addTTFfont">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L53">at line 53</a></div>
+        <code>        static            string|false
+    <strong>addTTFfont</strong>(string $fontfile, string $fonttype = &#039;&#039;, string $enc = &#039;&#039;, int $flags = 32, string $outpath = &#039;&#039;, int $platid = 3, int $encid = 1, bool $addcbbox = false, bool $link = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert and add the selected TrueType or Type1 font to the fonts folder (that must be writeable).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$fontfile</td>
+                <td>Font file (full path).</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fonttype</td>
+                <td>Font type. Leave empty for autodetect mode. Valid values are: TrueTypeUnicode, TrueType, Type1, CID0JP = CID-0 Japanese, CID0KR = CID-0 Korean, CID0CS = CID-0 Chinese Simplified, CID0CT = CID-0 Chinese Traditional.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$enc</td>
+                <td>Name of the encoding table to use. Leave empty for default mode. Omit this parameter for TrueType Unicode and symbolic fonts like Symbol or ZapfDingBats.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$flags</td>
+                <td>Unsigned 32-bit integer containing flags specifying various characteristics of the font (PDF32000:2008 - 9.8.2 Font Descriptor Flags): +1 for fixed font; +4 for symbol or +32 for non-symbol; +64 for italic. Fixed and Italic mode are generally autodetected so you have to set it to 32 = non-symbolic font (default) or 4 = symbolic font.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$outpath</td>
+                <td>Output path for generated font files (must be writeable by the web server). Leave empty for default font folder.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$platid</td>
+                <td>Platform ID for CMAP table to extract (when building a Unicode font for Windows this value should be 3, for Macintosh should be 1).</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$encid</td>
+                <td>Encoding ID for CMAP table to extract (when building a Unicode font for Windows this value should be 1, for Macintosh should be 0). When Platform ID is 3, legal values for Encoding ID are: 0=Symbol, 1=Unicode, 2=ShiftJIS, 3=PRC, 4=Big5, 5=Wansung, 6=Johab, 7=Reserved, 8=Reserved, 9=Reserved, 10=UCS-4.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$addcbbox</td>
+                <td>If true includes the character bounding box information on the php font file.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$link</td>
+                <td>If true link to system font instead of copying the font data (not transportable) - Note: do not work with Type1 fonts.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|false</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__getTTFtableChecksum">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L912">at line 912</a></div>
+        <code>        static            int
+    <strong>_getTTFtableChecksum</strong>(string $table, int $length)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returs the checksum of a TTF table.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$table</td>
+                <td>table to check</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td>length of table in bytes</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__getTrueTypeFontSubset">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L934">at line 934</a></div>
+        <code>        static            string
+    <strong>_getTrueTypeFontSubset</strong>(string $font, array $subsetchars)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns a subset of the TrueType font data without the unused glyphs.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$font</td>
+                <td>TrueType font data.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$subsetchars</td>
+                <td>Array of used characters (the glyphs to keep).</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__putfontwidths">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1380">at line 1380</a></div>
+        <code>        static            string
+    <strong>_putfontwidths</strong>(array $font, int $cidoffset = 0)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Outputs font widths</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$font</td>
+                <td>font data</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$cidoffset</td>
+                <td>offset for CID values</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_updateCIDtoGIDmap">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1489">at line 1489</a></div>
+        <code>        static            string
+    <strong>updateCIDtoGIDmap</strong>(string $map, int $cid, int $gid)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Update the CIDToGIDMap string with a new value.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$map</td>
+                <td>CIDToGIDMap.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$cid</td>
+                <td>CID value.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$gid</td>
+                <td>GID value.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method__getfontpath">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1505">at line 1505</a></div>
+        <code>        static            string
+    <strong>_getfontpath</strong>()
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return fonts path</p>                                                </div>
+                <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFontFullPath">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1526">at line 1526</a></div>
+        <code>        static            string
+    <strong>getFontFullPath</strong>(string $file, string $fontdir = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Return font full path</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$file</td>
+                <td>Font file name.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$fontdir</td>
+                <td>Font directory (set to false fto search on default directories)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getFontRefSize">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1549">at line 1549</a></div>
+        <code>        static            float
+    <strong>getFontRefSize</strong>(string $size, float $refsize = 12)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Get a reference font size.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$size</td>
+                <td>String containing font size value.</td>
+            </tr>
+                    <tr>
+                <td>float</td>
+                <td>$refsize</td>
+                <td>Reference font size in points.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unichr">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1649">at line 1649</a></div>
+        <code>        static            string
+    <strong>unichr</strong>(int $c, bool $unicode = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the unicode caracter specified by the value</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$c</td>
+                <td>UTF-8 value</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$unicode</td>
+                <td>True if we are in unicode mode, false otherwise.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unichrUnicode">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1676">at line 1676</a></div>
+        <code>        static            string
+    <strong>unichrUnicode</strong>(int $c)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the unicode caracter specified by UTF-8 value</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$c</td>
+                <td>UTF-8 value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_unichrASCII">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1686">at line 1686</a></div>
+        <code>        static            string
+    <strong>unichrASCII</strong>(int $c)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Returns the unicode caracter specified by ASCII value</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$c</td>
+                <td>UTF-8 value</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_arrUTF8ToUTF16BE">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1728">at line 1728</a></div>
+        <code>        static            string
+    <strong>arrUTF8ToUTF16BE</strong>(array $unicode, bool $setbom = false)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts array of UTF-8 characters to UTF16-BE string.<br>
+Based on: http://www.faqs.org/rfcs/rfc2781.html</p>
+
+<p>&lt;</p>
+
+<p>pre>
+  Encoding UTF-16:</p>                    <p>Encoding of a single character from an ISO 10646 character value to
+   UTF-16 proceeds as follows. Let U be the character number, no greater
+   than 0x10FFFF.</p>
+
+<p>1) If U &lt; 0x10000, encode U as a 16-bit unsigned integer and
+      terminate.</p>
+
+<p>2) Let U' = U - 0x10000. Because U is less than or equal to 0x10FFFF,
+      U' must be less than or equal to 0xFFFFF. That is, U' can be
+      represented in 20 bits.</p>
+
+<p>3) Initialize two 16-bit unsigned integers, W1 and W2, to 0xD800 and
+      0xDC00, respectively. These integers each have 10 bits free to
+      encode the character value, for a total of 20 bits.</p>
+
+<p>4) Assign the 10 high-order bits of the 20-bit U' to the 10 low-order
+      bits of W1 and the 10 low-order bits of U' to the 10 low-order
+      bits of W2. Terminate.</p>
+
+<p>Graphically, steps 2 through 4 look like:
+   U' = yyyyyyyyyyxxxxxxxxxx
+   W1 = 110110yyyyyyyyyy
+   W2 = 110111xxxxxxxxxx
+</pre></p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$unicode</td>
+                <td>array containing UTF-8 unicode values</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$setbom</td>
+                <td>if true set the Byte Order Mark (BOM = 0xFEFF)</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_UTF8ArrayToUniArray">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1762">at line 1762</a></div>
+        <code>        static            array
+    <strong>UTF8ArrayToUniArray</strong>(array $ta, bool $isunicode = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Convert an array of UTF8 values to array of unicode characters</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ta</td>
+                <td>The input array of UTF8 values.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isunicode</td>
+                <td>True for Unicode mode, false otherwise.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_UTF8ArrSubString">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1778">at line 1778</a></div>
+        <code>        static            string
+    <strong>UTF8ArrSubString</strong>(string $strarr, int $start = &#039;&#039;, int $end = &#039;&#039;, bool $unicode = true)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Extract a slice of the $strarr array and return it as string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$strarr</td>
+                <td>The input array of characters.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$start</td>
+                <td>the starting element of $strarr.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$end</td>
+                <td>first element that will not be returned.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$unicode</td>
+                <td>True if we are in unicode mode, false otherwise.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_UniArrSubString">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1801">at line 1801</a></div>
+        <code>        static            string
+    <strong>UniArrSubString</strong>(string $uniarr, int $start = &#039;&#039;, int $end = &#039;&#039;)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Extract a slice of the $uniarr array and return it as string.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uniarr</td>
+                <td>The input array of characters.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$start</td>
+                <td>the starting element of $strarr.</td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$end</td>
+                <td>first element that will not be returned.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_UTF8ArrToLatin1Arr">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1823">at line 1823</a></div>
+        <code>        static            array
+    <strong>UTF8ArrToLatin1Arr</strong>(array $unicode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts UTF-8 characters array to array of Latin1 characters array<br></p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$unicode</td>
+                <td>array containing UTF-8 unicode values</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_UTF8ArrToLatin1">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1848">at line 1848</a></div>
+        <code>        static            array
+    <strong>UTF8ArrToLatin1</strong>(array $unicode)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts UTF-8 characters array to array of Latin1 string<br></p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$unicode</td>
+                <td>array containing UTF-8 unicode values</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_uniord">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1872">at line 1872</a></div>
+        <code>        static            int
+    <strong>uniord</strong>(string $uch)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts UTF-8 character to integer value.<br>
+Uses the getUniord() method if the value is not cached.</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uch</td>
+                <td>character string to process.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUniord">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1912">at line 1912</a></div>
+        <code>        static            int
+    <strong>getUniord</strong>(string $uch)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts UTF-8 character to integer value.<br>
+Invalid byte sequences will be replaced with 0xFFFD (replacement character)<br>
+Based on: http://www.faqs.org/rfcs/rfc3629.html</p>
+
+<p>&lt;</p>
+
+<p>pre>
+   Char. number range  |        UTF-8 octet sequence
+      (hexadecimal)    |              (binary)
+   --------------------+-----------------------------------------------
+   0000 0000-0000 007F | 0xxxxxxx
+   0000 0080-0000 07FF | 110xxxxx 10xxxxxx
+   0000 0800-0000 FFFF | 1110xxxx 10xxxxxx 10xxxxxx
+   0001 0000-0010 FFFF | 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</p>
+
+<hr />
+</p>                    <p>ABFN notation:</p>
+
+<hr />
+
+<p>UTF8-octets = *( UTF8-char )
+  UTF8-char   = UTF8-1 / UTF8-2 / UTF8-3 / UTF8-4
+  UTF8-1      = %x00-7F
+  UTF8-2      = %xC2-DF UTF8-tail</p>
+
+<p>UTF8-3      = %xE0 %xA0-BF UTF8-tail / %xE1-EC 2( UTF8-tail ) /
+                %xED %x80-9F UTF8-tail / %xEE-EF 2( UTF8-tail )
+  UTF8-4      = %xF0 %x90-BF 2( UTF8-tail ) / %xF1-F3 3( UTF8-tail ) /
+                %xF4 %x80-8F 2( UTF8-tail )
+  UTF8-tail   = %x80-BF</p>
+
+<hr />
+
+<p></pre></p>                            </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$uch</td>
+                <td>character string to process.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_UTF8StringToArray">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L1981">at line 1981</a></div>
+        <code>        static            array
+    <strong>UTF8StringToArray</strong>(string $str, bool $isunicode, array $currentfont)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts UTF-8 strings to codepoints array.<br>
+Invalid byte sequences will be replaced with 0xFFFD (replacement character)<br></p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>string to process.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isunicode</td>
+                <td>True when the documetn is in Unicode mode, false otherwise.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$currentfont</td>
+                <td>Reference to current font array.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_UTF8ToLatin1">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L2007">at line 2007</a></div>
+        <code>        static            string
+    <strong>UTF8ToLatin1</strong>(string $str, bool $isunicode, array $currentfont)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts UTF-8 strings to Latin1 when using the standard 14 core fonts.<br></p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>string to process.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isunicode</td>
+                <td>True when the documetn is in Unicode mode, false otherwise.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$currentfont</td>
+                <td>Reference to current font array.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_UTF8ToUTF16BE">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L2023">at line 2023</a></div>
+        <code>        static            string
+    <strong>UTF8ToUTF16BE</strong>(string $str, bool $setbom, bool $isunicode, array $currentfont)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Converts UTF-8 strings to UTF16-BE.<br></p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>string to process.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$setbom</td>
+                <td>if true set the Byte Order Mark (BOM = 0xFEFF)</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isunicode</td>
+                <td>True when the documetn is in Unicode mode, false otherwise.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$currentfont</td>
+                <td>Reference to current font array.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_utf8StrRev">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L2043">at line 2043</a></div>
+        <code>        static            string
+    <strong>utf8StrRev</strong>(string $str, bool $setbom, bool $forcertl, bool $isunicode, array $currentfont)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reverse the RLT substrings using the Bidirectional Algorithm (http://unicode.org/reports/tr9/).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>string to manipulate.</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$setbom</td>
+                <td>if true set the Byte Order Mark (BOM = 0xFEFF)</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$forcertl</td>
+                <td>if true forces RTL text direction</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isunicode</td>
+                <td>True if the document is in Unicode mode, false otherwise.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$currentfont</td>
+                <td>Reference to current font array.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_utf8StrArrRev">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L2060">at line 2060</a></div>
+        <code>        static            string
+    <strong>utf8StrArrRev</strong>(array $arr, string $str, bool $setbom, bool $forcertl, bool $isunicode, array $currentfont)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reverse the RLT substrings array using the Bidirectional Algorithm (http://unicode.org/reports/tr9/).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arr</td>
+                <td>array of unicode values.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>string to manipulate (or empty value).</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$setbom</td>
+                <td>if true set the Byte Order Mark (BOM = 0xFEFF)</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$forcertl</td>
+                <td>if true forces RTL text direction</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isunicode</td>
+                <td>True if the document is in Unicode mode, false otherwise.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$currentfont</td>
+                <td>Reference to current font array.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_utf8Bidi">
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/src/Fonts.php#L2076">at line 2076</a></div>
+        <code>        static            array
+    <strong>utf8Bidi</strong>(array $ta, string $str, bool $forcertl, bool $isunicode, array $currentfont)
+        </code>
+    </h3>
+    <div class="details">
+            
+    
+
+                    <div class="method-description">
+                                    <p>Reverse the RLT substrings using the Bidirectional Algorithm (http://unicode.org/reports/tr9/).</p>                                                </div>
+                <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$ta</td>
+                <td>array of characters composing the string.</td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$str</td>
+                <td>string to process</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$forcertl</td>
+                <td>if 'R' forces RTL, if 'L' forces LTR</td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isunicode</td>
+                <td>True if the document is in Unicode mode, false otherwise.</td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$currentfont</td>
+                <td>Reference to current font array.</td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+            </div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.            <br/>This documentation is for <a href="https://github.com/code-lts/WarnockPDF#readme" rel="noreferrer noopener" target="_blank">WarnockPDF</a> the fork of TCPDF.</div></div>
+    </div>
+    </body>
+
+</html>
