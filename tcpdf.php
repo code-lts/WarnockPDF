@@ -4667,7 +4667,7 @@ class TCPDF
      * Defines the page and position a link points to.
      * @param int $link The link identifier returned by AddLink()
      * @param float $y Ordinate of target position; -1 indicates the current position. The default value is 0 (top of page)
-     * @param $page (int|string) Number of target page; -1 indicates the current page (default value). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.
+     * @param int|string $page Number of target page; -1 indicates the current page (default value). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.
      * @public
      * @since 1.5
      * @see AddLink()
@@ -12189,7 +12189,7 @@ class TCPDF
      * NOTE: destination names are unique, so only last entry will be saved.
      * @param string $name Destination name.
      * @param float $y Y position in user units of the destiantion on the selected page (default = -1 = current position; 0 = page start;).
-     * @param $page (int|string) Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.
+     * @param int|string $page Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.
      * @param float $x X position in user units of the destiantion on the selected page (default = -1 = current position;).
      * @return string|false Stripped named destination identifier or false in case of error.
      * @public
@@ -12268,7 +12268,7 @@ class TCPDF
      * @param string $txt Bookmark description.
      * @param int $level Bookmark level (minimum value is 0).
      * @param float $y Y position in user units of the bookmark on the selected page (default = -1 = current position; 0 = page start;).
-     * @param $page (int|string) Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.
+     * @param int|string $page Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.
      * @param string $style Font style: B = Bold, I = Italic, BI = Bold + Italic.
      * @param array $color RGB color array (values from 0 to 255).
      * @param float $x X position in user units of the bookmark on the selected page (default = -1 = current position;).
@@ -12284,7 +12284,7 @@ class TCPDF
      * @param string $txt Bookmark description.
      * @param int $level Bookmark level (minimum value is 0).
      * @param float $y Y position in user units of the bookmark on the selected page (default = -1 = current position; 0 = page start;).
-     * @param $page (int|string) Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.
+     * @param int|string $page Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.
      * @param string $style Font style: B = Bold, I = Italic, BI = Bold + Italic.
      * @param array $color RGB color array (values from 0 to 255).
      * @param float $x X position in user units of the bookmark on the selected page (default = -1 = current position;).
@@ -13710,7 +13710,7 @@ class TCPDF
     /**
      * Start a new pdf layer.
      * @param string $name Layer name (only a-z letters and numbers). Leave empty for automatic name.
-     * @param $print (boolean|null) Set to TRUE to print this layer, FALSE to not print and NULL to not set this option
+     * @param boolean|null $print Set to TRUE to print this layer, FALSE to not print and NULL to not set this option
      * @param bool    $view Set to true to view this layer.
      * @param bool    $lock If true lock the layer
      * @public

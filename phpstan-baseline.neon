@@ -6301,13 +6301,8 @@ parameters:
 			path: tcpdf.php
 
 		-
-			message: "#^Method TCPDF\\:\\:SetLink\\(\\) has parameter \\$page with no typehint specified\\.$#"
-			count: 1
-			path: tcpdf.php
-
-		-
-			message: "#^PHPDoc tag @param has invalid value \\(\\$page \\(int\\|string\\) Number of target page; \\-1 indicates the current page \\(default value\\)\\. If you prefix a page number with the \\* character, then this page will not be changed when adding/deleting/moving pages\\.\\)\\: Unexpected token \"\\$page\", expected type at offset 251$#"
-			count: 1
+			message: "#^Parameter \\#1 \\$string of function substr expects string, int\\|string given\\.$#"
+			count: 5
 			path: tcpdf.php
 
 		-
@@ -7746,16 +7741,6 @@ parameters:
 			path: tcpdf.php
 
 		-
-			message: "#^Method TCPDF\\:\\:setDestination\\(\\) has parameter \\$page with no typehint specified\\.$#"
-			count: 1
-			path: tcpdf.php
-
-		-
-			message: "#^PHPDoc tag @param has invalid value \\(\\$page \\(int\\|string\\) Target page number \\(leave empty for current page\\)\\. If you prefix a page number with the \\* character, then this page will not be changed when adding/deleting/moving pages\\.\\)\\: Unexpected token \"\\$page\", expected type at offset 297$#"
-			count: 2
-			path: tcpdf.php
-
-		-
 			message: "#^Method TCPDF\\:\\:setDestination\\(\\) should return string\\|false but empty return statement found\\.$#"
 			count: 1
 			path: tcpdf.php
@@ -7781,27 +7766,12 @@ parameters:
 			path: tcpdf.php
 
 		-
-			message: "#^Method TCPDF\\:\\:setBookmark\\(\\) has parameter \\$page with no typehint specified\\.$#"
-			count: 1
-			path: tcpdf.php
-
-		-
 			message: "#^Method TCPDF\\:\\:Bookmark\\(\\) has no return typehint specified\\.$#"
 			count: 1
 			path: tcpdf.php
 
 		-
 			message: "#^Method TCPDF\\:\\:Bookmark\\(\\) has parameter \\$color with no value type specified in iterable type array\\.$#"
-			count: 1
-			path: tcpdf.php
-
-		-
-			message: "#^Method TCPDF\\:\\:Bookmark\\(\\) has parameter \\$page with no typehint specified\\.$#"
-			count: 1
-			path: tcpdf.php
-
-		-
-			message: "#^PHPDoc tag @param has invalid value \\(\\$page \\(int\\|string\\) Target page number \\(leave empty for current page\\)\\. If you prefix a page number with the \\* character, then this page will not be changed when adding/deleting/moving pages\\.\\)\\: Unexpected token \"\\$page\", expected type at offset 274$#"
 			count: 1
 			path: tcpdf.php
 
@@ -8152,16 +8122,6 @@ parameters:
 
 		-
 			message: "#^Method TCPDF\\:\\:startLayer\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: tcpdf.php
-
-		-
-			message: "#^Method TCPDF\\:\\:startLayer\\(\\) has parameter \\$print with no typehint specified\\.$#"
-			count: 1
-			path: tcpdf.php
-
-		-
-			message: "#^PHPDoc tag @param has invalid value \\(\\$print \\(boolean\\|null\\) Set to TRUE to print this layer, FALSE to not print and NULL to not set this option\\)\\: Unexpected token \"\\$print\", expected type at offset 141$#"
 			count: 1
 			path: tcpdf.php
 
