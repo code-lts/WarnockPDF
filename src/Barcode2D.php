@@ -1,5 +1,7 @@
 <?php
 
+namespace WarnockPDF;
+
 /**
  * This file is part of the WarnockPDF library.
  *
@@ -24,7 +26,7 @@
  * @version 1.0.015
  * @author Nicola Asuni
  */
-class TCPDF2DBarcode
+class Barcode2D
 {
 
     /**

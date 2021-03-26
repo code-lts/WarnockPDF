@@ -1,5 +1,7 @@
 <?php
 
+namespace WarnockPDF;
+
 /**
  * This file is part of the WarnockPDF library.
  *
