@@ -42,7 +42,7 @@
  *  * page compression (requires php-zlib extension);
  *  * XOBject Templates;
  *  * Layers and object visibility.
- *	* PDF/A-1b support
+ *  * PDF/A-1b support
  *
  * Tools to encode your unicode fonts are on fonts/utils directory.
  *
@@ -6125,7 +6125,7 @@ class TCPDF
                     and (($c == 173)
                         or preg_match($this->re_spaces, TCPDF_FONTS::unichr($c, $this->isunicode))
                         or
-                        (	($c == 45)
+                        (($c == 45)
                             and ($i > 0) and ($i < ($length - 1))
                             and @preg_match('/[\p{L}]/' . $this->re_space['m'], TCPDF_FONTS::unichr($chars[($i - 1)], $this->isunicode))
                             and @preg_match('/[\p{L}]/' . $this->re_space['m'], TCPDF_FONTS::unichr($chars[($i + 1)], $this->isunicode))
@@ -6177,20 +6177,20 @@ class TCPDF
      *  // calculate height
      *  $height = 0;
      *  if ($end_page == $start_page) {
-     *  	$height = $end_y - $start_y;
+     *      $height = $end_y - $start_y;
      *  } else {
-     *  	for ($page=$start_page; $page <= $end_page; ++$page) {
-     *  		$this->setPage($page);
-     *  		if ($page == $start_page) {
-     *  			// first page
-     *  			$height += $this->h - $start_y - $this->bMargin;
-     *  		} elseif ($page == $end_page) {
-     *  			// last page
-     *  			$height += $end_y - $this->tMargin;
-     *  		} else {
-     *  			$height += $this->h - $this->tMargin - $this->bMargin;
-     *  		}
-     *  	}
+     *      for ($page=$start_page; $page <= $end_page; ++$page) {
+     *          $this->setPage($page);
+     *          if ($page == $start_page) {
+     *              // first page
+     *              $height += $this->h - $start_y - $this->bMargin;
+     *          } elseif ($page == $end_page) {
+     *              // last page
+     *              $height += $end_y - $this->tMargin;
+     *          } else {
+     *              $height += $this->h - $this->tMargin - $this->bMargin;
+     *          }
+     *      }
      *  }
      *  // restore previous object
      *  $pdf = $pdf->rollbackTransaction();
@@ -11293,19 +11293,19 @@ class TCPDF
      * Set line style.
      * @param array $style Line style. Array with keys among the following:
      * <ul>
-     *	 <li>width (float): Width of the line in user units.</li>
-     *	 <li>cap (string): Type of cap to put on the line. Possible values are:
+     *   <li>width (float): Width of the line in user units.</li>
+     *   <li>cap (string): Type of cap to put on the line. Possible values are:
      * butt, round, square. The difference between "square" and "butt" is that
      * "square" projects a flat end past the end of the line.</li>
-     *	 <li>join (string): Type of join. Possible values are: miter, round,
+     *   <li>join (string): Type of join. Possible values are: miter, round,
      * bevel.</li>
-     *	 <li>dash (mixed): Dash pattern. Is 0 (without dash) or string with
+     *   <li>dash (mixed): Dash pattern. Is 0 (without dash) or string with
      * series of length values, which are the lengths of the on and off dashes.
      * For example: "2" represents 2 on, 2 off, 2 on, 2 off, ...; "2,1" is 2 on,
      * 1 off, 2 on, 1 off, ...</li>
-     *	 <li>phase (integer): Modifier on the dash pattern which is used to shift
+     *   <li>phase (integer): Modifier on the dash pattern which is used to shift
      * the point at which the pattern starts.</li>
-     *	 <li>color (array): Draw color. Format: array(GREY) or array(R,G,B) or array(C,M,Y,K) or array(C,M,Y,K,SpotColorName).</li>
+     *   <li>color (array): Draw color. Format: array(GREY) or array(R,G,B) or array(C,M,Y,K) or array(C,M,Y,K,SpotColorName).</li>
      * </ul>
      * @param bool    $ret if true do not send the command.
      * @return string the PDF command
@@ -11492,8 +11492,8 @@ class TCPDF
      * @param string $style Style of rendering. See the getPathPaintOperator() function for more information.
      * @param array $border_style Border style of rectangle. Array with keys among the following:
      * <ul>
-     *	 <li>all: Line style of all borders. Array like for SetLineStyle().</li>
-     *	 <li>L, T, R, B or combinations: Line style of left, top, right or bottom border. Array like for SetLineStyle().</li>
+     *   <li>all: Line style of all borders. Array like for SetLineStyle().</li>
+     *   <li>L, T, R, B or combinations: Line style of left, top, right or bottom border. Array like for SetLineStyle().</li>
      * </ul>
      * If a key is not present or is null, the correspondent border is not drawn. Default value: default line style (empty array).
      * @param array $fill_color Fill color. Format: array(GREY) or array(R,G,B) or array(C,M,Y,K) or array(C,M,Y,K,SpotColorName). Default value: default color (empty array).
@@ -11824,8 +11824,8 @@ class TCPDF
      * @param string $style Style of rendering. See the getPathPaintOperator() function for more information.
      * @param array $line_style Line style of polygon. Array with keys among the following:
      * <ul>
-     *	 <li>all: Line style of all lines. Array like for SetLineStyle().</li>
-     *	 <li>0 to ($np - 1): Line style of each line. Array like for SetLineStyle().</li>
+     *   <li>all: Line style of all lines. Array like for SetLineStyle().</li>
+     *   <li>0 to ($np - 1): Line style of each line. Array like for SetLineStyle().</li>
      * </ul>
      * If a key is not present or is null, not draws the line. Default value is default line style (empty array).
      * @param array $fill_color Fill color. Format: array(GREY) or array(R,G,B) or array(C,M,Y,K) or array(C,M,Y,K,SpotColorName). Default value: default color (empty array).
@@ -11842,8 +11842,8 @@ class TCPDF
      * @param string $style Style of rendering. See the getPathPaintOperator() function for more information.
      * @param array $line_style Line style of polygon. Array with keys among the following:
      * <ul>
-     *	 <li>all: Line style of all lines. Array like for SetLineStyle().</li>
-     *	 <li>0 to ($np - 1): Line style of each line. Array like for SetLineStyle().</li>
+     *   <li>all: Line style of all lines. Array like for SetLineStyle().</li>
+     *   <li>0 to ($np - 1): Line style of each line. Array like for SetLineStyle().</li>
      * </ul>
      * If a key is not present or is null, not draws the line. Default value is default line style (empty array).
      * @param array $fill_color Fill color. Format: array(GREY) or array(R,G,B) or array(C,M,Y,K) or array(C,M,Y,K,SpotColorName). Default value: default color (empty array).
@@ -11934,18 +11934,18 @@ class TCPDF
      * @param string $style Style of rendering. See the getPathPaintOperator() function for more information.
      * @param array $line_style Line style of polygon sides. Array with keys among the following:
      * <ul>
-     *	 <li>all: Line style of all sides. Array like for SetLineStyle().</li>
-     *	 <li>0 to ($ns - 1): Line style of each side. Array like for SetLineStyle().</li>
+     *   <li>all: Line style of all sides. Array like for SetLineStyle().</li>
+     *   <li>0 to ($ns - 1): Line style of each side. Array like for SetLineStyle().</li>
      * </ul>
      * If a key is not present or is null, not draws the side. Default value is default line style (empty array).
      * @param array $fill_color Fill color. Format: array(red, green, blue). Default value: default color (empty array).
      * @param string $circle_style Style of rendering of inscribed circle (if draws). Possible values are:
      * <ul>
-     *	 <li>D or empty string: Draw (default).</li>
-     *	 <li>F: Fill.</li>
-     *	 <li>DF or FD: Draw and fill.</li>
-     *	 <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
-     *	 <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
+     *   <li>D or empty string: Draw (default).</li>
+     *   <li>F: Fill.</li>
+     *   <li>DF or FD: Draw and fill.</li>
+     *   <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
+     *   <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
      * </ul>
      * @param array $circle_outLine_style Line style of inscribed circle (if draws). Array like for SetLineStyle(). Default value: default line style (empty array).
      * @param array $circle_fill_color Fill color of inscribed circle (if draws). Format: array(red, green, blue). Default value: default color (empty array).
@@ -11981,19 +11981,19 @@ class TCPDF
      * @param string $style Style of rendering. See the getPathPaintOperator() function for more information.
      * @param array $line_style Line style of polygon sides. Array with keys among the following:
      * <ul>
-     *	 <li>all: Line style of all sides. Array like for
+     *   <li>all: Line style of all sides. Array like for
      * SetLineStyle().</li>
-     *	 <li>0 to (n - 1): Line style of each side. Array like for SetLineStyle().</li>
+     *   <li>0 to (n - 1): Line style of each side. Array like for SetLineStyle().</li>
      * </ul>
      * If a key is not present or is null, not draws the side. Default value is default line style (empty array).
      * @param array $fill_color Fill color. Format: array(red, green, blue). Default value: default color (empty array).
      * @param string $circle_style Style of rendering of inscribed circle (if draws). Possible values are:
      * <ul>
-     *	 <li>D or empty string: Draw (default).</li>
-     *	 <li>F: Fill.</li>
-     *	 <li>DF or FD: Draw and fill.</li>
-     *	 <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
-     *	 <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
+     *   <li>D or empty string: Draw (default).</li>
+     *   <li>F: Fill.</li>
+     *   <li>DF or FD: Draw and fill.</li>
+     *   <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
+     *   <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
      * </ul>
      * @param array $circle_outLine_style Line style of inscribed circle (if draws). Array like for SetLineStyle(). Default value: default line style (empty array).
      * @param array $circle_fill_color Fill color of inscribed circle (if draws). Format: array(red, green, blue). Default value: default color (empty array).
@@ -23330,13 +23330,13 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
      * @param string $d attribute d of the path SVG element
      * @param string $style Style of rendering. Possible values are:
      * <ul>
-     *	 <li>D or empty string: Draw (default).</li>
-     *	 <li>F: Fill.</li>
-     *	 <li>F*: Fill using the even-odd rule to determine which regions lie inside the clipping path.</li>
-     *	 <li>DF or FD: Draw and fill.</li>
-     *	 <li>DF* or FD*: Draw and fill using the even-odd rule to determine which regions lie inside the clipping path.</li>
-     *	 <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
-     *	 <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
+     *   <li>D or empty string: Draw (default).</li>
+     *   <li>F: Fill.</li>
+     *   <li>F*: Fill using the even-odd rule to determine which regions lie inside the clipping path.</li>
+     *   <li>DF or FD: Draw and fill.</li>
+     *   <li>DF* or FD*: Draw and fill using the even-odd rule to determine which regions lie inside the clipping path.</li>
+     *   <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
+     *   <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
      * </ul>
      * @return array of container box measures (x, y, w, h)
      * @author Nicola Asuni
