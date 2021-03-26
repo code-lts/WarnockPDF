@@ -686,21 +686,6 @@ parameters:
 			path: examples/example_019.php
 
 		-
-			message: "#^Method MYPDF\\:\\:MultiRow\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: examples/example_020.php
-
-		-
-			message: "#^Method MYPDF\\:\\:MultiRow\\(\\) has parameter \\$left with no typehint specified\\.$#"
-			count: 1
-			path: examples/example_020.php
-
-		-
-			message: "#^Method MYPDF\\:\\:MultiRow\\(\\) has parameter \\$right with no typehint specified\\.$#"
-			count: 1
-			path: examples/example_020.php
-
-		-
 			message: "#^Parameter \\#6 \\$fill of method TCPDF\\:\\:MultiCell\\(\\) expects bool, int given\\.$#"
 			count: 2
 			path: examples/example_020.php

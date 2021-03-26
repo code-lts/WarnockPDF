@@ -13710,9 +13710,9 @@ class TCPDF
     /**
      * Start a new pdf layer.
      * @param string $name Layer name (only a-z letters and numbers). Leave empty for automatic name.
-     * @param boolean|null $print Set to TRUE to print this layer, FALSE to not print and NULL to not set this option
-     * @param bool    $view Set to true to view this layer.
-     * @param bool    $lock If true lock the layer
+     * @param bool|null $print Set to TRUE to print this layer, FALSE to not print and NULL to not set this option
+     * @param bool      $view Set to true to view this layer.
+     * @param bool      $lock If true lock the layer
      * @public
      * @since 5.9.102 (2011-07-13)
      */

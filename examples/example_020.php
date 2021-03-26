@@ -23,8 +23,12 @@ require_once('tcpdf_include.php');
 // extend class with custom functions
 class MYPDF extends TCPDF
 {
-
-    public function MultiRow($left, $right) {
+    /**
+     * @param string $left
+     * @param string $right
+     * @return void
+     */
+    public function multiRow($left, $right) {
         // MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0)
 
         $page_start = $this->getPage();
@@ -123,7 +127,7 @@ Fusce et felis vitae diam lobortis sollicitudin. Aenean tincidunt accumsan nisi,
 
 // print some rows just as example
 for ($i = 0; $i < 10; ++$i) {
-    $pdf->MultiRow('Row ' . ($i + 1), $text . "\n");
+    $pdf->multiRow('Row ' . ($i + 1), $text . "\n");
 }
 
 // reset pointer to the last page
