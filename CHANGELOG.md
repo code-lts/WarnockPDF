@@ -10,6 +10,7 @@
 - Cleaned up and update links of the LICENSE
 - Adjusted the php composer version
 - Cleaned up the headers of source files
+- Renamed `tools/tcpdf_addfont.php` to `tools/addfont.php` (this is a CLI only file)
 
 ### Improvements
 

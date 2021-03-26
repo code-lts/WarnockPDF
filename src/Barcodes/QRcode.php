@@ -1,7 +1,5 @@
 <?php
 
-namespace WarnockPDF\Barcodes;
-
 /**
  * This file is part of the WarnockPDF library.
  *
@@ -43,6 +41,8 @@ namespace WarnockPDF\Barcodes;
  * @copyright 2010-2012 Nicola Asuni - Tecnick.com LTD
  *
  */
+
+namespace WarnockPDF\Barcodes;
 
 /**
  * Class to create QR-code arrays for WarnockPDF class.

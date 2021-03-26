@@ -1503,7 +1503,7 @@ class Fonts
      * @public static
      */
     public static function _getfontpath() {
-        if (!defined('K_PATH_FONTS') and is_dir($fdir = realpath(dirname(__FILE__) . '/../fonts'))) {
+        if (!defined('K_PATH_FONTS') and is_dir($fdir = realpath(__DIR__ . '/../fonts'))) {
             if (substr($fdir, -1) != '/') {
                 $fdir .= '/';
             }
@@ -1761,9 +1761,9 @@ class Fonts
      */
     public static function UTF8ArrayToUniArray($ta, $isunicode = true) {
         if ($isunicode) {
-            return array_map(array('TCPDF_FONTS', 'unichrUnicode'), $ta);
+            return array_map(array('\\WarnockPDF\\Fonts', 'unichrUnicode'), $ta);
         }
-        return array_map(array('TCPDF_FONTS', 'unichrASCII'), $ta);
+        return array_map(array('\\WarnockPDF\\Fonts', 'unichrASCII'), $ta);
     }
 
     /**
@@ -1982,7 +1982,7 @@ class Fonts
         if ($isunicode) {
             // requires PCRE unicode support turned on
             $chars = StaticUtils::pregSplit('//', 'u', $str, -1, PREG_SPLIT_NO_EMPTY);
-            $carr = array_map(array('TCPDF_FONTS', 'uniord'), $chars);
+            $carr = array_map(array('\\WarnockPDF\\Fonts', 'uniord'), $chars);
         } else {
             $chars = str_split($str);
             $carr = array_map('ord', $chars);

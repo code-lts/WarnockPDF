@@ -1,7 +1,5 @@
 <?php
 
-namespace WarnockPDF;
-
 /**
  * This file is part of the WarnockPDF library.
  *
@@ -10,6 +8,8 @@ namespace WarnockPDF;
  * @copyright 2011-2014 Nicola Asuni - Tecnick.com LTD
  * @description Try to automatically configure some TCPDF constants if not defined.
  */
+
+namespace WarnockPDF;
 
 /**
  * @file
@@ -47,7 +47,7 @@ if (!defined('K_TCPDF_EXTERNAL_CONFIG') or !K_TCPDF_EXTERNAL_CONFIG) {
 }
 
 if (!defined('K_PATH_MAIN')) {
-    define ('K_PATH_MAIN', dirname(__FILE__) . '/');
+    define ('K_PATH_MAIN', __DIR__ . '/../');
 }
 
 if (!defined('K_PATH_FONTS')) {

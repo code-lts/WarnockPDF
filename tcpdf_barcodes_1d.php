@@ -6,12 +6,12 @@
  * @deprecated 7.0.0 This file will be removed in next major version
  */
 
-require_once __DIR__ . '/../src/Colors.php';
+require_once __DIR__ . '/src/Barcode1D.php';
 
 /**
  * This is a legacy support class
  * @deprecated 7.0.0 This file will be removed in next major version
  */
-class TCPDF_COLORS extends \WarnockPDF\Colors
+class TCPDFBarcode extends \WarnockPDF\Barcode1D
 {
 }

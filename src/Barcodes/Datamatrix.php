@@ -1,7 +1,5 @@
 <?php
 
-namespace WarnockPDF\Barcodes;
-
 /**
  * This file is part of the WarnockPDF library.
  *
@@ -14,6 +12,8 @@ namespace WarnockPDF\Barcodes;
  * @description Class to create DataMatrix ECC 200 barcode arrays for TCPDF class.
  * @description DataMatrix (ISO/IEC 16022:2006) is a 2-dimensional bar code.
  */
+
+namespace WarnockPDF\Barcodes;
 
 /**
  * @version 1.0.008

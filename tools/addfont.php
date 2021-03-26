@@ -11,6 +11,10 @@
  * @description This is a command line script to generate WarnockPDF fonts.
  */
 
+require_once __DIR__ . '/src/Fonts.php';
+
+use WarnockPDF\Fonts;
+
 /**
  * @file
  * This is a command line script to generate WarnockPDF fonts.<br>
@@ -233,7 +237,7 @@ $errors = false;
 
 foreach ($options['fonts'] as $font) {
     $fontfile = realpath($font);
-    $fontname = TCPDF_FONTS::addTTFfont($fontfile, $options['type'], $options['enc'], $options['flags'], $options['outpath'], $options['platid'], $options['encid'], $options['addcbbox'], $options['link']);
+    $fontname = Fonts::addTTFfont($fontfile, $options['type'], $options['enc'], $options['flags'], $options['outpath'], $options['platid'], $options['encid'], $options['addcbbox'], $options['link']);
     if ($fontname === false) {
         $errors = true;
         echo "--- ERROR: can't add " . $font . "\n";

@@ -97,4 +97,11 @@
         <exclude-pattern>*/tests/coverage.php</exclude-pattern>
     </rule>
 
+    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility.MissingConstantVisibility"><!-- PHP 5 not compatible, requires PHP 7.1 -->
+        <exclude-pattern>*/src/Version.php</exclude-pattern>
+    </rule>
+
+    <rule ref="PSR12.Properties.ConstantVisibility.NotFound"><!-- PHP 5 not compatible, requires PHP 7.1 -->
+        <exclude-pattern>*/src/Version.php</exclude-pattern>
+    </rule>
 </ruleset>

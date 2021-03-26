@@ -1,7 +1,5 @@
 <?php
 
-namespace WarnockPDF\Barcodes;
-
 /**
  * This file is part of the WarnockPDF library.
  *
@@ -25,6 +23,8 @@ namespace WarnockPDF\Barcodes;
  *
  * @php-extension bcmath for bcadd
  */
+
+namespace WarnockPDF\Barcodes;
 
 /**
  * @file
