@@ -242,7 +242,7 @@ class StaticUtils
      * @public static
      */
     public static function getObjFilename($type = 'tmp', $file_id = '') {
-        return tempnam(K_PATH_CACHE, '__tcpdf_' . $file_id . '_' . $type . '_' . md5(TCPDF_STATIC::getRandomSeed()) . '_');
+        return tempnam(K_PATH_CACHE, '__tcpdf_' . $file_id . '_' . $type . '_' . md5(StaticUtils::getRandomSeed()) . '_');
     }
 
     /**
@@ -771,7 +771,7 @@ class StaticUtils
             if (is_array($prop['fillColor'])) {
                 $opt['mk']['bg'] = $prop['fillColor'];
             } else {
-                $opt['mk']['bg'] = TCPDF_COLORS::convertHTMLColorToDec($prop['fillColor'], $spot_colors);
+                $opt['mk']['bg'] = Colors::convertHTMLColorToDec($prop['fillColor'], $spot_colors);
             }
         }
         // strokeColor: Specifies the stroke color for a field that is used to stroke the rectangle of the field with a line as large as the line width.
@@ -779,7 +779,7 @@ class StaticUtils
             if (is_array($prop['strokeColor'])) {
                 $opt['mk']['bc'] = $prop['strokeColor'];
             } else {
-                $opt['mk']['bc'] = TCPDF_COLORS::convertHTMLColorToDec($prop['strokeColor'], $spot_colors);
+                $opt['mk']['bc'] = Colors::convertHTMLColorToDec($prop['strokeColor'], $spot_colors);
             }
         }
         // rotation: The rotation of a widget in counterclockwise increments.
@@ -1484,7 +1484,7 @@ class StaticUtils
         // create new language array of patterns
         $patterns = array();
         foreach($patterns_array as $val) {
-            if (!TCPDF_STATIC::empty_string($val)) {
+            if (!StaticUtils::empty_string($val)) {
                 $val = trim($val);
                 $val = str_replace('\'', '\\\'', $val);
                 $key = preg_replace('/[0-9]+/', '', $val);
