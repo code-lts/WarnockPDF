@@ -39,13 +39,13 @@ class MYPDF extends TCPDF
         $this->setPage($page_start);
 
         // write the right cell
-        $this->MultiCell(0, 0, $right, 1, 'J', 0, 1, $this->GetX() ,$y_start, true, 0);
+        $this->MultiCell(0, 0, $right, 1, 'J', 0, 1, $this->GetX() , $y_start, true, 0);
 
         $page_end_2 = $this->getPage();
         $y_end_2 = $this->GetY();
 
         // set the new row position by case
-        if (max($page_end_1,$page_end_2) == $page_start) {
+        if (max($page_end_1, $page_end_2) == $page_start) {
             $ynew = max($y_end_1, $y_end_2);
         } elseif ($page_end_1 == $page_end_2) {
             $ynew = max($y_end_1, $y_end_2);
@@ -55,8 +55,8 @@ class MYPDF extends TCPDF
             $ynew = $y_end_2;
         }
 
-        $this->setPage(max($page_end_1,$page_end_2));
-        $this->SetXY($this->GetX(),$ynew);
+        $this->setPage(max($page_end_1, $page_end_2));
+        $this->SetXY($this->GetX(), $ynew);
     }
 
 }

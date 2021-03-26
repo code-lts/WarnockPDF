@@ -849,7 +849,7 @@ class QRcode
             $this->rsblocks[$blockNo]['eccLength'] = $el;
             $ecc = $this->encode_rs_char($rs, $this->rsblocks[$blockNo]['data'], $ecc);
             $this->rsblocks[$blockNo]['ecc'] = $ecc;
-            $this->ecccode = array_merge(array_slice($this->ecccode,0, $eccPos), $ecc);
+            $this->ecccode = array_merge(array_slice($this->ecccode, 0, $eccPos), $ecc);
             $dataPos += $dl;
             $eccPos += $el;
             $blockNo++;
@@ -2249,7 +2249,7 @@ class QRcode
      * @return array srctab
      */
      protected function qrstrset($srctab, $x, $y, $repl, $replLen=false) {
-        $srctab[$y] = substr_replace($srctab[$y], ($replLen !== false)?substr($repl,0,$replLen):$repl, $x, ($replLen !== false)?$replLen:strlen($repl));
+        $srctab[$y] = substr_replace($srctab[$y], ($replLen !== false)?substr($repl, 0, $replLen):$repl, $x, ($replLen !== false)?$replLen:strlen($repl));
         return $srctab;
     }
 

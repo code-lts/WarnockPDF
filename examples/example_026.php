@@ -64,7 +64,7 @@ $pdf->SetFont('helvetica', '', 22);
 $pdf->AddPage();
 
 // set color for text stroke
-$pdf->SetDrawColor(255,0,0);
+$pdf->SetDrawColor(255, 0, 0);
 
 
 $pdf->setTextRenderingMode($stroke=0, $fill=true, $clip=false);

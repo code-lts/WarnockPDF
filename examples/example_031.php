@@ -79,7 +79,7 @@ $pdf->SetFillColor(255, 0, 0);
 $pdf->PieSector($xc, $yc, $r, 250, 20, 'FD', false, 0, 2);
 
 // write labels
-$pdf->SetTextColor(255,255,255);
+$pdf->SetTextColor(255, 255, 255);
 $pdf->Text(105, 65, 'BLUE');
 $pdf->Text(60, 95, 'GREEN');
 $pdf->Text(120, 115, 'RED');

@@ -64,7 +64,7 @@ $pdf->SetFont('helvetica', '', 14);
 $core_fonts = array('courier', 'courierB', 'courierI', 'courierBI', 'helvetica', 'helveticaB', 'helveticaI', 'helveticaBI', 'times', 'timesB', 'timesI', 'timesBI', 'symbol', 'zapfdingbats');
 
 // set fill color
-$pdf->SetFillColor(221,238,255);
+$pdf->SetFillColor(221, 238, 255);
 
 // create one HTML table for each core font
 foreach($core_fonts as $font) {

@@ -174,7 +174,7 @@ $pdf->SetTextColor(0);
 // Start Transformation
 $pdf->StartTransform();
 // point reflection at the lower left point of rectangle
-$pdf->MirrorP(70,170);
+$pdf->MirrorP(70, 170);
 $pdf->Rect(70, 160, 40, 10, 'D');
 $pdf->Text(70, 156, 'MirrorP');
 // Stop Transformation
@@ -188,8 +188,8 @@ $py=170;
 // just for visualisation: the straight line to mirror against
 
 $pdf->SetDrawColor(200);
-$pdf->Line($px-1,$py-1,$px+1,$py+1);
-$pdf->Line($px-1,$py+1,$px+1,$py-1);
+$pdf->Line($px-1, $py-1, $px+1, $py+1);
+$pdf->Line($px-1, $py+1, $px+1, $py-1);
 $pdf->StartTransform();
 $pdf->Rotate($angle, $px, $py);
 $pdf->Line($px-5, $py, $px+60, $py);

@@ -185,7 +185,7 @@ $pdf->writeHTML($html, true, false, true, false, '');
 
 $html = '<span color="red">red</span> <span color="green">green</span> <span color="blue">blue</span><br /><span color="red">red</span> <span color="green">green</span> <span color="blue">blue</span>';
 
-$pdf->SetFillColor(255,255,0);
+$pdf->SetFillColor(255, 255, 0);
 
 $pdf->writeHTMLCell(0, 0, '', '', $html, 'LRTB', 1, 0, true, 'L', true);
 $pdf->writeHTMLCell(0, 0, '', '', $html, 'LRTB', 1, 1, true, 'C', true);

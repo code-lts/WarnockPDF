@@ -79,7 +79,7 @@ $pdf->Write(0, $txt, '', 0, '', true, 0, false, false, 0);
 $pdf->SetFontSize(40);
 
 // change text color
-$pdf->SetTextColor(0,63,127);
+$pdf->SetTextColor(0, 63, 127);
 
 // set visibility only for screen
 $pdf->setVisibility('screen');
@@ -91,7 +91,7 @@ $pdf->Write(0, '[This line is for display]', '', 0, 'C', true, 0, false, false, 
 $pdf->setVisibility('print');
 
 // change text color
-$pdf->SetTextColor(127,0,0);
+$pdf->SetTextColor(127, 0, 0);
 
 // write something only for print
 $pdf->Write(0, '[This line is for printout]', '', 0, 'C', true, 0, false, false, 0);
@@ -110,7 +110,7 @@ $pdf->startLayer('layer1', true, true);
 $pdf->SetFontSize(18);
 
 // change text color
-$pdf->SetTextColor(0,127,0);
+$pdf->SetTextColor(0, 127, 0);
 
 $txt = 'Using the startLayer() method you can group PDF objects into layers.
 This text is on "layer1".';

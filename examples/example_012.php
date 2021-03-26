@@ -89,20 +89,20 @@ $pdf->Curve(140, 40, 150, 55, 180, 45, 200, 75, 'DF', $style6, array(200, 220, 2
 // Circle and ellipse
 $pdf->Text(5, 79, 'Circle and ellipse examples');
 $pdf->SetLineStyle($style5);
-$pdf->Circle(25,105,20);
-$pdf->Circle(25,105,10, 90, 180, null, $style6);
-$pdf->Circle(25,105,10, 270, 360, 'F');
-$pdf->Circle(25,105,10, 270, 360, 'C', $style6);
+$pdf->Circle(25, 105, 20);
+$pdf->Circle(25, 105, 10, 90, 180, null, $style6);
+$pdf->Circle(25, 105, 10, 270, 360, 'F');
+$pdf->Circle(25, 105, 10, 270, 360, 'C', $style6);
 
 $pdf->SetLineStyle($style5);
-$pdf->Ellipse(100,103,40,20);
-$pdf->Ellipse(100,105,20,10, 0, 90, 180, null, $style6);
-$pdf->Ellipse(100,105,20,10, 0, 270, 360, 'DF', $style6);
+$pdf->Ellipse(100, 103, 40, 20);
+$pdf->Ellipse(100, 105, 20, 10, 0, 90, 180, null, $style6);
+$pdf->Ellipse(100, 105, 20, 10, 0, 270, 360, 'DF', $style6);
 
 $pdf->SetLineStyle($style5);
-$pdf->Ellipse(175,103,30,15,45);
-$pdf->Ellipse(175,105,15,7.50, 45, 90, 180, null, $style6);
-$pdf->Ellipse(175,105,15,7.50, 45, 270, 360, 'F', $style6, array(220, 200, 200));
+$pdf->Ellipse(175, 103, 30, 15, 45);
+$pdf->Ellipse(175, 105, 15, 7.50, 45, 90, 180, null, $style6);
+$pdf->Ellipse(175, 105, 15, 7.50, 45, 270, 360, 'F', $style6, array(220, 200, 200));
 
 // Polygon
 $pdf->Text(5, 129, 'Polygon examples');

@@ -71,7 +71,7 @@ $pdf->SetFont('helvetica', '', 11);
 $pdf->SetLineWidth(0.7);
 
 // set color for cell border
-$pdf->SetDrawColor(0,128,255);
+$pdf->SetDrawColor(0, 128, 255);
 
 $pdf->setCellHeightRatio(3);
 
@@ -162,10 +162,10 @@ $pdf->SetFont('helvetica', '', 11);
 $pdf->SetLineWidth(0.508);
 
 // set color for cell border
-$pdf->SetDrawColor(0,128,255);
+$pdf->SetDrawColor(0, 128, 255);
 
 // set filling color
-$pdf->SetFillColor(255,255,128);
+$pdf->SetFillColor(255, 255, 128);
 
 // set cell height ratio
 $pdf->setCellHeightRatio(3);
@@ -219,10 +219,10 @@ $pdf->SetFont('helvetica', '', 11);
 $pdf->SetLineWidth(1);
 
 // set color for cell border
-$pdf->SetDrawColor(0,128,255);
+$pdf->SetDrawColor(0, 128, 255);
 
 // set filling color
-$pdf->SetFillColor(255,255,128);
+$pdf->SetFillColor(255, 255, 128);
 
 $border = array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(255, 0, 0)));
 $pdf->Cell(30, 0, 'LTRB', $border, 1, 'C', 1, '', 0, false, 'T', 'C');
