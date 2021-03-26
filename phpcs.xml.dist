@@ -83,6 +83,9 @@
         <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
         <exclude name="Generic.Metrics.NestingLevel.TooHigh"/>
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedIf"/>
+        <!-- PHP 5 not compatible rule, it requires PHP 7.1 -->
+        <exclude name="SlevomatCodingStandard.Classes.ClassConstantVisibility.MissingConstantVisibility"/>
+        <exclude name="PSR12.Properties.ConstantVisibility.NotFound"/>
     </rule>
 
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
@@ -97,13 +100,4 @@
         <exclude-pattern>*/tests/coverage.php</exclude-pattern>
     </rule>
 
-    <!-- PHP 5 not compatible rule, it requires PHP 7.1 -->
-    <rule ref="SlevomatCodingStandard.Classes.ClassConstantVisibility.MissingConstantVisibility">
-        <exclude-pattern type="relative">src/Version.php</exclude-pattern>
-    </rule>
-
-    <!-- PHP 5 not compatible rule, it requires PHP 7.1 -->
-    <rule ref="PSR12.Properties.ConstantVisibility.NotFound">
-        <exclude-pattern  type="relative">src/Version.php</exclude-pattern>
-    </rule>
 </ruleset>
