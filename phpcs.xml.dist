@@ -46,10 +46,6 @@
         <exclude name="PSR12.ControlStructures.ControlStructureSpacing.FirstExpressionLine"/>
         <exclude name="PSR12.ControlStructures.ControlStructureSpacing.CloseParenthesisLine"/>
         <exclude name="PSR12.ControlStructures.ControlStructureSpacing.LineIndent"/>
-        <exclude name="PSR12.ControlStructures.ControlStructureSpacing.SpacingAfterOpenBrace"/>
-        <exclude name="PSR12.ControlStructures.ControlStructureSpacing.SpacingBeforeOpenBrace"/>
-        <exclude name="PSR12.ControlStructures.ControlStructureSpacing.SpaceAfterCloseBrace"/>
-        <exclude name="PSR12.ControlStructures.ControlStructureSpacing.SpaceBeforeCloseBrace"/>
 
         <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
 

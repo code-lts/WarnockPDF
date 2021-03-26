@@ -2145,7 +2145,7 @@ class TCPDF_FONTS
                 //  a. If this new level would be valid, then this embedding code is valid. Remember (push) the current embedding level and override status. Reset the current level to this new level, and reset the override status to neutral.
                 //  b. If the new level would not be valid, then this code is invalid. Do not change the current level or override status.
                 $next_level = $cel + 2 - ($cel % 2);
-                if ( $next_level < 62 ) {
+                if ($next_level < 62) {
                     $remember[] = array('num' => TCPDF_FONT_DATA::$uni_LRE, 'cel' => $cel, 'dos' => $dos);
                     $cel = $next_level;
                     $dos = 'N';
@@ -2169,7 +2169,7 @@ class TCPDF_FONTS
                 //  a. If this new level would be valid, then this embedding code is valid. Remember (push) the current embedding level and override status. Reset the current level to this new level, and reset the override status to left-to-right.
                 //  b. If the new level would not be valid, then this code is invalid. Do not change the current level or override status.
                 $next_level = $cel + 2 - ($cel % 2);
-                if ( $next_level < 62 ) {
+                if ($next_level < 62) {
                     $remember[] = array('num' => TCPDF_FONT_DATA::$uni_LRO, 'cel' => $cel, 'dos' => $dos);
                     $cel = $next_level;
                     $dos = 'L';

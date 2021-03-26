@@ -2805,7 +2805,7 @@ class TCPDF
         $this->compress = false;
         if (function_exists('gzcompress')) {
             if ($compress) {
-                if ( !$this->pdfa_mode) {
+                if (!$this->pdfa_mode) {
                     $this->compress = true;
                 }
             }
@@ -6315,7 +6315,7 @@ class TCPDF
         $pc = 0; // previous character
         // for each character
         while ($i < $nb) {
-            if (($maxh > 0) and ($this->y > $maxy) ) {
+            if (($maxh > 0) and ($this->y > $maxy)) {
                 break;
             }
             //Get the current character
@@ -10369,7 +10369,7 @@ class TCPDF
         if (isset($url[1]) and ($url[0] == '#') and is_numeric($url[1])) {
             // convert url to internal link
             $lnkdata = explode(',', $url);
-            if (isset($lnkdata[0]) ) {
+            if (isset($lnkdata[0])) {
                 $page = substr($lnkdata[0], 1);
                 if (isset($lnkdata[1]) and (strlen($lnkdata[1]) > 0)) {
                     $lnky = floatval($lnkdata[1]);
@@ -13986,7 +13986,7 @@ class TCPDF
      * @since 3.1.000 (2008-06-09)
      */
     public function setPDFVersion($version = '1.7') {
-        if ($this->pdfa_mode && $this->pdfa_version == 1 ) {
+        if ($this->pdfa_mode && $this->pdfa_version == 1) {
             // PDF/A mode
             $this->PDFVersion = '1.4';
         } else {
