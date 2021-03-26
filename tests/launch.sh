@@ -25,6 +25,9 @@ OUTPUT_FILE_ERROR="${TEMP_FOLDER}/errors.txt"
 ROOT_DIR="$(php -r 'echo realpath(__DIR__);')"
 TESTS_DIR="${ROOT_DIR}/tests/"
 
+BCMATH_EXT="$(find $(php -r 'echo ini_get("extension_dir");') -type f -name 'bcmath.so')"
+echo "bcmath found at: ${BCMATH_EXT}"
+
 COVERAGE_EXTENSION="-d extension=pcov.so"
 IMAGICK_OR_GD="-dextension=gd.so"
 if [ "$(php -r 'echo PHP_MAJOR_VERSION;')" = "5" ];then
@@ -100,7 +103,7 @@ for file in $EXAMPLE_BARCODE_FILES; do
     set +e
     php -n \
         -d date.timezone=UTC \
-        -d extension=bcmath.so ${COVERAGE_EXTENSION} \
+        -d extension=${BCMATH_EXT} ${COVERAGE_EXTENSION} \
         -d display_errors=on \
         -d error_reporting=-1 \
         -d pcov.directory="${ROOT_DIR}" \

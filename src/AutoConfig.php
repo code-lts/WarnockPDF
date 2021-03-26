@@ -37,21 +37,26 @@ if (substr($_SERVER['DOCUMENT_ROOT'], -1) != '/') {
 // Load main configuration file only if the K_TCPDF_EXTERNAL_CONFIG constant is set to false.
 if (!defined('K_TCPDF_EXTERNAL_CONFIG') or !K_TCPDF_EXTERNAL_CONFIG) {
     // define a list of default config files in order of priority
-    $tcpdf_config_files = array(__DIR__ . '/config/tcpdf_config.php', '/etc/php-tcpdf/tcpdf_config.php', '/etc/tcpdf/tcpdf_config.php', '/etc/tcpdf_config.php');
+    $tcpdf_config_files = array(
+        __DIR__ . '/../config/tcpdf_config.php',
+        '/etc/php-tcpdf/tcpdf_config.php',
+        '/etc/tcpdf/tcpdf_config.php',
+        '/etc/tcpdf_config.php'
+    );
     foreach ($tcpdf_config_files as $tcpdf_config) {
         if (@file_exists($tcpdf_config) and is_readable($tcpdf_config)) {
-            require_once($tcpdf_config);
+            require_once $tcpdf_config;
             break;
         }
     }
 }
 
 if (!defined('K_PATH_MAIN')) {
-    define ('K_PATH_MAIN', __DIR__ . '/../');
+    define('K_PATH_MAIN', __DIR__ . '/../');
 }
 
 if (!defined('K_PATH_FONTS')) {
-    define ('K_PATH_FONTS', K_PATH_MAIN . 'fonts/');
+    define('K_PATH_FONTS', K_PATH_MAIN . 'fonts/');
 }
 
 if (!defined('K_PATH_URL')) {
@@ -65,14 +70,14 @@ if (!defined('K_PATH_URL')) {
         $k_path_url .= $_SERVER['HTTP_HOST'];
         $k_path_url .= str_replace('\\', '/', substr(K_PATH_MAIN, (strlen($_SERVER['DOCUMENT_ROOT']) - 1)));
     }
-    define ('K_PATH_URL', $k_path_url);
+    define('K_PATH_URL', $k_path_url);
 }
 
 if (!defined('K_PATH_IMAGES')) {
     $tcpdf_images_dirs = array(K_PATH_MAIN . 'examples/images/', K_PATH_MAIN . 'images/', '/usr/share/doc/php-tcpdf/examples/images/', '/usr/share/doc/tcpdf/examples/images/', '/usr/share/doc/php/tcpdf/examples/images/', '/var/www/tcpdf/images/', '/var/www/html/tcpdf/images/', '/usr/local/apache2/htdocs/tcpdf/images/', K_PATH_MAIN);
     foreach ($tcpdf_images_dirs as $tcpdf_images_path) {
         if (@file_exists($tcpdf_images_path)) {
-            define ('K_PATH_IMAGES', $tcpdf_images_path);
+            define('K_PATH_IMAGES', $tcpdf_images_path);
             break;
         }
     }
@@ -83,14 +88,14 @@ if (!defined('PDF_HEADER_LOGO')) {
     if (@file_exists(K_PATH_IMAGES . 'tcpdf_logo.jpg')) {
         $tcpdf_header_logo = 'tcpdf_logo.jpg';
     }
-    define ('PDF_HEADER_LOGO', $tcpdf_header_logo);
+    define('PDF_HEADER_LOGO', $tcpdf_header_logo);
 }
 
 if (!defined('PDF_HEADER_LOGO_WIDTH')) {
     if (!empty($tcpdf_header_logo)) {
-        define ('PDF_HEADER_LOGO_WIDTH', 30);
+        define('PDF_HEADER_LOGO_WIDTH', 30);
     } else {
-        define ('PDF_HEADER_LOGO_WIDTH', 0);
+        define('PDF_HEADER_LOGO_WIDTH', 0);
     }
 }
 
@@ -99,87 +104,87 @@ if (!defined('K_PATH_CACHE')) {
     if (substr($K_PATH_CACHE, -1) != '/') {
         $K_PATH_CACHE .= '/';
     }
-    define ('K_PATH_CACHE', $K_PATH_CACHE);
+    define('K_PATH_CACHE', $K_PATH_CACHE);
 }
 
 if (!defined('K_BLANK_IMAGE')) {
-    define ('K_BLANK_IMAGE', '_blank.png');
+    define('K_BLANK_IMAGE', '_blank.png');
 }
 
 if (!defined('PDF_PAGE_FORMAT')) {
-    define ('PDF_PAGE_FORMAT', 'A4');
+    define('PDF_PAGE_FORMAT', 'A4');
 }
 
 if (!defined('PDF_PAGE_ORIENTATION')) {
-    define ('PDF_PAGE_ORIENTATION', 'P');
+    define('PDF_PAGE_ORIENTATION', 'P');
 }
 
 if (!defined('PDF_CREATOR')) {
-    define ('PDF_CREATOR', 'TCPDF');
+    define('PDF_CREATOR', 'TCPDF');
 }
 
 if (!defined('PDF_AUTHOR')) {
-    define ('PDF_AUTHOR', 'TCPDF');
+    define('PDF_AUTHOR', 'TCPDF');
 }
 
 if (!defined('PDF_HEADER_TITLE')) {
-    define ('PDF_HEADER_TITLE', 'TCPDF Example');
+    define('PDF_HEADER_TITLE', 'TCPDF Example');
 }
 
 if (!defined('PDF_HEADER_STRING')) {
-    define ('PDF_HEADER_STRING', "by Nicola Asuni - Tecnick.com\nwww.tcpdf.org");
+    define('PDF_HEADER_STRING', "by Nicola Asuni - Tecnick.com\nwww.tcpdf.org");
 }
 
 if (!defined('PDF_UNIT')) {
-    define ('PDF_UNIT', 'mm');
+    define('PDF_UNIT', 'mm');
 }
 
 if (!defined('PDF_MARGIN_HEADER')) {
-    define ('PDF_MARGIN_HEADER', 5);
+    define('PDF_MARGIN_HEADER', 5);
 }
 
 if (!defined('PDF_MARGIN_FOOTER')) {
-    define ('PDF_MARGIN_FOOTER', 10);
+    define('PDF_MARGIN_FOOTER', 10);
 }
 
 if (!defined('PDF_MARGIN_TOP')) {
-    define ('PDF_MARGIN_TOP', 27);
+    define('PDF_MARGIN_TOP', 27);
 }
 
 if (!defined('PDF_MARGIN_BOTTOM')) {
-    define ('PDF_MARGIN_BOTTOM', 25);
+    define('PDF_MARGIN_BOTTOM', 25);
 }
 
 if (!defined('PDF_MARGIN_LEFT')) {
-    define ('PDF_MARGIN_LEFT', 15);
+    define('PDF_MARGIN_LEFT', 15);
 }
 
 if (!defined('PDF_MARGIN_RIGHT')) {
-    define ('PDF_MARGIN_RIGHT', 15);
+    define('PDF_MARGIN_RIGHT', 15);
 }
 
 if (!defined('PDF_FONT_NAME_MAIN')) {
-    define ('PDF_FONT_NAME_MAIN', 'helvetica');
+    define('PDF_FONT_NAME_MAIN', 'helvetica');
 }
 
 if (!defined('PDF_FONT_SIZE_MAIN')) {
-    define ('PDF_FONT_SIZE_MAIN', 10);
+    define('PDF_FONT_SIZE_MAIN', 10);
 }
 
 if (!defined('PDF_FONT_NAME_DATA')) {
-    define ('PDF_FONT_NAME_DATA', 'helvetica');
+    define('PDF_FONT_NAME_DATA', 'helvetica');
 }
 
 if (!defined('PDF_FONT_SIZE_DATA')) {
-    define ('PDF_FONT_SIZE_DATA', 8);
+    define('PDF_FONT_SIZE_DATA', 8);
 }
 
 if (!defined('PDF_FONT_MONOSPACED')) {
-    define ('PDF_FONT_MONOSPACED', 'courier');
+    define('PDF_FONT_MONOSPACED', 'courier');
 }
 
 if (!defined('PDF_IMAGE_SCALE_RATIO')) {
-    define ('PDF_IMAGE_SCALE_RATIO', 1.25);
+    define('PDF_IMAGE_SCALE_RATIO', 1.25);
 }
 
 if (!defined('HEAD_MAGNIFICATION')) {

@@ -17,7 +17,7 @@
  */
 
 // Include the main TCPDF library (search for installation path).
-require_once('tcpdf_include.php');
+require_once __DIR__ . '/tcpdf_include.php';
 
 /**
  * TCPDF class extension with custom header and footer for TOC page
@@ -88,7 +88,8 @@ $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // set some language-dependent strings (optional)
 if (@file_exists(__DIR__ . '/lang/eng.php')) {
-    require_once(__DIR__ . '/lang/eng.php');
+    require_once __DIR__ . '/lang/eng.php';
+
     $pdf->setLanguageArray($l);
 }
 

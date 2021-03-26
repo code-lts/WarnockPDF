@@ -1,46 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Instantiated class TCPDFBarcode not found\\.$#"
-			count: 1
-			path: examples/barcodes/example_1d_html.php
-
-		-
-			message: "#^Call to method getBarcodeHTML\\(\\) on an unknown class TCPDFBarcode\\.$#"
-			count: 1
-			path: examples/barcodes/example_1d_html.php
-
-		-
-			message: "#^Instantiated class TCPDFBarcode not found\\.$#"
-			count: 1
-			path: examples/barcodes/example_1d_png.php
-
-		-
-			message: "#^Call to method getBarcodePNG\\(\\) on an unknown class TCPDFBarcode\\.$#"
-			count: 1
-			path: examples/barcodes/example_1d_png.php
-
-		-
-			message: "#^Instantiated class TCPDFBarcode not found\\.$#"
-			count: 1
-			path: examples/barcodes/example_1d_svg.php
-
-		-
-			message: "#^Call to method getBarcodeSVG\\(\\) on an unknown class TCPDFBarcode\\.$#"
-			count: 1
-			path: examples/barcodes/example_1d_svg.php
-
-		-
-			message: "#^Instantiated class TCPDFBarcode not found\\.$#"
-			count: 1
-			path: examples/barcodes/example_1d_svgi.php
-
-		-
-			message: "#^Call to method getBarcodeSVGcode\\(\\) on an unknown class TCPDFBarcode\\.$#"
-			count: 1
-			path: examples/barcodes/example_1d_svgi.php
-
-		-
 			message: "#^Parameter \\#1 \\$filename of function file_exists expects string, string\\|false given\\.$#"
 			count: 1
 			path: examples/barcodes/tcpdf_barcodes_1d_include.php
@@ -2176,7 +2136,7 @@ parameters:
 			path: src/AutoConfig.php
 
 		-
-			message: "#^Property WarnockPDF\\\\Barcode1D\\:\\:\\$barcode_array has no typehint specified\\.$#"
+			message: "#^Property WarnockPDF\\\\Barcode1D\\:\\:\\$barcode_array type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Barcode1D.php
 
@@ -2188,6 +2148,26 @@ parameters:
 		-
 			message: "#^Method WarnockPDF\\\\Barcode1D\\:\\:getBarcodeSVG\\(\\) has no return typehint specified\\.$#"
 			count: 1
+			path: src/Barcode1D.php
+
+		-
+			message: "#^Cannot access offset 'maxw' on array\\|false\\.$#"
+			count: 3
+			path: src/Barcode1D.php
+
+		-
+			message: "#^Cannot access offset 'code' on array\\|false\\.$#"
+			count: 1
+			path: src/Barcode1D.php
+
+		-
+			message: "#^Cannot access offset 'bcode' on array\\|false\\.$#"
+			count: 3
+			path: src/Barcode1D.php
+
+		-
+			message: "#^Cannot access offset 'maxh' on array\\|false\\.$#"
+			count: 6
 			path: src/Barcode1D.php
 
 		-
@@ -2606,7 +2586,7 @@ parameters:
 			path: src/Barcode1D.php
 
 		-
-			message: "#^Property WarnockPDF\\\\Barcode2D\\:\\:\\$barcode_array has no typehint specified\\.$#"
+			message: "#^Property WarnockPDF\\\\Barcode2D\\:\\:\\$barcode_array type has no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/Barcode2D.php
 
@@ -2618,6 +2598,26 @@ parameters:
 		-
 			message: "#^Method WarnockPDF\\\\Barcode2D\\:\\:getBarcodeSVG\\(\\) has no return typehint specified\\.$#"
 			count: 1
+			path: src/Barcode2D.php
+
+		-
+			message: "#^Cannot access offset 'num_cols' on array\\|false\\.$#"
+			count: 6
+			path: src/Barcode2D.php
+
+		-
+			message: "#^Cannot access offset 'num_rows' on array\\|false\\.$#"
+			count: 8
+			path: src/Barcode2D.php
+
+		-
+			message: "#^Cannot access offset 'code' on array\\|false\\.$#"
+			count: 1
+			path: src/Barcode2D.php
+
+		-
+			message: "#^Cannot access offset 'bcode' on array\\|false\\.$#"
+			count: 3
 			path: src/Barcode2D.php
 
 		-
@@ -9306,13 +9306,8 @@ parameters:
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Instantiated class WarnockPDF\\\\TCPDFBarcode not found\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method getBarcodeArray\\(\\) on an unknown class WarnockPDF\\\\TCPDFBarcode\\.$#"
-			count: 1
+			message: "#^Cannot access offset 'maxh' on array\\|false\\.$#"
+			count: 2
 			path: src/WarnockPDF.php
 
 		-

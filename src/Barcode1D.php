@@ -34,6 +34,8 @@ class Barcode1D
     /**
      * Array representation of barcode.
      * @protected
+     *
+     * @var array|false
      */
     protected $barcode_array;
 
@@ -58,7 +60,7 @@ class Barcode1D
 
     /**
      * Return an array representations of barcode.
-     * @return array
+     * @return array|false
      * @public
      */
     public function getBarcodeArray() {

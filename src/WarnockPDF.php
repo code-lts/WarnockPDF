@@ -15187,7 +15187,7 @@ class WarnockPDF
         // save current graphic settings
         $gvars = $this->getGraphicVars();
         // create new barcode object
-        $barcodeobj = new TCPDFBarcode($code, $type);
+        $barcodeobj = new Barcode1D($code, $type);
         $arrcode = $barcodeobj->getBarcodeArray();
         if (($arrcode === false) or empty($arrcode) or ($arrcode['maxw'] <= 0)) {
             $this->Error('Error in 1D barcode string');
