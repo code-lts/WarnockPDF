@@ -144,12 +144,12 @@ if (!defined('QRCODEDEFS')) {
     /**
      * Matrix index to get width from $capacity array.
      */
-    define('QRCAP_WIDTH',    0);
+    define('QRCAP_WIDTH', 0);
 
     /**
      * Matrix index to get number of words from $capacity array.
      */
-    define('QRCAP_WORDS',    1);
+    define('QRCAP_WORDS', 1);
 
     /**
      * Matrix index to get remainder from $capacity array.
@@ -159,7 +159,7 @@ if (!defined('QRCODEDEFS')) {
     /**
      * Matrix index to get error correction level from $capacity array.
      */
-    define('QRCAP_EC',       3);
+    define('QRCAP_EC', 3);
 
     // -----------------------------------------------------
 
@@ -168,7 +168,7 @@ if (!defined('QRCODEDEFS')) {
     /**
      * Number of header bits for structured mode
      */
-    define('STRUCTURE_HEADER_BITS',  20);
+    define('STRUCTURE_HEADER_BITS', 20);
 
     /**
      * Max number of symbols for structured mode
@@ -182,12 +182,12 @@ if (!defined('QRCODEDEFS')) {
     /**
      * Down point base value for case 1 mask pattern (concatenation of same color in a line or a column)
      */
-    define('N1',  3);
+    define('N1', 3);
 
     /**
      * Down point base value for case 2 mask pattern (module block of same color)
      */
-    define('N2',  3);
+    define('N2', 3);
 
     /**
      * Down point base value for case 3 mask pattern (1:1:3:1:1(dark:bright:dark:bright:dark)pattern in a line or a column)
@@ -1319,9 +1319,9 @@ class QRcode
      * @return int run
      */
      protected function eatAn() {
-        $la = $this->lengthIndicator(QR_MODE_AN,  $this->version);
+        $la = $this->lengthIndicator(QR_MODE_AN, $this->version);
         $ln = $this->lengthIndicator(QR_MODE_NM, $this->version);
-        $p = 1 ;
+        $p = 1;
         while($this->isalnumat($this->dataStr, $p)) {
             if ($this->isdigitat($this->dataStr, $p)) {
                 $q = $p;
@@ -2434,7 +2434,7 @@ class QRcode
         $wo = $w - 1;
         for ($x = 1; $x < $wo; ++$x) {
             $frame = $this->putAlignmentMarker($frame, 6, $cx);
-            $frame = $this->putAlignmentMarker($frame, $cx,  6);
+            $frame = $this->putAlignmentMarker($frame, $cx, 6);
             $cx += $d;
         }
         $cy = $this->alignmentPattern[$version][0];

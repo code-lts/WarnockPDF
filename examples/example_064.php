@@ -73,8 +73,8 @@ Nulla facilisi. Cras varius quam eget libero aliquam vitae tincidunt leo rutrum.
 $pdf->AddPage();
 
 // print some graphic content
-$pdf->Image('images/image_demo.jpg', 155,  30, 40, 40, 'JPG', '', '', true);
-$pdf->Image('images/image_demo.jpg',  15, 230, 40, 40, 'JPG', '', '', true);
+$pdf->Image('images/image_demo.jpg', 155, 30, 40, 40, 'JPG', '', '', true);
+$pdf->Image('images/image_demo.jpg', 15, 230, 40, 40, 'JPG', '', '', true);
 
 // define some graphic styles
 $styleA = array('width' => 0.254, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(255, 0, 0));

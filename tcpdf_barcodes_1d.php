@@ -498,7 +498,7 @@ class TCPDFBarcode
             chr(124) => '%Q', chr(125) => '%R', chr(126) => '%S', chr(127) => '%T');
         $code_ext = '';
         $clen = strlen($code);
-        for ($i = 0 ; $i < $clen; ++$i) {
+        for ($i = 0; $i < $clen; ++$i) {
             if (ord($code[$i]) > 127) {
                 return false;
             }
@@ -521,7 +521,7 @@ class TCPDFBarcode
             'W', 'X', 'Y', 'Z', '-', '.', ' ', '$', '/', '+', '%');
         $sum = 0;
         $clen = strlen($code);
-        for ($i = 0 ; $i < $clen; ++$i) {
+        for ($i = 0; $i < $clen; ++$i) {
             $k = array_keys($chars, $code[$i]);
             $sum += $k[0];
         }
@@ -621,7 +621,7 @@ class TCPDFBarcode
             chr(124) => chr(131) . 'Q', chr(125) => chr(131) . 'R', chr(126) => chr(131) . 'S', chr(127) => chr(131) . 'T');
         $code_ext = '';
         $clen = strlen($code);
-        for ($i = 0 ; $i < $clen; ++$i) {
+        for ($i = 0; $i < $clen; ++$i) {
             if (ord($code[$i]) > 127) {
                 return false;
             }

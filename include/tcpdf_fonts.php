@@ -769,7 +769,7 @@ class TCPDF_FONTS
             // ceate widths array
             $cw = array();
             $offset = $table['hmtx']['offset'];
-            for ($i = 0 ; $i < $numberOfHMetrics; ++$i) {
+            for ($i = 0; $i < $numberOfHMetrics; ++$i) {
                 $cw[$i] = round(TCPDF_STATIC::_getUFWORD($font, $offset) * $urk);
                 $offset += 4; // skip lsb
             }
@@ -1129,7 +1129,7 @@ class TCPDF_FONTS
                                 $subsetglyphs[$g] = true;
                             }
                         }
-                    }   
+                    }
                     break;
                 }
                 case 6: { // Format 6: Trimmed table mapping

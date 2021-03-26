@@ -19,8 +19,6 @@
         <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing"/>
         <exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
         <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact"/>
-        <exclude name="Generic.Functions.FunctionCallArgumentSpacing.SpaceBeforeComma"/>
-        <exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma"/>
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedElseif"/>
         <exclude name="Generic.Metrics.NestingLevel.MaxExceeded"/>
         <exclude name="Generic.WhiteSpace.IncrementDecrementSpacing.SpaceAfterIncrement"/><!-- To be fixed -->
@@ -43,8 +41,6 @@
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingAfterOpen"/>
         <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose"/>
         <exclude name="Squiz.WhiteSpace.ScopeClosingBrace.Indent"/>
-        <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace.EndLine"/>
-        <exclude name="Squiz.WhiteSpace.SemicolonSpacing.Incorrect"/><!-- To be fixed -->
         <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.CloseBracketLine"/>
         <exclude name="Squiz.PHP.NonExecutableCode.Unreachable"/><!-- To be fixed -->
 
@@ -86,8 +82,6 @@
         <exclude name="PEAR.ControlStructures.MultiLineCondition.StartWithBoolean"/>
         <exclude name="PEAR.ControlStructures.MultiLineCondition.Alignment"/>
         <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
-        <exclude name="PEAR.NamingConventions.ValidClassName.StartWithCapital"/><!-- To be fixed -->
-        <exclude name="PEAR.NamingConventions.ValidClassName.Invalid"/><!-- To be fixed -->
 
         <!-- Warnings -->
         <exclude name="Generic.Formatting.MultipleStatementAlignment.IncorrectWarning"/>
@@ -95,9 +89,15 @@
         <exclude name="Generic.Files.LineLength.TooLong"/>
         <exclude name="Generic.PHP.NoSilencedErrors.Discouraged"/>
         <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
-        <exclude name="Generic.Classes.DuplicateClassName.Found"/>
         <exclude name="Generic.Metrics.NestingLevel.TooHigh"/>
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedIf"/>
+    </rule>
+
+    <rule ref="Generic.Classes.DuplicateClassName.Found">
+        <exclude-pattern>*/examples/example_011.php</exclude-pattern>
+        <exclude-pattern>*/examples/example_051.php</exclude-pattern>
+        <exclude-pattern>*/examples/example_020.php</exclude-pattern>
+        <exclude-pattern>*/examples/example_021.php</exclude-pattern>
     </rule>
 
     <rule ref="Generic.WhiteSpace.DisallowTabIndent.TabsUsed">
@@ -107,6 +107,7 @@
     <rule ref="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">
         <exclude-pattern>*/tcpdf.php</exclude-pattern>
     </rule>
+
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
         <exclude-pattern>*/include/*</exclude-pattern>
         <exclude-pattern>*/examples/*</exclude-pattern>
@@ -114,6 +115,7 @@
         <exclude-pattern>*/tcpdf.php</exclude-pattern>
         <exclude-pattern>*/tests/coverage.php</exclude-pattern>
     </rule>
+
     <rule ref="PSR1.Classes.ClassDeclaration.MultipleClasses">
         <exclude-pattern>*/tests/coverage.php</exclude-pattern>
     </rule>

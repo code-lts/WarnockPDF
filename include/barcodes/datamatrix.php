@@ -984,10 +984,10 @@ class Datamatrix
         $marr = $this->placeModule($marr, $nrow, $ncol, $row - 2, $col - 1, $chr, 2);
         $marr = $this->placeModule($marr, $nrow, $ncol, $row - 1, $col - 2, $chr, 3);
         $marr = $this->placeModule($marr, $nrow, $ncol, $row - 1, $col - 1, $chr, 4);
-        $marr = $this->placeModule($marr, $nrow, $ncol, $row - 1, $col,   $chr, 5);
-        $marr = $this->placeModule($marr, $nrow, $ncol, $row,   $col - 2, $chr, 6);
-        $marr = $this->placeModule($marr, $nrow, $ncol, $row,   $col - 1, $chr, 7);
-        $marr = $this->placeModule($marr, $nrow, $ncol, $row,   $col,   $chr, 8);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $row - 1, $col, $chr, 5);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $row, $col - 2, $chr, 6);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $row, $col - 1, $chr, 7);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $row, $col, $chr, 8);
         return $marr;
     }
 
@@ -1002,14 +1002,14 @@ class Datamatrix
      * @protected
      */
     protected function placeCornerA($marr, $nrow, $ncol, $chr) {
-        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 0,       $chr, 1);
-        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 1,       $chr, 2);
-        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 2,       $chr, 3);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 2, $chr, 4);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 1, $chr, 5);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 1,       $ncol - 1, $chr, 6);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 2,       $ncol - 1, $chr, 7);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 3,       $ncol - 1, $chr, 8);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 0, $chr, 1);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 1, $chr, 2);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 2, $chr, 3);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 2, $chr, 4);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 1, $chr, 5);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 1, $ncol - 1, $chr, 6);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 2, $ncol - 1, $chr, 7);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 3, $ncol - 1, $chr, 8);
         return $marr;
     }
 
@@ -1024,14 +1024,14 @@ class Datamatrix
      * @protected
      */
     protected function placeCornerB($marr, $nrow, $ncol, $chr) {
-        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 3, 0,       $chr, 1);
-        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 2, 0,       $chr, 2);
-        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 0,       $chr, 3);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 4, $chr, 4);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 3, $chr, 5);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 2, $chr, 6);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 1, $chr, 7);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 1,       $ncol - 1, $chr, 8);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 3, 0, $chr, 1);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 2, 0, $chr, 2);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 0, $chr, 3);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 4, $chr, 4);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 3, $chr, 5);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 2, $chr, 6);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 1, $chr, 7);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 1, $ncol - 1, $chr, 8);
         return $marr;
     }
 
@@ -1046,14 +1046,14 @@ class Datamatrix
      * @protected
      */
     protected function placeCornerC($marr, $nrow, $ncol, $chr) {
-        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 3, 0,       $chr, 1);
-        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 2, 0,       $chr, 2);
-        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 0,       $chr, 3);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 2, $chr, 4);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 1, $chr, 5);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 1,       $ncol - 1, $chr, 6);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 2,       $ncol - 1, $chr, 7);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 3,       $ncol - 1, $chr, 8);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 3, 0, $chr, 1);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 2, 0, $chr, 2);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 0, $chr, 3);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 2, $chr, 4);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 1, $chr, 5);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 1, $ncol - 1, $chr, 6);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 2, $ncol - 1, $chr, 7);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 3, $ncol - 1, $chr, 8);
         return $marr;
     }
 
@@ -1068,14 +1068,14 @@ class Datamatrix
      * @protected
      */
     protected function placeCornerD($marr, $nrow, $ncol, $chr) {
-        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 0,       $chr, 1);
+        $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, 0, $chr, 1);
         $marr = $this->placeModule($marr, $nrow, $ncol, $nrow - 1, $ncol - 1, $chr, 2);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 3, $chr, 3);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 2, $chr, 4);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 0,       $ncol - 1, $chr, 5);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 1,       $ncol - 3, $chr, 6);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 1,       $ncol - 2, $chr, 7);
-        $marr = $this->placeModule($marr, $nrow, $ncol, 1,       $ncol - 1, $chr, 8);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 3, $chr, 3);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 2, $chr, 4);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 0, $ncol - 1, $chr, 5);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 1, $ncol - 3, $chr, 6);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 1, $ncol - 2, $chr, 7);
+        $marr = $this->placeModule($marr, $nrow, $ncol, 1, $ncol - 1, $chr, 8);
         return $marr;
     }
 
