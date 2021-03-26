@@ -22,7 +22,8 @@ require_once('tcpdf_include.php');
 /**
  * Extend TCPDF to work with multiple columns
  */
-class MC_TCPDF extends TCPDF {
+class MC_TCPDF extends TCPDF
+{
 
     /**
      * Print chapter

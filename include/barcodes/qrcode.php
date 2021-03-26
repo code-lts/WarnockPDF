@@ -264,7 +264,8 @@ if (!function_exists('str_split')) {
  * @author Nicola Asuni
  * @version 1.0.010
  */
-class QRcode {
+class QRcode
+{
 
     /**
      * Barcode array to be returned which is readable by WarnockPDF.

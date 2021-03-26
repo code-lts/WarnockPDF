@@ -19,7 +19,8 @@
 require_once('tcpdf_include.php');
 
 // extend TCPF with custom functions
-class MYPDF extends TCPDF {
+class MYPDF extends TCPDF
+{
 
     // Load table data from file
     public function LoadData($file) {

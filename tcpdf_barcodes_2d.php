@@ -23,7 +23,8 @@
  * @version 1.0.015
  * @author Nicola Asuni
  */
-class TCPDF2DBarcode {
+class TCPDF2DBarcode
+{
 
     /**
      * Array representation of barcode.

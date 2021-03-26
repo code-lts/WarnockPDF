@@ -76,7 +76,6 @@
         <exclude name="PSR2.Methods.FunctionCallSignature.SpaceBeforeOpenBracket"/>
         <exclude name="PSR2.ControlStructures.SwitchDeclaration.WrongOpenercase"/>
         <exclude name="PSR2.ControlStructures.SwitchDeclaration.WrongOpenerdefault"/>
-        <exclude name="PSR2.Classes.ClassDeclaration.OpenBraceNewLine"/>
         <exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
         <exclude name="PSR2.Methods.FunctionClosingBrace.SpacingBeforeClose"/>
         <exclude name="PSR2.ControlStructures.SwitchDeclaration.SpaceBeforeColonCASE"/>
@@ -96,7 +95,6 @@
         <exclude name="PEAR.ControlStructures.MultiLineCondition.CloseBracketNewLine"/>
         <exclude name="PEAR.ControlStructures.MultiLineCondition.StartWithBoolean"/>
         <exclude name="PEAR.ControlStructures.MultiLineCondition.Alignment"/>
-        <exclude name="PEAR.Classes.ClassDeclaration.OpenBraceNewLine"/>
         <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
         <exclude name="PEAR.NamingConventions.ValidClassName.StartWithCapital"/><!-- To be fixed -->
         <exclude name="PEAR.NamingConventions.ValidClassName.Invalid"/><!-- To be fixed -->

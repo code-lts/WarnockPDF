@@ -22,7 +22,8 @@
  * @version 1.0.004
  * @author Nicola Asuni - info@tecnick.com
  */
-class TCPDF_COLORS {
+class TCPDF_COLORS
+{
 
     /**
      * Array of WEB safe colors

@@ -21,7 +21,8 @@
 require_once('tcpdf_include.php');
 
 // extend class with custom functions
-class MYPDF extends TCPDF {
+class MYPDF extends TCPDF
+{
 
     public function MultiRow($left, $right) {
         // MultiCell($w, $h, $txt, $border=0, $align='J', $fill=0, $ln=1, $x='', $y='', $reseth=true, $stretch=0)

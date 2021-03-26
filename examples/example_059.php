@@ -21,7 +21,8 @@ require_once('tcpdf_include.php');
 /**
  * TCPDF class extension with custom header and footer for TOC page
  */
-class TOC_TCPDF extends TCPDF {
+class TOC_TCPDF extends TCPDF
+{
 
     /**
      * Overwrite Header() method.

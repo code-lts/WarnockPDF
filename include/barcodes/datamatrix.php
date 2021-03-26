@@ -80,7 +80,8 @@ define('ENC_ASCII_NUM', 7);
  * @author Nicola Asuni
  * @version 1.0.004
  */
-class Datamatrix {
+class Datamatrix
+{
 
     /**
      * Barcode array to be returned which is readable by TCPDF.

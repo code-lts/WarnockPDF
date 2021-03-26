@@ -24,7 +24,8 @@
  * @version 1.0.005
  * @author Nicola Asuni - info@tecnick.com
  */
-class TCPDF_IMAGES {
+class TCPDF_IMAGES
+{
 
     /**
      * Array of hinheritable SVG properties.

@@ -20,7 +20,8 @@ require_once('tcpdf_include.php');
 
 
 // Extend the TCPDF class to create custom Header and Footer
-class MYPDF extends TCPDF {
+class MYPDF extends TCPDF
+{
 
     //Page header
     public function Header() {

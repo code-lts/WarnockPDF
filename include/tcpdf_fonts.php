@@ -22,7 +22,8 @@
  * @version 1.1.0
  * @author Nicola Asuni - info@tecnick.com
  */
-class TCPDF_FONTS {
+class TCPDF_FONTS
+{
 
     /**
      * Static cache used for speed up uniord performances

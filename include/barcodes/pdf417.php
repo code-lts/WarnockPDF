@@ -70,7 +70,8 @@ if (!defined('PDF417DEFS')) {
  * @author Nicola Asuni
  * @version 1.0.003
  */
-class PDF417 {
+class PDF417
+{
 
     /**
      * Barcode array to be returned which is readable by WarnockPDF.
