@@ -7,13 +7,13 @@
  * It is one of the most popular 2D codes because of its ability to be read with
  * slightly modified handheld laser or linear CCD scanners.
  * TECHNICAL DATA / FEATURES OF PDF417:
- *		Encodable Character Set:     All 128 ASCII Characters (including extended)
- *		Code Type:                   Continuous, Multi-Row
- *		Symbol Height:               3 - 90 Rows
- *		Symbol Width:                90X - 583X
- *		Bidirectional Decoding:      Yes
- *		Error Correction Characters: 2 - 512
- *		Maximum Data Characters:     1850 text, 2710 digits, 1108 bytes
+ *      Encodable Character Set:     All 128 ASCII Characters (including extended)
+ *      Code Type:                   Continuous, Multi-Row
+ *      Symbol Height:               3 - 90 Rows
+ *      Symbol Width:                90X - 583X
+ *      Bidirectional Decoding:      Yes
+ *      Error Correction Characters: 2 - 512
+ *      Maximum Data Characters:     1850 text, 2710 digits, 1108 bytes
  *
  * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
  * @license LGPL-3.0
@@ -879,7 +879,7 @@ class PDF417 {
 									}
 								} else {
 									// latch
-									$txtarr	= array_merge($txtarr, $this->textlatch[''.$submode.$s]);
+									$txtarr = array_merge($txtarr, $this->textlatch[''.$submode.$s]);
 									// set new submode
 									$submode = $s;
 								}

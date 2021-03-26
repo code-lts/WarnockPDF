@@ -1128,7 +1128,7 @@ class TCPDF_FONTS {
 								$subsetglyphs[$g] = true;
 							}
 						}
-					}	
+					}   
 					break;
 				}
 				case 6: { // Format 6: Trimmed table mapping
@@ -2128,8 +2128,8 @@ class TCPDF_FONTS {
 		for ($i=0; $i < $numchars; ++$i) {
 			if ($ta[$i] == TCPDF_FONT_DATA::$uni_RLE) {
 				// X2. With each RLE, compute the least greater odd embedding level.
-				//	a. If this new level would be valid, then this embedding code is valid. Remember (push) the current embedding level and override status. Reset the current level to this new level, and reset the override status to neutral.
-				//	b. If the new level would not be valid, then this code is invalid. Do not change the current level or override status.
+				//  a. If this new level would be valid, then this embedding code is valid. Remember (push) the current embedding level and override status. Reset the current level to this new level, and reset the override status to neutral.
+				//  b. If the new level would not be valid, then this code is invalid. Do not change the current level or override status.
 				$next_level = $cel + ($cel % 2) + 1;
 				if ($next_level < 62) {
 					$remember[] = array('num' => TCPDF_FONT_DATA::$uni_RLE, 'cel' => $cel, 'dos' => $dos);
@@ -2140,8 +2140,8 @@ class TCPDF_FONTS {
 				}
 			} elseif ($ta[$i] == TCPDF_FONT_DATA::$uni_LRE) {
 				// X3. With each LRE, compute the least greater even embedding level.
-				//	a. If this new level would be valid, then this embedding code is valid. Remember (push) the current embedding level and override status. Reset the current level to this new level, and reset the override status to neutral.
-				//	b. If the new level would not be valid, then this code is invalid. Do not change the current level or override status.
+				//  a. If this new level would be valid, then this embedding code is valid. Remember (push) the current embedding level and override status. Reset the current level to this new level, and reset the override status to neutral.
+				//  b. If the new level would not be valid, then this code is invalid. Do not change the current level or override status.
 				$next_level = $cel + 2 - ($cel % 2);
 				if ( $next_level < 62 ) {
 					$remember[] = array('num' => TCPDF_FONT_DATA::$uni_LRE, 'cel' => $cel, 'dos' => $dos);
@@ -2152,8 +2152,8 @@ class TCPDF_FONTS {
 				}
 			} elseif ($ta[$i] == TCPDF_FONT_DATA::$uni_RLO) {
 				// X4. With each RLO, compute the least greater odd embedding level.
-				//	a. If this new level would be valid, then this embedding code is valid. Remember (push) the current embedding level and override status. Reset the current level to this new level, and reset the override status to right-to-left.
-				//	b. If the new level would not be valid, then this code is invalid. Do not change the current level or override status.
+				//  a. If this new level would be valid, then this embedding code is valid. Remember (push) the current embedding level and override status. Reset the current level to this new level, and reset the override status to right-to-left.
+				//  b. If the new level would not be valid, then this code is invalid. Do not change the current level or override status.
 				$next_level = $cel + ($cel % 2) + 1;
 				if ($next_level < 62) {
 					$remember[] = array('num' => TCPDF_FONT_DATA::$uni_RLO, 'cel' => $cel, 'dos' => $dos);
@@ -2164,8 +2164,8 @@ class TCPDF_FONTS {
 				}
 			} elseif ($ta[$i] == TCPDF_FONT_DATA::$uni_LRO) {
 				// X5. With each LRO, compute the least greater even embedding level.
-				//	a. If this new level would be valid, then this embedding code is valid. Remember (push) the current embedding level and override status. Reset the current level to this new level, and reset the override status to left-to-right.
-				//	b. If the new level would not be valid, then this code is invalid. Do not change the current level or override status.
+				//  a. If this new level would be valid, then this embedding code is valid. Remember (push) the current embedding level and override status. Reset the current level to this new level, and reset the override status to left-to-right.
+				//  b. If the new level would not be valid, then this code is invalid. Do not change the current level or override status.
 				$next_level = $cel + 2 - ($cel % 2);
 				if ( $next_level < 62 ) {
 					$remember[] = array('num' => TCPDF_FONT_DATA::$uni_LRO, 'cel' => $cel, 'dos' => $dos);
@@ -2195,8 +2195,8 @@ class TCPDF_FONTS {
 							 ($ta[$i] != TCPDF_FONT_DATA::$uni_LRO) AND
 							 ($ta[$i] != TCPDF_FONT_DATA::$uni_PDF)) {
 				// X6. For all types besides RLE, LRE, RLO, LRO, and PDF:
-				//	a. Set the level of the current character to the current embedding level.
-				//	b. Whenever the directional override status is not neutral, reset the current character type to the directional override status.
+				//  a. Set the level of the current character to the current embedding level.
+				//  b. Whenever the directional override status is not neutral, reset the current character type to the directional override status.
 				if ($dos != 'N') {
 					$chardir = $dos;
 				} else {
@@ -2422,10 +2422,10 @@ class TCPDF_FONTS {
 		}
 
 		// L1. On each line, reset the embedding level of the following characters to the paragraph embedding level:
-		//	1. Segment separators,
-		//	2. Paragraph separators,
-		//	3. Any sequence of whitespace characters preceding a segment separator or paragraph separator, and
-		//	4. Any sequence of white space characters at the end of the line.
+		//  1. Segment separators,
+		//  2. Paragraph separators,
+		//  3. Any sequence of whitespace characters preceding a segment separator or paragraph separator, and
+		//  4. Any sequence of white space characters at the end of the line.
 		for ($i=0; $i < $numchars; ++$i) {
 			if (($chardata[$i]['type'] == 'B') OR ($chardata[$i]['type'] == 'S')) {
 				$chardata[$i]['level'] = $pel;
