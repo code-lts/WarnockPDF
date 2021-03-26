@@ -222,33 +222,6 @@ if (!defined('QRCODEDEFS')) {
 
 } // end of definitions
 
-// #*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#*#
-
-// for compatibility with PHP4
-if (!function_exists('str_split')) {
-
-    /**
-     * Convert a string to an array (needed for PHP4 compatibility)
-     * @param string $string The input string.
-     * @param int $split_length Maximum length of the chunk.
-     * @return  If the optional split_length  parameter is specified, the returned array will be broken down into chunks with each being split_length  in length, otherwise each chunk will be one character in length. FALSE is returned if split_length is less than 1. If the split_length length exceeds the length of string , the entire string is returned as the first (and only) array element.
-     */
-    function str_split($string, $split_length = 1) {
-        if ((strlen($string) > $split_length) or (!$split_length)) {
-            do {
-                $c = strlen($string);
-                $parts[] = substr($string, 0, $split_length);
-                $string = substr($string, $split_length);
-            } while ($string !== false);
-        } else {
-            $parts = array($string);
-        }
-        return $parts;
-    }
-}
-
-// #####################################################
-
 /**
  *
  * Class to create QR-code arrays for WarnockPDF class.
@@ -434,7 +407,7 @@ class QRcode
     protected $frames = array();
 
     /**
-     * Alphabet-numeric convesion table.
+     * Alphabet-numeric conversion table.
      * @protected
      */
     protected $anTable = array(
@@ -677,6 +650,7 @@ class QRcode
     /**
      * Encode the input string to QR code
      * @param string $string input string to encode
+     * @return null|void
      */
     protected function encodeString($string) {
         $this->dataStr = $string;
@@ -693,6 +667,7 @@ class QRcode
     /**
      * Encode mask
      * @param int $mask masking mode
+     * @return null|void
      */
     protected function encodeMask($mask) {
         $spec = array(0, 0, 0, 0, 0);
@@ -767,7 +742,7 @@ class QRcode
     /**
      * Get frame value at specified position
      * @param array $at x,y position
-     * @return value at specified position
+     * @return int value at specified position
      */
     protected function getFrameAt($at) {
         return ord($this->frame[$at['y']][$at['x']]);
@@ -2452,7 +2427,7 @@ class QRcode
     /**
      * Return BCH encoded version information pattern that is used for the symbol of version 7 or greater. Use lower 18 bits.
      * @param int $version version
-     * @return BCH encoded version information pattern
+     * @return int BCH encoded version information pattern
      */
     protected function getVersionPattern($version) {
         if (($version < 7) or ($version > QRSPEC_VERSION_MAX)) {
@@ -2465,7 +2440,7 @@ class QRcode
      * Return BCH encoded format information pattern.
      * @param array $mask
      * @param int $level error correction level
-     * @return BCH encoded format information pattern
+     * @return int BCH encoded format information pattern
      */
     protected function getFormatInfo($mask, $level) {
         if (($mask < 0) or ($mask > 7)) {
@@ -2503,7 +2478,7 @@ class QRcode
     /**
      * Return a copy of initialized frame.
      * @param int $version version
-     * @return Array of unsigned char.
+     * @return array array of unsigned char.
      */
     protected function createFrame($version) {
         $width = $this->capacity[$version][QRCAP_WIDTH];
@@ -2801,7 +2776,7 @@ class QRcode
      * @param array $rs RS values
      * @param array $data data
      * @param array $parity parity
-     * @return parity array
+     * @return array parity array
      */
      protected function encode_rs_char($rs, $data, $parity) {
         $MM       =& $rs['mm']; // bits per symbol
