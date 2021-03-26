@@ -1531,26 +1531,6 @@ parameters:
 			path: examples/example_047.php
 
 		-
-			message: "#^Call to method Write\\(\\) on an unknown class WarnockPDF\\\\TCPDF\\.$#"
-			count: 3
-			path: examples/example_047.php
-
-		-
-			message: "#^Call to method startTransaction\\(\\) on an unknown class WarnockPDF\\\\TCPDF\\.$#"
-			count: 1
-			path: examples/example_047.php
-
-		-
-			message: "#^Call to method commitTransaction\\(\\) on an unknown class WarnockPDF\\\\TCPDF\\.$#"
-			count: 1
-			path: examples/example_047.php
-
-		-
-			message: "#^Call to method Output\\(\\) on an unknown class WarnockPDF\\\\TCPDF\\.$#"
-			count: 1
-			path: examples/example_047.php
-
-		-
 			message: "#^Parameter \\#2 \\$lw of method WarnockPDF\\\\WarnockPDF\\:\\:setHeaderData\\(\\) expects string, int given\\.$#"
 			count: 1
 			path: examples/example_048.php
@@ -2186,11 +2166,6 @@ parameters:
 			path: src/Barcode1D.php
 
 		-
-			message: "#^Return typehint of method WarnockPDF\\\\Barcode1D\\:\\:getBarcodePngData\\(\\) has invalid type WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/Barcode1D.php
-
-		-
 			message: "#^Parameter \\#1 \\$im of function imagecolorallocate expects resource, resource\\|false given\\.$#"
 			count: 2
 			path: src/Barcode1D.php
@@ -2206,42 +2181,12 @@ parameters:
 			path: src/Barcode1D.php
 
 		-
-			message: "#^Instantiated class WarnockPDF\\\\imagickpixel not found\\.$#"
-			count: 2
-			path: src/Barcode1D.php
-
-		-
-			message: "#^Instantiated class WarnockPDF\\\\Imagick not found\\.$#"
-			count: 1
-			path: src/Barcode1D.php
-
-		-
-			message: "#^Call to method newImage\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/Barcode1D.php
-
-		-
-			message: "#^Instantiated class WarnockPDF\\\\imagickdraw not found\\.$#"
-			count: 1
-			path: src/Barcode1D.php
-
-		-
-			message: "#^Call to method setfillcolor\\(\\) on an unknown class WarnockPDF\\\\imagickdraw\\.$#"
-			count: 1
-			path: src/Barcode1D.php
-
-		-
-			message: "#^Call to method rectangle\\(\\) on an unknown class WarnockPDF\\\\imagickdraw\\.$#"
-			count: 1
-			path: src/Barcode1D.php
-
-		-
 			message: "#^Variable \\$bar might not be defined\\.$#"
 			count: 2
 			path: src/Barcode1D.php
 
 		-
-			message: "#^Parameter \\#1 \\$im of function imagefilledrectangle expects resource, resource\\|WarnockPDF\\\\Imagick\\|false given\\.$#"
+			message: "#^Parameter \\#1 \\$im of function imagefilledrectangle expects resource, Imagick\\|resource\\|false given\\.$#"
 			count: 1
 			path: src/Barcode1D.php
 
@@ -2266,27 +2211,27 @@ parameters:
 			path: src/Barcode1D.php
 
 		-
-			message: "#^Parameter \\#6 \\$col of function imagefilledrectangle expects int, int\\|WarnockPDF\\\\imagickpixel\\|false given\\.$#"
+			message: "#^Parameter \\#6 \\$col of function imagefilledrectangle expects int, ImagickPixel\\|int\\|false given\\.$#"
 			count: 1
 			path: src/Barcode1D.php
 
 		-
-			message: "#^Call to method drawimage\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
+			message: "#^Cannot call method drawimage\\(\\) on Imagick\\|resource\\|false\\.$#"
 			count: 1
 			path: src/Barcode1D.php
 
 		-
-			message: "#^Method WarnockPDF\\\\Barcode1D\\:\\:getBarcodePngData\\(\\) should return string\\|WarnockPDF\\\\Imagick\\|false but returns resource\\|WarnockPDF\\\\Imagick\\|false\\.$#"
+			message: "#^Method WarnockPDF\\\\Barcode1D\\:\\:getBarcodePngData\\(\\) should return Imagick\\|string\\|false but returns Imagick\\|resource\\|false\\.$#"
 			count: 1
 			path: src/Barcode1D.php
 
 		-
-			message: "#^Parameter \\#1 \\$im of function imagepng expects resource, resource\\|WarnockPDF\\\\Imagick\\|false given\\.$#"
+			message: "#^Parameter \\#1 \\$im of function imagepng expects resource, Imagick\\|resource\\|false given\\.$#"
 			count: 1
 			path: src/Barcode1D.php
 
 		-
-			message: "#^Parameter \\#1 \\$im of function imagedestroy expects resource, resource\\|WarnockPDF\\\\Imagick\\|false given\\.$#"
+			message: "#^Parameter \\#1 \\$im of function imagedestroy expects resource, Imagick\\|resource\\|false given\\.$#"
 			count: 1
 			path: src/Barcode1D.php
 
@@ -2636,11 +2581,6 @@ parameters:
 			path: src/Barcode2D.php
 
 		-
-			message: "#^Return typehint of method WarnockPDF\\\\Barcode2D\\:\\:getBarcodePngData\\(\\) has invalid type WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
 			message: "#^Parameter \\#1 \\$im of function imagecolorallocate expects resource, resource\\|false given\\.$#"
 			count: 2
 			path: src/Barcode2D.php
@@ -2656,67 +2596,37 @@ parameters:
 			path: src/Barcode2D.php
 
 		-
-			message: "#^Instantiated class WarnockPDF\\\\imagickpixel not found\\.$#"
-			count: 2
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Instantiated class WarnockPDF\\\\Imagick not found\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Call to method newImage\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Instantiated class WarnockPDF\\\\imagickdraw not found\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Call to method setfillcolor\\(\\) on an unknown class WarnockPDF\\\\imagickdraw\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Call to method rectangle\\(\\) on an unknown class WarnockPDF\\\\imagickdraw\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
 			message: "#^Variable \\$bar might not be defined\\.$#"
 			count: 2
 			path: src/Barcode2D.php
 
 		-
-			message: "#^Parameter \\#1 \\$im of function imagefilledrectangle expects resource, resource\\|WarnockPDF\\\\Imagick\\|false given\\.$#"
+			message: "#^Parameter \\#1 \\$im of function imagefilledrectangle expects resource, Imagick\\|resource\\|false given\\.$#"
 			count: 1
 			path: src/Barcode2D.php
 
 		-
-			message: "#^Parameter \\#6 \\$col of function imagefilledrectangle expects int, int\\|WarnockPDF\\\\imagickpixel\\|false given\\.$#"
+			message: "#^Parameter \\#6 \\$col of function imagefilledrectangle expects int, ImagickPixel\\|int\\|false given\\.$#"
 			count: 1
 			path: src/Barcode2D.php
 
 		-
-			message: "#^Call to method drawimage\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
+			message: "#^Cannot call method drawimage\\(\\) on Imagick\\|resource\\|false\\.$#"
 			count: 1
 			path: src/Barcode2D.php
 
 		-
-			message: "#^Method WarnockPDF\\\\Barcode2D\\:\\:getBarcodePngData\\(\\) should return string\\|WarnockPDF\\\\Imagick\\|false but returns resource\\|WarnockPDF\\\\Imagick\\|false\\.$#"
+			message: "#^Method WarnockPDF\\\\Barcode2D\\:\\:getBarcodePngData\\(\\) should return Imagick\\|string\\|false but returns Imagick\\|resource\\|false\\.$#"
 			count: 1
 			path: src/Barcode2D.php
 
 		-
-			message: "#^Parameter \\#1 \\$im of function imagepng expects resource, resource\\|WarnockPDF\\\\Imagick\\|false given\\.$#"
+			message: "#^Parameter \\#1 \\$im of function imagepng expects resource, Imagick\\|resource\\|false given\\.$#"
 			count: 1
 			path: src/Barcode2D.php
 
 		-
-			message: "#^Parameter \\#1 \\$im of function imagedestroy expects resource, resource\\|WarnockPDF\\\\Imagick\\|false given\\.$#"
+			message: "#^Parameter \\#1 \\$im of function imagedestroy expects resource, Imagick\\|resource\\|false given\\.$#"
 			count: 1
 			path: src/Barcode2D.php
 
@@ -2727,36 +2637,6 @@ parameters:
 
 		-
 			message: "#^Method WarnockPDF\\\\Barcode2D\\:\\:setBarcode\\(\\) should return array but return statement is missing\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Instantiated class WarnockPDF\\\\Datamatrix not found\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Call to method getBarcodeArray\\(\\) on an unknown class WarnockPDF\\\\Datamatrix\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Instantiated class WarnockPDF\\\\PDF417 not found\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Call to method getBarcodeArray\\(\\) on an unknown class WarnockPDF\\\\PDF417\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Instantiated class WarnockPDF\\\\QRcode not found\\.$#"
-			count: 1
-			path: src/Barcode2D.php
-
-		-
-			message: "#^Call to method getBarcodeArray\\(\\) on an unknown class WarnockPDF\\\\QRcode\\.$#"
 			count: 1
 			path: src/Barcode2D.php
 
@@ -4546,17 +4426,7 @@ parameters:
 			path: src/StaticUtils.php
 
 		-
-			message: "#^Class WarnockPDF\\\\Imagick not found\\.$#"
-			count: 1
-			path: src/StaticUtils.php
-
-		-
 			message: "#^Parameter \\#1 \\$version1 of function version_compare expects string, string\\|false given\\.$#"
-			count: 1
-			path: src/StaticUtils.php
-
-		-
-			message: "#^Call to method clone\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
 			count: 1
 			path: src/StaticUtils.php
 
@@ -6386,16 +6256,6 @@ parameters:
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Instantiated class WarnockPDF\\\\Exception not found\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Throwing object of an unknown class WarnockPDF\\\\Exception\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
 			message: "#^Method WarnockPDF\\\\WarnockPDF\\:\\:Open\\(\\) has no return typehint specified\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
@@ -7216,47 +7076,17 @@ parameters:
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Caught class WarnockPDF\\\\Exception not found\\.$#"
-			count: 4
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Instantiated class WarnockPDF\\\\Imagick not found\\.$#"
-			count: 2
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method readImageBlob\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
+			message: "#^Parameter \\#1 \\$image of method Imagick\\:\\:readImageBlob\\(\\) expects string, string\\|null given\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Call to method readImage\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 2
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method resizeImage\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
+			message: "#^Parameter \\#1 \\$columns of method Imagick\\:\\:resizeImage\\(\\) expects int, float given\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Call to method setCompressionQuality\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method setImageFormat\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 2
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method writeImage\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 2
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method destroy\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
+			message: "#^Parameter \\#2 \\$rows of method Imagick\\:\\:resizeImage\\(\\) expects int, float given\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
 
@@ -7267,41 +7097,6 @@ parameters:
 
 		-
 			message: "#^Method WarnockPDF\\\\WarnockPDF\\:\\:ImagePngAlpha\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Access to constant ALPHACHANNEL_EXTRACT on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method setImageAlphaChannel\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^PHPDoc tag @var for variable \\$img contains unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method separateImageChannel\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method negateImage\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method setImageMatte\\(\\) on an unknown class WarnockPDF\\\\Imagick\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^PHPDoc tag @var for variable \\$imga contains unknown class WarnockPDF\\\\Imagick\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
 
@@ -7318,11 +7113,6 @@ parameters:
 		-
 			message: "#^Call to an undefined method object\\:\\:writeImage\\(\\)\\.$#"
 			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Call to method getMessage\\(\\) on an unknown class WarnockPDF\\\\Exception\\.$#"
-			count: 2
 			path: src/WarnockPDF.php
 
 		-
@@ -9341,18 +9131,23 @@ parameters:
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Instantiated class WarnockPDF\\\\TCPDF2DBarcode not found\\.$#"
+			message: "#^Cannot access offset 'num_rows' on array\\|false\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Call to method getBarcodeArray\\(\\) on an unknown class WarnockPDF\\\\TCPDF2DBarcode\\.$#"
+			message: "#^Cannot access offset 'num_cols' on array\\|false\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
 
 		-
 			message: "#^Strict comparison using \\=\\=\\= between \\(float\\|int\\) and '' will always evaluate to false\\.$#"
 			count: 4
+			path: src/WarnockPDF.php
+
+		-
+			message: "#^Cannot access offset 'bcode' on array\\|false\\.$#"
+			count: 1
 			path: src/WarnockPDF.php
 
 		-
@@ -10107,16 +9902,6 @@ parameters:
 
 		-
 			message: "#^Method WarnockPDF\\\\WarnockPDF\\:\\:commitTransaction\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Return typehint of method WarnockPDF\\\\WarnockPDF\\:\\:rollbackTransaction\\(\\) has invalid type WarnockPDF\\\\TCPDF\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Method WarnockPDF\\\\WarnockPDF\\:\\:rollbackTransaction\\(\\) should return WarnockPDF\\\\TCPDF but returns \\$this\\(WarnockPDF\\\\WarnockPDF\\)\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
 

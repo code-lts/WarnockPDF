@@ -2,6 +2,8 @@
 
 namespace WarnockPDF;
 
+use Imagick;
+
 /**
  * This file is part of the WarnockPDF library.
  *

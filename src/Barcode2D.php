@@ -2,6 +2,13 @@
 
 namespace WarnockPDF;
 
+use WarnockPDF\Barcodes\Datamatrix;
+use WarnockPDF\Barcodes\Pdf417;
+use WarnockPDF\Barcodes\QRcode;
+use Imagick;
+use ImagickDraw;
+use ImagickPixel;
+
 /**
  * This file is part of the WarnockPDF library.
  *
@@ -185,11 +192,11 @@ class Barcode2D
             $fgcol = imagecolorallocate($png, $color[0], $color[1], $color[2]);
         } elseif (extension_loaded('imagick')) {
             $imagick = true;
-            $bgcol = new imagickpixel('rgb(255,255,255');
-            $fgcol = new imagickpixel('rgb(' . $color[0] . ',' . $color[1] . ',' . $color[2] . ')');
+            $bgcol = new ImagickPixel('rgb(255,255,255');
+            $fgcol = new ImagickPixel('rgb(' . $color[0] . ',' . $color[1] . ',' . $color[2] . ')');
             $png = new Imagick();
             $png->newImage($width, $height, 'none', 'png');
-            $bar = new imagickdraw();
+            $bar = new ImagickDraw();
             $bar->setfillcolor($fgcol);
         } else {
             return false;
@@ -268,7 +275,7 @@ class Barcode2D
                         }
                     }
                 }
-                $qrcode = new PDF417($code, $ecl, $aspectratio, $macro);
+                $qrcode = new Pdf417($code, $ecl, $aspectratio, $macro);
                 $this->barcode_array = $qrcode->getBarcodeArray();
                 $this->barcode_array['code'] = $code;
                 break;

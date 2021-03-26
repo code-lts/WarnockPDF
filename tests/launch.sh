@@ -121,7 +121,24 @@ for file in $EXAMPLE_BARCODE_FILES; do
             echo "---------------------------"
         fi
     else
+        FAILED_FLAG=1
         echo "File-run-failed: $file"
+        ERROR_LOGS="$(cat "${OUTPUT_FILE_ERROR}")"
+        if [ ! -z "${ERROR_LOGS}" ]; then
+            set -e
+            echo "Logs: $file"
+            echo "---------------------------"
+            echo "${ERROR_LOGS}"
+            echo "---------------------------"
+        fi
+        OUT_LOGS="$(cat "${OUTPUT_FILE}")"
+        if [ ! -z "${OUT_LOGS}" ]; then
+            set -e
+            echo "Logs: $file"
+            echo "---------------------------"
+            echo "${OUT_LOGS}"
+            echo "---------------------------"
+        fi
     fi
     set -e
 done

@@ -6,7 +6,7 @@
  * @deprecated 7.0.0 This file will be removed in next major version
  */
 
-require_once __DIR__ . '/../src/Barcodes/PDF417.php';
+require_once __DIR__ . '/../../src/Barcodes/Pdf417.php';
 
 /**
  * This is a legacy support class

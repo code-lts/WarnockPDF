@@ -6,7 +6,7 @@
  * @deprecated 7.0.0 This file will be removed in next major version
  */
 
-require_once __DIR__ . '/../src/Barcodes/Datamatrix.php';
+require_once __DIR__ . '/../../src/Barcodes/Datamatrix.php';
 
 /**
  * This is a legacy support class

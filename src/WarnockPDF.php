@@ -51,6 +51,10 @@
 
 namespace WarnockPDF;
 
+use WarnockPDF\Barcode2D;
+use Imagick;
+use Exception;
+
 // configuration
 require_once __DIR__ . '/AutoConfig.php';
 
@@ -1803,7 +1807,7 @@ class WarnockPDF
         }
         // set file ID for trailer
         $serformat = (is_array($format) ? json_encode($format) : $format);
-        $this->file_id = md5(StaticUtils::getRandomSeed('TCPDF' . $orientation . $unit . $serformat . $encoding));
+        $this->file_id = md5(StaticUtils::getRandomSeed('WarnockPDF' . $orientation . $unit . $serformat . $encoding));
         $this->font_obj_ids = array();
         $this->page_obj_id = array();
         $this->form_obj_id = array();
@@ -2892,7 +2896,7 @@ class WarnockPDF
         if (defined('K_TCPDF_THROW_EXCEPTION_ERROR') and !K_TCPDF_THROW_EXCEPTION_ERROR) {
             die('<strong>TCPDF ERROR: </strong>' . $msg);
         } else {
-            throw new Exception('TCPDF ERROR: ' . $msg);
+            throw new Exception('WarnockPDF ERROR: ' . $msg);
         }
     }
 
@@ -6982,7 +6986,7 @@ class WarnockPDF
             $gdfunction = 'imagecreatefrom' . $type;
             $info = false;
             if ((method_exists('Images', $mtd)) and (!($resize and (function_exists($gdfunction) or extension_loaded('imagick'))))) {
-                // TCPDF image functions
+                // WarnockPDF image functions
                 $info = Images::$mtd($file);
                 if (($ismask === false) and ($imgmask === false) and (strpos($file, '__tcpdf_' . $this->file_id . '_imgmask_') === false)
                     and (($info === 'pngalpha') or (isset($info['trns']) and !empty($info['trns'])))) {
@@ -7263,7 +7267,7 @@ class WarnockPDF
         }
         if ($parsed === false) {
             if (empty($parse_error)) {
-                $this->Error('TCPDF requires the Imagick or GD extension to handle PNG images with alpha channel.');
+                $this->Error('WarnockPDF requires the Imagick or GD extension to handle PNG images with alpha channel.');
             } else {
                 $this->Error($parse_error);
             }
@@ -10322,6 +10326,7 @@ class WarnockPDF
     /**
      * Set language array.
      * @param array $language
+     * @return void
      * @public
      * @since 1.1
      */
@@ -13384,9 +13389,9 @@ class WarnockPDF
     /**
      * Enable document signature (requires the OpenSSL Library).
      * The digital signature improve document authenticity and integrity and allows o enable extra features on Acrobat Reader.
-     * To create self-signed signature: openssl req -x509 -nodes -days 365000 -newkey rsa:1024 -keyout tcpdf.crt -out tcpdf.crt
-     * To export crt to p12: openssl pkcs12 -export -in tcpdf.crt -out tcpdf.p12
-     * To convert pfx certificate to pem: openssl pkcs12 -in tcpdf.pfx -out tcpdf.crt -nodes
+     * To create self-signed signature: openssl req -x509 -nodes -days 365000 -newkey rsa:1024 -keyout warnockpdf.crt -out warnockpdf.crt
+     * To export crt to p12: openssl pkcs12 -export -in warnockpdf.crt -out warnockpdf.p12
+     * To convert pfx certificate to pem: openssl pkcs12 -in warnockpdf.pfx -out warnockpdf.crt -nodes
      * @param mixed $signing_cert signing certificate (string or filename prefixed with 'file://')
      * @param mixed $private_key private key (string or filename prefixed with 'file://')
      * @param string $private_key_password password
@@ -13399,8 +13404,8 @@ class WarnockPDF
      * @since 4.6.005 (2009-04-24)
      */
     public function setSignature($signing_cert = '', $private_key = '', $private_key_password = '', $extracerts = '', $cert_type = 2, $info = array(), $approval = '') {
-        // to create self-signed signature: openssl req -x509 -nodes -days 365000 -newkey rsa:1024 -keyout tcpdf.crt -out tcpdf.crt
-        // to export crt to p12: openssl pkcs12 -export -in tcpdf.crt -out tcpdf.p12
+        // to create self-signed signature: openssl req -x509 -nodes -days 365000 -newkey rsa:1024 -keyout warnockpdf.crt -out warnockpdf.crt
+        // to export crt to p12: openssl pkcs12 -export -in warnockpdf.crt -out warnockpdf.p12
         // to convert pfx certificate to pem: openssl
         //     OpenSSL> pkcs12 -in <cert.pfx> -out <cert.crt> -nodes
         $this->sign = true;
@@ -15152,7 +15157,7 @@ class WarnockPDF
     /**
      * Print a Linear Barcode.
      * @param string $code code to print
-     * @param string $type type of barcode (see tcpdf_barcodes_1d.php for supported formats).
+     * @param string $type type of barcode (see Barcode1D class for supported formats).
      * @param int $x x position in user units (empty string = current x position)
      * @param int $y y position in user units (empty string = current y position)
      * @param int $w width in user units (empty string = remaining page width)
@@ -15476,7 +15481,7 @@ class WarnockPDF
     /**
      * Print 2D Barcode.
      * @param string $code code to print
-     * @param string $type type of barcode (see tcpdf_barcodes_2d.php for supported formats).
+     * @param string $type type of barcode (see Barcode 2D for supported formats).
      * @param int $x x position in user units
      * @param int $y y position in user units
      * @param int $w width in user units
@@ -15505,7 +15510,7 @@ class WarnockPDF
         // save current graphic settings
         $gvars = $this->getGraphicVars();
         // create new barcode object
-        $barcodeobj = new TCPDF2DBarcode($code, $type);
+        $barcodeobj = new Barcode2D($code, $type);
         $arrcode = $barcodeobj->getBarcodeArray();
         if (($arrcode === false) or empty($arrcode) or !isset($arrcode['num_rows']) or ($arrcode['num_rows'] == 0) or !isset($arrcode['num_cols']) or ($arrcode['num_cols'] == 0)) {
             $this->Error('Error in 2D barcode string');
@@ -21622,7 +21627,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
     }
 
     /**
-     * Stores a copy of the current TCPDF object used for undo operation.
+     * Stores a copy of the current WarnockPDF object used for undo operation.
      * @public
      * @since 4.5.029 (2009-03-19)
      */
@@ -21639,7 +21644,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
     }
 
     /**
-     * Delete the copy of the current TCPDF object used for undo operation.
+     * Delete the copy of the current WarnockPDF object used for undo operation.
      * @public
      * @since 4.5.029 (2009-03-19)
      */
@@ -21651,9 +21656,9 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
     }
 
     /**
-     * This method allows to undo the latest transaction by returning the latest saved TCPDF object with startTransaction().
+     * This method allows to undo the latest transaction by returning the latest saved WarnockPDF object with startTransaction().
      * @param bool    $self if true restores current class object to previous state without the need of reassignment via the returned value.
-     * @return TCPDF object.
+     * @return self object.
      * @public
      * @since 4.5.029 (2009-03-19)
      */

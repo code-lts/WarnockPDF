@@ -6,6 +6,9 @@
  * @deprecated 7.0.0 This file will be removed in next major version
  */
 
+// Dependencies for Barcode2D class
+require_once __DIR__ . '/src/Barcodes/QRcode.php';
+
 require_once __DIR__ . '/src/Barcode2D.php';
 
 /**
