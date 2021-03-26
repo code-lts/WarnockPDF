@@ -13,7 +13,6 @@
     <exclude-pattern>*/tmp/*</exclude-pattern>
     <exclude-pattern>*/vendor/*</exclude-pattern>
     <exclude-pattern>*/build/*</exclude-pattern>
-    <exclude-pattern>*/fonts/*</exclude-pattern>
 
     <rule ref="Wdes">
         <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing"/>
