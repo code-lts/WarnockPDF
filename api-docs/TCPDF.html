@@ -3132,7 +3132,7 @@ The identifier can then be passed to Cell(), Write(), Image() or Link(). The des
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_SetLink">SetLink</a>(int $link, float $y = 0, $page = -1)
+                    <a href="#method_SetLink">SetLink</a>(int $link, float $y = 0, int|string $page = -1)
         
                                             <p>Defines the page and position a link points to.</p>                </div>
                 <div class="col-md-2"></div>
@@ -4507,7 +4507,7 @@ Remark: the protection against modification is for people who have the full Acro
                     string|false
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setDestination">setDestination</a>(string $name, float $y = -1, $page = &#039;&#039;, float $x = -1)
+                    <a href="#method_setDestination">setDestination</a>(string $name, float $y = -1, int|string $page = &#039;&#039;, float $x = -1)
         
                                             <p>Add a Named Destination.</p>                </div>
                 <div class="col-md-2"></div>
@@ -4537,7 +4537,7 @@ Remark: the protection against modification is for people who have the full Acro
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setBookmark">setBookmark</a>(string $txt, int $level = 0, float $y = -1, $page = &#039;&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0), float $x = -1, mixed $link = &#039;&#039;)
+                    <a href="#method_setBookmark">setBookmark</a>(string $txt, int $level = 0, float $y = -1, int|string $page = &#039;&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0), float $x = -1, mixed $link = &#039;&#039;)
         
                                             <p>Adds a bookmark - alias for Bookmark().</p>                </div>
                 <div class="col-md-2"></div>
@@ -4547,7 +4547,7 @@ Remark: the protection against modification is for people who have the full Acro
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_Bookmark">Bookmark</a>(string $txt, int $level = 0, float $y = -1, $page = &#039;&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0), float $x = -1, mixed $link = &#039;&#039;)
+                    <a href="#method_Bookmark">Bookmark</a>(string $txt, int $level = 0, float $y = -1, int|string $page = &#039;&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0), float $x = -1, mixed $link = &#039;&#039;)
         
                                             <p>Adds a bookmark.</p>                </div>
                 <div class="col-md-2"></div>
@@ -4890,7 +4890,7 @@ Request TSA for a timestamp</p>                </div>
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_startLayer">startLayer</a>(string $name = &#039;&#039;, $print = true, bool $view = true, bool $lock = true)
+                    <a href="#method_startLayer">startLayer</a>(string $name = &#039;&#039;, bool|null $print = true, bool $view = true, bool $lock = true)
         
                                             <p>Start a new pdf layer.</p>                </div>
                 <div class="col-md-2"></div>
@@ -10800,7 +10800,7 @@ The identifier can then be passed to Cell(), Write(), Image() or Link(). The des
                     <h3 id="method_SetLink">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L4675">at line 4675</a></div>
         <code>                    
-    <strong>SetLink</strong>(int $link, float $y = 0, $page = -1)
+    <strong>SetLink</strong>(int $link, float $y = 0, int|string $page = -1)
         </code>
     </h3>
     <div class="details">
@@ -10824,9 +10824,9 @@ The identifier can then be passed to Cell(), Write(), Image() or Link(). The des
                 <td>Ordinate of target position; -1 indicates the current position. The default value is 0 (top of page)</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int|string</td>
                 <td>$page</td>
-                <td>(int|string) Number of target page; -1 indicates the current page (default value). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.</td>
+                <td>Number of target page; -1 indicates the current page (default value). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.</td>
             </tr>
             </table>
 
@@ -16063,19 +16063,19 @@ Use StartTransform() before, and StopTransform() after the transformations to re
                 <td>Line style. Array with keys among the following:</p>
 
 <ul>
- <li>width (float): Width of the line in user units.</li>
- <li>cap (string): Type of cap to put on the line. Possible values are:
+  <li>width (float): Width of the line in user units.</li>
+  <li>cap (string): Type of cap to put on the line. Possible values are:
 butt, round, square. The difference between "square" and "butt" is that
 "square" projects a flat end past the end of the line.</li>
- <li>join (string): Type of join. Possible values are: miter, round,
+  <li>join (string): Type of join. Possible values are: miter, round,
 bevel.</li>
- <li>dash (mixed): Dash pattern. Is 0 (without dash) or string with
+  <li>dash (mixed): Dash pattern. Is 0 (without dash) or string with
 series of length values, which are the lengths of the on and off dashes.
 For example: "2" represents 2 on, 2 off, 2 on, 2 off, ...; "2,1" is 2 on,
 1 off, 2 on, 1 off, ...</li>
- <li>phase (integer): Modifier on the dash pattern which is used to shift
+  <li>phase (integer): Modifier on the dash pattern which is used to shift
 the point at which the pattern starts.</li>
- <li>color (array): Draw color. Format: array(GREY) or array(R,G,B) or array(C,M,Y,K) or array(C,M,Y,K,SpotColorName).</li>
+  <li>color (array): Draw color. Format: array(GREY) or array(R,G,B) or array(C,M,Y,K) or array(C,M,Y,K,SpotColorName).</li>
 </ul>
 </td>
             </tr>
@@ -16483,8 +16483,8 @@ the point at which the pattern starts.</li>
                 <td>Border style of rectangle. Array with keys among the following:</p>
 
 <ul>
- <li>all: Line style of all borders. Array like for SetLineStyle().</li>
- <li>L, T, R, B or combinations: Line style of left, top, right or bottom border. Array like for SetLineStyle().</li>
+  <li>all: Line style of all borders. Array like for SetLineStyle().</li>
+  <li>L, T, R, B or combinations: Line style of left, top, right or bottom border. Array like for SetLineStyle().</li>
 </ul>
 
 <p>If a key is not present or is null, the correspondent border is not drawn. Default value: default line style (empty array).</td>
@@ -16955,8 +16955,8 @@ either end of the curve.</p>                            </div>
                 <td>Line style of polygon. Array with keys among the following:</p>
 
 <ul>
- <li>all: Line style of all lines. Array like for SetLineStyle().</li>
- <li>0 to ($np - 1): Line style of each line. Array like for SetLineStyle().</li>
+  <li>all: Line style of all lines. Array like for SetLineStyle().</li>
+  <li>0 to ($np - 1): Line style of each line. Array like for SetLineStyle().</li>
 </ul>
 
 <p>If a key is not present or is null, not draws the line. Default value is default line style (empty array).</td>
@@ -17008,8 +17008,8 @@ either end of the curve.</p>                            </div>
                 <td>Line style of polygon. Array with keys among the following:</p>
 
 <ul>
- <li>all: Line style of all lines. Array like for SetLineStyle().</li>
- <li>0 to ($np - 1): Line style of each line. Array like for SetLineStyle().</li>
+  <li>all: Line style of all lines. Array like for SetLineStyle().</li>
+  <li>0 to ($np - 1): Line style of each line. Array like for SetLineStyle().</li>
 </ul>
 
 <p>If a key is not present or is null, not draws the line. Default value is default line style (empty array).</td>
@@ -17091,8 +17091,8 @@ either end of the curve.</p>                            </div>
                 <td>Line style of polygon sides. Array with keys among the following:</p>
 
 <ul>
- <li>all: Line style of all sides. Array like for SetLineStyle().</li>
- <li>0 to ($ns - 1): Line style of each side. Array like for SetLineStyle().</li>
+  <li>all: Line style of all sides. Array like for SetLineStyle().</li>
+  <li>0 to ($ns - 1): Line style of each side. Array like for SetLineStyle().</li>
 </ul>
 
 <p>If a key is not present or is null, not draws the side. Default value is default line style (empty array).</td>
@@ -17108,11 +17108,11 @@ either end of the curve.</p>                            </div>
                 <td>Style of rendering of inscribed circle (if draws). Possible values are:</p>
 
 <ul>
- <li>D or empty string: Draw (default).</li>
- <li>F: Fill.</li>
- <li>DF or FD: Draw and fill.</li>
- <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
- <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
+  <li>D or empty string: Draw (default).</li>
+  <li>F: Fill.</li>
+  <li>DF or FD: Draw and fill.</li>
+  <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
+  <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
 </ul>
 </td>
             </tr>
@@ -17198,9 +17198,9 @@ either end of the curve.</p>                            </div>
                 <td>Line style of polygon sides. Array with keys among the following:</p>
 
 <ul>
- <li>all: Line style of all sides. Array like for
+  <li>all: Line style of all sides. Array like for
 SetLineStyle().</li>
- <li>0 to (n - 1): Line style of each side. Array like for SetLineStyle().</li>
+  <li>0 to (n - 1): Line style of each side. Array like for SetLineStyle().</li>
 </ul>
 
 <p>If a key is not present or is null, not draws the side. Default value is default line style (empty array).</td>
@@ -17216,11 +17216,11 @@ SetLineStyle().</li>
                 <td>Style of rendering of inscribed circle (if draws). Possible values are:</p>
 
 <ul>
- <li>D or empty string: Draw (default).</li>
- <li>F: Fill.</li>
- <li>DF or FD: Draw and fill.</li>
- <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
- <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
+  <li>D or empty string: Draw (default).</li>
+  <li>F: Fill.</li>
+  <li>DF or FD: Draw and fill.</li>
+  <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
+  <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
 </ul>
 </td>
             </tr>
@@ -17455,7 +17455,7 @@ SetLineStyle().</li>
                     <h3 id="method_setDestination">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12199">at line 12199</a></div>
         <code>                    string|false
-    <strong>setDestination</strong>(string $name, float $y = -1, $page = &#039;&#039;, float $x = -1)
+    <strong>setDestination</strong>(string $name, float $y = -1, int|string $page = &#039;&#039;, float $x = -1)
         </code>
     </h3>
     <div class="details">
@@ -17479,9 +17479,9 @@ SetLineStyle().</li>
                 <td>Y position in user units of the destiantion on the selected page (default = -1 = current position; 0 = page start;).</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int|string</td>
                 <td>$page</td>
-                <td>(int|string) Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.</td>
+                <td>Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.</td>
             </tr>
                     <tr>
                 <td>float</td>
@@ -17561,7 +17561,7 @@ SetLineStyle().</li>
                     <h3 id="method_setBookmark">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12278">at line 12278</a></div>
         <code>                    
-    <strong>setBookmark</strong>(string $txt, int $level = 0, float $y = -1, $page = &#039;&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0), float $x = -1, mixed $link = &#039;&#039;)
+    <strong>setBookmark</strong>(string $txt, int $level = 0, float $y = -1, int|string $page = &#039;&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0), float $x = -1, mixed $link = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -17590,9 +17590,9 @@ SetLineStyle().</li>
                 <td>Y position in user units of the bookmark on the selected page (default = -1 = current position; 0 = page start;).</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int|string</td>
                 <td>$page</td>
-                <td>(int|string) Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.</td>
+                <td>Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.</td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -17627,7 +17627,7 @@ SetLineStyle().</li>
                     <h3 id="method_Bookmark">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12295">at line 12295</a></div>
         <code>                    
-    <strong>Bookmark</strong>(string $txt, int $level = 0, float $y = -1, $page = &#039;&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0), float $x = -1, mixed $link = &#039;&#039;)
+    <strong>Bookmark</strong>(string $txt, int $level = 0, float $y = -1, int|string $page = &#039;&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0), float $x = -1, mixed $link = &#039;&#039;)
         </code>
     </h3>
     <div class="details">
@@ -17656,9 +17656,9 @@ SetLineStyle().</li>
                 <td>Y position in user units of the bookmark on the selected page (default = -1 = current position; 0 = page start;).</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>int|string</td>
                 <td>$page</td>
-                <td>(int|string) Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.</td>
+                <td>Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.</td>
             </tr>
                     <tr>
                 <td>string</td>
@@ -19126,7 +19126,7 @@ This alias will be replaced by the page number (relative to the belonging group)
                     <h3 id="method_startLayer">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13719">at line 13719</a></div>
         <code>                    
-    <strong>startLayer</strong>(string $name = &#039;&#039;, $print = true, bool $view = true, bool $lock = true)
+    <strong>startLayer</strong>(string $name = &#039;&#039;, bool|null $print = true, bool $view = true, bool $lock = true)
         </code>
     </h3>
     <div class="details">
@@ -19145,9 +19145,9 @@ This alias will be replaced by the page number (relative to the belonging group)
                 <td>Layer name (only a-z letters and numbers). Leave empty for automatic name.</td>
             </tr>
                     <tr>
-                <td></td>
+                <td>bool|null</td>
                 <td>$print</td>
-                <td>(boolean|null) Set to TRUE to print this layer, FALSE to not print and NULL to not set this option</td>
+                <td>Set to TRUE to print this layer, FALSE to not print and NULL to not set this option</td>
             </tr>
                     <tr>
                 <td>bool</td>
@@ -24640,13 +24640,13 @@ A region is always aligned on the left or right side of the page ad is defined u
                 <td>Style of rendering. Possible values are:</p>
 
 <ul>
- <li>D or empty string: Draw (default).</li>
- <li>F: Fill.</li>
- <li>F*: Fill using the even-odd rule to determine which regions lie inside the clipping path.</li>
- <li>DF or FD: Draw and fill.</li>
- <li>DF* or FD*: Draw and fill using the even-odd rule to determine which regions lie inside the clipping path.</li>
- <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
- <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
+  <li>D or empty string: Draw (default).</li>
+  <li>F: Fill.</li>
+  <li>F*: Fill using the even-odd rule to determine which regions lie inside the clipping path.</li>
+  <li>DF or FD: Draw and fill.</li>
+  <li>DF* or FD*: Draw and fill using the even-odd rule to determine which regions lie inside the clipping path.</li>
+  <li>CNZ: Clipping mode (using the even-odd rule to determine which regions lie inside the clipping path).</li>
+  <li>CEO: Clipping mode (using the nonzero winding number rule to determine which regions lie inside the clipping path).</li>
 </ul>
 </td>
             </tr>
