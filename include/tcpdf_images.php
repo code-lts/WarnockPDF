@@ -46,15 +46,15 @@ class TCPDF_IMAGES
      */
     public static function getImageFileType($imgfile, $iminfo = array()) {
         $type = '';
-        if (isset($iminfo['mime']) AND !empty($iminfo['mime'])) {
+        if (isset($iminfo['mime']) and !empty($iminfo['mime'])) {
             $mime = explode('/', $iminfo['mime']);
-            if ((count($mime) > 1) AND ($mime[0] == 'image') AND (!empty($mime[1]))) {
+            if ((count($mime) > 1) and ($mime[0] == 'image') and (!empty($mime[1]))) {
                 $type = strtolower(trim($mime[1]));
             }
         }
         if (empty($type)) {
             $fileinfo = pathinfo($imgfile);
-            if (isset($fileinfo['extension']) AND (!TCPDF_STATIC::empty_string($fileinfo['extension']))) {
+            if (isset($fileinfo['extension']) and (!TCPDF_STATIC::empty_string($fileinfo['extension']))) {
                 $type = strtolower(trim($fileinfo['extension']));
             }
         }
@@ -78,7 +78,7 @@ class TCPDF_IMAGES
         // transparency index
         $tid = imagecolortransparent($image);
         $palletsize = imagecolorstotal($image);
-        if (($tid >= 0) AND ($tid < $palletsize)) {
+        if (($tid >= 0) and ($tid < $palletsize)) {
             // get the colors for the transparency index
             $tcol = imagecolorsforindex($image, $tid);
         }
@@ -198,7 +198,7 @@ class TCPDF_IMAGES
         if (count($icc) > 0) {
             ksort($icc);
             $icc = implode('', $icc);
-            if ((ord($icc[36]) != 0x61) OR (ord($icc[37]) != 0x63) OR (ord($icc[38]) != 0x73) OR (ord($icc[39]) != 0x70)) {
+            if ((ord($icc[36]) != 0x61) or (ord($icc[37]) != 0x63) or (ord($icc[38]) != 0x73) or (ord($icc[39]) != 0x70)) {
                 // invalid ICC profile
                 $icc = false;
             }
@@ -299,7 +299,7 @@ class TCPDF_IMAGES
             } elseif ($type == 'iCCP') {
                 // skip profile name
                 $len = 0;
-                while ((ord(fread($f, 1)) != 0) AND ($len < 80)) {
+                while ((ord(fread($f, 1)) != 0) and ($len < 80)) {
                     ++$len;
                 }
                 // get compression method
@@ -320,7 +320,7 @@ class TCPDF_IMAGES
             }
             $n = TCPDF_STATIC::_freadint($f);
         } while ($n);
-        if (($colspace == 'Indexed') AND (empty($pal))) {
+        if (($colspace == 'Indexed') and (empty($pal))) {
             // Missing palette
             fclose($f);
             return false;

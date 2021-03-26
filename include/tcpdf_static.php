@@ -155,7 +155,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function getBorderMode($brd, $position = 'start', $opencell = true) {
-        if ((!$opencell) OR empty($brd)) {
+        if ((!$opencell) or empty($brd)) {
             return $brd;
         }
         if ($brd == 1) {
@@ -227,7 +227,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function empty_string($str) {
-        return ($str === null OR (is_string($str) AND (strlen($str) == 0)));
+        return ($str === null or (is_string($str) and (strlen($str) == 0)));
     }
 
     /**
@@ -274,7 +274,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function objclone($object) {
-        if (($object instanceof Imagick) AND (version_compare(phpversion('imagick'), '3.0.1') !== 1)) {
+        if (($object instanceof Imagick) and (version_compare(phpversion('imagick'), '3.0.1') !== 1)) {
             // on the versions after 3.0.1 the clone() method was deprecated in favour of clone keyword
             return @$object->clone();
         }
@@ -289,7 +289,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function sendOutputData($data, $length) {
-        if (!isset($_SERVER['HTTP_ACCEPT_ENCODING']) OR empty($_SERVER['HTTP_ACCEPT_ENCODING'])) {
+        if (!isset($_SERVER['HTTP_ACCEPT_ENCODING']) or empty($_SERVER['HTTP_ACCEPT_ENCODING'])) {
             // the content length may vary if the server is using compression
             header('Content-Length: ' . $length);
         }
@@ -324,7 +324,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function getTimestamp($date) {
-        if (($date[0] == 'D') AND ($date[1] == ':')) {
+        if (($date[0] == 'D') and ($date[1] == ':')) {
             // remove date prefix if present
             $date = substr($date, 2);
         }
@@ -355,7 +355,7 @@ class TCPDF_STATIC
         if (function_exists('posix_getpid')) {
             $rnd .= posix_getpid();
         }
-        if (function_exists('openssl_random_pseudo_bytes') AND (strtoupper(substr(PHP_OS, 0, 3)) !== 'WIN')) {
+        if (function_exists('openssl_random_pseudo_bytes') and (strtoupper(substr(PHP_OS, 0, 3)) !== 'WIN')) {
             // this is not used on windows systems because it is very slow for a know bug
             $rnd .= openssl_random_pseudo_bytes(512);
         } else {
@@ -436,7 +436,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function _RC4($key, $text, &$last_enc_key, &$last_enc_key_c) {
-        if (function_exists('mcrypt_encrypt') AND ($out = @mcrypt_encrypt(MCRYPT_ARCFOUR, $key, $text, MCRYPT_MODE_STREAM, ''))) {
+        if (function_exists('mcrypt_encrypt') and ($out = @mcrypt_encrypt(MCRYPT_ARCFOUR, $key, $text, MCRYPT_MODE_STREAM, ''))) {
             // try to use mcrypt function if exist
             return $out;
         }
@@ -494,7 +494,7 @@ class TCPDF_STATIC
         $protection = 2147422012; // 32 bit: (01111111 11111111 00001111 00111100)
         foreach ($permissions as $permission) {
             if (isset($options[$permission])) {
-                if (($mode > 0) OR ($options[$permission] <= 32)) {
+                if (($mode > 0) or ($options[$permission] <= 32)) {
                     // set only valid permissions
                     if ($options[$permission] == 2) {
                         // the logic for bit 2 is inverted (cleared by default)
@@ -597,7 +597,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function getAnnotOptFromJSProp($prop, &$spot_colors, $rtl = false) {
-        if (isset($prop['aopt']) AND is_array($prop['aopt'])) {
+        if (isset($prop['aopt']) and is_array($prop['aopt'])) {
             // the annotation options are already defined
             return $prop['aopt'];
         }
@@ -667,7 +667,7 @@ class TCPDF_STATIC
                 }
             }
         }
-        if (isset($prop['border']) AND is_array($prop['border'])) {
+        if (isset($prop['border']) and is_array($prop['border'])) {
             $opt['border'] = $prop['border'];
         }
         if (!isset($opt['mk'])) {
@@ -686,7 +686,7 @@ class TCPDF_STATIC
             $opt['mk']['if']['a'][1] = $prop['buttonAlignY'];
         }
         // buttonFitBounds: If true, the extent to which the icon may be scaled is set to the bounds of the button field.
-        if (isset($prop['buttonFitBounds']) AND ($prop['buttonFitBounds'] == 'true')) {
+        if (isset($prop['buttonFitBounds']) and ($prop['buttonFitBounds'] == 'true')) {
             $opt['mk']['if']['fb'] = true;
         }
         // buttonScaleHow: Controls how the icon is scaled (if necessary) to fit inside the button face.
@@ -789,75 +789,75 @@ class TCPDF_STATIC
         }
         $ff = 0;
         // readonly: The read-only characteristic of a field. If a field is read-only, the user can see the field but cannot change it.
-        if (isset($prop['readonly']) AND ($prop['readonly'] == 'true')) {
+        if (isset($prop['readonly']) and ($prop['readonly'] == 'true')) {
             $ff += 1 << 0;
         }
         // required: Specifies whether a field requires a value.
-        if (isset($prop['required']) AND ($prop['required'] == 'true')) {
+        if (isset($prop['required']) and ($prop['required'] == 'true')) {
             $ff += 1 << 1;
         }
         // multiline: Controls how text is wrapped within the field.
-        if (isset($prop['multiline']) AND ($prop['multiline'] == 'true')) {
+        if (isset($prop['multiline']) and ($prop['multiline'] == 'true')) {
             $ff += 1 << 12;
         }
         // password: Specifies whether the field should display asterisks when data is entered in the field.
-        if (isset($prop['password']) AND ($prop['password'] == 'true')) {
+        if (isset($prop['password']) and ($prop['password'] == 'true')) {
             $ff += 1 << 13;
         }
         // NoToggleToOff: If set, exactly one radio button shall be selected at all times; selecting the currently selected button has no effect.
-        if (isset($prop['NoToggleToOff']) AND ($prop['NoToggleToOff'] == 'true')) {
+        if (isset($prop['NoToggleToOff']) and ($prop['NoToggleToOff'] == 'true')) {
             $ff += 1 << 14;
         }
         // Radio: If set, the field is a set of radio buttons.
-        if (isset($prop['Radio']) AND ($prop['Radio'] == 'true')) {
+        if (isset($prop['Radio']) and ($prop['Radio'] == 'true')) {
             $ff += 1 << 15;
         }
         // Pushbutton: If set, the field is a pushbutton that does not retain a permanent value.
-        if (isset($prop['Pushbutton']) AND ($prop['Pushbutton'] == 'true')) {
+        if (isset($prop['Pushbutton']) and ($prop['Pushbutton'] == 'true')) {
             $ff += 1 << 16;
         }
         // Combo: If set, the field is a combo box; if clear, the field is a list box.
-        if (isset($prop['Combo']) AND ($prop['Combo'] == 'true')) {
+        if (isset($prop['Combo']) and ($prop['Combo'] == 'true')) {
             $ff += 1 << 17;
         }
         // editable: Controls whether a combo box is editable.
-        if (isset($prop['editable']) AND ($prop['editable'] == 'true')) {
+        if (isset($prop['editable']) and ($prop['editable'] == 'true')) {
             $ff += 1 << 18;
         }
         // Sort: If set, the field's option items shall be sorted alphabetically.
-        if (isset($prop['Sort']) AND ($prop['Sort'] == 'true')) {
+        if (isset($prop['Sort']) and ($prop['Sort'] == 'true')) {
             $ff += 1 << 19;
         }
         // fileSelect: If true, sets the file-select flag in the Options tab of the text field (Field is Used for File Selection).
-        if (isset($prop['fileSelect']) AND ($prop['fileSelect'] == 'true')) {
+        if (isset($prop['fileSelect']) and ($prop['fileSelect'] == 'true')) {
             $ff += 1 << 20;
         }
         // multipleSelection: If true, indicates that a list box allows a multiple selection of items.
-        if (isset($prop['multipleSelection']) AND ($prop['multipleSelection'] == 'true')) {
+        if (isset($prop['multipleSelection']) and ($prop['multipleSelection'] == 'true')) {
             $ff += 1 << 21;
         }
         // doNotSpellCheck: If true, spell checking is not performed on this editable text field.
-        if (isset($prop['doNotSpellCheck']) AND ($prop['doNotSpellCheck'] == 'true')) {
+        if (isset($prop['doNotSpellCheck']) and ($prop['doNotSpellCheck'] == 'true')) {
             $ff += 1 << 22;
         }
         // doNotScroll: If true, the text field does not scroll and the user, therefore, is limited by the rectangular region designed for the field.
-        if (isset($prop['doNotScroll']) AND ($prop['doNotScroll'] == 'true')) {
+        if (isset($prop['doNotScroll']) and ($prop['doNotScroll'] == 'true')) {
             $ff += 1 << 23;
         }
         // comb: If set to true, the field background is drawn as series of boxes (one for each character in the value of the field) and each character of the content is drawn within those boxes. The number of boxes drawn is determined from the charLimit property. It applies only to text fields. The setter will also raise if any of the following field properties are also set multiline, password, and fileSelect. A side-effect of setting this property is that the doNotScroll property is also set.
-        if (isset($prop['comb']) AND ($prop['comb'] == 'true')) {
+        if (isset($prop['comb']) and ($prop['comb'] == 'true')) {
             $ff += 1 << 24;
         }
         // radiosInUnison: If false, even if a group of radio buttons have the same name and export value, they behave in a mutually exclusive fashion, like HTML radio buttons.
-        if (isset($prop['radiosInUnison']) AND ($prop['radiosInUnison'] == 'true')) {
+        if (isset($prop['radiosInUnison']) and ($prop['radiosInUnison'] == 'true')) {
             $ff += 1 << 25;
         }
         // richText: If true, the field allows rich text formatting.
-        if (isset($prop['richText']) AND ($prop['richText'] == 'true')) {
+        if (isset($prop['richText']) and ($prop['richText'] == 'true')) {
             $ff += 1 << 25;
         }
         // commitOnSelChange: Controls whether a field value is committed after a selection change.
-        if (isset($prop['commitOnSelChange']) AND ($prop['commitOnSelChange'] == 'true')) {
+        if (isset($prop['commitOnSelChange']) and ($prop['commitOnSelChange'] == 'true')) {
             $ff += 1 << 26;
         }
         $opt['ff'] = $ff;
@@ -867,7 +867,7 @@ class TCPDF_STATIC
         }
         $f = 4; // default value for annotation flags
         // readonly: The read-only characteristic of a field. If a field is read-only, the user can see the field but cannot change it.
-        if (isset($prop['readonly']) AND ($prop['readonly'] == 'true')) {
+        if (isset($prop['readonly']) and ($prop['readonly'] == 'true')) {
             $f += 1 << 6;
         }
         // display: Controls whether the field is hidden or visible on screen and in print.
@@ -884,14 +884,14 @@ class TCPDF_STATIC
         }
         $opt['f'] = $f;
         // currentValueIndices: Reads and writes single or multiple values of a list box or combo box.
-        if (isset($prop['currentValueIndices']) AND is_array($prop['currentValueIndices'])) {
+        if (isset($prop['currentValueIndices']) and is_array($prop['currentValueIndices'])) {
             $opt['i'] = $prop['currentValueIndices'];
         }
         // value: The value of the field data that the user has entered.
         if (isset($prop['value'])) {
             if (is_array($prop['value'])) {
                 $opt['opt'] = array();
-                foreach ($prop['value'] AS $key => $optval) {
+                foreach ($prop['value'] as $key => $optval) {
                     // exportValues: An array of strings representing the export values for the field.
                     if (isset($prop['exportValues'][$key])) {
                         $opt['opt'][$key] = array($prop['exportValues'][$key], $prop['value'][$key]);
@@ -1012,10 +1012,10 @@ class TCPDF_STATIC
             $cssdata = preg_replace('/@media[\s]+([^\§]*)§([^§]*)§/i', '', $cssdata);
         }
         // keep 'all' and 'print' media, other media types are discarded
-        if (isset($cssblocks['all']) AND !empty($cssblocks['all'])) {
+        if (isset($cssblocks['all']) and !empty($cssblocks['all'])) {
             $cssdata .= $cssblocks['all'];
         }
-        if (isset($cssblocks['print']) AND !empty($cssblocks['print'])) {
+        if (isset($cssblocks['print']) and !empty($cssblocks['print'])) {
             $cssdata .= $cssblocks['print'];
         }
         // reset css blocks array
@@ -1150,11 +1150,11 @@ class TCPDF_STATIC
         $valid = false; // value to be returned
         $tag = $dom[$key]['value'];
         $class = array();
-        if (isset($dom[$key]['attribute']['class']) AND !empty($dom[$key]['attribute']['class'])) {
+        if (isset($dom[$key]['attribute']['class']) and !empty($dom[$key]['attribute']['class'])) {
             $class = explode(' ', strtolower($dom[$key]['attribute']['class']));
         }
         $id = '';
-        if (isset($dom[$key]['attribute']['id']) AND !empty($dom[$key]['attribute']['id'])) {
+        if (isset($dom[$key]['attribute']['id']) and !empty($dom[$key]['attribute']['id'])) {
             $id = strtolower($dom[$key]['attribute']['id']);
         }
         $selector = preg_replace('/([\>\+\~\s]{1})([\.]{1})([^\>\+\~\s]*)/si', '\\1*.\\3', $selector);
@@ -1165,7 +1165,7 @@ class TCPDF_STATIC
             $offset = $parentop[1];
             $lasttag = array_pop($matches[2]);
             $lasttag = strtolower(trim($lasttag[0]));
-            if (($lasttag == '*') OR ($lasttag == $tag)) {
+            if (($lasttag == '*') or ($lasttag == $tag)) {
                 // the last element on selector is our tag or 'any tag'
                 $attrib = array_pop($matches[3]);
                 $attrib = strtolower(trim($attrib[0]));
@@ -1252,7 +1252,7 @@ class TCPDF_STATIC
                 } else {
                     $valid = true;
                 }
-                if ($valid AND ($offset > 0)) {
+                if ($valid and ($offset > 0)) {
                     $valid = false;
                     // check remaining selector part
                     $selector = substr($selector, 0, $offset);
@@ -1274,7 +1274,7 @@ class TCPDF_STATIC
                         }
                         case '+': { // immediately preceded by an element
                             for ($i = ($key - 1); $i > $dom[$key]['parent']; --$i) {
-                                if ($dom[$i]['tag'] AND $dom[$i]['opening']) {
+                                if ($dom[$i]['tag'] and $dom[$i]['opening']) {
                                     $valid = self::isValidCSSSelectorForTag($dom, $i, $selector);
                                     break;
                                 }
@@ -1283,7 +1283,7 @@ class TCPDF_STATIC
                         }
                         case '~': { // preceded by an element
                             for ($i = ($key - 1); $i > $dom[$key]['parent']; --$i) {
-                                if ($dom[$i]['tag'] AND $dom[$i]['opening']) {
+                                if ($dom[$i]['tag'] and $dom[$i]['opening']) {
                                     if (self::isValidCSSSelectorForTag($dom, $i, $selector)) {
                                         break;
                                     }
@@ -1732,17 +1732,17 @@ class TCPDF_STATIC
      * @since 6.0.023
      * @public static
      */
-    public static function pregSplit($pattern, $modifiers, $subject, $limit = NULL, $flags = NULL) {
+    public static function pregSplit($pattern, $modifiers, $subject, $limit = null, $flags = null) {
         // PHP 8.1 deprecates nulls for $limit and $flags
         $limit = $limit === null ? -1 : $limit;
         $flags = $flags === null ? 0 : $flags;
         // the bug only happens on PHP 5.2 when using the u modifier
-        if ((strpos($modifiers, 'u') === FALSE) OR (count(preg_split('//u', "\n\t", -1, PREG_SPLIT_NO_EMPTY)) == 2)) {
+        if ((strpos($modifiers, 'u') === false) or (count(preg_split('//u', "\n\t", -1, PREG_SPLIT_NO_EMPTY)) == 2)) {
             return preg_split($pattern . $modifiers, $subject, $limit, $flags);
         }
         // preg_split is bugged - try alternative solution
         $ret = array();
-        while (($nl = strpos($subject, "\n")) !== FALSE) {
+        while (($nl = strpos($subject, "\n")) !== false) {
             $ret = array_merge($ret, preg_split($pattern . $modifiers, substr($subject, 0, $nl), $limit, $flags));
             $ret[] = "\n";
             $subject = substr($subject, ($nl + 1));

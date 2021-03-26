@@ -284,7 +284,7 @@ class TCPDF_COLORS
                 }
                 return $returncolor;
             }
-        } elseif ((substr($color, 0, 4) != 'cmyk') AND (substr($color, 0, 3) != 'rgb') AND (($dotpos = strpos($color, '.')) !== false)) {
+        } elseif ((substr($color, 0, 4) != 'cmyk') and (substr($color, 0, 3) != 'rgb') and (($dotpos = strpos($color, '.')) !== false)) {
             // remove class parent (i.e.: color.red)
             $color = substr($color, ($dotpos + 1));
             if ($color == 'transparent') {

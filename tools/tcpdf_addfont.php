@@ -218,7 +218,7 @@ if (empty($options['fonts'])) {
 }
 
 // check the output path
-if (!is_dir($options['outpath']) OR !is_writable($options['outpath'])) {
+if (!is_dir($options['outpath']) or !is_writable($options['outpath'])) {
     echo "ERROR: Can't write to " . $options['outpath'] . "\n\n";
     exit(3);
 }

@@ -24,8 +24,6 @@
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedElseif"/>
         <exclude name="Generic.Metrics.NestingLevel.MaxExceeded"/>
         <exclude name="Generic.WhiteSpace.IncrementDecrementSpacing.SpaceAfterIncrement"/><!-- To be fixed -->
-        <exclude name="Generic.PHP.LowerCaseKeyword.Found"/><!-- To be fixed -->
-        <exclude name="Generic.PHP.LowerCaseConstant.Found"/><!-- To be fixed -->
         <exclude name="Generic.Formatting.SpaceAfterCast.NoSpace"/><!-- To be fixed -->
 
         <exclude name="Squiz.PHP.DisallowSizeFunctionsInLoops.Found"/>
