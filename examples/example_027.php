@@ -51,8 +51,8 @@ $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // set some language-dependent strings (optional)
 if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-	require_once(dirname(__FILE__).'/lang/eng.php');
-	$pdf->setLanguageArray($l);
+    require_once(dirname(__FILE__).'/lang/eng.php');
+    $pdf->setLanguageArray($l);
 }
 
 // ---------------------------------------------------------
@@ -77,20 +77,20 @@ $pdf->SetFont('helvetica', '', 10);
 
 // define barcode style
 $style = array(
-	'position' => '',
-	'align' => 'C',
-	'stretch' => false,
-	'fitwidth' => true,
-	'cellfitalign' => '',
-	'border' => true,
-	'hpadding' => 'auto',
-	'vpadding' => 'auto',
-	'fgcolor' => array(0,0,0),
-	'bgcolor' => false, //array(255,255,255),
-	'text' => true,
-	'font' => 'helvetica',
-	'fontsize' => 8,
-	'stretchtext' => 4
+    'position' => '',
+    'align' => 'C',
+    'stretch' => false,
+    'fitwidth' => true,
+    'cellfitalign' => '',
+    'border' => true,
+    'hpadding' => 'auto',
+    'vpadding' => 'auto',
+    'fgcolor' => array(0,0,0),
+    'bgcolor' => false, //array(255,255,255),
+    'text' => true,
+    'font' => 'helvetica',
+    'fontsize' => 8,
+    'stretchtext' => 4
 );
 
 // PRINT VARIOUS 1D BARCODES
@@ -377,21 +377,21 @@ $pdf->write1DBarcode('RIGHT', 'C128A', '', '', '', 15, 0.4, $style, 'N');
 
 // define barcode style
 $style = array(
-	'position' => '',
-	'align' => '',
-	'stretch' => true,
-	'fitwidth' => false,
-	'cellfitalign' => '',
-	'border' => true,
-	'hpadding' => 'auto',
-	'vpadding' => 'auto',
-	'fgcolor' => array(0,0,128),
-	'bgcolor' => array(255,255,128),
-	'text' => true,
-	'label' => 'CUSTOM LABEL',
-	'font' => 'helvetica',
-	'fontsize' => 8,
-	'stretchtext' => 4
+    'position' => '',
+    'align' => '',
+    'stretch' => true,
+    'fitwidth' => false,
+    'cellfitalign' => '',
+    'border' => true,
+    'hpadding' => 'auto',
+    'vpadding' => 'auto',
+    'fgcolor' => array(0,0,128),
+    'bgcolor' => array(255,255,128),
+    'text' => true,
+    'label' => 'CUSTOM LABEL',
+    'font' => 'helvetica',
+    'fontsize' => 8,
+    'stretchtext' => 4
 );
 
 // CODE 39 EXTENDED + CHECKSUM

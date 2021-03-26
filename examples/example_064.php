@@ -51,8 +51,8 @@ $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // set some language-dependent strings (optional)
 if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-	require_once(dirname(__FILE__).'/lang/eng.php');
-	$pdf->setLanguageArray($l);
+    require_once(dirname(__FILE__).'/lang/eng.php');
+    $pdf->setLanguageArray($l);
 }
 
 // ---------------------------------------------------------
@@ -112,11 +112,11 @@ $pdf->SetXY(15, 30);
 
 // define no-write page regions to avoid text overlapping images
 /*
-	'page' => page number or empy for current page
-	'xt' => X top
-	'yt' => Y top
-	'yb' => Y bottom
-	'side' => page side ('L' = left or 'R' = right)
+    'page' => page number or empy for current page
+    'xt' => X top
+    'yt' => Y top
+    'yb' => Y bottom
+    'side' => page side ('L' = left or 'R' = right)
 */
 $regions = array(
 array('page' => '', 'xt' => 153, 'yt' =>  30, 'xb' => 153, 'yb' =>  70, 'side' => 'R'),

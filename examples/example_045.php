@@ -51,8 +51,8 @@ $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // set some language-dependent strings (optional)
 if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-	require_once(dirname(__FILE__).'/lang/eng.php');
-	$pdf->setLanguageArray($l);
+    require_once(dirname(__FILE__).'/lang/eng.php');
+    $pdf->setLanguageArray($l);
 }
 
 // ---------------------------------------------------------
@@ -97,9 +97,9 @@ $pdf->writeHTML($html, true, false, true, false, '');
 
 // add some pages and bookmarks
 for ($i = 2; $i < 12; $i++) {
-	$pdf->AddPage();
-	$pdf->Bookmark('Chapter '.$i, 0, 0, '', 'B', array(0,64,128));
-	$pdf->Cell(0, 10, 'Chapter '.$i, 0, 1, 'L');
+    $pdf->AddPage();
+    $pdf->Bookmark('Chapter '.$i, 0, 0, '', 'B', array(0,64,128));
+    $pdf->Cell(0, 10, 'Chapter '.$i, 0, 1, 'L');
 }
 
 // . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .

@@ -15,10 +15,8 @@
 
     <rule ref="Wdes">
         <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing"/>
-        <exclude name="Generic.WhiteSpace.DisallowTabIndent.TabsUsed"/>
         <exclude name="Generic.Functions.FunctionCallArgumentSpacing.NoSpaceAfterComma"/>
         <exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
-        <exclude name="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed"/>
         <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact"/>
         <exclude name="Generic.Functions.FunctionCallArgumentSpacing.SpaceBeforeComma"/>
         <exclude name="Generic.Functions.FunctionCallArgumentSpacing.TooMuchSpaceAfterComma"/>
@@ -71,8 +69,6 @@
         <exclude name="PSR12.ControlStructures.ControlStructureSpacing.SpaceBeforeCloseBrace"/>
 
         <exclude name="PSR1.Methods.CamelCapsMethodName.NotCamelCaps"/>
-        <exclude name="PSR1.Classes.ClassDeclaration.MissingNamespace"/>
-        <exclude name="PSR1.Classes.ClassDeclaration.MultipleClasses"/><!-- To be fixed -->
 
         <exclude name="PSR2.ControlStructures.ControlStructureSpacing.SpaceBeforeCloseBrace"/>
         <exclude name="PSR2.ControlStructures.ControlStructureSpacing.SpacingAfterOpenBrace"/>
@@ -114,6 +110,24 @@
         <exclude name="Generic.Classes.DuplicateClassName.Found"/>
         <exclude name="Generic.Metrics.NestingLevel.TooHigh"/>
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedIf"/>
+    </rule>
+
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent.TabsUsed">
+        <exclude-pattern>*/tcpdf.php</exclude-pattern>
+    </rule>
+
+    <rule ref="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">
+        <exclude-pattern>*/tcpdf.php</exclude-pattern>
+    </rule>
+    <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
+        <exclude-pattern>*/include/*</exclude-pattern>
+        <exclude-pattern>*/examples/*</exclude-pattern>
+        <exclude-pattern>*/tcpdf_barcodes_*.php</exclude-pattern>
+        <exclude-pattern>*/tcpdf.php</exclude-pattern>
+        <exclude-pattern>*/tests/coverage.php</exclude-pattern>
+    </rule>
+    <rule ref="PSR1.Classes.ClassDeclaration.MultipleClasses">
+        <exclude-pattern>*/tests/coverage.php</exclude-pattern>
     </rule>
 
 </ruleset>
