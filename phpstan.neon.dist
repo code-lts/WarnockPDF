@@ -10,3 +10,5 @@ parameters:
         - vendor/
         - fonts/
         - scripts/
+    dynamicConstantNames:
+        - K_PATH_CACHE
