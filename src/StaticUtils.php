@@ -238,10 +238,8 @@ class StaticUtils
      * @public static
      */
     public static function getObjFilename($type = 'tmp', $file_id = '') {
-        if (! defined('K_PATH_CACHE')) {
-            define('K_PATH_CACHE', '');
-        }
-        return tempnam(K_PATH_CACHE, '__tcpdf_' . $file_id . '_' . $type . '_' . md5(StaticUtils::getRandomSeed()) . '_');
+        $cacheDir = K_PATH_CACHE;
+        return tempnam($cacheDir, '__tcpdf_' . $file_id . '_' . $type . '_' . md5(StaticUtils::getRandomSeed()) . '_');
     }
 
     /**

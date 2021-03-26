@@ -38,6 +38,8 @@ jobs:
                   ini-values: display_errors=on, error_reporting=-1
             - name: List php modules
               run: php -m
+            - name: List php modules using "no php ini" mode
+              run: php -m -n
             - name: Cache module
               uses: actions/cache@v2
               with:

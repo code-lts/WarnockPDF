@@ -51,7 +51,6 @@
 
 namespace WarnockPDF;
 
-use WarnockPDF\Barcode2D;
 use Imagick;
 use Exception;
 

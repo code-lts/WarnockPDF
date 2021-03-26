@@ -7691,11 +7691,6 @@ parameters:
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Method WarnockPDF\\\\WarnockPDF\\:\\:setLanguageArray\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
 			message: "#^Method WarnockPDF\\\\WarnockPDF\\:\\:setLanguageArray\\(\\) has parameter \\$language with no value type specified in iterable type array\\.$#"
 			count: 1
 			path: src/WarnockPDF.php

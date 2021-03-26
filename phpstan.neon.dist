@@ -6,11 +6,9 @@ parameters:
         processTimeout: 120.0
     paths:
         - ./
-    scanFiles:
-        - config/tcpdf_config.php
+    bootstrapFiles:
+        - src/AutoConfig.php
     excludes_analyse:
         - vendor/
         - fonts/
         - scripts/
-    dynamicConstantNames:
-        - K_PATH_CACHE
