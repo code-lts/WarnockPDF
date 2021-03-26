@@ -1,4 +1,5 @@
 <?php
+
 // LIBRARY FONT FILE DESCRIPTION
 $type = 'Type1';
 $name = 'PDFATimes';

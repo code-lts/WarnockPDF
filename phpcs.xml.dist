@@ -15,7 +15,7 @@
     <exclude-pattern>*/build/*</exclude-pattern>
 
     <rule ref="Wdes">
-        <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing"/>
+        <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes.DeclareStrictTypesMissing"/><!-- PHP 5 not compatible -->
         <exclude name="Generic.WhiteSpace.ScopeIndent.Incorrect"/>
         <exclude name="Generic.WhiteSpace.ScopeIndent.IncorrectExact"/>
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedElseif"/>
@@ -43,8 +43,6 @@
         <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.CloseBracketLine"/>
         <exclude name="Squiz.PHP.NonExecutableCode.Unreachable"/><!-- To be fixed -->
 
-        <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock"/>
-        <exclude name="PSR12.Classes.ClosingBrace.StatementAfter"/>
         <exclude name="PSR12.ControlStructures.ControlStructureSpacing.FirstExpressionLine"/>
         <exclude name="PSR12.ControlStructures.ControlStructureSpacing.CloseParenthesisLine"/>
         <exclude name="PSR12.ControlStructures.ControlStructureSpacing.LineIndent"/>
@@ -90,12 +88,6 @@
         <exclude name="PSR1.Files.SideEffects.FoundWithSymbols"/>
         <exclude name="Generic.Metrics.NestingLevel.TooHigh"/>
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedIf"/>
-    </rule>
-
-    <rule ref="Generic.WhiteSpace.DisallowTabIndent.TabsUsed">
-    </rule>
-
-    <rule ref="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">
     </rule>
 
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Example 025 for WarnockPDF library
  *

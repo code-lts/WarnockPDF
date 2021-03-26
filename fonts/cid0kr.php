@@ -1,4 +1,5 @@
 <?php
+
 // LIBRARY FONT FILE DESCRIPTION
 $type = 'cidfont0';
 $name = 'cid0kr';
