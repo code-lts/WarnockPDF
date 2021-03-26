@@ -7,6 +7,7 @@
  */
 // Dependencies of StaticUtils class
 require_once __DIR__ . '/../src/Colors.php';
+require_once __DIR__ . '/../src/Version.php';
 
 require_once __DIR__ . '/../src/StaticUtils.php';
 
@@ -15,4 +16,19 @@ require_once __DIR__ . '/../src/StaticUtils.php';
  * @deprecated 7.0.0 This file will be removed in next major
  */
 class TCPDF_STATIC extends \WarnockPDF\StaticUtils {
+
+    /**
+     * @deprecated use getVersion
+     */
+    public static function getTCPDFVersion() {
+        return self::getVersion();
+    }
+
+    /**
+     * @deprecated use getProducerString
+     */
+    public static function getTCPDFProducer() {
+        return parent::getProducerString();
+    }
+
 }

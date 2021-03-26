@@ -31,12 +31,6 @@ class StaticUtils
 {
 
     /**
-     * Current TCPDF version.
-     * @private static
-     */
-    private static $tcpdf_version = '7.0.0';
-
-    /**
      * String alias for total number of pages.
      * @public static
      */
@@ -88,23 +82,23 @@ class StaticUtils
     // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     /**
-     * Return the current TCPDF version.
-     * @return string TCPDF version string
+     * Return the current WarnockPDF version.
+     * @return string WarnockPDF version string
      * @since 5.9.012 (2010-11-10)
      * @public static
      */
-    public static function getTCPDFVersion() {
-        return self::$tcpdf_version;
+    public static function getVersion() {
+        return Version::VERSION;
     }
 
     /**
-     * Return the current TCPDF producer.
-     * @return string TCPDF producer string
+     * Return the current WarnockPDF producer.
+     * @return string WarnockPDF producer string
      * @since 6.0.000 (2013-03-16)
      * @public static
      */
-    public static function getTCPDFProducer() {
-        return "\x54\x43\x50\x44\x46\x20" . self::getTCPDFVersion() . "\x20\x28\x68\x74\x74\x70\x3a\x2f\x2f\x77\x77\x77\x2e\x74\x63\x70\x64\x66\x2e\x6f\x72\x67\x29";
+    public static function getProducerString() {
+        return "\x54\x43\x50\x44\x46\x20" . self::getVersion() . "\x20\x28\x68\x74\x74\x70\x3a\x2f\x2f\x77\x77\x77\x2e\x74\x63\x70\x64\x66\x2e\x6f\x72\x67\x29";
     }
 
     /**
