@@ -1,5 +1,7 @@
 <?php
 
+namespace WarnockPDF;
+
 /**
  * This file is part of the WarnockPDF library.
  *
@@ -75,7 +77,7 @@ require_once(dirname(__FILE__) . '/include/tcpdf_static.php');
  * @IgnoreAnnotation("public")
  * @IgnoreAnnotation("pre")
  */
-class TCPDF
+class WarnockPDF
 {
 
     // Protected properties
