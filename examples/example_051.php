@@ -19,10 +19,14 @@
 require_once('tcpdf_include.php');
 
 
-// Extend the TCPDF class to create custom Header and Footer
-class MYPDF extends TCPDF
+// Extend the WarnockPDF class to create custom Header and Footer
+class MyPdfExample051 extends TCPDF
 {
-    //Page header
+    /**
+     * Page header
+     *
+     * @return void
+     */
     public function Header() {
         // get the current page break margin
         $bMargin = $this->getBreakMargin();
@@ -30,7 +34,7 @@ class MYPDF extends TCPDF
         $auto_page_break = $this->AutoPageBreak;
         // disable auto-page-break
         $this->SetAutoPageBreak(false, 0);
-        // set bacground image
+        // set background image
         $img_file = K_PATH_IMAGES . 'image_demo.jpg';
         $this->Image($img_file, 0, 0, 210, 297, '', '', '', false, 300, '', false, false, 0);
         // restore auto-page-break status
@@ -41,7 +45,7 @@ class MYPDF extends TCPDF
 }
 
 // create new PDF document
-$pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+$pdf = new MyPdfExample051(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
@@ -114,7 +118,7 @@ $bMargin = $pdf->getBreakMargin();
 $auto_page_break = $pdf->getAutoPageBreak();
 // disable auto-page-break
 $pdf->SetAutoPageBreak(false, 0);
-// set bacground image
+// set background image
 $img_file = K_PATH_IMAGES . 'image_demo.jpg';
 $pdf->Image($img_file, 0, 0, 210, 297, '', '', '', false, 300, '', false, false, 0);
 // restore auto-page-break status

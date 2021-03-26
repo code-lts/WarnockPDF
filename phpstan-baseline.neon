@@ -56,11 +56,6 @@ parameters:
 			path: examples/example_002.php
 
 		-
-			message: "#^Method MYPDF\\:\\:Header\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: examples/example_003.php
-
-		-
 			message: "#^Parameter \\#5 \\$h of method TCPDF\\:\\:Image\\(\\) expects float, string given\\.$#"
 			count: 1
 			path: examples/example_003.php
@@ -73,11 +68,6 @@ parameters:
 		-
 			message: "#^Parameter \\#7 \\$fill of method TCPDF\\:\\:Cell\\(\\) expects bool, int given\\.$#"
 			count: 2
-			path: examples/example_003.php
-
-		-
-			message: "#^Method MYPDF\\:\\:Footer\\(\\) has no return typehint specified\\.$#"
-			count: 1
 			path: examples/example_003.php
 
 		-
@@ -356,32 +346,7 @@ parameters:
 			path: examples/example_010.php
 
 		-
-			message: "#^Method MYPDF\\:\\:LoadData\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: examples/example_011.php
-
-		-
-			message: "#^Method MYPDF\\:\\:LoadData\\(\\) has parameter \\$file with no typehint specified\\.$#"
-			count: 1
-			path: examples/example_011.php
-
-		-
 			message: "#^Argument of an invalid type array\\<int, string\\>\\|false supplied for foreach, only iterables are supported\\.$#"
-			count: 1
-			path: examples/example_011.php
-
-		-
-			message: "#^Method MYPDF\\:\\:ColoredTable\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: examples/example_011.php
-
-		-
-			message: "#^Method MYPDF\\:\\:ColoredTable\\(\\) has parameter \\$data with no typehint specified\\.$#"
-			count: 1
-			path: examples/example_011.php
-
-		-
-			message: "#^Method MYPDF\\:\\:ColoredTable\\(\\) has parameter \\$header with no typehint specified\\.$#"
 			count: 1
 			path: examples/example_011.php
 
@@ -393,6 +358,11 @@ parameters:
 		-
 			message: "#^Parameter \\#7 \\$fill of method TCPDF\\:\\:Cell\\(\\) expects bool, bool\\|int given\\.$#"
 			count: 4
+			path: examples/example_011.php
+
+		-
+			message: "#^Parameter \\#1 \\$number of function number_format expects float, string given\\.$#"
+			count: 2
 			path: examples/example_011.php
 
 		-
@@ -416,12 +386,7 @@ parameters:
 			path: examples/example_011.php
 
 		-
-			message: "#^Call to an undefined method MYPDF\\:\\:LoadData\\(\\)\\.$#"
-			count: 1
-			path: examples/example_011.php
-
-		-
-			message: "#^Call to an undefined method MYPDF\\:\\:ColoredTable\\(\\)\\.$#"
+			message: "#^Parameter \\#2 \\$data of method MyPdfExample011\\:\\:ColoredTable\\(\\) expects array\\<string\\>, array\\<int, array\\<int, string\\>\\> given\\.$#"
 			count: 1
 			path: examples/example_011.php
 
@@ -1639,11 +1604,6 @@ parameters:
 			message: "#^Variable \\$l might not be defined\\.$#"
 			count: 1
 			path: examples/example_050.php
-
-		-
-			message: "#^Method MYPDF\\:\\:Header\\(\\) has no return typehint specified\\.$#"
-			count: 1
-			path: examples/example_051.php
 
 		-
 			message: "#^Parameter \\#1 \\$font of method TCPDF\\:\\:setHeaderFont\\(\\) expects array\\<int, string\\>, array\\<int, int\\|string\\> given\\.$#"

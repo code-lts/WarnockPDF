@@ -19,11 +19,15 @@
 require_once('tcpdf_include.php');
 
 
-// Extend the TCPDF class to create custom Header and Footer
-class MYPDF extends TCPDF
+// Extend the WarnockPDF class to create custom Header and Footer
+class MyPdfExample003 extends TCPDF
 {
 
-    //Page header
+    /**
+     * Page header
+     *
+     * @return void
+     */
     public function Header() {
         // Logo
         $image_file = K_PATH_IMAGES . 'logo_example.jpg';
@@ -34,7 +38,11 @@ class MYPDF extends TCPDF
         $this->Cell(0, 15, '<< TCPDF Example 003 >>', 0, false, 'C', 0, '', 0, false, 'M', 'M');
     }
 
-    // Page footer
+    /**
+     * Page footer
+     *
+     * @return void
+     */
     public function Footer() {
         // Position at 15 mm from bottom
         $this->SetY(-15);
@@ -46,7 +54,7 @@ class MYPDF extends TCPDF
 }
 
 // create new PDF document
-$pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+$pdf = new MyPdfExample003(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 // set document information
 $pdf->SetCreator(PDF_CREATOR);

@@ -18,11 +18,16 @@
 // Include the main TCPDF library (search for installation path).
 require_once('tcpdf_include.php');
 
-// extend TCPF with custom functions
-class MYPDF extends TCPDF
+// extend with custom functions
+class MyPdfExample011 extends TCPDF
 {
 
-    // Load table data from file
+    /**
+     * Load table data from file
+     *
+     * @param string $file
+     * @return array<int,array<int,string>>
+     */
     public function LoadData($file) {
         // Read file lines
         $lines = file($file);
@@ -33,7 +38,13 @@ class MYPDF extends TCPDF
         return $data;
     }
 
-    // Colored table
+    /**
+     * Colored table
+     *
+     * @param string[] $header
+     * @param string[] $data
+     * @return void
+     */
     public function ColoredTable($header, $data) {
         // Colors, line width and bold font
         $this->SetFillColor(255, 0, 0);
@@ -67,7 +78,7 @@ class MYPDF extends TCPDF
 }
 
 // create new PDF document
-$pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+$pdf = new MyPdfExample011(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 // set document information
 $pdf->SetCreator(PDF_CREATOR);

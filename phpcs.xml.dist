@@ -92,13 +92,6 @@
         <exclude name="Generic.CodeAnalysis.EmptyStatement.DetectedIf"/>
     </rule>
 
-    <rule ref="Generic.Classes.DuplicateClassName.Found">
-        <exclude-pattern>*/examples/example_003.php</exclude-pattern>
-        <exclude-pattern>*/examples/example_011.php</exclude-pattern>
-        <exclude-pattern>*/examples/example_020.php</exclude-pattern>
-        <exclude-pattern>*/examples/example_051.php</exclude-pattern>
-    </rule>
-
     <rule ref="Generic.WhiteSpace.DisallowTabIndent.TabsUsed">
     </rule>
 
