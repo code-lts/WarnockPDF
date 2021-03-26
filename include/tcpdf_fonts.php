@@ -39,8 +39,8 @@ class TCPDF_FONTS {
 	 * @param string $outpath Output path for generated font files (must be writeable by the web server). Leave empty for default font folder.
 	 * @param int $platid Platform ID for CMAP table to extract (when building a Unicode font for Windows this value should be 3, for Macintosh should be 1).
 	 * @param int $encid Encoding ID for CMAP table to extract (when building a Unicode font for Windows this value should be 1, for Macintosh should be 0). When Platform ID is 3, legal values for Encoding ID are: 0=Symbol, 1=Unicode, 2=ShiftJIS, 3=PRC, 4=Big5, 5=Wansung, 6=Johab, 7=Reserved, 8=Reserved, 9=Reserved, 10=UCS-4.
-	 * @param boolean $addcbbox If true includes the character bounding box information on the php font file.
-	 * @param boolean $link If true link to system font instead of copying the font data (not transportable) - Note: do not work with Type1 fonts.
+	 * @param bool $addcbbox If true includes the character bounding box information on the php font file.
+	 * @param bool $link If true link to system font instead of copying the font data (not transportable) - Note: do not work with Type1 fonts.
 	 * @return string TCPDF font name or boolean false in case of error.
 	 * @author Nicola Asuni
 	 * @since 5.9.123 (2010-09-30)
@@ -1637,7 +1637,7 @@ class TCPDF_FONTS {
 	/**
 	 * Returns the unicode caracter specified by the value
 	 * @param int $c UTF-8 value
-	 * @param boolean $unicode True if we are in unicode mode, false otherwise.
+	 * @param bool $unicode True if we are in unicode mode, false otherwise.
 	 * @return string Returns the specified character.
 	 * @since 2.3.000 (2008-03-05)
 	 * @public static
@@ -1714,7 +1714,7 @@ class TCPDF_FONTS {
 	 *    W2 = 110111xxxxxxxxxx
 	 * </pre>
 	 * @param array $unicode array containing UTF-8 unicode values
-	 * @param boolean $setbom if true set the Byte Order Mark (BOM = 0xFEFF)
+	 * @param bool $setbom if true set the Byte Order Mark (BOM = 0xFEFF)
 	 * @return string
 	 * @protected
 	 * @author Nicola Asuni
@@ -1750,7 +1750,7 @@ class TCPDF_FONTS {
 	/**
 	 * Convert an array of UTF8 values to array of unicode characters
 	 * @param array $ta The input array of UTF8 values.
-	 * @param boolean $isunicode True for Unicode mode, false otherwise.
+	 * @param bool $isunicode True for Unicode mode, false otherwise.
 	 * @return array Return array of unicode characters
 	 * @since 4.5.037 (2009-04-07)
 	 * @public static
@@ -1767,7 +1767,7 @@ class TCPDF_FONTS {
 	 * @param string $strarr The input array of characters.
 	 * @param int $start the starting element of $strarr.
 	 * @param int $end first element that will not be returned.
-	 * @param boolean $unicode True if we are in unicode mode, false otherwise.
+	 * @param bool $unicode True if we are in unicode mode, false otherwise.
 	 * @return string Return part of a string
 	 * @public static
 	 */
@@ -1968,7 +1968,7 @@ class TCPDF_FONTS {
 	 * Converts UTF-8 strings to codepoints array.<br>
 	 * Invalid byte sequences will be replaced with 0xFFFD (replacement character)<br>
 	 * @param string $str string to process.
-	 * @param boolean $isunicode True when the documetn is in Unicode mode, false otherwise.
+	 * @param bool $isunicode True when the documetn is in Unicode mode, false otherwise.
 	 * @param array $currentfont Reference to current font array.
 	 * @return array containing codepoints (UTF-8 characters values)
 	 * @author Nicola Asuni
@@ -1994,7 +1994,7 @@ class TCPDF_FONTS {
 	/**
 	 * Converts UTF-8 strings to Latin1 when using the standard 14 core fonts.<br>
 	 * @param string $str string to process.
-	 * @param boolean $isunicode True when the documetn is in Unicode mode, false otherwise.
+	 * @param bool $isunicode True when the documetn is in Unicode mode, false otherwise.
 	 * @param array $currentfont Reference to current font array.
 	 * @return string
 	 * @since 3.2.000 (2008-06-23)
@@ -2008,8 +2008,8 @@ class TCPDF_FONTS {
 	/**
 	 * Converts UTF-8 strings to UTF16-BE.<br>
 	 * @param string $str string to process.
-	 * @param boolean $setbom if true set the Byte Order Mark (BOM = 0xFEFF)
-	 * @param boolean $isunicode True when the documetn is in Unicode mode, false otherwise.
+	 * @param bool $setbom if true set the Byte Order Mark (BOM = 0xFEFF)
+	 * @param bool $isunicode True when the documetn is in Unicode mode, false otherwise.
 	 * @param array $currentfont Reference to current font array.
 	 * @return string
 	 * @author Nicola Asuni
@@ -2029,7 +2029,7 @@ class TCPDF_FONTS {
 	 * @param string $str string to manipulate.
 	 * @param bool $setbom if true set the Byte Order Mark (BOM = 0xFEFF)
 	 * @param bool $forcertl if true forces RTL text direction
-	 * @param boolean $isunicode True if the document is in Unicode mode, false otherwise.
+	 * @param bool $isunicode True if the document is in Unicode mode, false otherwise.
 	 * @param array $currentfont Reference to current font array.
 	 * @return string
 	 * @author Nicola Asuni
@@ -2046,7 +2046,7 @@ class TCPDF_FONTS {
 	 * @param string $str string to manipulate (or empty value).
 	 * @param bool $setbom if true set the Byte Order Mark (BOM = 0xFEFF)
 	 * @param bool $forcertl if true forces RTL text direction
-	 * @param boolean $isunicode True if the document is in Unicode mode, false otherwise.
+	 * @param bool $isunicode True if the document is in Unicode mode, false otherwise.
 	 * @param array $currentfont Reference to current font array.
 	 * @return string
 	 * @author Nicola Asuni
@@ -2062,7 +2062,7 @@ class TCPDF_FONTS {
 	 * @param array $ta array of characters composing the string.
 	 * @param string $str string to process
 	 * @param bool $forcertl if 'R' forces RTL, if 'L' forces LTR
-	 * @param boolean $isunicode True if the document is in Unicode mode, false otherwise.
+	 * @param bool $isunicode True if the document is in Unicode mode, false otherwise.
 	 * @param array $currentfont Reference to current font array.
 	 * @return array of unicode chars
 	 * @author Nicola Asuni

@@ -846,7 +846,7 @@ class PDF417 {
 	 * Compact data by mode.
 	 * @param int $mode compaction mode number
 	 * @param string $code data to compact
-	 * @param boolean $addmode if true add the mode codeword at first position
+	 * @param bool $addmode if true add the mode codeword at first position
 	 * @return array of codewords
 	 * @protected
 	 */

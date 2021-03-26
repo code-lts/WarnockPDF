@@ -1794,10 +1794,10 @@ class TCPDF {
 	 * @param string $orientation page orientation. Possible values are (case insensitive):<ul><li>P or Portrait (default)</li><li>L or Landscape</li><li>'' (empty string) for automatic orientation</li></ul>
 	 * @param string $unit User measure unit. Possible values are:<ul><li>pt: point</li><li>mm: millimeter (default)</li><li>cm: centimeter</li><li>in: inch</li></ul><br />A point equals 1/72 of inch, that is to say about 0.35 mm (an inch being 2.54 cm). This is a very common unit in typography; font sizes are expressed in that unit.
 	 * @param mixed $format The format used for pages. It can be either: one of the string values specified at getPageSizeFromFormat() or an array of parameters specified at setPageFormat().
-	 * @param boolean $unicode TRUE means that the input text is unicode (default = true)
+	 * @param bool    $unicode TRUE means that the input text is unicode (default = true)
 	 * @param string $encoding Charset encoding (used only when converting back html entities); default is UTF-8.
-	 * @param boolean $diskcache DEPRECATED FEATURE
-	 * @param integer $pdfa If not false, set the document to PDF/A mode and the good version (1 or 3).
+	 * @param bool    $diskcache DEPRECATED FEATURE
+	 * @param int     $pdfa If not false, set the document to PDF/A mode and the good version (1 or 3).
 	 * @public
 	 * @see getPageSizeFromFormat(), setPageFormat()
 	 */
@@ -2179,7 +2179,7 @@ class TCPDF {
 	/**
 	 * Set page orientation.
 	 * @param string $orientation page orientation. Possible values are (case insensitive):<ul><li>P or Portrait (default)</li><li>L or Landscape</li><li>'' (empty string) for automatic orientation</li></ul>
-	 * @param boolean $autopagebreak Boolean indicating if auto-page-break mode should be on or off.
+	 * @param bool  $autopagebreak Boolean indicating if auto-page-break mode should be on or off.
 	 * @param float $bottommargin bottom margin of the page.
 	 * @public
 	 * @since 3.0.015 (2008-06-06)
@@ -2311,8 +2311,8 @@ class TCPDF {
 
 	/**
 	 * Enable or disable Right-To-Left language mode
-	 * @param Boolean $enable if true enable Right-To-Left language mode.
-	 * @param Boolean $resetx if true reset the X position on direction change.
+	 * @param bool    $enable if true enable Right-To-Left language mode.
+	 * @param bool    $resetx if true reset the X position on direction change.
 	 * @public
 	 * @since 2.0.000 (2008-01-03)
 	 */
@@ -2392,7 +2392,7 @@ class TCPDF {
 	/**
 	 * Return the cell height
 	 * @param int $fontsize Font size in internal units
-	 * @param boolean $padding If true add cell padding
+	 * @param bool    $padding If true add cell padding
 	 * @public
 	 */
 	public function getCellHeight($fontsize, $padding=TRUE) {
@@ -2524,7 +2524,7 @@ class TCPDF {
 	 * @param float $left Left margin.
 	 * @param float $top Top margin.
 	 * @param float $right Right margin. Default value is the left one.
-	 * @param boolean $keepmargins if true overwrites the default page margins
+	 * @param bool    $keepmargins if true overwrites the default page margins
 	 * @public
 	 * @since 1.0
 	 * @see SetLeftMargin(), SetTopMargin(), SetRightMargin(), SetAutoPageBreak()
@@ -2752,7 +2752,7 @@ class TCPDF {
 
 	/**
 	 * Enables or disables the automatic page breaking mode. When enabling, the second parameter is the distance from the bottom of the page that defines the triggering limit. By default, the mode is on and the margin is 2 cm.
-	 * @param boolean $auto Boolean indicating if mode should be on or off.
+	 * @param bool    $auto Boolean indicating if mode should be on or off.
 	 * @param float $margin Distance from the bottom of the page.
 	 * @public
 	 * @since 1.0
@@ -2795,7 +2795,7 @@ class TCPDF {
 	/**
 	 * Activates or deactivates page compression. When activated, the internal representation of each page is compressed, which leads to a compression ratio of about 2 for the resulting document. Compression is on by default.
 	 * Note: the Zlib extension is required for this feature. If not present, compression will be turned off.
-	 * @param boolean $compress Boolean indicating if compression must be enabled.
+	 * @param bool    $compress Boolean indicating if compression must be enabled.
 	 * @public
 	 * @since 1.4
 	 */
@@ -2812,7 +2812,7 @@ class TCPDF {
 
 	/**
 	 * Set flag to force sRGB_IEC61966-2.1 black scaled ICC color profile for the whole document.
-	 * @param boolean $mode If true force sRGB output intent.
+	 * @param bool    $mode If true force sRGB output intent.
 	 * @public
 	 * @since 5.9.121 (2011-09-28)
 	 */
@@ -2823,7 +2823,7 @@ class TCPDF {
 	/**
 	 * Turn on/off Unicode mode for document information dictionary (meta tags).
 	 * This has effect only when unicode mode is set to false.
-	 * @param boolean $unicode if true set the meta information in Unicode
+	 * @param bool    $unicode if true set the meta information in Unicode
 	 * @since 5.9.027 (2010-12-01)
 	 * @public
 	 */
@@ -2961,7 +2961,7 @@ class TCPDF {
 	/**
 	 * Move pointer at the specified document page and update page dimensions.
 	 * @param int $pnum page number (1 ... numpages)
-	 * @param boolean $resetmargins if true reset left, right, top margins and Y position.
+	 * @param bool    $resetmargins if true reset left, right, top margins and Y position.
 	 * @public
 	 * @since 2.1.000 (2008-01-07)
 	 * @see getPage(), lastpage(), getNumPages()
@@ -3008,7 +3008,7 @@ class TCPDF {
 
 	/**
 	 * Reset pointer to the last document page.
-	 * @param boolean $resetmargins if true reset left, right, top margins and Y position.
+	 * @param bool    $resetmargins if true reset left, right, top margins and Y position.
 	 * @public
 	 * @since 2.0.000 (2008-01-04)
 	 * @see setPage(), getPage(), getNumPages()
@@ -3043,7 +3043,7 @@ class TCPDF {
 	 * Adds a new TOC (Table Of Content) page to the document.
 	 * @param string $orientation page orientation.
 	 * @param mixed $format The format used for pages. It can be either: one of the string values specified at getPageSizeFromFormat() or an array of parameters specified at setPageFormat().
-	 * @param boolean $keepmargins if true overwrites the default page margins with the current margins
+	 * @param bool    $keepmargins if true overwrites the default page margins with the current margins
 	 * @public
 	 * @since 5.0.001 (2010-05-06)
 	 * @see AddPage(), startPage(), endPage(), endTOCPage()
@@ -3067,8 +3067,8 @@ class TCPDF {
 	 * The origin of the coordinate system is at the top-left corner (or top-right for RTL) and increasing ordinates go downwards.
 	 * @param string $orientation page orientation. Possible values are (case insensitive):<ul><li>P or PORTRAIT (default)</li><li>L or LANDSCAPE</li></ul>
 	 * @param mixed $format The format used for pages. It can be either: one of the string values specified at getPageSizeFromFormat() or an array of parameters specified at setPageFormat().
-	 * @param boolean $keepmargins if true overwrites the default page margins with the current margins
-	 * @param boolean $tocpage if true set the tocpage state to true (the added page will be used to display Table Of Content).
+	 * @param bool    $keepmargins if true overwrites the default page margins with the current margins
+	 * @param bool    $tocpage if true set the tocpage state to true (the added page will be used to display Table Of Content).
 	 * @public
 	 * @since 1.0
 	 * @see startPage(), endPage(), addTOCPage(), endTOCPage(), getPageSizeFromFormat(), setPageFormat()
@@ -3092,7 +3092,7 @@ class TCPDF {
 
 	/**
 	 * Terminate the current page
-	 * @param boolean $tocpage if true set the tocpage state to false (end the page used to display Table Of Content).
+	 * @param bool    $tocpage if true set the tocpage state to false (end the page used to display Table Of Content).
 	 * @public
 	 * @since 4.2.010 (2008-11-14)
 	 * @see AddPage(), startPage(), addTOCPage(), endTOCPage()
@@ -3118,7 +3118,7 @@ class TCPDF {
 	 * The origin of the coordinate system is at the top-left corner and increasing ordinates go downwards.
 	 * @param string $orientation page orientation. Possible values are (case insensitive):<ul><li>P or PORTRAIT (default)</li><li>L or LANDSCAPE</li></ul>
 	 * @param mixed $format The format used for pages. It can be either: one of the string values specified at getPageSizeFromFormat() or an array of parameters specified at setPageFormat().
-	 * @param boolean $tocpage if true the page is designated to contain the Table-Of-Content.
+	 * @param bool    $tocpage if true the page is designated to contain the Table-Of-Content.
 	 * @since 4.2.010 (2008-11-14)
 	 * @see AddPage(), endPage(), addTOCPage(), endTOCPage(), getPageSizeFromFormat(), setPageFormat()
 	 * @public
@@ -3307,7 +3307,7 @@ class TCPDF {
 	}
 	/**
 	 * Set a flag to print page header.
-	 * @param boolean $val set to true to print the page header (default), false otherwise.
+	 * @param bool    $val set to true to print the page header (default), false otherwise.
 	 * @public
 	 */
 	public function setPrintHeader($val=true) {
@@ -3316,7 +3316,7 @@ class TCPDF {
 
 	/**
 	 * Set a flag to print page footer.
-	 * @param boolean $val set to true to print the page footer (default), false otherwise.
+	 * @param bool    $val set to true to print the page footer (default), false otherwise.
 	 * @public
 	 */
 	public function setPrintFooter($val=true) {
@@ -3351,7 +3351,7 @@ class TCPDF {
 
 	/**
 	 * Set a flag to automatically reset the xobject template used by Header() method at each page.
-	 * @param boolean $val set to true to reset Header xobject template at each page, false otherwise.
+	 * @param bool    $val set to true to reset Header xobject template at each page, false otherwise.
 	 * @public
 	 */
 	public function setHeaderTemplateAutoreset($val=true) {
@@ -3783,7 +3783,7 @@ class TCPDF {
 	 * The method can be called before the first page is created and the value is retained from page to page.
 	 * @param string $type Type of object affected by this color: ('draw', 'fill', 'text').
 	 * @param array $color Array of colors (1=gray, 3=RGB, 4=CMYK or 5=spotcolor=CMYK+name values).
-	 * @param boolean $ret If true do not send the PDF command.
+	 * @param bool    $ret If true do not send the PDF command.
 	 * @return string The PDF command or empty string.
 	 * @public
 	 * @since 3.1.000 (2008-06-11)
@@ -3813,7 +3813,7 @@ class TCPDF {
 	 * It can be expressed in RGB, CMYK or GRAY SCALE components.
 	 * The method can be called before the first page is created and the value is retained from page to page.
 	 * @param array $color Array of colors (1, 3 or 4 values).
-	 * @param boolean $ret If true do not send the PDF command.
+	 * @param bool    $ret If true do not send the PDF command.
 	 * @return string the PDF command
 	 * @public
 	 * @since 3.1.000 (2008-06-11)
@@ -3828,7 +3828,7 @@ class TCPDF {
 	 * It can be expressed in RGB, CMYK or GRAY SCALE components.
 	 * The method can be called before the first page is created and the value is retained from page to page.
 	 * @param array $color Array of colors (1, 3 or 4 values).
-	 * @param boolean $ret If true do not send the PDF command.
+	 * @param bool    $ret If true do not send the PDF command.
 	 * @public
 	 * @since 3.1.000 (2008-6-11)
 	 * @see SetFillColor()
@@ -3841,7 +3841,7 @@ class TCPDF {
 	 * Defines the color used for text. It can be expressed in RGB components or gray scale.
 	 * The method can be called before the first page is created and the value is retained from page to page.
 	 * @param array $color Array of colors (1, 3 or 4 values).
-	 * @param boolean $ret If true do not send the PDF command.
+	 * @param bool    $ret If true do not send the PDF command.
 	 * @public
 	 * @since 3.1.000 (2008-6-11)
 	 * @see SetFillColor()
@@ -3857,7 +3857,7 @@ class TCPDF {
 	 * @param float $col2 GREEN color for RGB (0-255), or MAGENTA color for CMYK (0-100).
 	 * @param float $col3 BLUE color for RGB (0-255), or YELLOW color for CMYK (0-100).
 	 * @param float $col4 KEY (BLACK) color for CMYK (0-100).
-	 * @param boolean $ret If true do not send the command.
+	 * @param bool    $ret If true do not send the command.
 	 * @param string $name spot color name (if any)
 	 * @return string The PDF command or empty string.
 	 * @public
@@ -3946,7 +3946,7 @@ class TCPDF {
 	 * @param float $col2 GREEN color for RGB (0-255), or MAGENTA color for CMYK (0-100).
 	 * @param float $col3 BLUE color for RGB (0-255), or YELLOW color for CMYK (0-100).
 	 * @param float $col4 KEY (BLACK) color for CMYK (0-100).
-	 * @param boolean $ret If true do not send the command.
+	 * @param bool    $ret If true do not send the command.
 	 * @param string $name spot color name (if any)
 	 * @return string the PDF command
 	 * @public
@@ -3963,7 +3963,7 @@ class TCPDF {
 	 * @param float $col2 GREEN color for RGB (0-255), or MAGENTA color for CMYK (0-100).
 	 * @param float $col3 BLUE color for RGB (0-255), or YELLOW color for CMYK (0-100).
 	 * @param float $col4 KEY (BLACK) color for CMYK (0-100).
-	 * @param boolean $ret If true do not send the command.
+	 * @param bool    $ret If true do not send the command.
 	 * @param string $name Spot color name (if any).
 	 * @return string The PDF command.
 	 * @public
@@ -3980,7 +3980,7 @@ class TCPDF {
 	 * @param float $col2 GREEN color for RGB (0-255), or MAGENTA color for CMYK (0-100).
 	 * @param float $col3 BLUE color for RGB (0-255), or YELLOW color for CMYK (0-100).
 	 * @param float $col4 KEY (BLACK) color for CMYK (0-100).
-	 * @param boolean $ret If true do not send the command.
+	 * @param bool    $ret If true do not send the command.
 	 * @param string $name Spot color name (if any).
 	 * @return string Empty string.
 	 * @public
@@ -3997,7 +3997,7 @@ class TCPDF {
 	 * @param string $fontname Family font. It can be either a name defined by AddFont() or one of the standard families. It is also possible to pass an empty string, in that case, the current family is retained.
 	 * @param string $fontstyle Font style. Possible values are (case insensitive):<ul><li>empty string: regular</li><li>B: bold</li><li>I: italic</li><li>U: underline</li><li>D: line-through</li><li>O: overline</li></ul> or any combination. The default value is regular.
 	 * @param float $fontsize Font size in points. The default value is the current size.
-	 * @param boolean $getarray if true returns an array of characters widths, if false returns the total length.
+	 * @param bool    $getarray if true returns an array of characters widths, if false returns the total length.
 	 * @return mixed int total string length or array of characted widths
 	 * @author Nicola Asuni
 	 * @public
@@ -4013,7 +4013,7 @@ class TCPDF {
 	 * @param string $fontname Family font. It can be either a name defined by AddFont() or one of the standard families. It is also possible to pass an empty string, in that case, the current family is retained.
 	 * @param string $fontstyle Font style. Possible values are (case insensitive):<ul><li>empty string: regular</li><li>B: bold</li><li>I: italic</li><li>U: underline</li><li>D: line through</li><li>O: overline</li></ul> or any combination. The default value is regular.
 	 * @param float $fontsize Font size in points. The default value is the current size.
-	 * @param boolean $getarray if true returns an array of characters widths, if false returns the total length.
+	 * @param bool    $getarray if true returns an array of characters widths, if false returns the total length.
 	 * @return mixed int total string length or array of characted widths
 	 * @author Nicola Asuni
 	 * @public
@@ -4052,7 +4052,7 @@ class TCPDF {
 	/**
 	 * Returns the length of the char in user unit for the current font considering current stretching and spacing (tracking).
 	 * @param int $char The char code whose length is to be returned
-	 * @param boolean $notlast If false ignore the font-spacing.
+	 * @param bool    $notlast If false ignore the font-spacing.
 	 * @return float char width
 	 * @author Nicola Asuni
 	 * @public
@@ -4392,7 +4392,7 @@ class TCPDF {
 	 * @param float $size Font size in points. The default value is the current size. If no size has been specified since the beginning of the document, the value taken is 12
 	 * @param string $fontfile The font definition file. By default, the name is built from the family and style, in lower case with no spaces.
 	 * @param mixed $subset if true embedd only a subset of the font (stores only the information related to the used characters); if false embedd full font; if 'default' uses the default value set using setFontSubsetting(). This option is valid only for TrueTypeUnicode fonts. If you want to enable users to change the document, set this parameter to false. If you subset the font, the person who receives your PDF would need to have your same font in order to make changes to your PDF. The file size of the PDF would also be smaller because you are embedding only part of a font.
-	 * @param boolean $out if true output the font size command, otherwise only set the font properties.
+	 * @param bool    $out if true output the font size command, otherwise only set the font properties.
 	 * @author Nicola Asuni
 	 * @public
 	 * @since 1.0
@@ -4421,7 +4421,7 @@ class TCPDF {
 	/**
 	 * Defines the size of the current font.
 	 * @param float $size The font size in points.
-	 * @param boolean $out if true output the font size command, otherwise only set the font properties.
+	 * @param bool    $out if true output the font size command, otherwise only set the font properties.
 	 * @public
 	 * @since 1.0
 	 * @see SetFont()
@@ -4857,18 +4857,18 @@ class TCPDF {
 	 * @param float $y Ordinate of the cell origin
 	 * @param string $txt String to print
 	 * @param int $fstroke outline size in user units (false = disable)
-	 * @param boolean $fclip if true activate clipping mode (you must call StartTransform() before this function and StopTransform() to stop the clipping tranformation).
-	 * @param boolean $ffill if true fills the text
+	 * @param bool    $fclip if true activate clipping mode (you must call StartTransform() before this function and StopTransform() to stop the clipping tranformation).
+	 * @param bool    $ffill if true fills the text
 	 * @param mixed $border Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
 	 * @param int $ln Indicates where the current position should go after the call. Possible values are:<ul><li>0: to the right (or left for RTL languages)</li><li>1: to the beginning of the next line</li><li>2: below</li></ul>Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value: 0.
 	 * @param string $align Allows to center or align the text. Possible values are:<ul><li>L or empty string: left align (default value)</li><li>C: center</li><li>R: right align</li><li>J: justify</li></ul>
-	 * @param boolean $fill Indicates if the cell background must be painted (true) or transparent (false).
+	 * @param bool    $fill Indicates if the cell background must be painted (true) or transparent (false).
 	 * @param mixed $link URL or identifier returned by AddLink().
 	 * @param int $stretch font stretch mode: <ul><li>0 = disabled</li><li>1 = horizontal scaling only if text is larger than cell width</li><li>2 = forced horizontal scaling to fit cell width</li><li>3 = character spacing only if text is larger than cell width</li><li>4 = forced character spacing to fit cell width</li></ul> General font stretching and scaling values will be preserved when possible.
-	 * @param boolean $ignore_min_height if true ignore automatic minimum height value.
+	 * @param bool    $ignore_min_height if true ignore automatic minimum height value.
 	 * @param string $calign cell vertical alignment relative to the specified Y value. Possible values are:<ul><li>T : cell top</li><li>A : font top</li><li>L : font baseline</li><li>D : font bottom</li><li>B : cell bottom</li></ul>
 	 * @param string $valign text vertical alignment inside the cell. Possible values are:<ul><li>T : top</li><li>C : center</li><li>B : bottom</li></ul>
-	 * @param boolean $rtloff if true uses the page top-left corner as origin of axis for $x and $y initial position.
+	 * @param bool    $rtloff if true uses the page top-left corner as origin of axis for $x and $y initial position.
 	 * @public
 	 * @since 1.0
 	 * @see Cell(), Write(), MultiCell(), WriteHTML(), WriteHTMLCell()
@@ -4915,7 +4915,7 @@ class TCPDF {
 	 * Add page if needed.
 	 * @param float $h Cell height. Default value: 0.
 	 * @param mixed $y starting y position, leave empty for current position.
-	 * @param boolean $addpage if true add a page, otherwise only return the true/false state
+	 * @param bool    $addpage if true add a page, otherwise only return the true/false state
 	 * @return boolean true in case of page break, false otherwise.
 	 * @since 3.2.000 (2008-07-01)
 	 * @protected
@@ -4964,10 +4964,10 @@ class TCPDF {
 	 * @param mixed $border Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
 	 * @param int $ln Indicates where the current position should go after the call. Possible values are:<ul><li>0: to the right (or left for RTL languages)</li><li>1: to the beginning of the next line</li><li>2: below</li></ul> Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value: 0.
 	 * @param string $align Allows to center or align the text. Possible values are:<ul><li>L or empty string: left align (default value)</li><li>C: center</li><li>R: right align</li><li>J: justify</li></ul>
-	 * @param boolean $fill Indicates if the cell background must be painted (true) or transparent (false).
+	 * @param bool    $fill Indicates if the cell background must be painted (true) or transparent (false).
 	 * @param mixed $link URL or identifier returned by AddLink().
 	 * @param int $stretch font stretch mode: <ul><li>0 = disabled</li><li>1 = horizontal scaling only if text is larger than cell width</li><li>2 = forced horizontal scaling to fit cell width</li><li>3 = character spacing only if text is larger than cell width</li><li>4 = forced character spacing to fit cell width</li></ul> General font stretching and scaling values will be preserved when possible.
-	 * @param boolean $ignore_min_height if true ignore automatic minimum height value.
+	 * @param bool    $ignore_min_height if true ignore automatic minimum height value.
 	 * @param string $calign cell vertical alignment relative to the specified Y value. Possible values are:<ul><li>T : cell top</li><li>C : center</li><li>B : cell bottom</li><li>A : font top</li><li>L : font baseline</li><li>D : font bottom</li></ul>
 	 * @param string $valign text vertical alignment inside the cell. Possible values are:<ul><li>T : top</li><li>C : center</li><li>B : bottom</li></ul>
 	 * @public
@@ -5032,10 +5032,10 @@ class TCPDF {
 	 * @param mixed $border Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
 	 * @param int $ln Indicates where the current position should go after the call. Possible values are:<ul><li>0: to the right (or left for RTL languages)</li><li>1: to the beginning of the next line</li><li>2: below</li></ul>Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value: 0.
 	 * @param string $align Allows to center or align the text. Possible values are:<ul><li>L or empty string: left align (default value)</li><li>C: center</li><li>R: right align</li><li>J: justify</li></ul>
-	 * @param boolean $fill Indicates if the cell background must be painted (true) or transparent (false).
+	 * @param bool    $fill Indicates if the cell background must be painted (true) or transparent (false).
 	 * @param mixed $link URL or identifier returned by AddLink().
 	 * @param int $stretch font stretch mode: <ul><li>0 = disabled</li><li>1 = horizontal scaling only if text is larger than cell width</li><li>2 = forced horizontal scaling to fit cell width</li><li>3 = character spacing only if text is larger than cell width</li><li>4 = forced character spacing to fit cell width</li></ul> General font stretching and scaling values will be preserved when possible.
-	 * @param boolean $ignore_min_height if true ignore automatic minimum height value.
+	 * @param bool    $ignore_min_height if true ignore automatic minimum height value.
 	 * @param string $calign cell vertical alignment relative to the specified Y value. Possible values are:<ul><li>T : cell top</li><li>C : center</li><li>B : cell bottom</li><li>A : font top</li><li>L : font baseline</li><li>D : font bottom</li></ul>
 	 * @param string $valign text vertical alignment inside the cell. Possible values are:<ul><li>T : top</li><li>M : middle</li><li>B : bottom</li></ul>
 	 * @return string containing cell code
@@ -5700,17 +5700,17 @@ class TCPDF {
 	 * @param string $txt String to print
 	 * @param mixed $border Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
 	 * @param string $align Allows to center or align the text. Possible values are:<ul><li>L or empty string: left align</li><li>C: center</li><li>R: right align</li><li>J: justification (default value when $ishtml=false)</li></ul>
-	 * @param boolean $fill Indicates if the cell background must be painted (true) or transparent (false).
+	 * @param bool    $fill Indicates if the cell background must be painted (true) or transparent (false).
 	 * @param int $ln Indicates where the current position should go after the call. Possible values are:<ul><li>0: to the right</li><li>1: to the beginning of the next line [DEFAULT]</li><li>2: below</li></ul>
 	 * @param float $x x position in user units
 	 * @param float $y y position in user units
-	 * @param boolean $reseth if true reset the last cell height (default true).
+	 * @param bool    $reseth if true reset the last cell height (default true).
 	 * @param int $stretch font stretch mode: <ul><li>0 = disabled</li><li>1 = horizontal scaling only if text is larger than cell width</li><li>2 = forced horizontal scaling to fit cell width</li><li>3 = character spacing only if text is larger than cell width</li><li>4 = forced character spacing to fit cell width</li></ul> General font stretching and scaling values will be preserved when possible.
-	 * @param boolean $ishtml INTERNAL USE ONLY -- set to true if $txt is HTML content (default = false). Never set this parameter to true, use instead writeHTMLCell() or writeHTML() methods.
-	 * @param boolean $autopadding if true, uses internal padding and automatically adjust it to account for line width.
+	 * @param bool    $ishtml INTERNAL USE ONLY -- set to true if $txt is HTML content (default = false). Never set this parameter to true, use instead writeHTMLCell() or writeHTML() methods.
+	 * @param bool    $autopadding if true, uses internal padding and automatically adjust it to account for line width.
 	 * @param float $maxh maximum height. It should be >= $h and less then remaining space to the bottom of the page, or 0 for disable this feature. This feature works only when $ishtml=false.
 	 * @param string $valign Vertical alignment of text (requires $maxh = $h > 0). Possible values are:<ul><li>T: TOP</li><li>M: middle</li><li>B: bottom</li></ul>. This feature works only when $ishtml=false and the cell must fit in a single page.
-	 * @param boolean $fitcell if true attempt to fit all the text within the cell by reducing the font size (do not work in HTML mode). $maxh must be greater than 0 and equal to $h.
+	 * @param bool    $fitcell if true attempt to fit all the text within the cell by reducing the font size (do not work in HTML mode). $maxh must be greater than 0 and equal to $h.
 	 * @return int Return the number of cells or 1 for html mode.
 	 * @public
 	 * @since 1.3
@@ -6075,8 +6075,8 @@ class TCPDF {
 	 * This method return the estimated number of lines for print a simple text string using Multicell() method.
 	 * @param string $txt String for calculating his height
 	 * @param float $w Width of cells. If 0, they extend up to the right margin of the page.
-	 * @param boolean $reseth if true reset the last cell height (default false).
-	 * @param boolean $autopadding if true, uses internal padding and automatically adjust it to account for line width (default true).
+	 * @param bool    $reseth if true reset the last cell height (default false).
+	 * @param bool    $autopadding if true, uses internal padding and automatically adjust it to account for line width (default true).
 	 * @param float $cellpadding Internal cell padding, if empty uses default cell padding.
 	 * @param mixed $border Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
 	 * @return float Return the minimal height needed for multicell method for printing the $txt param.
@@ -6196,8 +6196,8 @@ class TCPDF {
 	 *
 	 * @param float $w Width of cells. If 0, they extend up to the right margin of the page.
 	 * @param string $txt String for calculating his height
-	 * @param boolean $reseth if true reset the last cell height (default false).
-	 * @param boolean $autopadding if true, uses internal padding and automatically adjust it to account for line width (default true).
+	 * @param bool    $reseth if true reset the last cell height (default false).
+	 * @param bool    $autopadding if true, uses internal padding and automatically adjust it to account for line width (default true).
 	 * @param float $cellpadding Internal cell padding, if empty uses default cell padding.
 	 * @param mixed $border Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
 	 * @return float Return the minimal height needed for multicell method for printing the $txt param.
@@ -6224,12 +6224,12 @@ class TCPDF {
 	 * @param float $h Line height
 	 * @param string $txt String to print
 	 * @param mixed $link URL or identifier returned by AddLink()
-	 * @param boolean $fill Indicates if the cell background must be painted (true) or transparent (false).
+	 * @param bool    $fill Indicates if the cell background must be painted (true) or transparent (false).
 	 * @param string $align Allows to center or align the text. Possible values are:<ul><li>L or empty string: left align (default value)</li><li>C: center</li><li>R: right align</li><li>J: justify</li></ul>
-	 * @param boolean $ln if true set cursor at the bottom of the line, otherwise set cursor at the top of the line.
+	 * @param bool    $ln if true set cursor at the bottom of the line, otherwise set cursor at the top of the line.
 	 * @param int $stretch font stretch mode: <ul><li>0 = disabled</li><li>1 = horizontal scaling only if text is larger than cell width</li><li>2 = forced horizontal scaling to fit cell width</li><li>3 = character spacing only if text is larger than cell width</li><li>4 = forced character spacing to fit cell width</li></ul> General font stretching and scaling values will be preserved when possible.
-	 * @param boolean $firstline if true prints only the first line and return the remaining string.
-	 * @param boolean $firstblock if true the string is the starting of a line.
+	 * @param bool    $firstline if true prints only the first line and return the remaining string.
+	 * @param bool    $firstblock if true the string is the starting of a line.
 	 * @param float $maxh maximum height. It should be >= $h and less then remaining space to the bottom of the page, or 0 for disable this feature.
 	 * @param float $wadj first line width will be reduced by this amount (used in HTML mode).
 	 * @param array $margin margin array of the parent container
@@ -6683,7 +6683,7 @@ class TCPDF {
 	 * @param float $h height
 	 * @param float $x X coordinate
 	 * @param float $y Y coodiante
-	 * @param boolean $fitonpage if true the block is resized to not exceed page dimensions.
+	 * @param bool    $fitonpage if true the block is resized to not exceed page dimensions.
 	 * @return array array($w, $h, $x, $y)
 	 * @protected
 	 * @since 5.5.009 (2010-07-05)
@@ -6771,13 +6771,13 @@ class TCPDF {
 	 * @param mixed $resize If true resize (reduce) the image to fit $w and $h (requires GD or ImageMagick library); if false do not resize; if 2 force resize in all cases (upscaling and downscaling).
 	 * @param int $dpi dot-per-inch resolution used on resize
 	 * @param string $palign Allows to center or align the image on the current line. Possible values are:<ul><li>L : left align</li><li>C : center</li><li>R : right align</li><li>'' : empty string : left for LTR or right for RTL</li></ul>
-	 * @param boolean $ismask true if this image is a mask, false otherwise
+	 * @param bool    $ismask true if this image is a mask, false otherwise
 	 * @param mixed $imgmask image object returned by this function or false
 	 * @param mixed $border Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
 	 * @param mixed $fitbox If not false scale image dimensions proportionally to fit within the ($w, $h) box. $fitbox can be true or a 2 characters string indicating the image alignment inside the box. The first character indicate the horizontal alignment (L = left, C = center, R = right) the second character indicate the vertical algnment (T = top, M = middle, B = bottom).
-	 * @param boolean $hidden If true do not display the image.
-	 * @param boolean $fitonpage If true the image is resized to not exceed page dimensions.
-	 * @param boolean $alt If true the image will be added as alternative and not directly printed (the ID of the image will be returned).
+	 * @param bool    $hidden If true do not display the image.
+	 * @param bool    $fitonpage If true the image is resized to not exceed page dimensions.
+	 * @param bool    $alt If true the image will be added as alternative and not directly printed (the ID of the image will be returned).
 	 * @param array $altimgs Array of alternate images IDs. Each alternative image must be an array with two values: an integer representing the image ID (the value returned by the Image method) and a boolean value to indicate if the image is the default for printing.
 	 * @return image information
 	 * @public
@@ -7182,7 +7182,7 @@ class TCPDF {
 	 * @param string $type Image format. Possible values are (case insensitive): JPEG and PNG (whitout GD library) and all images supported by GD: GD, GD2, GD2PART, GIF, JPEG, PNG, BMP, XBM, XPM;. If not specified, the type is inferred from the file extension.
 	 * @param mixed $link URL or identifier returned by AddLink().
 	 * @param string $align Indicates the alignment of the pointer next to image insertion relative to image height. The value can be:<ul><li>T: top-right for LTR or top-left for RTL</li><li>M: middle-right for LTR or middle-left for RTL</li><li>B: bottom-right for LTR or bottom-left for RTL</li><li>N: next line</li></ul>
-	 * @param boolean $resize If true resize (reduce) the image to fit $w and $h (requires GD library).
+	 * @param bool    $resize If true resize (reduce) the image to fit $w and $h (requires GD library).
 	 * @param int $dpi dot-per-inch resolution used on resize
 	 * @param string $palign Allows to center or align the image on the current line. Possible values are:<ul><li>L : left align</li><li>C : center</li><li>R : right align</li><li>'' : empty string : left for LTR or right for RTL</li></ul>
 	 * @param string $filehash File hash used to build unique file names.
@@ -7305,7 +7305,7 @@ class TCPDF {
 	 * Performs a line break.
 	 * The current abscissa goes back to the left margin and the ordinate increases by the amount passed in parameter.
 	 * @param float $h The height of the break. By default, the value equals the height of the last printed cell.
-	 * @param boolean $cell if true add the current left (or right o for RTL) padding to the X coordinate
+	 * @param bool    $cell if true add the current left (or right o for RTL) padding to the X coordinate
 	 * @public
 	 * @since 1.0
 	 * @see Cell()
@@ -7379,7 +7379,7 @@ class TCPDF {
 	 * Defines the abscissa of the current position.
 	 * If the passed value is negative, it is relative to the right of the page (or left if language is RTL).
 	 * @param float $x The value of the abscissa in user units.
-	 * @param boolean $rtloff if true always uses the page top-left corner as origin of axis.
+	 * @param bool    $rtloff if true always uses the page top-left corner as origin of axis.
 	 * @public
 	 * @since 1.2
 	 * @see GetX(), GetY(), SetY(), SetXY()
@@ -7412,7 +7412,7 @@ class TCPDF {
 	 * If the passed value is negative, it is relative to the bottom of the page.
 	 * @param float $y The value of the ordinate in user units.
 	 * @param bool $resetx if true (default) reset the X position.
-	 * @param boolean $rtloff if true always uses the page top-left corner as origin of axis.
+	 * @param bool    $rtloff if true always uses the page top-left corner as origin of axis.
 	 * @public
 	 * @since 1.0
 	 * @see GetX(), GetY(), SetY(), SetXY()
@@ -7445,7 +7445,7 @@ class TCPDF {
 	 * If the passed values are negative, they are relative respectively to the right and bottom of the page.
 	 * @param float $x The value of the abscissa.
 	 * @param float $y The value of the ordinate.
-	 * @param boolean $rtloff if true always uses the page top-left corner as origin of axis.
+	 * @param bool    $rtloff if true always uses the page top-left corner as origin of axis.
 	 * @public
 	 * @since 1.2
 	 * @see SetX(), SetY()
@@ -7695,8 +7695,8 @@ class TCPDF {
 	protected static $cleaned_ids = array();
 	/**
 	 * Unset all class variables except the following critical variables.
-	 * @param boolean $destroyall if true destroys all class variables, otherwise preserves critical variables.
-	 * @param boolean $preserve_objcopy if true preserves the objcopy variable
+	 * @param bool    $destroyall if true destroys all class variables, otherwise preserves critical variables.
+	 * @param bool    $preserve_objcopy if true preserves the objcopy variable
 	 * @public
 	 * @since 4.5.016 (2009-02-24)
 	 */
@@ -10352,11 +10352,11 @@ class TCPDF {
 	 * Output anchor link.
 	 * @param string $url link URL or internal link (i.e.: &lt;a href="#23,4.5"&gt;link to page 23 at 4.5 Y position&lt;/a&gt;)
 	 * @param string $name link name
-	 * @param boolean $fill Indicates if the cell background must be painted (true) or transparent (false).
-	 * @param boolean $firstline if true prints only the first line and return the remaining string.
+	 * @param bool    $fill Indicates if the cell background must be painted (true) or transparent (false).
+	 * @param bool    $firstline if true prints only the first line and return the remaining string.
 	 * @param array $color array of RGB text color
 	 * @param string $style font style (U, D, B, I)
-	 * @param boolean $firstblock if true the string is the starting of a line.
+	 * @param bool    $firstblock if true the string is the starting of a line.
 	 * @return the number of cells used or the remaining text if $firstline = true;
 	 * @public
 	 */
@@ -11303,7 +11303,7 @@ class TCPDF {
 	 * the point at which the pattern starts.</li>
 	 *	 <li>color (array): Draw color. Format: array(GREY) or array(R,G,B) or array(C,M,Y,K) or array(C,M,Y,K,SpotColorName).</li>
 	 * </ul>
-	 * @param boolean $ret if true do not send the command.
+	 * @param bool    $ret if true do not send the command.
 	 * @return string the PDF command
 	 * @public
 	 * @since 2.1.000 (2008-01-08)
@@ -11633,7 +11633,7 @@ class TCPDF {
 	 * @param string $style Style of rendering. See the getPathPaintOperator() function for more information.
 	 * @param array $line_style Line style of ellipse. Array like for SetLineStyle(). Default value: default line style (empty array).
 	 * @param array $fill_color Fill color. Format: array(GREY) or array(R,G,B) or array(C,M,Y,K) or array(C,M,Y,K,SpotColorName). Default value: default color (empty array).
-	 * @param integer $nc Number of curves used to draw a 90 degrees portion of ellipse.
+	 * @param int   $nc Number of curves used to draw a 90 degrees portion of ellipse.
 	 * @author Nicola Asuni
 	 * @public
 	 * @since 2.1.000 (2008-01-08)
@@ -11669,11 +11669,11 @@ class TCPDF {
 	 * @param float $xang Angle between the X-axis and the major axis of the ellipse. Default value: 0.
 	 * @param float $angs Angle start of draw line. Default value: 0.
 	 * @param float $angf Angle finish of draw line. Default value: 360.
-	 * @param boolean $pie if true do not mark the border point (used to draw pie sectors).
-	 * @param integer $nc Number of curves used to draw a 90 degrees portion of ellipse.
-	 * @param boolean $startpoint if true output a starting point.
-	 * @param boolean $ccw if true draws in counter-clockwise.
-	 * @param boolean $svg if true the angles are in svg mode (already calculated).
+	 * @param bool  $pie if true do not mark the border point (used to draw pie sectors).
+	 * @param int   $nc Number of curves used to draw a 90 degrees portion of ellipse.
+	 * @param bool  $startpoint if true output a starting point.
+	 * @param bool  $ccw if true draws in counter-clockwise.
+	 * @param bool  $svg if true the angles are in svg mode (already calculated).
 	 * @return array bounding box coordinates (x min, y min, x max, y max)
 	 * @author Nicola Asuni
 	 * @protected
@@ -11806,7 +11806,7 @@ class TCPDF {
 	 * @param string $style Style of rendering. See the getPathPaintOperator() function for more information.
 	 * @param array $line_style Line style of circle. Array like for SetLineStyle(). Default value: default line style (empty array).
 	 * @param array $fill_color Fill color. Format: array(red, green, blue). Default value: default color (empty array).
-	 * @param integer $nc Number of curves used to draw a 90 degrees portion of circle.
+	 * @param int     $nc Number of curves used to draw a 90 degrees portion of circle.
 	 * @public
 	 * @since 2.1.000 (2008-01-08)
 	 */
@@ -11843,7 +11843,7 @@ class TCPDF {
 	 * </ul>
 	 * If a key is not present or is null, not draws the line. Default value is default line style (empty array).
 	 * @param array $fill_color Fill color. Format: array(GREY) or array(R,G,B) or array(C,M,Y,K) or array(C,M,Y,K,SpotColorName). Default value: default color (empty array).
-	 * @param boolean $closed if true the polygon is closes, otherwise will remain open
+	 * @param bool    $closed if true the polygon is closes, otherwise will remain open
 	 * @public
 	 * @since 2.1.000 (2008-01-08)
 	 */
@@ -11924,9 +11924,9 @@ class TCPDF {
 	 * @param float $x0 Abscissa of center point.
 	 * @param float $y0 Ordinate of center point.
 	 * @param float $r Radius of inscribed circle.
-	 * @param integer $ns Number of sides.
+	 * @param int     $ns Number of sides.
 	 * @param float $angle Angle oriented (anti-clockwise). Default value: 0.
-	 * @param boolean $draw_circle Draw inscribed circle or not. Default value: false.
+	 * @param bool    $draw_circle Draw inscribed circle or not. Default value: false.
 	 * @param string $style Style of rendering. See the getPathPaintOperator() function for more information.
 	 * @param array $line_style Line style of polygon sides. Array with keys among the following:
 	 * <ul>
@@ -11970,10 +11970,10 @@ class TCPDF {
 	 * @param float $x0 Abscissa of center point.
 	 * @param float $y0 Ordinate of center point.
 	 * @param float $r Radius of inscribed circle.
-	 * @param integer $nv Number of vertices.
-	 * @param integer $ng Number of gap (if ($ng % $nv = 1) then is a regular polygon).
+	 * @param int     $nv Number of vertices.
+	 * @param int     $ng Number of gap (if ($ng % $nv = 1) then is a regular polygon).
 	 * @param float $angle Angle oriented (anti-clockwise). Default value: 0.
-	 * @param boolean $draw_circle Draw inscribed circle or not. Default value is false.
+	 * @param bool    $draw_circle Draw inscribed circle or not. Default value is false.
 	 * @param string $style Style of rendering. See the getPathPaintOperator() function for more information.
 	 * @param array $line_style Line style of polygon sides. Array with keys among the following:
 	 * <ul>
@@ -12487,7 +12487,7 @@ class TCPDF {
 	/**
 	 * Adds a javascript object and return object ID
 	 * @param string $script Javascript code
-	 * @param boolean $onload if true executes this object when opening the document
+	 * @param bool    $onload if true executes this object when opening the document
 	 * @return int internal object ID
 	 * @public
 	 * @author Nicola Asuni
@@ -12627,7 +12627,7 @@ class TCPDF {
 	 * @param array $opt annotation parameters. Possible values are described on official PDF32000_2008 reference.
 	 * @param float $x Abscissa of the upper-left corner of the rectangle
 	 * @param float $y Ordinate of the upper-left corner of the rectangle
-	 * @param boolean $js if true put the field using JavaScript (requires Acrobat Writer to be rendered).
+	 * @param bool    $js if true put the field using JavaScript (requires Acrobat Writer to be rendered).
 	 * @public
 	 * @author Nicola Asuni
 	 * @since 4.8.000 (2009-09-07)
@@ -12745,10 +12745,10 @@ class TCPDF {
 	 * @param array $prop Javascript field properties. Possible values are described on official Javascript for Acrobat API reference.
 	 * @param array $opt Annotation parameters. Possible values are described on official PDF32000_2008 reference.
 	 * @param string $onvalue Value to be returned if selected.
-	 * @param boolean $checked Define the initial state.
+	 * @param bool    $checked Define the initial state.
 	 * @param float $x Abscissa of the upper-left corner of the rectangle
 	 * @param float $y Ordinate of the upper-left corner of the rectangle
-	 * @param boolean $js If true put the field using JavaScript (requires Acrobat Writer to be rendered).
+	 * @param bool    $js If true put the field using JavaScript (requires Acrobat Writer to be rendered).
 	 * @public
 	 * @author Nicola Asuni
 	 * @since 4.8.000 (2009-09-07)
@@ -12851,7 +12851,7 @@ class TCPDF {
 	 * @param array $opt annotation parameters. Possible values are described on official PDF32000_2008 reference.
 	 * @param float $x Abscissa of the upper-left corner of the rectangle
 	 * @param float $y Ordinate of the upper-left corner of the rectangle
-	 * @param boolean $js if true put the field using JavaScript (requires Acrobat Writer to be rendered).
+	 * @param bool    $js if true put the field using JavaScript (requires Acrobat Writer to be rendered).
 	 * @public
 	 * @author Nicola Asuni
 	 * @since 4.8.000 (2009-09-07)
@@ -12937,7 +12937,7 @@ class TCPDF {
 	 * @param array $opt annotation parameters. Possible values are described on official PDF32000_2008 reference.
 	 * @param float $x Abscissa of the upper-left corner of the rectangle
 	 * @param float $y Ordinate of the upper-left corner of the rectangle
-	 * @param boolean $js if true put the field using JavaScript (requires Acrobat Writer to be rendered).
+	 * @param bool    $js if true put the field using JavaScript (requires Acrobat Writer to be rendered).
 	 * @public
 	 * @author Nicola Asuni
 	 * @since 4.8.000 (2009-09-07)
@@ -13018,13 +13018,13 @@ class TCPDF {
 	 * Creates a CheckBox field
 	 * @param string $name field name
 	 * @param int $w width
-	 * @param boolean $checked define the initial state.
+	 * @param bool    $checked define the initial state.
 	 * @param array $prop javascript field properties. Possible values are described on official Javascript for Acrobat API reference.
 	 * @param array $opt annotation parameters. Possible values are described on official PDF32000_2008 reference.
 	 * @param string $onvalue value to be returned if selected.
 	 * @param float $x Abscissa of the upper-left corner of the rectangle
 	 * @param float $y Ordinate of the upper-left corner of the rectangle
-	 * @param boolean $js if true put the field using JavaScript (requires Acrobat Writer to be rendered).
+	 * @param bool    $js if true put the field using JavaScript (requires Acrobat Writer to be rendered).
 	 * @public
 	 * @author Nicola Asuni
 	 * @since 4.8.000 (2009-09-07)
@@ -13104,7 +13104,7 @@ class TCPDF {
 	 * @param array $opt annotation parameters. Possible values are described on official PDF32000_2008 reference.
 	 * @param float $x Abscissa of the upper-left corner of the rectangle
 	 * @param float $y Ordinate of the upper-left corner of the rectangle
-	 * @param boolean $js if true put the field using JavaScript (requires Acrobat Writer to be rendered).
+	 * @param bool    $js if true put the field using JavaScript (requires Acrobat Writer to be rendered).
 	 * @public
 	 * @author Nicola Asuni
 	 * @since 4.8.000 (2009-09-07)
@@ -13352,7 +13352,7 @@ class TCPDF {
 	 * WARNING: This is experimental and currently do not work.
 	 * Check the PDF Reference 8.7.1 Transform Methods,
 	 * Table 8.105 Entries in the UR transform parameters dictionary
-	 * @param boolean $enable if true enable user's rights on PDF reader
+	 * @param bool    $enable if true enable user's rights on PDF reader
 	 * @param string $document Names specifying additional document-wide usage rights for the document. The only defined value is "/FullSave", which permits a user to save the document along with modified form and/or annotation data.
 	 * @param string $annots Names specifying additional annotation-related usage rights for the document. Valid names in PDF 1.5 and later are /Create/Delete/Modify/Copy/Import/Export, which permit the user to perform the named operation on annotations.
 	 * @param string $form Names specifying additional form-field-related usage rights for the document. Valid names are: /Add/Delete/FillIn/Import/Export/SubmitStandalone/SpawnTemplate
@@ -13707,8 +13707,8 @@ class TCPDF {
 	 * Start a new pdf layer.
 	 * @param string $name Layer name (only a-z letters and numbers). Leave empty for automatic name.
 	 * @param $print (boolean|null) Set to TRUE to print this layer, FALSE to not print and NULL to not set this option
-	 * @param boolean $view Set to true to view this layer.
-	 * @param boolean $lock If true lock the layer
+	 * @param bool    $view Set to true to view this layer.
+	 * @param bool    $lock If true lock the layer
 	 * @public
 	 * @since 5.9.102 (2011-07-13)
 	 */
@@ -13851,9 +13851,9 @@ class TCPDF {
 	/**
 	 * Set overprint mode for stroking (OP) and non-stroking (op) painting operations.
 	 * (Check the "Entries in a Graphics State Parameter Dictionary" on PDF 32000-1:2008).
-	 * @param boolean $stroking If true apply overprint for stroking operations.
-	 * @param boolean $nonstroking If true apply overprint for painting operations other than stroking.
-	 * @param integer $mode Overprint mode: (0 = each source colour component value replaces the value previously painted for the corresponding device colorant; 1 = a tint value of 0.0 for a source colour component shall leave the corresponding component of the previously painted colour unchanged).
+	 * @param bool $stroking If true apply overprint for stroking operations.
+	 * @param bool $nonstroking If true apply overprint for painting operations other than stroking.
+	 * @param int  $mode Overprint mode: (0 = each source colour component value replaces the value previously painted for the corresponding device colorant; 1 = a tint value of 0.0 for a source colour component shall leave the corresponding component of the previously painted colour unchanged).
 	 * @public
 	 * @since 5.9.152 (2012-03-23)
 	 */
@@ -13892,7 +13892,7 @@ class TCPDF {
 	 * @param float $stroking Alpha value for stroking operations: real value from 0 (transparent) to 1 (opaque).
 	 * @param string $bm blend mode, one of the following: Normal, Multiply, Screen, Overlay, Darken, Lighten, ColorDodge, ColorBurn, HardLight, SoftLight, Difference, Exclusion, Hue, Saturation, Color, Luminosity
 	 * @param float $nonstroking Alpha value for non-stroking operations: real value from 0 (transparent) to 1 (opaque).
-	 * @param boolean $ais
+	 * @param bool    $ais
 	 * @public
 	 * @since 3.0.000 (2008-03-27)
 	 */
@@ -14008,8 +14008,8 @@ class TCPDF {
 	 * @param float $y ordinate of the top left corner of the rectangle.
 	 * @param float $w width of the rectangle.
 	 * @param float $h height of the rectangle.
-	 * @param boolean $transition if true prints tcolor transitions to white.
-	 * @param boolean $vertical if true prints bar vertically.
+	 * @param bool    $transition if true prints tcolor transitions to white.
+	 * @param bool    $vertical if true prints bar vertically.
 	 * @param string $colors colors to print separated by comma. Valid values are: A,W,R,G,B,C,M,Y,K,RGB,CMYK,ALL,ALLSPOT,<SPOT_COLOR_NAME>. Where: A = grayscale black, W = grayscale white, R = RGB red, G RGB green, B RGB blue, C = CMYK cyan, M = CMYK magenta, Y = CMYK yellow, K = CMYK key/black, RGB = RGB registration color, CMYK = CMYK registration color, ALL = Spot registration color, ALLSPOT = print all defined spot colors, <SPOT_COLOR_NAME> = name of the spot color to print.
 	 * @author Nicola Asuni
 	 * @since 4.9.000 (2010-03-26)
@@ -14219,7 +14219,7 @@ class TCPDF {
 	 * @param float $x abscissa of the registration mark center.
 	 * @param float $y ordinate of the registration mark center.
 	 * @param float $r radius of the crop mark.
-	 * @param boolean $double if true print two concentric crop marks.
+	 * @param bool    $double if true print two concentric crop marks.
 	 * @param array $cola crop mark color (default spot registration color 'All').
 	 * @param array $colb second crop mark color (default spot registration color 'None').
 	 * @author Nicola Asuni
@@ -14333,7 +14333,7 @@ class TCPDF {
 	 * @param array $coords <ul><li>for one patch mesh: array(float x1, float y1, .... float x12, float y12): 12 pairs of coordinates (normally from 0 to 1) which specify the Bezier control points that define the patch. First pair is the lower left edge point, next is its right control point (control point 2). Then the other points are defined in the order: control point 1, edge point, control point 2 going counter-clockwise around the patch. Last (x12, y12) is the first edge point's left control point (control point 1).</li><li>for two or more patch meshes: array[number of patches]: arrays with the following keys for each patch: f: where to put that patch (0 = first patch, 1, 2, 3 = right, top and left of precedent patch - I didn't figure this out completely - just try and error ;-) points: 12 pairs of coordinates of the Bezier control points as above for the first patch, 8 pairs of coordinates for the following patches, ignoring the coordinates already defined by the precedent patch (I also didn't figure out the order of these - also: try and see what's happening) colors: must be 4 colors for the first patch, 2 colors for the following patches</li></ul>
 	 * @param array $coords_min minimum value used by the coordinates. If a coordinate's value is smaller than this it will be cut to coords_min. default: 0
 	 * @param array $coords_max maximum value used by the coordinates. If a coordinate's value is greater than this it will be cut to coords_max. default: 1
-	 * @param boolean $antialias A flag indicating whether to filter the shading function to prevent aliasing artifacts.
+	 * @param bool    $antialias A flag indicating whether to filter the shading function to prevent aliasing artifacts.
 	 * @author Andreas W\FCrmser, Nicola Asuni
 	 * @since 3.1.000 (2008-06-09)
 	 * @public
@@ -14452,7 +14452,7 @@ class TCPDF {
 	 * @param array $coords array of coordinates.
 	 * @param array $stops array gradient color components: color = array of GRAY, RGB or CMYK color components; offset = (0 to 1) represents a location along the gradient vector; exponent = exponent of the exponential interpolation function (default = 1).
 	 * @param array $background An array of colour components appropriate to the colour space, specifying a single background colour value.
-	 * @param boolean $antialias A flag indicating whether to filter the shading function to prevent aliasing artifacts.
+	 * @param bool    $antialias A flag indicating whether to filter the shading function to prevent aliasing artifacts.
 	 * @author Nicola Asuni
 	 * @since 3.1.000 (2008-06-09)
 	 * @public
@@ -14772,7 +14772,7 @@ class TCPDF {
 	 * @param string $style Style of rendering. See the getPathPaintOperator() function for more information.
 	 * @param float $cw indicates whether to go clockwise.
 	 * @param float $o origin of angles (0 for 3 o'clock, 90 for noon, 180 for 9 o'clock, 270 for 6 o'clock).
-	 * @param integer $nc Number of curves used to draw a 90 degrees portion of arc.
+	 * @param int   $nc Number of curves used to draw a 90 degrees portion of arc.
 	 * @author Maxime Delorme, Nicola Asuni
 	 * @since 3.1.000 (2008-06-09)
 	 * @public
@@ -14811,12 +14811,12 @@ class TCPDF {
 	 * @param float $w Width of the image in the page. If not specified or equal to zero, it is automatically calculated.
 	 * @param float $h Height of the image in the page. If not specified or equal to zero, it is automatically calculated.
 	 * @param mixed $link URL or identifier returned by AddLink().
-	 * @param boolean $useBoundingBox specifies whether to position the bounding box (true) or the complete canvas (false) at location (x,y). Default value is true.
+	 * @param bool    $useBoundingBox specifies whether to position the bounding box (true) or the complete canvas (false) at location (x,y). Default value is true.
 	 * @param string $align Indicates the alignment of the pointer next to image insertion relative to image height. The value can be:<ul><li>T: top-right for LTR or top-left for RTL</li><li>M: middle-right for LTR or middle-left for RTL</li><li>B: bottom-right for LTR or bottom-left for RTL</li><li>N: next line</li></ul>
 	 * @param string $palign Allows to center or align the image on the current line. Possible values are:<ul><li>L : left align</li><li>C : center</li><li>R : right align</li><li>'' : empty string : left for LTR or right for RTL</li></ul>
 	 * @param mixed $border Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
-	 * @param boolean $fitonpage if true the image is resized to not exceed page dimensions.
-	 * @param boolean $fixoutvals if true remove values outside the bounding box.
+	 * @param bool    $fitonpage if true the image is resized to not exceed page dimensions.
+	 * @param bool    $fixoutvals if true remove values outside the bounding box.
 	 * @author Valentin Schmidt, Nicola Asuni
 	 * @since 3.1.000 (2008-06-09)
 	 * @public
@@ -15495,7 +15495,7 @@ class TCPDF {
 	 * <li>mixed $style['bgcolor'] color array for background or false for transparent</li>
 	 * <li>string $style['position'] barcode position on the page: L = left margin; C = center; R = right margin; S = stretch</li>
 	 * @param string $align Indicates the alignment of the pointer next to barcode insertion relative to barcode height. The value can be:<ul><li>T: top-right for LTR or top-left for RTL</li><li>M: middle-right for LTR or middle-left for RTL</li><li>B: bottom-right for LTR or bottom-left for RTL</li><li>N: next line</li></ul>
-	 * @param boolean $distort if true distort the barcode to fit width and height, otherwise preserve aspect ratio
+	 * @param bool    $distort if true distort the barcode to fit width and height, otherwise preserve aspect ratio
 	 * @author Nicola Asuni
 	 * @since 4.5.037 (2009-04-07)
 	 * @public
@@ -17080,10 +17080,10 @@ class TCPDF {
 	 * @param mixed $border Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
 	 * @param int $ln Indicates where the current position should go after the call. Possible values are:<ul><li>0: to the right (or left for RTL language)</li><li>1: to the beginning of the next line</li><li>2: below</li></ul>
 Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value: 0.
-	 * @param boolean $fill Indicates if the cell background must be painted (true) or transparent (false).
-	 * @param boolean $reseth if true reset the last cell height (default true).
+	 * @param bool    $fill Indicates if the cell background must be painted (true) or transparent (false).
+	 * @param bool    $reseth if true reset the last cell height (default true).
 	 * @param string $align Allows to center or align the text. Possible values are:<ul><li>L : left align</li><li>C : center</li><li>R : right align</li><li>'' : empty string : left for LTR or right for RTL</li></ul>
-	 * @param boolean $autopadding if true, uses internal padding and automatically adjust it to account for line width.
+	 * @param bool    $autopadding if true, uses internal padding and automatically adjust it to account for line width.
 	 * @see Multicell(), writeHTML()
 	 * @public
 	 */
@@ -17097,10 +17097,10 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * Supported tags are: a, b, blockquote, br, dd, del, div, dl, dt, em, font, h1, h2, h3, h4, h5, h6, hr, i, img, li, ol, p, pre, small, span, strong, sub, sup, table, tcpdf, td, th, thead, tr, tt, u, ul
 	 * NOTE: all the HTML attributes must be enclosed in double-quote.
 	 * @param string $html text to display
-	 * @param boolean $ln if true add a new line after text (default = true)
-	 * @param boolean $fill Indicates if the background must be painted (true) or transparent (false).
-	 * @param boolean $reseth if true reset the last cell height (default false).
-	 * @param boolean $cell if true add the current left (or right for RTL) padding to each Write (default false).
+	 * @param bool    $ln if true add a new line after text (default = true)
+	 * @param bool    $fill Indicates if the background must be painted (true) or transparent (false).
+	 * @param bool    $reseth if true reset the last cell height (default false).
+	 * @param bool    $cell if true add the current left (or right for RTL) padding to each Write (default false).
 	 * @param string $align Allows to center or align the text. Possible values are:<ul><li>L : left align</li><li>C : center</li><li>R : right align</li><li>'' : empty string : left for LTR or right for RTL</li></ul>
 	 * @public
 	 */
@@ -18658,7 +18658,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * Process opening tags.
 	 * @param array $dom html dom array
 	 * @param int $key current element id
-	 * @param boolean $cell if true add the default left (or right if RTL) padding to each new line (default false).
+	 * @param bool    $cell if true add the default left (or right if RTL) padding to each new line (default false).
 	 * @return array $dom
 	 * @protected
 	 */
@@ -19349,7 +19349,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * Process closing tags.
 	 * @param array $dom html dom array
 	 * @param int $key current element id
-	 * @param boolean $cell if true add the default left (or right if RTL) padding to each new line (default false).
+	 * @param bool    $cell if true add the default left (or right if RTL) padding to each new line (default false).
 	 * @param int $maxbottomliney maximum y value of current line
 	 * @return array $dom
 	 * @protected
@@ -19896,9 +19896,9 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * Add vertical spaces if needed.
 	 * @param string $hbz Distance between current y and line bottom.
 	 * @param string $hb The height of the break.
-	 * @param boolean $cell if true add the default left (or right if RTL) padding to each new line (default false).
-	 * @param boolean $firsttag set to true when the tag is the first.
-	 * @param boolean $lasttag set to true when the tag is the last.
+	 * @param bool    $cell if true add the default left (or right if RTL) padding to each new line (default false).
+	 * @param bool    $firsttag set to true when the tag is the first.
+	 * @param bool    $lasttag set to true when the tag is the last.
 	 * @protected
 	 */
 	protected function addHTMLVertSpace($hbz=0, $hb=0, $cell=false, $firsttag=false, $lasttag=false) {
@@ -20162,7 +20162,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 
 	/**
 	 * Set the booklet mode for double-sided pages.
-	 * @param boolean $booklet true set the booklet mode on, false otherwise.
+	 * @param bool    $booklet true set the booklet mode on, false otherwise.
 	 * @param float $inner Inner page margin.
 	 * @param float $outer Outer page margin.
 	 * @public
@@ -20180,7 +20180,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 
 	/**
 	 * Swap the left and right margins.
-	 * @param boolean $reverse if true swap left and right margins.
+	 * @param bool    $reverse if true swap left and right margins.
 	 * @protected
 	 * @since 4.2.000 (2008-10-29)
 	 */
@@ -20224,7 +20224,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 
 	/**
 	 * Set the top/bottom cell sides to be open or closed when the cell cross the page.
-	 * @param boolean $isopen if true keeps the top/bottom border open for the cell sides that cross the page.
+	 * @param bool    $isopen if true keeps the top/bottom border open for the cell sides that cross the page.
 	 * @public
 	 * @since 4.2.010 (2008-11-14)
 	 */
@@ -20249,7 +20249,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * @param string $htmlval String containing values and unit.
 	 * @param string $refsize Reference value in points.
 	 * @param string $defaultunit Default unit (can be one of the following: %, em, ex, px, in, mm, pc, pt).
-	 * @param boolean $points If true returns points, otherwise returns value in user's units.
+	 * @param bool    $points If true returns points, otherwise returns value in user's units.
 	 * @return float value in user's unit or point if $points=true
 	 * @public
 	 * @since 4.4.004 (2008-12-10)
@@ -20597,7 +20597,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	/**
 	 * Set graphic variables.
 	 * @param array $gvars array of graphic variablesto restore
-	 * @param boolean $extended if true restore extended graphic variables
+	 * @param bool    $extended if true restore extended graphic variables
 	 * @protected
 	 * @since 4.2.010 (2008-11-14)
 	 */
@@ -20713,7 +20713,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * Set page buffer content.
 	 * @param int $page page number
 	 * @param string $data page data
-	 * @param boolean $append if true append data, false replace.
+	 * @param bool    $append if true append data, false replace.
 	 * @protected
 	 * @since 4.5.000 (2008-12-31)
 	 */
@@ -21486,7 +21486,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * @param int $page page number where this TOC should be inserted (leave empty for current page).
 	 * @param string $toc_name name to use for TOC bookmark.
 	 * @param array $templates array of html templates. Use: "#TOC_DESCRIPTION#" for bookmark title, "#TOC_PAGE_NUMBER#" for page number.
-	 * @param boolean $correct_align if true correct the number alignment (numbers must be in monospaced font like courier and right aligned on LTR, or left aligned on RTL)
+	 * @param bool    $correct_align if true correct the number alignment (numbers must be in monospaced font like courier and right aligned on LTR, or left aligned on RTL)
 	 * @param string $style Font style for title: B = Bold, I = Italic, BI = Bold + Italic.
 	 * @param array $color RGB color array for title (values from 0 to 255).
 	 * @public
@@ -21653,7 +21653,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 
 	/**
 	 * This method allows to undo the latest transaction by returning the latest saved TCPDF object with startTransaction().
-	 * @param boolean $self if true restores current class object to previous state without the need of reassignment via the returned value.
+	 * @param bool    $self if true restores current class object to previous state without the need of reassignment via the returned value.
 	 * @return TCPDF object.
 	 * @public
 	 * @since 4.5.029 (2009-03-19)
@@ -21837,8 +21837,8 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	/**
 	 * Set Text rendering mode.
 	 * @param int $stroke outline size in user units (0 = disable).
-	 * @param boolean $fill if true fills the text (default).
-	 * @param boolean $clip if true activate clipping mode
+	 * @param bool    $fill if true fills the text (default).
+	 * @param bool    $clip if true activate clipping mode
 	 * @public
 	 * @since 4.9.008 (2009-04-02)
 	 */
@@ -22097,7 +22097,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 
 	/**
 	 * Enable/disable rasterization of vector images using ImageMagick library.
-	 * @param boolean $mode if true enable rasterization, false otherwise.
+	 * @param bool    $mode if true enable rasterization, false otherwise.
 	 * @public
 	 * @since 5.0.000 (2010-04-27)
 	 */
@@ -22107,7 +22107,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 
 	/**
 	 * Enable or disable default option for font subsetting.
-	 * @param boolean $enable if true enable font subsetting by default.
+	 * @param bool    $enable if true enable font subsetting by default.
 	 * @author Nicola Asuni
 	 * @public
 	 * @since 5.3.002 (2010-06-07)
@@ -22323,7 +22323,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * @param int $h Height in user units (zero = remaining page height)
 	 * @param string $align Indicates the alignment of the pointer next to template insertion relative to template height. The value can be:<ul><li>T: top-right for LTR or top-left for RTL</li><li>M: middle-right for LTR or middle-left for RTL</li><li>B: bottom-right for LTR or bottom-left for RTL</li><li>N: next line</li></ul>
 	 * @param string $palign Allows to center or align the template on the current line. Possible values are:<ul><li>L : left align</li><li>C : center</li><li>R : right align</li><li>'' : empty string : left for LTR or right for RTL</li></ul>
-	 * @param boolean $fitonpage If true the template is resized to not exceed page dimensions.
+	 * @param bool    $fitonpage If true the template is resized to not exceed page dimensions.
 	 * @author Nicola Asuni
 	 * @public
 	 * @since 5.8.017 (2010-08-24)
@@ -22677,7 +22677,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * @param string $align Indicates the alignment of the pointer next to image insertion relative to image height. The value can be:<ul><li>T: top-right for LTR or top-left for RTL</li><li>M: middle-right for LTR or middle-left for RTL</li><li>B: bottom-right for LTR or bottom-left for RTL</li><li>N: next line</li></ul> If the alignment is an empty string, then the pointer will be restored on the starting SVG position.
 	 * @param string $palign Allows to center or align the image on the current line. Possible values are:<ul><li>L : left align</li><li>C : center</li><li>R : right align</li><li>'' : empty string : left for LTR or right for RTL</li></ul>
 	 * @param mixed $border Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
-	 * @param boolean $fitonpage if true the image is resized to not exceed page dimensions.
+	 * @param bool    $fitonpage if true the image is resized to not exceed page dimensions.
 	 * @author Nicola Asuni
 	 * @since 5.0.000 (2010-05-02)
 	 * @public

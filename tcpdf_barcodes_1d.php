@@ -363,8 +363,8 @@ class TCPDFBarcode {
 	 * CODE 39 - ANSI MH10.8M-1983 - USD-3 - 3 of 9.
 	 * General-purpose code in very wide use world-wide
 	 * @param string $code code to represent.
-	 * @param boolean $extended if true uses the extended mode.
-	 * @param boolean $checksum if true add a checksum to the code.
+	 * @param bool $extended if true uses the extended mode.
+	 * @param bool $checksum if true add a checksum to the code.
 	 * @return array barcode representation.
 	 * @protected
 	 */
@@ -734,7 +734,7 @@ class TCPDFBarcode {
 	 * Variation of Plessey code, with similar applications
 	 * Contains digits (0 to 9) and encodes the data only in the width of bars.
 	 * @param string $code code to represent.
-	 * @param boolean $checksum if true add a checksum to the code (modulo 11)
+	 * @param bool $checksum if true add a checksum to the code (modulo 11)
 	 * @return array barcode representation.
 	 * @protected
 	 */
@@ -793,7 +793,7 @@ class TCPDFBarcode {
 	 * Used in airline ticket marking, photofinishing
 	 * Contains digits (0 to 9) and encodes the data only in the width of bars.
 	 * @param string $code code to represent.
-	 * @param boolean $checksum if true add a checksum to the code
+	 * @param bool $checksum if true add a checksum to the code
 	 * @return array barcode representation.
 	 * @protected
 	 */
@@ -864,7 +864,7 @@ class TCPDFBarcode {
 	 * Compact numeric code, widely used in industry, air cargo
 	 * Contains digits (0 to 9) and encodes the data in the width of both bars and spaces.
 	 * @param string $code code to represent.
-	 * @param boolean $checksum if true add a checksum to the code
+	 * @param bool $checksum if true add a checksum to the code
 	 * @return array barcode representation.
 	 * @protected
 	 */
@@ -1565,7 +1565,7 @@ class TCPDFBarcode {
 	 * POSTNET and PLANET barcodes.
 	 * Used by U.S. Postal Service for automated mail sorting
 	 * @param string $code zip code to represent. Must be a string containing a zip code of the form DDDDD or DDDDD-DDDD.
-	 * @param boolean $planet if true print the PLANET barcode, otherwise print POSTNET
+	 * @param bool $planet if true print the PLANET barcode, otherwise print POSTNET
 	 * @return array barcode representation.
 	 * @protected
 	 */
@@ -1638,7 +1638,7 @@ class TCPDFBarcode {
 	 * RMS4CC (Royal Mail 4-state Customer Code) - CBC (Customer Bar Code) - KIX (Klant index - Customer index)
 	 * RM4SCC is the name of the barcode symbology used by the Royal Mail for its Cleanmail service.
 	 * @param string $code code to print
-	 * @param boolean $kix if true prints the KIX variation (doesn't use the start and end symbols, and the checksum) - in this case the house number must be sufficed with an X and placed at the end of the code.
+	 * @param bool $kix if true prints the KIX variation (doesn't use the start and end symbols, and the checksum) - in this case the house number must be sufficed with an X and placed at the end of the code.
 	 * @return array barcode representation.
 	 * @protected
 	 */

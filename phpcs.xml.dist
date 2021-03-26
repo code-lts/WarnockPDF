@@ -58,8 +58,6 @@
         <exclude name="Squiz.Functions.MultiLineFunctionDeclaration.CloseBracketLine"/>
         <exclude name="Squiz.PHP.NonExecutableCode.Unreachable"/><!-- To be fixed -->
 
-        <exclude name="SlevomatCodingStandard.TypeHints.LongTypeHints.UsedLongTypeHint"/><!-- To be fixed -->
-
         <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceBefore"/>
         <exclude name="PSR12.Operators.OperatorSpacing.NoSpaceAfter"/>
         <exclude name="PSR12.Files.FileHeader.SpacingAfterBlock"/>

@@ -1058,7 +1058,7 @@ class QRcode {
 	 * @param int $width
 	 * @param int $s
 	 * @param int $d
-	 * @param boolean $maskGenOnly
+	 * @param bool $maskGenOnly
 	 * @return int b
 	 */
 	 protected function makeMaskNo($maskNo, $width, $s, &$d, $maskGenOnly=false) {
@@ -1233,7 +1233,7 @@ class QRcode {
 	 * Return true if the character at specified position is a number
 	 * @param string $str string
 	 * @param int $pos characted position
-	 * @return boolean true of false
+	 * @return bool true of false
 	 */
 	 protected function isdigitat($str, $pos) {
 		if ($pos >= strlen($str)) {
@@ -1246,7 +1246,7 @@ class QRcode {
 	 * Return true if the character at specified position is an alphanumeric character
 	 * @param string $str string
 	 * @param int $pos characted position
-	 * @return boolean true of false
+	 * @return bool true of false
 	 */
 	 protected function isalnumat($str, $pos) {
 		if ($pos >= strlen($str)) {
@@ -1720,7 +1720,7 @@ class QRcode {
 	 * checkModeNum
 	 * @param int $size
 	 * @param array $data
-	 * @return boolean true or false
+	 * @return bool true or false
 	 */
 	 protected function checkModeNum($size, $data) {
 		for ($i=0; $i<$size; ++$i) {
@@ -1744,7 +1744,7 @@ class QRcode {
 	 * checkModeAn
 	 * @param int $size
 	 * @param array $data
-	 * @return boolean true or false
+	 * @return bool true or false
 	 */
 	 protected function checkModeAn($size, $data) {
 		for ($i=0; $i<$size; ++$i) {
@@ -1811,7 +1811,7 @@ class QRcode {
 	 * checkModeKanji
 	 * @param int $size
 	 * @param array $data
-	 * @return boolean true or false
+	 * @return bool true or false
 	 */
 	 protected function checkModeKanji($size, $data) {
 		if ($size & 1) {
@@ -1831,7 +1831,7 @@ class QRcode {
 	 * @param int $mode encoding mode.
 	 * @param int $size size of data (byte).
 	 * @param array $data data to validate
-	 * @return boolean true in case of valid data, false otherwise
+	 * @return bool true in case of valid data, false otherwise
 	 */
 	protected function check($mode, $size, $data) {
 		if ($size <= 0) {

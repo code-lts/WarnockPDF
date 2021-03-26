@@ -106,7 +106,7 @@ class TCPDF_STATIC {
 	/**
 	 * Check if the URL exist.
 	 * @param string $url URL to check.
-	 * @return Boolean true if the URl exist, false otherwise.
+	 * @return bool true if the URl exist, false otherwise.
 	 * @since 5.9.204 (2013-01-28)
 	 * @public static
 	 */
@@ -130,7 +130,7 @@ class TCPDF_STATIC {
 	 * <li>UTF-8 character: chr(194).chr(173)</li>
 	 * </ul>
 	 * @param string $txt input string
-	 * @param boolean $unicode True if we are in unicode mode, false otherwise.
+	 * @param bool $unicode True if we are in unicode mode, false otherwise.
 	 * @return string without SHY characters.
 	 * @since (4.5.019) 2009-02-28
 	 * @public static
@@ -148,7 +148,7 @@ class TCPDF_STATIC {
 	 * Get the border mode accounting for multicell position (opens bottom side of multicell crossing pages)
 	 * @param mixed $brd Indicates if borders must be drawn around the cell block. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul>or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
 	 * @param string $position multicell position: 'start', 'middle', 'end'
-	 * @param boolean $opencell True when the cell is left open at the page bottom, false otherwise.
+	 * @param bool $opencell True when the cell is left open at the page bottom, false otherwise.
 	 * @return border mode array
 	 * @since 4.4.002 (2008-12-09)
 	 * @public static
@@ -589,7 +589,7 @@ class TCPDF_STATIC {
 	 * Convert JavaScript form fields properties array to Annotation Properties array.
 	 * @param array $prop javascript field properties. Possible values are described on official Javascript for Acrobat API reference.
 	 * @param array $spot_colors Reference to spot colors array.
-	 * @param boolean $rtl True if in Right-To-Left text direction mode, false otherwise.
+	 * @param bool $rtl True if in Right-To-Left text direction mode, false otherwise.
 	 * @return array of annotation properties
 	 * @author Nicola Asuni
 	 * @since 4.8.000 (2009-09-06)
@@ -2447,7 +2447,7 @@ class TCPDF_STATIC {
 	 * @param float $lly lower-left y coordinate in user units.
 	 * @param float $urx upper-right x coordinate in user units.
 	 * @param float $ury upper-right y coordinate in user units.
-	 * @param boolean $points If true uses user units as unit of measure, otherwise uses PDF points.
+	 * @param bool $points If true uses user units as unit of measure, otherwise uses PDF points.
 	 * @param float $k Scale factor (number of points in user unit).
 	 * @param array $pagedim Array of page dimensions.
 	 * @return pagedim array of page dimensions.
