@@ -16,7 +16,7 @@
     };
 
     var searchIndex = [
-                        {"type":"Namespace","link":".html","name":"","doc":"Namespace "},                            {"type":"Class","link":"Datamatrix.html","name":"Datamatrix","doc":"*\nClass to create DataMatrix ECC 200 barcode arrays for TCPDF class."},
+                        {"type":"Namespace","link":".html","name":"","doc":"Namespace "},                            {"type":"Class","link":"Datamatrix.html","name":"Datamatrix","doc":"Class to create DataMatrix ECC 200 barcode arrays for TCPDF class."},
                                 {"type":"Method","fromName":"Datamatrix","fromLink":"Datamatrix.html","link":"Datamatrix.html#method___construct","name":"Datamatrix::__construct","doc":"This is the class constructor."},
         {"type":"Method","fromName":"Datamatrix","fromLink":"Datamatrix.html","link":"Datamatrix.html#method_getBarcodeArray","name":"Datamatrix::getBarcodeArray","doc":"Returns a barcode array which is readable by TCPDF"},
         {"type":"Method","fromName":"Datamatrix","fromLink":"Datamatrix.html","link":"Datamatrix.html#method_getGFProduct","name":"Datamatrix::getGFProduct","doc":"Product of two numbers in a Power-of-Two Galois Field"},
@@ -642,8 +642,8 @@
         {"type":"Method","fromName":"TCPDF_STATIC","fromLink":"TCPDF_STATIC.html","link":"TCPDF_STATIC.html#method_getFormattedDate","name":"TCPDF_STATIC::getFormattedDate","doc":"Returns a formatted date-time."},
         {"type":"Method","fromName":"TCPDF_STATIC","fromLink":"TCPDF_STATIC.html","link":"TCPDF_STATIC.html#method_getRandomSeed","name":"TCPDF_STATIC::getRandomSeed","doc":"Returns a string containing random data to be used as a seed for encryption methods."},
         {"type":"Method","fromName":"TCPDF_STATIC","fromLink":"TCPDF_STATIC.html","link":"TCPDF_STATIC.html#method__md5_16","name":"TCPDF_STATIC::_md5_16","doc":"Encrypts a string using MD5 and returns it's value as a binary string."},
-        {"type":"Method","fromName":"TCPDF_STATIC","fromLink":"TCPDF_STATIC.html","link":"TCPDF_STATIC.html#method__AES","name":"TCPDF_STATIC::_AES","doc":"Returns the input text exrypted using AES algorithm and the specified key."},
-        {"type":"Method","fromName":"TCPDF_STATIC","fromLink":"TCPDF_STATIC.html","link":"TCPDF_STATIC.html#method__AESnopad","name":"TCPDF_STATIC::_AESnopad","doc":"Returns the input text exrypted using AES algorithm and the specified key."},
+        {"type":"Method","fromName":"TCPDF_STATIC","fromLink":"TCPDF_STATIC.html","link":"TCPDF_STATIC.html#method__AES","name":"TCPDF_STATIC::_AES","doc":"Returns the input text encrypted using AES algorithm and the specified key."},
+        {"type":"Method","fromName":"TCPDF_STATIC","fromLink":"TCPDF_STATIC.html","link":"TCPDF_STATIC.html#method__AESnopad","name":"TCPDF_STATIC::_AESnopad","doc":"Returns the input text encrypted using AES algorithm and the specified key."},
         {"type":"Method","fromName":"TCPDF_STATIC","fromLink":"TCPDF_STATIC.html","link":"TCPDF_STATIC.html#method__RC4","name":"TCPDF_STATIC::_RC4","doc":"Returns the input text encrypted using RC4 algorithm and the specified key."},
         {"type":"Method","fromName":"TCPDF_STATIC","fromLink":"TCPDF_STATIC.html","link":"TCPDF_STATIC.html#method_getUserPermissionCode","name":"TCPDF_STATIC::getUserPermissionCode","doc":"Return the permission code used on encryption (P value)."},
         {"type":"Method","fromName":"TCPDF_STATIC","fromLink":"TCPDF_STATIC.html","link":"TCPDF_STATIC.html#method_convertHexStringToString","name":"TCPDF_STATIC::convertHexStringToString","doc":"Convert hexadecimal string to string"},
