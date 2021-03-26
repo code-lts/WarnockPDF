@@ -4541,11 +4541,6 @@ parameters:
 			path: src/StaticUtils.php
 
 		-
-			message: "#^Constant K_PATH_CACHE not found\\.$#"
-			count: 1
-			path: src/StaticUtils.php
-
-		-
 			message: "#^Method WarnockPDF\\\\StaticUtils\\:\\:getObjFilename\\(\\) should return string but returns string\\|false\\.$#"
 			count: 1
 			path: src/StaticUtils.php

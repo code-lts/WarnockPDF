@@ -6,6 +6,8 @@ parameters:
         processTimeout: 120.0
     paths:
         - ./
+    scanFiles:
+        - config/tcpdf_config.php
     excludes_analyse:
         - vendor/
         - fonts/
