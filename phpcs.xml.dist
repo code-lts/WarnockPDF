@@ -100,11 +100,9 @@
     </rule>
 
     <rule ref="Generic.WhiteSpace.DisallowTabIndent.TabsUsed">
-        <exclude-pattern>*/tcpdf.php</exclude-pattern>
     </rule>
 
     <rule ref="Generic.WhiteSpace.DisallowTabIndent.NonIndentTabsUsed">
-        <exclude-pattern>*/tcpdf.php</exclude-pattern>
     </rule>
 
     <rule ref="PSR1.Classes.ClassDeclaration.MissingNamespace">
