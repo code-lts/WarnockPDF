@@ -47,7 +47,7 @@ class TCPDF_FONTS
      * @since 5.9.123 (2010-09-30)
      * @public static
      */
-    public static function addTTFfont($fontfile, $fonttype='', $enc='', $flags=32, $outpath='', $platid=3, $encid=1, $addcbbox=false, $link=false) {
+    public static function addTTFfont($fontfile, $fonttype = '', $enc = '', $flags = 32, $outpath = '', $platid = 3, $encid = 1, $addcbbox = false, $link = false) {
         if (!TCPDF_STATIC::file_exists($fontfile)) {
             // Could not find file
             return false;
@@ -1374,7 +1374,7 @@ class TCPDF_FONTS
      * @since 4.4.000 (2008-12-07)
      * @public static
      */
-    public static function _putfontwidths($font, $cidoffset=0) {
+    public static function _putfontwidths($font, $cidoffset = 0) {
         ksort($font['cw']);
         $rangeid = 0;
         $range = array();
@@ -1520,7 +1520,7 @@ class TCPDF_FONTS
      * @since 6.0.025
      * @public static
      */
-    public static function getFontFullPath($file, $fontdir=false) {
+    public static function getFontFullPath($file, $fontdir = false) {
         $fontfile = '';
         // search files on various directories
         if (($fontdir !== false) AND @TCPDF_STATIC::file_exists($fontdir . $file)) {
@@ -1543,7 +1543,7 @@ class TCPDF_FONTS
      * @return float value in points
      * @public static
      */
-    public static function getFontRefSize($size, $refsize=12) {
+    public static function getFontRefSize($size, $refsize = 12) {
         switch ($size) {
             case 'xx-small': {
                 $size = ($refsize - 4);
@@ -1643,7 +1643,7 @@ class TCPDF_FONTS
      * @since 2.3.000 (2008-03-05)
      * @public static
      */
-    public static function unichr($c, $unicode=true) {
+    public static function unichr($c, $unicode = true) {
         $c = intval($c);
         if (!$unicode) {
             return chr($c);
@@ -1722,7 +1722,7 @@ class TCPDF_FONTS
      * @since 2.1.000 (2008-01-08)
      * @public static
      */
-    public static function arrUTF8ToUTF16BE($unicode, $setbom=false) {
+    public static function arrUTF8ToUTF16BE($unicode, $setbom = false) {
         $outstr = ''; // string to be returned
         if ($setbom) {
             $outstr .= "\xFE\xFF"; // Byte Order Mark (BOM)
@@ -1756,7 +1756,7 @@ class TCPDF_FONTS
      * @since 4.5.037 (2009-04-07)
      * @public static
      */
-    public static function UTF8ArrayToUniArray($ta, $isunicode=true) {
+    public static function UTF8ArrayToUniArray($ta, $isunicode = true) {
         if ($isunicode) {
             return array_map(array('TCPDF_FONTS', 'unichrUnicode'), $ta);
         }
@@ -1772,7 +1772,7 @@ class TCPDF_FONTS
      * @return string Return part of a string
      * @public static
      */
-    public static function UTF8ArrSubString($strarr, $start='', $end='', $unicode=true) {
+    public static function UTF8ArrSubString($strarr, $start = '', $end = '', $unicode = true) {
         if (strlen($start) == 0) {
             $start = 0;
         }
@@ -1795,7 +1795,7 @@ class TCPDF_FONTS
      * @since 4.5.037 (2009-04-07)
      * @public static
      */
-    public static function UniArrSubString($uniarr, $start='', $end='') {
+    public static function UniArrSubString($uniarr, $start = '', $end = '') {
         if (strlen($start) == 0) {
             $start = 0;
         }

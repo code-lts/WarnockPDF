@@ -136,7 +136,7 @@ class TCPDF_STATIC
      * @since (4.5.019) 2009-02-28
      * @public static
      */
-    public static function removeSHY($txt='', $unicode=true) {
+    public static function removeSHY($txt = '', $unicode = true) {
         $txt = preg_replace('/([\\xc2]{1}[\\xad]{1})/', '', $txt);
         if (!$unicode) {
             $txt = preg_replace('/([\\xad]{1})/', '', $txt);
@@ -154,7 +154,7 @@ class TCPDF_STATIC
      * @since 4.4.002 (2008-12-09)
      * @public static
      */
-    public static function getBorderMode($brd, $position='start', $opencell=true) {
+    public static function getBorderMode($brd, $position = 'start', $opencell = true) {
         if ((!$opencell) OR empty($brd)) {
             return $brd;
         }
@@ -238,7 +238,7 @@ class TCPDF_STATIC
      * @since 4.5.000 (2008-12-31)
      * @public static
      */
-    public static function getObjFilename($type='tmp', $file_id='') {
+    public static function getObjFilename($type = 'tmp', $file_id = '') {
         return tempnam(K_PATH_CACHE, '__tcpdf_' . $file_id . '_' . $type . '_' . md5(TCPDF_STATIC::getRandomSeed()) . '_');
     }
 
@@ -304,7 +304,7 @@ class TCPDF_STATIC
      * @return replaced page content and updated $diff parameter as array.
      * @public static
      */
-    public static function replacePageNumAliases($page, $replace, $diff=0) {
+    public static function replacePageNumAliases($page, $replace, $diff = 0) {
         foreach ($replace as $rep) {
             foreach ($rep[3] as $a) {
                 if (strpos($page, $a) !== false) {
@@ -350,7 +350,7 @@ class TCPDF_STATIC
      * @since 5.9.006 (2010-10-19)
      * @public static
      */
-    public static function getRandomSeed($seed='') {
+    public static function getRandomSeed($seed = '') {
         $rnd = uniqid(rand() . microtime(true), true);
         if (function_exists('posix_getpid')) {
             $rnd .= posix_getpid();
@@ -479,7 +479,7 @@ class TCPDF_STATIC
      * @author Nicola Asuni
      * @public static
      */
-    public static function getUserPermissionCode($permissions, $mode=0) {
+    public static function getUserPermissionCode($permissions, $mode = 0) {
         $options = array(
             'owner' => 2, // bit 2 -- inverted logic: cleared by default
             'print' => 4, // bit 3
@@ -596,7 +596,7 @@ class TCPDF_STATIC
      * @since 4.8.000 (2009-09-06)
      * @public static
      */
-    public static function getAnnotOptFromJSProp($prop, &$spot_colors, $rtl=false) {
+    public static function getAnnotOptFromJSProp($prop, &$spot_colors, $rtl = false) {
         if (isset($prop['aopt']) AND is_array($prop['aopt'])) {
             // the annotation options are already defined
             return $prop['aopt'];
@@ -1510,7 +1510,7 @@ class TCPDF_STATIC
      * @since 5.0.000 (2010-04-30)
      * @public static
      */
-    public static function getPathPaintOperator($style, $default='S') {
+    public static function getPathPaintOperator($style, $default = 'S') {
         $op = '';
         switch($style) {
             case 'S':
@@ -1732,7 +1732,7 @@ class TCPDF_STATIC
      * @since 6.0.023
      * @public static
      */
-    public static function pregSplit($pattern, $modifiers, $subject, $limit=NULL, $flags=NULL) {
+    public static function pregSplit($pattern, $modifiers, $subject, $limit = NULL, $flags = NULL) {
         // PHP 8.1 deprecates nulls for $limit and $flags
         $limit = $limit === null ? -1 : $limit;
         $flags = $flags === null ? 0 : $flags;
@@ -2455,7 +2455,7 @@ class TCPDF_STATIC
      * @since 5.0.010 (2010-05-17)
      * @public static
      */
-    public static function setPageBoxes($page, $type, $llx, $lly, $urx, $ury, $points, $k, $pagedim=array()) {
+    public static function setPageBoxes($page, $type, $llx, $lly, $urx, $ury, $points, $k, $pagedim = array()) {
         if (!isset($pagedim[$page])) {
             // initialize array
             $pagedim[$page] = array();
@@ -2502,7 +2502,7 @@ class TCPDF_STATIC
      * @return string Canonical page layout name.
      * @public static
      */
-    public static function getPageLayoutMode($layout='SinglePage') {
+    public static function getPageLayoutMode($layout = 'SinglePage') {
         switch ($layout) {
             case 'default':
             case 'single':
@@ -2545,7 +2545,7 @@ class TCPDF_STATIC
      * @return string Canonical page mode name.
      * @public static
      */
-    public static function getPageMode($mode='UseNone') {
+    public static function getPageMode($mode = 'UseNone') {
         switch ($mode) {
             case 'UseNone': {
                 $page_mode = 'UseNone';

@@ -233,7 +233,7 @@ if (!function_exists('str_split')) {
      * @param int $split_length Maximum length of the chunk.
      * @return  If the optional split_length  parameter is specified, the returned array will be broken down into chunks with each being split_length  in length, otherwise each chunk will be one character in length. FALSE is returned if split_length is less than 1. If the split_length length exceeds the length of string , the entire string is returned as the first (and only) array element.
      */
-    function str_split($string, $split_length=1) {
+    function str_split($string, $split_length = 1) {
         if ((strlen($string) > $split_length) OR (!$split_length)) {
             do {
                 $c = strlen($string);
@@ -1062,7 +1062,7 @@ class QRcode
      * @param bool $maskGenOnly
      * @return int b
      */
-     protected function makeMaskNo($maskNo, $width, $s, &$d, $maskGenOnly=false) {
+     protected function makeMaskNo($maskNo, $width, $s, &$d, $maskGenOnly = false) {
         $b = 0;
         $bitMask = array();
         $bitMask = $this->generateMaskNo($maskNo, $width, $s);
@@ -1488,7 +1488,7 @@ class QRcode
      * @param array $bstream
      * @return array input item
      */
-     protected function newInputItem($mode, $size, $data, $bstream=null) {
+     protected function newInputItem($mode, $size, $data, $bstream = null) {
         $setData = array_slice($data, 0, $size);
         if (count($setData) < $size) {
             $setData = array_merge($setData, array_fill(0, ($size - count($setData)), 0));
@@ -2248,7 +2248,7 @@ class QRcode
      * @param int $replLen length of the repl string
      * @return array srctab
      */
-     protected function qrstrset($srctab, $x, $y, $repl, $replLen=false) {
+     protected function qrstrset($srctab, $x, $y, $repl, $replLen = false) {
         $srctab[$y] = substr_replace($srctab[$y], ($replLen !== false) ? substr($repl, 0, $replLen) : $repl, $x, ($replLen !== false) ? $replLen : strlen($repl));
         return $srctab;
     }

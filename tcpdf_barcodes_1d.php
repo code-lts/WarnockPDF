@@ -69,7 +69,7 @@ class TCPDFBarcode
      * @param string $color Foreground color (in SVG format) for bar elements (background is transparent).
      * @public
      */
-    public function getBarcodeSVG($w=2, $h=30, $color='black') {
+    public function getBarcodeSVG($w = 2, $h = 30, $color = 'black') {
         // send headers
         $code = $this->getBarcodeSVGcode($w, $h, $color);
         header('Content-Type: application/svg+xml');
@@ -90,7 +90,7 @@ class TCPDFBarcode
      * @return string SVG code.
      * @public
      */
-    public function getBarcodeSVGcode($w=2, $h=30, $color='black') {
+    public function getBarcodeSVGcode($w = 2, $h = 30, $color = 'black') {
         // replace table for special characters
         $repstr = array("\0" => '', '&' => '&amp;', '<' => '&lt;', '>' => '&gt;');
         $svg = '<' . '?' . 'xml version="1.0" standalone="no"' . '?' . '>' . "\n";
@@ -123,7 +123,7 @@ class TCPDFBarcode
      * @return string HTML code.
      * @public
      */
-    public function getBarcodeHTML($w=2, $h=30, $color='black') {
+    public function getBarcodeHTML($w = 2, $h = 30, $color = 'black') {
         $html = '<div style="font-size:0;position:relative;width:' . ($this->barcode_array['maxw'] * $w) . 'px;height:' . ($h) . 'px;">' . "\n";
         // print bars
         $x = 0;
@@ -148,7 +148,7 @@ class TCPDFBarcode
      * @param array $color RGB (0-255) foreground color for bar elements (background is transparent).
      * @public
      */
-    public function getBarcodePNG($w=2, $h=30, $color=array(0,0,0)) {
+    public function getBarcodePNG($w = 2, $h = 30, $color = array(0,0,0)) {
         $data = $this->getBarcodePngData($w, $h, $color);
         // send headers
         header('Content-Type: image/png');
@@ -168,7 +168,7 @@ class TCPDFBarcode
      * @return image or false in case of error.
      * @public
      */
-    public function getBarcodePngData($w=2, $h=30, $color=array(0,0,0)) {
+    public function getBarcodePngData($w = 2, $h = 30, $color = array(0,0,0)) {
         // calculate image size
         $width = ($this->barcode_array['maxw'] * $w);
         $height = $h;
@@ -369,7 +369,7 @@ class TCPDFBarcode
      * @return array barcode representation.
      * @protected
      */
-    protected function barcode_code39($code, $extended=false, $checksum=false) {
+    protected function barcode_code39($code, $extended = false, $checksum = false) {
         $chr['0'] = '111331311';
         $chr['1'] = '311311113';
         $chr['2'] = '113311113';
@@ -739,7 +739,7 @@ class TCPDFBarcode
      * @return array barcode representation.
      * @protected
      */
-    protected function barcode_msi($code, $checksum=false) {
+    protected function barcode_msi($code, $checksum = false) {
         $chr['0'] = '100100100100';
         $chr['1'] = '100100100110';
         $chr['2'] = '100100110100';
@@ -798,7 +798,7 @@ class TCPDFBarcode
      * @return array barcode representation.
      * @protected
      */
-    protected function barcode_s25($code, $checksum=false) {
+    protected function barcode_s25($code, $checksum = false) {
         $chr['0'] = '10101110111010';
         $chr['1'] = '11101010101110';
         $chr['2'] = '10111010101110';
@@ -869,7 +869,7 @@ class TCPDFBarcode
      * @return array barcode representation.
      * @protected
      */
-    protected function barcode_i25($code, $checksum=false) {
+    protected function barcode_i25($code, $checksum = false) {
         $chr['0'] = '11221';
         $chr['1'] = '21112';
         $chr['2'] = '12112';
@@ -933,7 +933,7 @@ class TCPDFBarcode
      * @return array barcode representation.
      * @protected
      */
-    protected function barcode_c128($code, $type='') {
+    protected function barcode_c128($code, $type = '') {
         $chr = array(
             '212222', /* 00 */
             '222122', /* 01 */
@@ -1302,7 +1302,7 @@ class TCPDFBarcode
      * @return array barcode representation.
      * @protected
      */
-    protected function barcode_eanupc($code, $len=13) {
+    protected function barcode_eanupc($code, $len = 13) {
         $upce = false;
         if ($len == 6) {
             $len = 12; // UPC-A
@@ -1495,7 +1495,7 @@ class TCPDFBarcode
      * @return array barcode representation.
      * @protected
      */
-    protected function barcode_eanext($code, $len=5) {
+    protected function barcode_eanext($code, $len = 5) {
         //Padding
         $code = str_pad($code, $len, '0', STR_PAD_LEFT);
         // calculate check digit
@@ -1570,7 +1570,7 @@ class TCPDFBarcode
      * @return array barcode representation.
      * @protected
      */
-    protected function barcode_postnet($code, $planet=false) {
+    protected function barcode_postnet($code, $planet = false) {
         // bar length
         if ($planet) {
             $barlen = Array(
@@ -1643,7 +1643,7 @@ class TCPDFBarcode
      * @return array barcode representation.
      * @protected
      */
-    protected function barcode_rms4cc($code, $kix=false) {
+    protected function barcode_rms4cc($code, $kix = false) {
         $notkix = !$kix;
         // bar mode
         // 1 = pos 1, length 2

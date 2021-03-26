@@ -33,7 +33,7 @@ class MC_TCPDF extends TCPDF
      * @param bool $mode if true the chapter body is in HTML, otherwise in simple text.
      * @public
      */
-    public function PrintChapter($num, $title, $file, $mode=false) {
+    public function PrintChapter($num, $title, $file, $mode = false) {
         // add a new page
         $this->AddPage();
         // disable existing columns
@@ -65,7 +65,7 @@ class MC_TCPDF extends TCPDF
      * @param bool $mode if true the chapter body is in HTML, otherwise in simple text.
      * @public
      */
-    public function ChapterBody($file, $mode=false) {
+    public function ChapterBody($file, $mode = false) {
         $this->selectColumn();
         // get external file content
         $content = file_get_contents($file, false);

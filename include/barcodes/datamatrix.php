@@ -355,7 +355,7 @@ class Datamatrix
      * @return array data codewords + error codewords
      * @protected
      */
-    protected function getErrorCorrection($wd, $nb, $nd, $nc, $gf=256, $pp=301) {
+    protected function getErrorCorrection($wd, $nb, $nd, $nc, $gf = 256, $pp = 301) {
         // generate the log ($log) and antilog ($alog) tables
         $log[0] = 0;
         $alog[0] = 1;
