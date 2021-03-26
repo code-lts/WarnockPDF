@@ -19,11 +19,16 @@ jobs:
                   tools: composer:v2
             - name: Validate composer.json and composer.lock
               run: composer validate
-            - name: Cache module
+            - name: Cache module for composer
               uses: actions/cache@v2
               with:
                   path: ~/.composer/cache/
                   key: composer-cache
+            - name: Cache module for phpcs
+              uses: actions/cache@v2
+              with:
+                  path: ./phpcs.xml.dist
+                  key: phpcs-cache
             - name: Install wdes/coding-standard
               run: composer require wdes/coding-standard
             - name: Lint files
