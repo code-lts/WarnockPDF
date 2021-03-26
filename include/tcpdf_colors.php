@@ -245,7 +245,7 @@ class TCPDF_COLORS
      * @param string $hcolor HTML color.
      * @param array $spotc Reference to an array of spot colors.
      * @param array $defcol Color to return in case of error.
-     * @return array RGB or CMYK color, or false in case of error.
+     * @return array|false RGB or CMYK color, or false in case of error.
      * @public static
      */
     public static function convertHTMLColorToDec($hcolor, &$spotc, $defcol = array('R' => 128,'G' => 128,'B' => 128)) {

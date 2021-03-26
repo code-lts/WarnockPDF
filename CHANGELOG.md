@@ -16,6 +16,7 @@
 - Added a testing and coverage script
 - Added GitHub actions to cover all PHP versions supported
 - Applied a coding-standard: wdes/coding-standard
+- Improved the phpdoc blocks
 
 ### Fixes
 

@@ -31,6 +31,8 @@ class TCPDF_IMAGES
      * Array of hinheritable SVG properties.
      * @since 5.0.000 (2010-05-02)
      * @public static
+     *
+     * @var string[]
      */
     public static $svginheritprop = array('clip-rule', 'color', 'color-interpolation', 'color-interpolation-filters', 'color-profile', 'color-rendering', 'cursor', 'direction', 'display', 'fill', 'fill-opacity', 'fill-rule', 'font', 'font-family', 'font-size', 'font-size-adjust', 'font-stretch', 'font-style', 'font-variant', 'font-weight', 'glyph-orientation-horizontal', 'glyph-orientation-vertical', 'image-rendering', 'kerning', 'letter-spacing', 'marker', 'marker-end', 'marker-mid', 'marker-start', 'pointer-events', 'shape-rendering', 'stroke', 'stroke-dasharray', 'stroke-dashoffset', 'stroke-linecap', 'stroke-linejoin', 'stroke-miterlimit', 'stroke-opacity', 'stroke-width', 'text-anchor', 'text-rendering', 'visibility', 'word-spacing', 'writing-mode');
 
@@ -66,9 +68,9 @@ class TCPDF_IMAGES
 
     /**
      * Set the transparency for the given GD image.
-     * @param image $new_image GD image object
-     * @param image $image GD image object.
-     * return GD image object.
+     * @param resource $new_image GD image object
+     * @param resource $image GD image object.
+     * @return resource GD image object $new_image
      * @since 4.9.016 (2010-04-20)
      * @public static
      */
@@ -91,9 +93,9 @@ class TCPDF_IMAGES
     /**
      * Convert the loaded image to a PNG and then return a structure for the PDF creator.
      * This function requires GD library and write access to the directory defined on K_PATH_CACHE constant.
-     * @param image $image Image object.
+     * @param resource $image Image object.
      * @param string $tempfile Temporary file name.
-     * return image PNG image object.
+     * @return array|false PNG image object.
      * @since 4.9.016 (2010-04-20)
      * @public static
      */
@@ -114,10 +116,10 @@ class TCPDF_IMAGES
     /**
      * Convert the loaded image to a JPEG and then return a structure for the PDF creator.
      * This function requires GD library and write access to the directory defined on K_PATH_CACHE constant.
-     * @param image $image Image object.
+     * @param resource $image Image object.
      * @param int $quality JPEG quality.
      * @param string $tempfile Temporary file name.
-     * return image JPEG image object.
+     * @return array|false
      * @public static
      */
     public static function _toJPEG($image, $quality, $tempfile) {
@@ -132,7 +134,7 @@ class TCPDF_IMAGES
     /**
      * Extract info from a JPEG file without using the GD library.
      * @param string $file image file to parse
-     * @return array structure containing the image data
+     * @return array|false structure containing the image data
      * @public static
      */
     public static function _parsejpeg($file) {
@@ -211,7 +213,7 @@ class TCPDF_IMAGES
     /**
      * Extract info from a PNG file without using the GD library.
      * @param string $file image file to parse
-     * @return array structure containing the image data
+     * @return array|false structure containing the image data
      * @public static
      */
     public static function _parsepng($file) {

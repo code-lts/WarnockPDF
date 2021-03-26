@@ -2415,7 +2415,7 @@ class TCPDF
 
 	/**
 	 * Get the last cell height.
-	 * @return last cell height
+	 * @return float last cell height
 	 * @public
 	 * @since 4.0.017 (2008-08-05)
 	 */
@@ -4137,7 +4137,7 @@ class TCPDF
 	 * @param string $family Font family. The name can be chosen arbitrarily. If it is a standard family name, it will override the corresponding font.
 	 * @param string $style Font style. Possible values are (case insensitive):<ul><li>empty string: regular (default)</li><li>B: bold</li><li>I: italic</li><li>BI or IB: bold italic</li></ul>
 	 * @param string $fontfile The font definition file. By default, the name is built from the family and style, in lower case with no spaces.
-	 * @return array containing the font data, or false in case of error.
+	 * @return array|false containing the font data, or false in case of error.
 	 * @param mixed $subset if true embedd only a subset of the font (stores only the information related to the used characters); if false embedd full font; if 'default' uses the default value set using setFontSubsetting(). This option is valid only for TrueTypeUnicode fonts. If you want to enable users to change the document, set this parameter to false. If you subset the font, the person who receives your PDF would need to have your same font in order to make changes to your PDF. The file size of the PDF would also be smaller because you are embedding only part of a font.
 	 * @public
 	 * @since 1.5
@@ -6780,7 +6780,7 @@ class TCPDF
 	 * @param bool    $fitonpage If true the image is resized to not exceed page dimensions.
 	 * @param bool    $alt If true the image will be added as alternative and not directly printed (the ID of the image will be returned).
 	 * @param array $altimgs Array of alternate images IDs. Each alternative image must be an array with two values: an integer representing the image ID (the value returned by the Image method) and a boolean value to indicate if the image is the default for printing.
-	 * @return image information
+	 * @return mixed|false image information
 	 * @public
 	 * @since 1.1
 	 */
@@ -7213,6 +7213,7 @@ class TCPDF
 				$imga = TCPDF_STATIC::objclone($img);
 				// extract alpha channel
 				if (method_exists($img, 'setImageAlphaChannel') and defined('Imagick::ALPHACHANNEL_EXTRACT')) {
+					/** @var Imagick $img */
 					$img->setImageAlphaChannel(Imagick::ALPHACHANNEL_EXTRACT);
 				} else {
 					$img->separateImageChannel(8); // 8 = (imagick::CHANNEL_ALPHA | imagick::CHANNEL_OPACITY | imagick::CHANNEL_MATTE);
@@ -7222,6 +7223,7 @@ class TCPDF
 				$img->writeImage($tempfile_alpha);
 				// remove alpha channel
 				if (method_exists($imga, 'setImageMatte')) {
+					/** @var Imagick $imga */
 					$imga->setImageMatte(false);
 				} else {
 					$imga->separateImageChannel(39); // 39 = (imagick::CHANNEL_ALL & ~(imagick::CHANNEL_ALPHA | imagick::CHANNEL_OPACITY | imagick::CHANNEL_MATTE));
@@ -7810,7 +7812,7 @@ class TCPDF
 	 * @param string $page Page content.
 	 * @param array $aliases Array of page aliases.
 	 * @param int $diff initial difference to add.
-	 * @return replaced page content.
+	 * @return string replaced page content.
 	 * @protected
 	 */
 	protected function replaceRightShiftPageNumAliases($page, $aliases, $diff) {
@@ -10359,7 +10361,7 @@ class TCPDF
 	 * @param array $color array of RGB text color
 	 * @param string $style font style (U, D, B, I)
 	 * @param bool    $firstblock if true the string is the starting of a line.
-	 * @return the number of cells used or the remaining text if $firstline = true;
+	 * @return int the number of cells used or the remaining text if $firstline = true;
 	 * @public
 	 */
 	public function addHtmlLink($url, $name, $fill = false, $firstline = false, $color = '', $style = -1, $firstblock = false) {
@@ -10445,7 +10447,7 @@ class TCPDF
 	 * Encrypt the input string.
 	 * @param int $n object number
 	 * @param string $s data string to encrypt
-	 * @return encrypted string
+	 * @return string encrypted string
 	 * @protected
 	 * @author Nicola Asuni
 	 * @since 5.0.005 (2010-05-11)
@@ -12189,7 +12191,7 @@ class TCPDF
 	 * @param float $y Y position in user units of the destiantion on the selected page (default = -1 = current position; 0 = page start;).
 	 * @param $page (int|string) Target page number (leave empty for current page). If you prefix a page number with the * character, then this page will not be changed when adding/deleting/moving pages.
 	 * @param float $x X position in user units of the destiantion on the selected page (default = -1 = current position;).
-	 * @return string Stripped named destination identifier or false in case of error.
+	 * @return string|false Stripped named destination identifier or false in case of error.
 	 * @public
 	 * @author Christian Deligant, Nicola Asuni
 	 * @since 5.9.097 (2011-06-23)
@@ -13625,7 +13627,7 @@ class TCPDF
 	 * Return the alias for the total number of pages in the current page group.
 	 * If the current font is unicode type, the returned string is surrounded by additional curly braces.
 	 * This alias will be replaced by the total number of pages in this group.
-	 * @return alias of the current page group
+	 * @return string alias of the current page group
 	 * @public
 	 * @since 3.0.000 (2008-03-27)
 	 */
@@ -13640,7 +13642,7 @@ class TCPDF
 	 * Return the alias for the page number on the current page group.
 	 * If the current font is unicode type, the returned string is surrounded by additional curly braces.
 	 * This alias will be replaced by the page number (relative to the belonging group).
-	 * @return alias of the current page group
+	 * @return string alias of the current page group
 	 * @public
 	 * @since 4.5.000 (2009-01-02)
 	 */
@@ -13653,7 +13655,7 @@ class TCPDF
 
 	/**
 	 * Return the current page in the group.
-	 * @return current page in the group
+	 * @return int current page in the group
 	 * @public
 	 * @since 3.0.000 (2008-03-27)
 	 */
@@ -13782,7 +13784,7 @@ class TCPDF
 	/**
 	 * Add transparency parameters to the current extgstate
 	 * @param array $parms parameters
-	 * @return the number of extgstates
+	 * @return int|void the number of extgstates
 	 * @protected
 	 * @since 3.0.000 (2008-03-27)
 	 */
@@ -15768,7 +15770,7 @@ class TCPDF
 
 	/**
 	 * Returns the current font size.
-	 * @return current font size
+	 * @return float current font size
 	 * @public
 	 * @since 3.2.000 (2008-06-23)
 	 */
@@ -15778,7 +15780,7 @@ class TCPDF
 
 	/**
 	 * Returns the current font size in points unit.
-	 * @return current font size in points unit
+	 * @return int current font size in points unit
 	 * @public
 	 * @since 3.2.000 (2008-06-23)
 	 */
@@ -20784,7 +20786,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	/**
 	 * Get image buffer content.
 	 * @param string $image image key
-	 * @return string image buffer content or false in case of error
+	 * @return string|false image buffer content or false in case of error
 	 * @protected
 	 * @since 4.5.000 (2008-12-31)
 	 */
@@ -20831,7 +20833,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	/**
 	 * Get font buffer content.
 	 * @param string $font font key
-	 * @return string font buffer content or false in case of error
+	 * @return string|false font buffer content or false in case of error
 	 * @protected
 	 * @since 4.5.000 (2009-01-02)
 	 */
@@ -20846,7 +20848,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * Move a page to a previous position.
 	 * @param int $frompage number of the source page
 	 * @param int $topage number of the destination page (must be less than $frompage)
-	 * @return true in case of success, false in case of error.
+	 * @return bool in case of success, false in case of error.
 	 * @public
 	 * @since 4.5.000 (2009-01-02)
 	 */
@@ -21207,7 +21209,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	/**
 	 * Clone the specified page to a new page.
 	 * @param int $page number of page to copy (0 = current page)
-	 * @return true in case of success, false in case of error.
+	 * @return bool in case of success, false in case of error.
 	 * @public
 	 * @since 4.9.015 (2010-04-20)
 	 */
@@ -22139,7 +22141,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * Left trim the input string
 	 * @param string $str string to trim
 	 * @param string $replace string that replace spaces.
-	 * @return left trimmed string
+	 * @return string left trimmed string
 	 * @author Nicola Asuni
 	 * @public
 	 * @since 5.8.000 (2010-08-11)
@@ -22152,7 +22154,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * Right trim the input string
 	 * @param string $str string to trim
 	 * @param string $replace string that replace spaces.
-	 * @return right trimmed string
+	 * @return string right trimmed string
 	 * @author Nicola Asuni
 	 * @public
 	 * @since 5.8.000 (2010-08-11)
@@ -22165,7 +22167,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * Trim the input string
 	 * @param string $str string to trim
 	 * @param string $replace string that replace spaces.
-	 * @return trimmed string
+	 * @return string trimmed string
 	 * @author Nicola Asuni
 	 * @public
 	 * @since 5.8.000 (2010-08-11)
@@ -22233,7 +22235,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
 	 * @param int $w Template width in user units (empty string or zero = page width less margins).
 	 * @param int $h Template height in user units (empty string or zero = page height less margins).
 	 * @param mixed $group Set transparency group. Can be a boolean value or an array specifying optional parameters: 'CS' (solour space name), 'I' (boolean flag to indicate isolated group) and 'K' (boolean flag to indicate knockout group).
-	 * @return int the XObject Template ID in case of success or false in case of error.
+	 * @return int|false the XObject Template ID in case of success or false in case of error.
 	 * @author Nicola Asuni
 	 * @public
 	 * @since 5.8.017 (2010-08-24)
