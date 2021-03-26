@@ -1,5 +1,7 @@
 <?php
 
+namespace WarnockPDF;
+
 /**
  * This file is part of WarnockPDF software library.
  *
@@ -23,7 +25,7 @@
  * @version 1.1.0
  * @author Nicola Asuni - info@tecnick.com
  */
-class TCPDF_FONTS
+class Fonts
 {
 
     /**

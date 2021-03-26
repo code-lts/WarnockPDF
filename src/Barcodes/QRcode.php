@@ -1,5 +1,7 @@
 <?php
 
+namespace WarnockPDF\Barcodes;
+
 /**
  * This file is part of the WarnockPDF library.
  *

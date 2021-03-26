@@ -1,5 +1,7 @@
 <?php
 
+namespace WarnockPDF\Barcodes;
+
 /**
  * This file is part of the WarnockPDF library.
  *
@@ -71,7 +73,7 @@ if (!defined('PDF417DEFS')) {
  * @author Nicola Asuni
  * @version 1.0.003
  */
-class PDF417
+class Pdf417
 {
 
     /**

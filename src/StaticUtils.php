@@ -1,5 +1,7 @@
 <?php
 
+namespace WarnockPDF;
+
 /**
  * This file is part of the WarnockPDF library.
  *
@@ -25,7 +27,7 @@
  * @version 1.1.1
  * @author Nicola Asuni - info@tecnick.com
  */
-class TCPDF_STATIC
+class StaticUtils
 {
 
     /**

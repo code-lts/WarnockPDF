@@ -1,5 +1,7 @@
 <?php
 
+namespace WarnockPDF;
+
 /**
  * This file is part of the WarnockPDF library.
  *
@@ -23,7 +25,7 @@
  * @version 1.0.004
  * @author Nicola Asuni - info@tecnick.com
  */
-class TCPDF_COLORS
+class Colors
 {
 
     /**
