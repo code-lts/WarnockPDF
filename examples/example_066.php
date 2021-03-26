@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Example 065 for WarnockPDF library
+ * Example 066 for WarnockPDF library
  *
  * @description Creates an example PDF/A-1b document using WarnockPDF
  * @author Nicola Asuni - Tecnick.com LTD <info@tecnick.com>
@@ -13,7 +13,7 @@
  *
  * @abstract WarnockPDF - Example: PDF/A-1b mode
  * @author Nicola Asuni
- * @since 2011-09-28
+ * @since 2021-03-26
  */
 
 // Load the autoloader, move one folder back from examples
@@ -27,9 +27,9 @@ $pdf = new WarnockPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UT
 // set document information
 $pdf->SetCreator(PDF_CREATOR);
 $pdf->SetAuthor('Nicola Asuni');
-$pdf->SetTitle('TCPDF Example 065');
-$pdf->SetSubject('TCPDF Tutorial');
-$pdf->SetKeywords('TCPDF, PDF, example, test, guide');
+$pdf->SetTitle('WarnockPDF Example 066');
+$pdf->SetSubject('WarnockPDF Tutorial');
+$pdf->SetKeywords('WarnockPDF, PDF, example, test, guide');
 
 // set default header data
 $pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE . ' 065', PDF_HEADER_STRING);

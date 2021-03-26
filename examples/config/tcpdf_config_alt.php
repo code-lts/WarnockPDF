@@ -29,7 +29,7 @@ define ('K_TCPDF_EXTERNAL_CONFIG', true);
 //define ('K_PATH_MAIN', '');
 
 /**
- * URL path to tcpdf installation folder (http://localhost/tcpdf/).
+ * URL path to WarnockPDF installation folder (http://localhost/tcpdf/).
  * By default it is automatically set but you can also set it as a fixed string to improve performances.
  */
 //define ('K_PATH_URL', '');
@@ -80,22 +80,22 @@ define ('PDF_PAGE_ORIENTATION', 'P');
 /**
  * Document creator.
  */
-define ('PDF_CREATOR', 'TCPDF');
+define ('PDF_CREATOR', 'WarnockPDF');
 
 /**
  * Document author.
  */
-define ('PDF_AUTHOR', 'TCPDF');
+define ('PDF_AUTHOR', 'WarnockPDF');
 
 /**
  * Header title.
  */
-define ('PDF_HEADER_TITLE', 'TCPDF Example');
+define ('PDF_HEADER_TITLE', 'WarnockPDF Example');
 
 /**
  * Header description string.
  */
-define ('PDF_HEADER_STRING', "by Nicola Asuni - Tecnick.com\nwww.tcpdf.org");
+define ('PDF_HEADER_STRING', "by WarnockPDF");
 
 /**
  * Document unit of measure [pt=point, mm=millimeter, cm=centimeter, in=inch].
@@ -188,7 +188,7 @@ define('K_SMALL_RATIO', 2 / 3);
 define('K_THAI_TOPCHARS', true);
 
 /**
- * If true allows to call TCPDF methods using HTML syntax
+ * If true allows to call WarnockPDF methods using HTML syntax
  * IMPORTANT: For security reason, disable this feature if you are printing user HTML content.
  */
 define('K_TCPDF_CALLS_IN_HTML', true);
