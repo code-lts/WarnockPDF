@@ -2680,7 +2680,7 @@ class TCPDF
 	/**
 	 * Adjust the internal Cell padding array to take account of the line width.
 	 * @param mixed $brd Indicates if borders must be drawn around the cell. The value can be a number:<ul><li>0: no border (default)</li><li>1: frame</li></ul> or a string containing some or all of the following characters (in any order):<ul><li>L: left</li><li>T: top</li><li>R: right</li><li>B: bottom</li></ul> or an array of line styles for each border group - for example: array('LTRB' => array('width' => 2, 'cap' => 'butt', 'join' => 'miter', 'dash' => 0, 'color' => array(0, 0, 0)))
-	 * @return array of adjustments
+	 * @return void|array of adjustments
 	 * @public
 	 * @since 5.9.000 (2010-10-03)
 	 */
@@ -2696,7 +2696,11 @@ class TCPDF
 				$newbrd[$brd[$i]] = true;
 			}
 			$brd = $newbrd;
-		} elseif (($brd === 1) or ($brd === true) or (is_numeric($brd) and (intval($brd) > 0))) {
+		} elseif (
+			($brd === 1)
+			|| ($brd === true)
+			|| (is_numeric($brd) && ((int)$brd > 0))
+		) {
 			$brd = array('LRTB' => true);
 		}
 		if (!is_array($brd)) {
@@ -2735,20 +2739,42 @@ class TCPDF
 				}
 			}
 			// correct internal cell padding if required to avoid overlap between text and lines
-			if ((strpos($border, 'T') !== false) and ($this->cell_padding['T'] < $adj)) {
+			if (
+				is_numeric($this->cell_padding['T'])
+				&& ($this->cell_padding['T'] < $adj)
+				&& (strpos($border, 'T') !== false)
+			) {
 				$this->cell_padding['T'] = $adj;
 			}
-			if ((strpos($border, 'R') !== false) and ($this->cell_padding['R'] < $adj)) {
+			if (
+				is_numeric($this->cell_padding['R'])
+				&& ($this->cell_padding['R'] < $adj)
+				&& (strpos($border, 'R') !== false)
+			) {
 				$this->cell_padding['R'] = $adj;
 			}
-			if ((strpos($border, 'B') !== false) and ($this->cell_padding['B'] < $adj)) {
+			if (
+				is_numeric($this->cell_padding['B'])
+				&& ($this->cell_padding['B'] < $adj)
+				&& (strpos($border, 'B') !== false)
+			) {
 				$this->cell_padding['B'] = $adj;
 			}
-			if ((strpos($border, 'L') !== false) and ($this->cell_padding['L'] < $adj)) {
+			if (
+				is_numeric($this->cell_padding['L'])
+				&& ($this->cell_padding['L'] < $adj)
+				&& (strpos($border, 'L') !== false)
+			) {
 				$this->cell_padding['L'] = $adj;
 			}
 		}
-		return array('T' => ($this->cell_padding['T'] - $cp['T']), 'R' => ($this->cell_padding['R'] - $cp['R']), 'B' => ($this->cell_padding['B'] - $cp['B']), 'L' => ($this->cell_padding['L'] - $cp['L']));
+
+		return array(
+			'T' => ($this->cell_padding['T'] - $cp['T']),
+			'R' => ($this->cell_padding['R'] - $cp['R']),
+			'B' => ($this->cell_padding['B'] - $cp['B']),
+			'L' => ($this->cell_padding['L'] - $cp['L']),
+		);
 	}
 
 	/**
@@ -16483,7 +16509,11 @@ class TCPDF
 						$dom[($dom[$key]['parent'])]['content'] = str_replace('</thead>', '', $dom[($dom[$key]['parent'])]['content']);
 					}
 					// store header rows on a new table
-					if (($dom[$key]['value'] == 'tr') and ($dom[($dom[$key]['parent'])]['thead'] === true)) {
+					if (
+						($dom[$key]['value'] === 'tr')
+						&& !empty($dom[($dom[$key]['parent'])]['thead'])
+						&& ($dom[($dom[$key]['parent'])]['thead'] === true)
+					) {
 						if (TCPDF_STATIC::empty_string($dom[($dom[($dom[$key]['parent'])]['parent'])]['thead'])) {
 							$dom[($dom[($dom[$key]['parent'])]['parent'])]['thead'] = $csstagarray . $a[$dom[($dom[($dom[$key]['parent'])]['parent'])]['elkey']];
 						}
@@ -16913,10 +16943,20 @@ class TCPDF
 							// rows on thead block are printed as a separate table
 						} else {
 							$dom[$key]['thead'] = false;
+							$parent = $dom[$key]['parent'];
+
+							if (!isset($dom[$parent]['rows'])) {
+								$dom[$parent]['rows'] = 0;
+							}
 							// store the number of rows on table element
-							++$dom[($dom[$key]['parent'])]['rows'];
+							++$dom[$parent]['rows'];
+
+							if (!isset($dom[$parent]['trids'])) {
+								$dom[$parent]['trids'] = array();
+							}
+
 							// store the TR elements IDs on table element
-							array_push($dom[($dom[$key]['parent'])]['trids'], $key);
+							$dom[$parent]['trids'][] = $key;
 						}
 					}
 					if (($dom[$key]['value'] == 'th') or ($dom[$key]['value'] == 'td')) {
@@ -19742,7 +19782,7 @@ Putting 1 is equivalent to putting 0 and calling Ln() just after. Default value:
                         }
                         }
                     if (!$in_table_head) { // we are not inside a thead section
-                    $this->cell_padding = $table_el['old_cell_padding'];
+                    $this->cell_padding = isset($table_el['old_cell_padding']) ? $table_el['old_cell_padding'] : null;
                     // reset row height
                     $this->resetLastH();
                     if (($this->page == ($this->numpages - 1)) AND ($this->pageopen[$this->numpages])) {
