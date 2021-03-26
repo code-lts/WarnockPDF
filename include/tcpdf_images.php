@@ -221,7 +221,7 @@ class TCPDF_IMAGES
             return false;
         }
         //Check signature
-        if (fread($f, 8) != chr(137).'PNG'.chr(13).chr(10).chr(26).chr(10)) {
+        if (fread($f, 8) != chr(137) . 'PNG' . chr(13) . chr(10) . chr(26) . chr(10)) {
             // Not a PNG file
             return false;
         }
@@ -263,7 +263,7 @@ class TCPDF_IMAGES
         }
         fread($f, 4);
         $channels = ($ct == 2 ? 3 : 1);
-        $parms = '/DecodeParms << /Predictor 15 /Colors '.$channels.' /BitsPerComponent '.$bpc.' /Columns '.$w.' >>';
+        $parms = '/DecodeParms << /Predictor 15 /Colors ' . $channels . ' /BitsPerComponent ' . $bpc . ' /Columns ' . $w . ' >>';
         //Scan chunks looking for palette, transparency and image data
         $pal = '';
         $trns = '';

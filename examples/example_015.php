@@ -31,7 +31,7 @@ $pdf->SetSubject('TCPDF Tutorial');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data
-$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 015', PDF_HEADER_STRING);
+$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE . ' 015', PDF_HEADER_STRING);
 
 // set header and footer fonts
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
@@ -52,8 +52,8 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // set some language-dependent strings (optional)
-if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-    require_once(dirname(__FILE__).'/lang/eng.php');
+if (@file_exists(dirname(__FILE__) . '/lang/eng.php')) {
+    require_once(dirname(__FILE__) . '/lang/eng.php');
     $pdf->setLanguageArray($l);
 }
 
@@ -127,10 +127,10 @@ $pdf->SetFont('helvetica', '', 10);
 $pdf->Write(0, $txt, '', 0, 'L', true, 0, false, false, 0);
 
 // attach an external file TXT file
-$pdf->Annotation(20, 50, 5, 5, 'TXT file', array('Subtype'=>'FileAttachment', 'Name' => 'PushPin', 'FS' => 'data/utf8test.txt'));
+$pdf->Annotation(20, 50, 5, 5, 'TXT file', array('Subtype' => 'FileAttachment', 'Name' => 'PushPin', 'FS' => 'data/utf8test.txt'));
 
 // attach an external file
-$pdf->Annotation(50, 50, 5, 5, 'PDF file', array('Subtype'=>'FileAttachment', 'Name' => 'PushPin', 'FS' => 'example_012.pdf'));
+$pdf->Annotation(50, 50, 5, 5, 'PDF file', array('Subtype' => 'FileAttachment', 'Name' => 'PushPin', 'FS' => 'example_012.pdf'));
 
 // add a bookmark that points to an embedded file
 // NOTE: prefix the file name with the * character for generic file and with % character for PDF file

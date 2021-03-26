@@ -55,7 +55,7 @@ class MC_TCPDF extends TCPDF
     public function ChapterTitle($num, $title) {
         $this->SetFont('helvetica', '', 14);
         $this->SetFillColor(200, 220, 255);
-        $this->Cell(180, 6, 'Chapter '.$num.' : '.$title, 0, 1, '', 1);
+        $this->Cell(180, 6, 'Chapter ' . $num . ' : ' . $title, 0, 1, '', 1);
         $this->Ln(4);
     }
 
@@ -98,7 +98,7 @@ $pdf->SetSubject('TCPDF Tutorial');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data
-$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 010', PDF_HEADER_STRING);
+$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE . ' 010', PDF_HEADER_STRING);
 
 // set header and footer fonts
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
@@ -119,18 +119,18 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // set some language-dependent strings (optional)
-if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-    require_once(dirname(__FILE__).'/lang/eng.php');
+if (@file_exists(dirname(__FILE__) . '/lang/eng.php')) {
+    require_once(dirname(__FILE__) . '/lang/eng.php');
     $pdf->setLanguageArray($l);
 }
 
 // ---------------------------------------------------------
 
 // print TEXT
-$pdf->PrintChapter(1, 'LOREM IPSUM [TEXT]', dirname(__FILE__) .'/data/chapter_demo_1.txt', false);
+$pdf->PrintChapter(1, 'LOREM IPSUM [TEXT]', dirname(__FILE__) . '/data/chapter_demo_1.txt', false);
 
 // print HTML
-$pdf->PrintChapter(2, 'LOREM IPSUM [HTML]', dirname(__FILE__) .'/data/chapter_demo_2.txt', true);
+$pdf->PrintChapter(2, 'LOREM IPSUM [HTML]', dirname(__FILE__) . '/data/chapter_demo_2.txt', true);
 
 // ---------------------------------------------------------
 

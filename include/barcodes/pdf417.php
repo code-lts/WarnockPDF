@@ -547,15 +547,15 @@ class PDF417
             $optmodes = array(900,902,902,900,900,902,902);
             $optsize = array(-1,2,4,-1,-1,-1,2);
             foreach ($optmodes as $k => $omode) {
-                if (isset($macro['option_'.$k])) {
+                if (isset($macro['option_' . $k])) {
                     $macrocw[] = 923;
                     $macrocw[] = $k;
                     if ($optsize[$k] == 2) {
-                        $macro['option_'.$k] = sprintf('%05d', $macro['option_'.$k]);
+                        $macro['option_' . $k] = sprintf('%05d', $macro['option_' . $k]);
                     } elseif ($optsize[$k] == 4) {
-                        $macro['option_'.$k] = sprintf('%010d', $macro['option_'.$k]);
+                        $macro['option_' . $k] = sprintf('%010d', $macro['option_' . $k]);
                     }
-                    $cw = $this->getCompaction($omode, $macro['option_'.$k], false);
+                    $cw = $this->getCompaction($omode, $macro['option_' . $k], false);
                     $macrocw = array_merge($macrocw, $cw);
                 }
             }
@@ -626,8 +626,8 @@ class PDF417
         // add error correction codewords
         $codewords = array_merge($codewords, $ecw);
         // add horizontal quiet zones to start and stop patterns
-        $pstart = str_repeat('0', QUIETH).$this->start_pattern;
-        $pstop = $this->stop_pattern.str_repeat('0', QUIETH);
+        $pstart = str_repeat('0', QUIETH) . $this->start_pattern;
+        $pstop = $this->stop_pattern . str_repeat('0', QUIETH);
         $barcode_array['num_rows'] = ($rows * ROWHEIGHT) + (2 * QUIETV);
         $barcode_array['num_cols'] = (($cols + 2) * 17) + 35 + (2 * QUIETH);
         $barcode_array['bcode'] = array();
@@ -880,7 +880,7 @@ class PDF417
                                     }
                                 } else {
                                     // latch
-                                    $txtarr = array_merge($txtarr, $this->textlatch[''.$submode.$s]);
+                                    $txtarr = array_merge($txtarr, $this->textlatch['' . $submode . $s]);
                                     // set new submode
                                     $submode = $s;
                                 }
@@ -915,12 +915,12 @@ class PDF417
                         $sublen = strlen($code);
                     }
                     if ($sublen == 6) {
-                        $t = bcmul(''.ord($code[0]), '1099511627776');
-                        $t = bcadd($t, bcmul(''.ord($code[1]), '4294967296'));
-                        $t = bcadd($t, bcmul(''.ord($code[2]), '16777216'));
-                        $t = bcadd($t, bcmul(''.ord($code[3]), '65536'));
-                        $t = bcadd($t, bcmul(''.ord($code[4]), '256'));
-                        $t = bcadd($t, ''.ord($code[5]));
+                        $t = bcmul('' . ord($code[0]), '1099511627776');
+                        $t = bcadd($t, bcmul('' . ord($code[1]), '4294967296'));
+                        $t = bcadd($t, bcmul('' . ord($code[2]), '16777216'));
+                        $t = bcadd($t, bcmul('' . ord($code[3]), '65536'));
+                        $t = bcadd($t, bcmul('' . ord($code[4]), '256'));
+                        $t = bcadd($t, '' . ord($code[5]));
                         // tmp array for the 6 bytes block
                         $cw6 = array();
                         do {
@@ -948,7 +948,7 @@ class PDF417
                     } else {
                         $rest = '';
                     }
-                    $t = '1'.$code;
+                    $t = '1' . $code;
                     do {
                         $d = bcmod($t, '900');
                         $t = bcdiv($t, '900');

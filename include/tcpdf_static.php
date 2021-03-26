@@ -101,7 +101,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function getTCPDFProducer() {
-        return "\x54\x43\x50\x44\x46\x20".self::getTCPDFVersion()."\x20\x28\x68\x74\x74\x70\x3a\x2f\x2f\x77\x77\x77\x2e\x74\x63\x70\x64\x66\x2e\x6f\x72\x67\x29";
+        return "\x54\x43\x50\x44\x46\x20" . self::getTCPDFVersion() . "\x20\x28\x68\x74\x74\x70\x3a\x2f\x2f\x77\x77\x77\x2e\x74\x63\x70\x64\x66\x2e\x6f\x72\x67\x29";
     }
 
     /**
@@ -239,7 +239,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function getObjFilename($type='tmp', $file_id='') {
-        return tempnam(K_PATH_CACHE, '__tcpdf_'.$file_id.'_'.$type.'_'.md5(TCPDF_STATIC::getRandomSeed()).'_');
+        return tempnam(K_PATH_CACHE, '__tcpdf_' . $file_id . '_' . $type . '_' . md5(TCPDF_STATIC::getRandomSeed()) . '_');
     }
 
     /**
@@ -291,7 +291,7 @@ class TCPDF_STATIC
     public static function sendOutputData($data, $length) {
         if (!isset($_SERVER['HTTP_ACCEPT_ENCODING']) OR empty($_SERVER['HTTP_ACCEPT_ENCODING'])) {
             // the content length may vary if the server is using compression
-            header('Content-Length: '.$length);
+            header('Content-Length: ' . $length);
         }
         echo $data;
     }
@@ -339,7 +339,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function getFormattedDate($time) {
-        return substr_replace(date('YmdHisO', intval($time)), '\'', (0 - 2), 0).'\'';
+        return substr_replace(date('YmdHisO', intval($time)), '\'', (0 - 2), 0) . '\'';
     }
 
     /**
@@ -351,7 +351,7 @@ class TCPDF_STATIC
      * @public static
      */
     public static function getRandomSeed($seed='') {
-        $rnd = uniqid(rand().microtime(true), true);
+        $rnd = uniqid(rand() . microtime(true), true);
         if (function_exists('posix_getpid')) {
             $rnd .= posix_getpid();
         }
@@ -363,7 +363,7 @@ class TCPDF_STATIC
                 $rnd .= uniqid('', true);
             }
         }
-        return $rnd.$seed.__FILE__.serialize($_SERVER).microtime(true);
+        return $rnd . $seed . __FILE__ . serialize($_SERVER) . microtime(true);
     }
 
     /**
@@ -394,11 +394,11 @@ class TCPDF_STATIC
         if (extension_loaded('openssl')) {
             $iv = openssl_random_pseudo_bytes (openssl_cipher_iv_length('aes-256-cbc'));
             $text = openssl_encrypt($text, 'aes-256-cbc', $key, OPENSSL_RAW_DATA, $iv);
-            return $iv.substr($text, 0, -16);
+            return $iv . substr($text, 0, -16);
         }
         $iv = mcrypt_create_iv(mcrypt_get_iv_size(MCRYPT_RIJNDAEL_128, MCRYPT_MODE_CBC), MCRYPT_RAND);
         $text = mcrypt_encrypt(MCRYPT_RIJNDAEL_128, $key, $text, MCRYPT_MODE_CBC, $iv);
-        $text = $iv.$text;
+        $text = $iv . $text;
         return $text;
     }
 
@@ -525,7 +525,7 @@ class TCPDF_STATIC
             ++$bslength;
         }
         for ($i = 0; $i < $bslength; $i += 2) {
-            $string .= chr(hexdec($bs[$i].$bs[($i + 1)]));
+            $string .= chr(hexdec($bs[$i] . $bs[($i + 1)]));
         }
         return $string;
     }
@@ -618,7 +618,7 @@ class TCPDF_STATIC
                     break;
                 }
                 default: {
-                    $opt['q'] = ($rtl)?2:0;
+                    $opt['q'] = ($rtl) ? 2 : 0;
                     break;
                 }
             }
@@ -635,31 +635,31 @@ class TCPDF_STATIC
                 case 'border.d':
                 case 'dashed': {
                     $opt['border'] = array(0, 0, $linewidth, array(3, 2));
-                    $opt['bs'] = array('w'=>$linewidth, 's'=>'D', 'd'=>array(3, 2));
+                    $opt['bs'] = array('w' => $linewidth, 's' => 'D', 'd' => array(3, 2));
                     break;
                 }
                 case 'border.b':
                 case 'beveled': {
                     $opt['border'] = array(0, 0, $linewidth);
-                    $opt['bs'] = array('w'=>$linewidth, 's'=>'B');
+                    $opt['bs'] = array('w' => $linewidth, 's' => 'B');
                     break;
                 }
                 case 'border.i':
                 case 'inset': {
                     $opt['border'] = array(0, 0, $linewidth);
-                    $opt['bs'] = array('w'=>$linewidth, 's'=>'I');
+                    $opt['bs'] = array('w' => $linewidth, 's' => 'I');
                     break;
                 }
                 case 'border.u':
                 case 'underline': {
                     $opt['border'] = array(0, 0, $linewidth);
-                    $opt['bs'] = array('w'=>$linewidth, 's'=>'U');
+                    $opt['bs'] = array('w' => $linewidth, 's' => 'U');
                     break;
                 }
                 case 'border.s':
                 case 'solid': {
                     $opt['border'] = array(0, 0, $linewidth);
-                    $opt['bs'] = array('w'=>$linewidth, 's'=>'S');
+                    $opt['bs'] = array('w' => $linewidth, 's' => 'S');
                     break;
                 }
                 default: {
@@ -1055,11 +1055,11 @@ class TCPDF_STATIC
             $b = intval(preg_match_all('/[\#]/', $selector, $matches)); // number of ID attributes
             $c = intval(preg_match_all('/[\[\.]/', $selector, $matches)); // number of other attributes
             $c += intval(preg_match_all('/[\:]link|visited|hover|active|focus|target|lang|enabled|disabled|checked|indeterminate|root|nth|first|last|only|empty|contains|not/i', $selector, $matches)); // number of pseudo-classes
-            $d = intval(preg_match_all('/[\>\+\~\s]{1}[a-zA-Z0-9]+/', ' '.$selector, $matches)); // number of element names
+            $d = intval(preg_match_all('/[\>\+\~\s]{1}[a-zA-Z0-9]+/', ' ' . $selector, $matches)); // number of element names
             $d += intval(preg_match_all('/[\:][\:]/', $selector, $matches)); // number of pseudo-elements
-            $specificity = $a.$b.$c.$d;
+            $specificity = $a . $b . $c . $d;
             // add specificity to the beginning of the selector
-            $cssdata[$specificity.' '.$selector] = $block[1];
+            $cssdata[$specificity . ' ' . $selector] = $block[1];
         }
         // sort selectors alphabetically to account for specificity
         ksort($cssdata, SORT_STRING);
@@ -1120,7 +1120,7 @@ class TCPDF_STATIC
             $css = '';
         }
         // include default css
-        $css = '<style>'.$default_css.$css.'</style>';
+        $css = '<style>' . $default_css . $css . '</style>';
         // get the body part
         $tidy_body = tidy_get_body($tidy);
         $html = $tidy_body->value;
@@ -1134,7 +1134,7 @@ class TCPDF_STATIC
             $tagvspaces = $tagvs;
         }
         // return the cleaned XHTML code + CSS
-        return $css.$html;
+        return $css . $html;
     }
 
     /**
@@ -1224,7 +1224,7 @@ class TCPDF_STATIC
                                         case '|=': {
                                             if ($dom[$key]['attribute'][$att] == $val) {
                                                 $valid = true;
-                                            } elseif (preg_match('/'.$val.'[\-]{1}/i', $dom[$key]['attribute'][$att]) > 0) {
+                                            } elseif (preg_match('/' . $val . '[\-]{1}/i', $dom[$key]['attribute'][$att]) > 0) {
                                                 $valid = true;
                                             }
                                             break;
@@ -1338,7 +1338,7 @@ class TCPDF_STATIC
         $cssordered = array();
         foreach ($cssarray as $key => $val) {
             $skey = sprintf('%04d', $key);
-            $cssordered[$val['s'].'_'.$skey] = $val;
+            $cssordered[$val['s'] . '_' . $skey] = $val;
         }
         // sort selectors alphabetically to account for specificity
         ksort($cssordered, SORT_STRING);
@@ -1364,12 +1364,12 @@ class TCPDF_STATIC
                         $cmd = substr($cmd, 0, ($pos + 1));
                         if (strpos($tagstyle, $cmd) !== false) {
                             // remove duplicate commands (last commands have high priority)
-                            $tagstyle = preg_replace('/'.$cmd.'[^;]+/i', '', $tagstyle);
+                            $tagstyle = preg_replace('/' . $cmd . '[^;]+/i', '', $tagstyle);
                         }
                     }
                 }
             }
-            $tagstyle .= ';'.$style['c'];
+            $tagstyle .= ';' . $style['c'];
         }
         // remove multiple semicolons
         $tagstyle = preg_replace('/[;]+/', ';', $tagstyle);
@@ -1451,9 +1451,9 @@ class TCPDF_STATIC
      */
     public static function revstrpos($haystack, $needle, $offset = 0) {
         $length = strlen($haystack);
-        $offset = ($offset > 0)?($length - $offset):abs($offset);
+        $offset = ($offset > 0) ? ($length - $offset) : abs($offset);
         $pos = strpos(strrev($haystack), strrev($needle), $offset);
-        return ($pos === false)?false:($length - $pos - strlen($needle));
+        return ($pos === false) ? false : ($length - $pos - strlen($needle));
     }
 
     /**
@@ -1738,17 +1738,17 @@ class TCPDF_STATIC
         $flags = $flags === null ? 0 : $flags;
         // the bug only happens on PHP 5.2 when using the u modifier
         if ((strpos($modifiers, 'u') === FALSE) OR (count(preg_split('//u', "\n\t", -1, PREG_SPLIT_NO_EMPTY)) == 2)) {
-            return preg_split($pattern.$modifiers, $subject, $limit, $flags);
+            return preg_split($pattern . $modifiers, $subject, $limit, $flags);
         }
         // preg_split is bugged - try alternative solution
         $ret = array();
         while (($nl = strpos($subject, "\n")) !== FALSE) {
-            $ret = array_merge($ret, preg_split($pattern.$modifiers, substr($subject, 0, $nl), $limit, $flags));
+            $ret = array_merge($ret, preg_split($pattern . $modifiers, substr($subject, 0, $nl), $limit, $flags));
             $ret[] = "\n";
             $subject = substr($subject, ($nl + 1));
         }
         if (strlen($subject) > 0) {
-            $ret = array_merge($ret, preg_split($pattern.$modifiers, $subject, $limit, $flags));
+            $ret = array_merge($ret, preg_split($pattern . $modifiers, $subject, $limit, $flags));
         }
         return $ret;
     }
@@ -1762,7 +1762,7 @@ class TCPDF_STATIC
      */
     public static function fopenLocal($filename, $mode) {
         if (strpos($filename, '://') === false) {
-            $filename = 'file://'.$filename;
+            $filename = 'file://' . $filename;
         } elseif (stream_is_local($filename) !== true) {
             return false;
         }
@@ -1855,7 +1855,7 @@ class TCPDF_STATIC
         ) {
             $findroot = strpos($file, $_SERVER['DOCUMENT_ROOT']);
             if (($findroot === false) || ($findroot > 1)) {
-            $alt[] = htmlspecialchars_decode(urldecode($_SERVER['DOCUMENT_ROOT'].$file));
+            $alt[] = htmlspecialchars_decode(urldecode($_SERVER['DOCUMENT_ROOT'] . $file));
             }
         }
         //
@@ -1866,7 +1866,7 @@ class TCPDF_STATIC
         //
         $url = $file;
         if (preg_match('%^//%', $url) && !empty($_SERVER['HTTP_HOST'])) {
-            $url = $protocol.':'.str_replace(' ', '%20', $url);
+            $url = $protocol . ':' . str_replace(' ', '%20', $url);
         }
         $url = htmlspecialchars_decode($url);
         $alt[] = $url;
@@ -1877,7 +1877,7 @@ class TCPDF_STATIC
         ) {
             $urldata = parse_url($url);
             if (empty($urldata['query'])) {
-                $host = $protocol.'://'.$_SERVER['HTTP_HOST'];
+                $host = $protocol . '://' . $_SERVER['HTTP_HOST'];
                 if (strpos($url, $host) === 0) {
                     // convert URL to full server path
                     $tmp = str_replace($host, $_SERVER['DOCUMENT_ROOT'], $url);
@@ -1891,7 +1891,7 @@ class TCPDF_STATIC
             && !preg_match('%^//%', $file)
         ) {
             $urldata = @parse_url($_SERVER['SCRIPT_URI']);
-            $alt[] = $urldata['scheme'].'://'.$urldata['host'].(($file[0] == '/') ? '' : '/').$file;
+            $alt[] = $urldata['scheme'] . '://' . $urldata['host'] . (($file[0] == '/') ? '' : '/') . $file;
         }
         //
         $alt = array_unique($alt);
@@ -2019,7 +2019,7 @@ class TCPDF_STATIC
         $m = self::_getFWORD($str, $offset);
         // fraction
         $f = self::_getUSHORT($str, ($offset + 2));
-        $v = floatval(''.$m.'.'.$f.'');
+        $v = floatval('' . $m . '.' . $f . '');
         return $v;
     }
 

@@ -45,8 +45,8 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // set some language-dependent strings (optional)
-if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-    require_once(dirname(__FILE__).'/lang/eng.php');
+if (@file_exists(dirname(__FILE__) . '/lang/eng.php')) {
+    require_once(dirname(__FILE__) . '/lang/eng.php');
     $pdf->setLanguageArray($l);
 }
 
@@ -164,18 +164,18 @@ $pdf->AddPage();
 $pdf->Cell(0, 0, 'Arc of Ellipse');
 
 // center of ellipse
-$xc=100;
-$yc=100;
+$xc = 100;
+$yc = 100;
 
 // X Y axis
 $pdf->SetDrawColor(200, 200, 200);
-$pdf->Line($xc-50, $yc, $xc+50, $yc);
-$pdf->Line($xc, $yc-50, $xc, $yc+50);
+$pdf->Line($xc - 50, $yc, $xc + 50, $yc);
+$pdf->Line($xc, $yc - 50, $xc, $yc + 50);
 
 // ellipse axis
 $pdf->SetDrawColor(200, 220, 255);
-$pdf->Line($xc-50, $yc-50, $xc+50, $yc+50);
-$pdf->Line($xc-50, $yc+50, $xc+50, $yc-50);
+$pdf->Line($xc - 50, $yc - 50, $xc + 50, $yc + 50);
+$pdf->Line($xc - 50, $yc + 50, $xc + 50, $yc - 50);
 
 // ellipse
 $pdf->SetDrawColor(200, 255, 200);

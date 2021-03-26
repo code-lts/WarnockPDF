@@ -22,7 +22,7 @@ if (php_sapi_name() != 'cli') {
   exit(1);
 }
 
-$library_include_dirs = array(realpath(dirname(__FILE__).'/../tcpdf.php'), '/usr/share/php/tcpdf/tcpdf.php', '/usr/share/tcpdf/tcpdf.php', '/usr/share/php-tcpdf/tcpdf.php', '/var/www/tcpdf/tcpdf.php', '/var/www/html/tcpdf/tcpdf.php', '/usr/local/apache2/htdocs/tcpdf/tcpdf.php');
+$library_include_dirs = array(realpath(dirname(__FILE__) . '/../tcpdf.php'), '/usr/share/php/tcpdf/tcpdf.php', '/usr/share/tcpdf/tcpdf.php', '/usr/share/php-tcpdf/tcpdf.php', '/var/www/tcpdf/tcpdf.php', '/var/www/html/tcpdf/tcpdf.php', '/usr/local/apache2/htdocs/tcpdf/tcpdf.php');
 foreach ($library_include_dirs as $tcpdf_include_path) {
     if (@file_exists($tcpdf_include_path)) {
         require_once($tcpdf_include_path);
@@ -97,7 +97,7 @@ Options:
 	-h
 	--help      Display this help and exit.
 EOD;
-    echo $help."\n\n";
+    echo $help . "\n\n";
     exit(0);
 }
 
@@ -219,13 +219,13 @@ if (empty($options['fonts'])) {
 
 // check the output path
 if (!is_dir($options['outpath']) OR !is_writable($options['outpath'])) {
-    echo "ERROR: Can't write to ".$options['outpath']."\n\n";
+    echo "ERROR: Can't write to " . $options['outpath'] . "\n\n";
     exit(3);
 }
 
 echo "\n>>> Converting fonts for WarnockPDF:\n";
 
-echo '*** Output dir set to '.$options['outpath']."\n";
+echo '*** Output dir set to ' . $options['outpath'] . "\n";
 
 // check if there are conversion errors
 $errors = false;
@@ -235,9 +235,9 @@ foreach ($options['fonts'] as $font) {
     $fontname = TCPDF_FONTS::addTTFfont($fontfile, $options['type'], $options['enc'], $options['flags'], $options['outpath'], $options['platid'], $options['encid'], $options['addcbbox'], $options['link']);
     if ($fontname === false) {
         $errors = true;
-        echo "--- ERROR: can't add ".$font."\n";
+        echo "--- ERROR: can't add " . $font . "\n";
     } else {
-        echo "+++ OK   : ".$fontfile.' added as '.$fontname."\n";
+        echo "+++ OK   : " . $fontfile . ' added as ' . $fontname . "\n";
     }
 }
 

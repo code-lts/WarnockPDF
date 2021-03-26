@@ -29,7 +29,7 @@ $pdf->SetSubject('TCPDF Tutorial');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data
-$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 009', PDF_HEADER_STRING);
+$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE . ' 009', PDF_HEADER_STRING);
 
 // set header and footer fonts
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
@@ -50,8 +50,8 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // set some language-dependent strings (optional)
-if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-    require_once(dirname(__FILE__).'/lang/eng.php');
+if (@file_exists(dirname(__FILE__) . '/lang/eng.php')) {
+    require_once(dirname(__FILE__) . '/lang/eng.php');
     $pdf->setLanguageArray($l);
 }
 
@@ -72,7 +72,7 @@ $pdf->setJPEGQuality(75);
 $imgdata = base64_decode('iVBORw0KGgoAAAANSUhEUgAAABwAAAASCAMAAAB/2U7WAAAABlBMVEUAAAD///+l2Z/dAAAASUlEQVR4XqWQUQoAIAxC2/0vXZDrEX4IJTRkb7lobNUStXsB0jIXIAMSsQnWlsV+wULF4Avk9fLq2r8a5HSE35Q3eO2XP1A1wQkZSgETvDtKdQAAAABJRU5ErkJggg==');
 
 // The '@' character is used to indicate that follows an image data stream and not an image file name
-$pdf->Image('@'.$imgdata);
+$pdf->Image('@' . $imgdata);
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -92,7 +92,7 @@ $w = 30;
 $h = 30;
 // test all combinations of alignments
 for ($i = 0; $i < 3; ++$i) {
-    $fitbox = $horizontal_alignments[$i].' ';
+    $fitbox = $horizontal_alignments[$i] . ' ';
     $x = 15;
     for ($j = 0; $j < 3; ++$j) {
         $fitbox[1] = $vertical_alignments[$j];
@@ -108,7 +108,7 @@ $y = 35;
 $w = 25;
 $h = 50;
 for ($i = 0; $i < 3; ++$i) {
-    $fitbox = $horizontal_alignments[$i].' ';
+    $fitbox = $horizontal_alignments[$i] . ' ';
     $x = 115;
     for ($j = 0; $j < 3; ++$j) {
         $fitbox[1] = $vertical_alignments[$j];

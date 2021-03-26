@@ -29,7 +29,7 @@ $pdf->SetSubject('TCPDF Tutorial');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data
-$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 030', PDF_HEADER_STRING);
+$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE . ' 030', PDF_HEADER_STRING);
 
 // set header and footer fonts
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
@@ -50,8 +50,8 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // set some language-dependent strings (optional)
-if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-    require_once(dirname(__FILE__).'/lang/eng.php');
+if (@file_exists(dirname(__FILE__) . '/lang/eng.php')) {
+    require_once(dirname(__FILE__) . '/lang/eng.php');
     $pdf->setLanguageArray($l);
 }
 
@@ -138,8 +138,8 @@ $patch_array[1]['points'] = array(
     0.00,1.67, 0.00,2.00, 0.33,2.00,
     0.67,2.00, 1.00,2.00, 1.00,1.67,
     1.5,1.33);
-$patch_array[1]['colors'][0]=array('r' => 0, 'g' => 0, 'b' => 0);
-$patch_array[1]['colors'][1]=array('r' => 255, 'g' => 0, 'b' => 255);
+$patch_array[1]['colors'][0] = array('r' => 0, 'g' => 0, 'b' => 0);
+$patch_array[1]['colors'][1] = array('r' => 255, 'g' => 0, 'b' => 255);
 
 // third patch - right of the above: f = 3
 $patch_array[2]['f'] = 3;

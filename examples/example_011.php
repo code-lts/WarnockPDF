@@ -60,7 +60,7 @@ class MYPDF extends TCPDF
             $this->Cell($w[2], 6, number_format($row[2]), 'LR', 0, 'R', $fill);
             $this->Cell($w[3], 6, number_format($row[3]), 'LR', 0, 'R', $fill);
             $this->Ln();
-            $fill=!$fill;
+            $fill = !$fill;
         }
         $this->Cell(array_sum($w), 0, '', 'T');
     }
@@ -77,7 +77,7 @@ $pdf->SetSubject('TCPDF Tutorial');
 $pdf->SetKeywords('TCPDF, PDF, example, test, guide');
 
 // set default header data
-$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 011', PDF_HEADER_STRING);
+$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE . ' 011', PDF_HEADER_STRING);
 
 // set header and footer fonts
 $pdf->setHeaderFont(Array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
@@ -98,8 +98,8 @@ $pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
 $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
 // set some language-dependent strings (optional)
-if (@file_exists(dirname(__FILE__).'/lang/eng.php')) {
-    require_once(dirname(__FILE__).'/lang/eng.php');
+if (@file_exists(dirname(__FILE__) . '/lang/eng.php')) {
+    require_once(dirname(__FILE__) . '/lang/eng.php');
     $pdf->setLanguageArray($l);
 }
 
@@ -115,7 +115,7 @@ $pdf->AddPage();
 $header = array('Country', 'Capital', 'Area (sq km)', 'Pop. (thousands)');
 
 // data loading
-$data = $pdf->LoadData(dirname(__FILE__) .'/data/table_data_demo.txt');
+$data = $pdf->LoadData(dirname(__FILE__) . '/data/table_data_demo.txt');
 
 // print colored table
 $pdf->ColoredTable($header, $data);
