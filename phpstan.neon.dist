@@ -8,6 +8,3 @@ parameters:
         - vendor/
         - fonts/
         - scripts/
-
-    # TODO review once we drop PHP 7.x support
-    treatPhpDocTypesAsCertain: false
