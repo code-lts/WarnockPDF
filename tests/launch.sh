@@ -22,7 +22,7 @@ EXAMPLE_BARCODE_FILES="$(find examples/barcodes -type f -name 'example*.php' \
 TEMP_FOLDER="$(mktemp -d /tmp/WarnockPDF-tests.XXXXXXXXX)"
 OUTPUT_FILE="${TEMP_FOLDER}/output.pdf"
 OUTPUT_FILE_ERROR="${TEMP_FOLDER}/errors.txt"
-ROOT_DIR="$(php -r 'echo realpath(dirname(__FILE__));')"
+ROOT_DIR="$(php -r 'echo realpath(__DIR__);')"
 TESTS_DIR="${ROOT_DIR}/tests/"
 
 COVERAGE_EXTENSION="-d extension=pcov.so"

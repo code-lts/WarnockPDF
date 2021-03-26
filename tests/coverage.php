@@ -10,7 +10,7 @@ if (extension_loaded('pcov')) {
         public function __destruct()
         {
             \pcov\stop();
-            $rootDir      = realpath(dirname(__FILE__) . '/../') . '/';
+            $rootDir      = realpath(__DIR__ . '/../') . '/';
             $coverageFile = $rootDir . 'tests/coverage.lcov';
             $covData      = \pcov\collect(
                 \pcov\exclusive,
@@ -43,7 +43,7 @@ if (extension_loaded('xdebug')) {
 
         public function __destruct()
         {
-            $rootDir      = realpath(dirname(__FILE__) . '/../') . '/';
+            $rootDir      = realpath(__DIR__ . '/../') . '/';
             $coverageFile = $rootDir . 'tests/coverage.lcov';
             $covData      = xdebug_get_code_coverage();
             $coverageData = '';
