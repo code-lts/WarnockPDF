@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types = 1);
-
 if (extension_loaded('pcov')) {
     \pcov\start();
 
