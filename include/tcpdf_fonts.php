@@ -2628,4 +2628,4 @@ class TCPDF_FONTS
         return $ordarray;
     }
 
-} // END OF TCPDF_FONTS CLASS
+}

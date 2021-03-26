@@ -19,9 +19,9 @@
 // DOCUMENT_ROOT fix for IIS Webserver
 if ((!isset($_SERVER['DOCUMENT_ROOT'])) or (empty($_SERVER['DOCUMENT_ROOT']))) {
     if(isset($_SERVER['SCRIPT_FILENAME'])) {
-        $_SERVER['DOCUMENT_ROOT'] = str_replace( '\\', '/', substr($_SERVER['SCRIPT_FILENAME'], 0, 0 - strlen($_SERVER['PHP_SELF'])));
+        $_SERVER['DOCUMENT_ROOT'] = str_replace('\\', '/', substr($_SERVER['SCRIPT_FILENAME'], 0, 0 - strlen($_SERVER['PHP_SELF'])));
     } elseif(isset($_SERVER['PATH_TRANSLATED'])) {
-        $_SERVER['DOCUMENT_ROOT'] = str_replace( '\\', '/', substr(str_replace('\\\\', '\\', $_SERVER['PATH_TRANSLATED']), 0, 0 - strlen($_SERVER['PHP_SELF'])));
+        $_SERVER['DOCUMENT_ROOT'] = str_replace('\\', '/', substr(str_replace('\\\\', '\\', $_SERVER['PATH_TRANSLATED']), 0, 0 - strlen($_SERVER['PHP_SELF'])));
     } else {
         // define here your DOCUMENT_ROOT path if the previous fails (e.g. '/var/www')
         $_SERVER['DOCUMENT_ROOT'] = '/';
@@ -61,7 +61,7 @@ if (!defined('K_PATH_URL')) {
             $k_path_url = 'http://';
         }
         $k_path_url .= $_SERVER['HTTP_HOST'];
-        $k_path_url .= str_replace( '\\', '/', substr(K_PATH_MAIN, (strlen($_SERVER['DOCUMENT_ROOT']) - 1)));
+        $k_path_url .= str_replace('\\', '/', substr(K_PATH_MAIN, (strlen($_SERVER['DOCUMENT_ROOT']) - 1)));
     }
     define ('K_PATH_URL', $k_path_url);
 }

@@ -434,4 +434,4 @@ class TCPDF_COLORS
     }
 
 
-} // END OF TCPDF_COLORS CLASS
+}

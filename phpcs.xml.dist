@@ -74,7 +74,6 @@
         <exclude name="PEAR.ControlStructures.MultiLineCondition.CloseBracketNewLine"/>
         <exclude name="PEAR.ControlStructures.MultiLineCondition.StartWithBoolean"/>
         <exclude name="PEAR.ControlStructures.MultiLineCondition.Alignment"/>
-        <exclude name="PEAR.Functions.FunctionCallSignature.SpaceAfterOpenBracket"/>
 
         <!-- Warnings -->
         <exclude name="Generic.Formatting.MultipleStatementAlignment.IncorrectWarning"/>

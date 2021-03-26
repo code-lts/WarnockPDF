@@ -332,4 +332,4 @@ class TCPDF_IMAGES
         return array('w' => $w, 'h' => $h, 'ch' => $channels, 'icc' => $icc, 'cs' => $colspace, 'bpc' => $bpc, 'f' => 'FlateDecode', 'parms' => $parms, 'pal' => $pal, 'trns' => $trns, 'data' => $data);
     }
 
-} // END OF TCPDF_IMAGES CLASS
+}

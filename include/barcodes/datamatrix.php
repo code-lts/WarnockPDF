@@ -1145,4 +1145,4 @@ class Datamatrix
         return $marr;
     }
 
-} // end DataMatrix class
+}

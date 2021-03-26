@@ -2330,4 +2330,4 @@ class TCPDFBarcode
         return $table;
     }
 
-} // end of class
+}

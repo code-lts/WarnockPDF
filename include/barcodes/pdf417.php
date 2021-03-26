@@ -971,4 +971,4 @@ class PDF417
         return $cw;
     }
 
-} // end PDF417 class
+}

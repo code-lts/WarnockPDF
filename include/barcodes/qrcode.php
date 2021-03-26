@@ -2814,4 +2814,4 @@ class QRcode
         return $parity;
     }
 
-} // end QRcode class
+}

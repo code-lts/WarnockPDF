@@ -2585,4 +2585,4 @@ class TCPDF_STATIC
     }
 
 
-} // END OF TCPDF_STATIC CLASS
+}

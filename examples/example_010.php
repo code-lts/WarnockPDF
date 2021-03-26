@@ -83,7 +83,7 @@ class MC_TCPDF extends TCPDF
         }
         $this->Ln();
     }
-} // end of extended class
+}
 
 // ---------------------------------------------------------
 // EXAMPLE

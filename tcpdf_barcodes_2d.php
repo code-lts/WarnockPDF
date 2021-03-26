@@ -320,4 +320,4 @@ class TCPDF2DBarcode
             }
         }
     }
-} // end of class
+}
