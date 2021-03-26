@@ -7,7 +7,7 @@
     <!-- Make sniff report relative -->
     <arg name="basepath" value="."/>
     <!-- Store results in a cache file -->
-    <arg name="cache" value=".php_cs.cache"/>
+    <arg name="cache" value=".phpcs.cache"/>
 
     <file>.</file>
     <exclude-pattern>*/tmp/*</exclude-pattern>
