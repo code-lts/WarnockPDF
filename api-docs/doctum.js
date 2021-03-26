@@ -90,7 +90,7 @@
         {"type":"Method","fromName":"QRcode","fromLink":"QRcode.html","link":"QRcode.html#method_insertStructuredAppendHeader","name":"QRcode::insertStructuredAppendHeader","doc":"insertStructuredAppendHeader"},
         {"type":"Method","fromName":"QRcode","fromLink":"QRcode.html","link":"QRcode.html#method_calcParity","name":"QRcode::calcParity","doc":"calcParity"},
         {"type":"Method","fromName":"QRcode","fromLink":"QRcode.html","link":"QRcode.html#method_checkModeNum","name":"QRcode::checkModeNum","doc":"checkModeNum"},
-        {"type":"Method","fromName":"QRcode","fromLink":"QRcode.html","link":"QRcode.html#method_lookAnTable","name":"QRcode::lookAnTable","doc":"Look up the alphabet-numeric convesion table (see JIS X0510:2004, pp.19)."},
+        {"type":"Method","fromName":"QRcode","fromLink":"QRcode.html","link":"QRcode.html#method_lookAnTable","name":"QRcode::lookAnTable","doc":"Look up the alphabet-numeric conversion table (see JIS X0510:2004, pp.19)."},
         {"type":"Method","fromName":"QRcode","fromLink":"QRcode.html","link":"QRcode.html#method_checkModeAn","name":"QRcode::checkModeAn","doc":"checkModeAn"},
         {"type":"Method","fromName":"QRcode","fromLink":"QRcode.html","link":"QRcode.html#method_estimateBitsModeNum","name":"QRcode::estimateBitsModeNum","doc":"estimateBitsModeNum"},
         {"type":"Method","fromName":"QRcode","fromLink":"QRcode.html","link":"QRcode.html#method_estimateBitsModeAn","name":"QRcode::estimateBitsModeAn","doc":"estimateBitsModeAn"},

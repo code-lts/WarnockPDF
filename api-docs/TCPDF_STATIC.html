@@ -148,7 +148,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_page_formats">
-                    static                                                            
+                    static                                                            array<string,float[]>
                 </td>
                 <td>$page_formats</td>
                 <td class="last">Array of page formats
@@ -163,7 +163,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a href="TCPDF.html">TCPDF</a>
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getTCPDFVersion">getTCPDFVersion</a>()
@@ -173,7 +173,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a href="TCPDF.html">TCPDF</a>
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getTCPDFProducer">getTCPDFProducer</a>()
@@ -203,10 +203,10 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;border
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getBorderMode">getBorderMode</a>(mixed $brd, string $position = &#039;start&#039;, bool $opencell = true)
+                    <a href="#method_getBorderMode">getBorderMode</a>(string|array|int $brd, string $position = &#039;start&#039;, bool $opencell = true)
         
                                             <p>Get the border mode accounting for multicell position (opens bottom side of multicell crossing pages)</p>                </div>
                 <div class="col-md-2"></div>
@@ -243,7 +243,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;converted
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method__escapeXML">_escapeXML</a>(string $str)
@@ -253,7 +253,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;cloned
+                    static&nbsp;object
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_objclone">objclone</a>(object $object)
@@ -273,7 +273,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;replaced
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_replacePageNumAliases">replacePageNumAliases</a>(string $page, array $replace, int $diff = 0)
@@ -373,7 +373,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;byte
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_convertStringToHexString">convertStringToHexString</a>(string $s)
@@ -413,7 +413,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_formatPageNumber">formatPageNumber</a>(int $num)
@@ -423,7 +423,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_formatTOCPageNumber">formatTOCPageNumber</a>(int $num)
@@ -433,7 +433,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;An
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_extractCSSproperties">extractCSSproperties</a>(string $cssdata)
@@ -513,7 +513,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getPathPaintOperator">getPathPaintOperator</a>(string $style, string $default = &#039;S&#039;)
@@ -523,7 +523,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;transformation
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getTransformationMatrixProduct">getTransformationMatrixProduct</a>(array $ta, array $tb)
@@ -556,7 +556,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
                     static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_pregSplit">pregSplit</a>(string $pattern, string $modifiers, string $subject, int $limit = NULL, int $flags = NULL)
+                    <a href="#method_pregSplit">pregSplit</a>(string $pattern, string $modifiers, string $subject, int $limit = null, int $flags = null)
         
                                             <p>Split string by a regular expression.</p>                </div>
                 <div class="col-md-2"></div>
@@ -603,7 +603,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;The
+                    static&nbsp;string|false
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_fileGetContents">fileGetContents</a>(string $file)
@@ -713,7 +713,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;pagedim
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_setPageBoxes">setPageBoxes</a>(int $page, string $type, float $llx, float $lly, float $urx, float $ury, bool $points, float $k, array $pagedim = array())
@@ -723,7 +723,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;pagedim
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_swapPageBoxCoordinates">swapPageBoxCoordinates</a>(int $page, array $pagedim)
@@ -760,7 +760,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
                     <div class="method-item">
                     <h3 id="method_getTCPDFVersion">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L93">at line 93</a></div>
-        <code>        static            <a href="TCPDF.html">TCPDF</a>
+        <code>        static            string
     <strong>getTCPDFVersion</strong>()
         </code>
     </h3>
@@ -776,7 +776,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="TCPDF.html">TCPDF</a></td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -790,7 +790,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
                     <div class="method-item">
                     <h3 id="method_getTCPDFProducer">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L103">at line 103</a></div>
-        <code>        static            <a href="TCPDF.html">TCPDF</a>
+        <code>        static            string
     <strong>getTCPDFProducer</strong>()
         </code>
     </h3>
@@ -806,7 +806,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="TCPDF.html">TCPDF</a></td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -916,8 +916,8 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
                     <div class="method-item">
                     <h3 id="method_getBorderMode">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L157">at line 157</a></div>
-        <code>        static            border
-    <strong>getBorderMode</strong>(mixed $brd, string $position = &#039;start&#039;, bool $opencell = true)
+        <code>        static            array
+    <strong>getBorderMode</strong>(string|array|int $brd, string $position = &#039;start&#039;, bool $opencell = true)
         </code>
     </h3>
     <div class="details">
@@ -931,7 +931,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
 
                     <table class="table table-condensed">
                     <tr>
-                <td>mixed</td>
+                <td>string|array|int</td>
                 <td>$brd</td>
                 <td>Indicates if borders must be drawn around the cell block. The value can be a number:</p>
 
@@ -960,7 +960,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
 
                     <table class="table table-condensed">
         <tr>
-            <td>border</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
@@ -1099,7 +1099,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
                     <div class="method-item">
                     <h3 id="method__escapeXML">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L263">at line 263</a></div>
-        <code>        static            converted
+        <code>        static            string
     <strong>_escapeXML</strong>(string $str)
         </code>
     </h3>
@@ -1125,7 +1125,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
 
                     <table class="table table-condensed">
         <tr>
-            <td>converted</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -1139,7 +1139,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
                     <div class="method-item">
                     <h3 id="method_objclone">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L276">at line 276</a></div>
-        <code>        static            cloned
+        <code>        static            object
     <strong>objclone</strong>(object $object)
         </code>
     </h3>
@@ -1165,7 +1165,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
 
                     <table class="table table-condensed">
         <tr>
-            <td>cloned</td>
+            <td>object</td>
             <td></td>
         </tr>
     </table>
@@ -1215,7 +1215,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
                     <div class="method-item">
                     <h3 id="method_replacePageNumAliases">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L307">at line 307</a></div>
-        <code>        static            replaced
+        <code>        static            array
     <strong>replacePageNumAliases</strong>(string $page, array $replace, int $diff = 0)
         </code>
     </h3>
@@ -1251,7 +1251,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
 
                     <table class="table table-condensed">
         <tr>
-            <td>replaced</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
@@ -1646,7 +1646,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
                     <div class="method-item">
                     <h3 id="method_convertStringToHexString">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L541">at line 541</a></div>
-        <code>        static            byte
+        <code>        static            string
     <strong>convertStringToHexString</strong>(string $s)
         </code>
     </h3>
@@ -1672,7 +1672,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
 
                     <table class="table table-condensed">
         <tr>
-            <td>byte</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -1815,8 +1815,8 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_formatPageNumber">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L963">at line 963</a></div>
-        <code>        static            
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L964">at line 964</a></div>
+        <code>        static            string
     <strong>formatPageNumber</strong>(int $num)
         </code>
     </h3>
@@ -1838,6 +1838,15 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -1846,8 +1855,8 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_formatTOCPageNumber">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L975">at line 975</a></div>
-        <code>        static            
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L977">at line 977</a></div>
+        <code>        static            string
     <strong>formatTOCPageNumber</strong>(int $num)
         </code>
     </h3>
@@ -1869,6 +1878,15 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                             <h4>See also</h4>
@@ -1888,8 +1906,8 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_extractCSSproperties">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L987">at line 987</a></div>
-        <code>        static            An
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L989">at line 989</a></div>
+        <code>        static            array
     <strong>extractCSSproperties</strong>(string $cssdata)
         </code>
     </h3>
@@ -1915,7 +1933,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
 
                     <table class="table table-condensed">
         <tr>
-            <td>An</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
@@ -1928,7 +1946,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_fixHTMLCode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1083">at line 1083</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1085">at line 1085</a></div>
         <code>        static            string
     <strong>fixHTMLCode</strong>(string $html, string $default_css, array $tagvs, array $tidy_options, array $tagvspaces)
         </code>
@@ -1999,7 +2017,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_isValidCSSSelectorForTag">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1149">at line 1149</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1151">at line 1151</a></div>
         <code>        static            true
     <strong>isValidCSSSelectorForTag</strong>(array $dom, int $key, string $selector)
         </code>
@@ -2049,7 +2067,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSdataArray">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1310">at line 1310</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1312">at line 1312</a></div>
         <code>        static            array
     <strong>getCSSdataArray</strong>(array $dom, int $key, array $css)
         </code>
@@ -2099,7 +2117,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_getTagStyleFromCSSarray">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1355">at line 1355</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1357">at line 1357</a></div>
         <code>        static            string
     <strong>getTagStyleFromCSSarray</strong>(array $css)
         </code>
@@ -2139,7 +2157,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_intToRoman">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1386">at line 1386</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1388">at line 1388</a></div>
         <code>        static            string
     <strong>intToRoman</strong>(int $number)
         </code>
@@ -2179,7 +2197,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_revstrpos">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1452">at line 1452</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1454">at line 1454</a></div>
         <code>        static            int|false
     <strong>revstrpos</strong>(string $haystack, string $needle, int $offset = 0)
         </code>
@@ -2229,7 +2247,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_getHyphenPatternsFromTEX">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1467">at line 1467</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1469">at line 1469</a></div>
         <code>        static            array
     <strong>getHyphenPatternsFromTEX</strong>(string $file)
         </code>
@@ -2269,8 +2287,8 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_getPathPaintOperator">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1513">at line 1513</a></div>
-        <code>        static            
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1516">at line 1516</a></div>
+        <code>        static            string
     <strong>getPathPaintOperator</strong>(string $style, string $default = &#039;S&#039;)
         </code>
     </h3>
@@ -2312,6 +2330,15 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -2320,8 +2347,8 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_getTransformationMatrixProduct">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1592">at line 1592</a></div>
-        <code>        static            transformation
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1595">at line 1595</a></div>
+        <code>        static            array
     <strong>getTransformationMatrixProduct</strong>(array $ta, array $tb)
         </code>
     </h3>
@@ -2352,7 +2379,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
 
                     <table class="table table-condensed">
         <tr>
-            <td>transformation</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
@@ -2365,7 +2392,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_getSVGTransformMatrix">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1611">at line 1611</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1614">at line 1614</a></div>
         <code>        static            array
     <strong>getSVGTransformMatrix</strong>(string $attribute)
         </code>
@@ -2405,7 +2432,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_getVectorsAngle">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1708">at line 1708</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1711">at line 1711</a></div>
         <code>        static            
     <strong>getVectorsAngle</strong>(int $x1, int $y1, int $x2, int $y2)
         </code>
@@ -2451,9 +2478,9 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_pregSplit">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1735">at line 1735</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1738">at line 1738</a></div>
         <code>        static            array
-    <strong>pregSplit</strong>(string $pattern, string $modifiers, string $subject, int $limit = NULL, int $flags = NULL)
+    <strong>pregSplit</strong>(string $pattern, string $modifiers, string $subject, int $limit = null, int $flags = null)
         </code>
     </h3>
     <div class="details">
@@ -2511,7 +2538,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_fopenLocal">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1763">at line 1763</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1766">at line 1766</a></div>
         <code>        static            resource|false
     <strong>fopenLocal</strong>(string $filename, string $mode)
         </code>
@@ -2556,7 +2583,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_url_exists">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1779">at line 1779</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1782">at line 1782</a></div>
         <code>        static            bool
     <strong>url_exists</strong>(string $url)
         </code>
@@ -2596,7 +2623,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeUrlQuery">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1808">at line 1808</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1811">at line 1811</a></div>
         <code>        static            string
     <strong>encodeUrlQuery</strong>(string $url)
         </code>
@@ -2636,7 +2663,7 @@ measures are calculated in this way: (inches * 72) or (millimeters * 72 / 25.4)<
             </div>
                     <div class="method-item">
                     <h3 id="method_file_exists">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1828">at line 1828</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1831">at line 1831</a></div>
         <code>        static            bool
     <strong>file_exists</strong>(string $filename)
         </code>
@@ -2677,8 +2704,8 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_fileGetContents">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1847">at line 1847</a></div>
-        <code>        static            The
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1850">at line 1850</a></div>
+        <code>        static            string|false
     <strong>fileGetContents</strong>(string $file)
         </code>
     </h3>
@@ -2704,7 +2731,7 @@ Only allows some protocols and local files.</p>                            </div
 
                     <table class="table table-condensed">
         <tr>
-            <td>The</td>
+            <td>string|false</td>
             <td></td>
         </tr>
     </table>
@@ -2717,7 +2744,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method__getULONG">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1944">at line 1944</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1947">at line 1947</a></div>
         <code>        static            int
     <strong>_getULONG</strong>(string $str, int $offset)
         </code>
@@ -2762,7 +2789,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method__getUSHORT">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1958">at line 1958</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1961">at line 1961</a></div>
         <code>        static            int
     <strong>_getUSHORT</strong>(string $str, int $offset)
         </code>
@@ -2807,7 +2834,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method__getSHORT">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1972">at line 1972</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1975">at line 1975</a></div>
         <code>        static            int
     <strong>_getSHORT</strong>(string $str, int $offset)
         </code>
@@ -2852,7 +2879,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method__getFWORD">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1986">at line 1986</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L1989">at line 1989</a></div>
         <code>        static            int
     <strong>_getFWORD</strong>(string $str, int $offset)
         </code>
@@ -2897,7 +2924,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method__getUFWORD">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2003">at line 2003</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2006">at line 2006</a></div>
         <code>        static            int
     <strong>_getUFWORD</strong>(string $str, int $offset)
         </code>
@@ -2942,7 +2969,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method__getFIXED">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2017">at line 2017</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2020">at line 2020</a></div>
         <code>        static            int
     <strong>_getFIXED</strong>(string $str, int $offset)
         </code>
@@ -2987,7 +3014,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method__getBYTE">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2035">at line 2035</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2038">at line 2038</a></div>
         <code>        static            int
     <strong>_getBYTE</strong>(string $str, int $offset)
         </code>
@@ -3032,7 +3059,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_rfread">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2049">at line 2049</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2052">at line 2052</a></div>
         <code>        static            string|false
     <strong>rfread</strong>(resource $handle, int $length)
         </code>
@@ -3077,7 +3104,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method__freadint">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2067">at line 2067</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2070">at line 2070</a></div>
         <code>        static            int
     <strong>_freadint</strong>(string $f)
         </code>
@@ -3117,7 +3144,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_getPageSizeFromFormat">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2436">at line 2436</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2441">at line 2441</a></div>
         <code>        static            array
     <strong>getPageSizeFromFormat</strong>(mixed $format)
         </code>
@@ -3161,8 +3188,8 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_setPageBoxes">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2458">at line 2458</a></div>
-        <code>        static            pagedim
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2463">at line 2463</a></div>
+        <code>        static            array
     <strong>setPageBoxes</strong>(int $page, string $type, float $llx, float $lly, float $urx, float $ury, bool $points, float $k, array $pagedim = array())
         </code>
     </h3>
@@ -3231,7 +3258,7 @@ Only allows some protocols and local files.</p>                            </div
 
                     <table class="table table-condensed">
         <tr>
-            <td>pagedim</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
@@ -3244,8 +3271,8 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_swapPageBoxCoordinates">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2484">at line 2484</a></div>
-        <code>        static            pagedim
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2489">at line 2489</a></div>
+        <code>        static            array
     <strong>swapPageBoxCoordinates</strong>(int $page, array $pagedim)
         </code>
     </h3>
@@ -3276,7 +3303,7 @@ Only allows some protocols and local files.</p>                            </div
 
                     <table class="table table-condensed">
         <tr>
-            <td>pagedim</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
@@ -3289,7 +3316,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_getPageLayoutMode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2505">at line 2505</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2510">at line 2510</a></div>
         <code>        static            string
     <strong>getPageLayoutMode</strong>(string $layout = &#039;SinglePage&#039;)
         </code>
@@ -3332,7 +3359,7 @@ Only allows some protocols and local files.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_getPageMode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2548">at line 2548</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_static.php#L2553">at line 2553</a></div>
         <code>        static            string
     <strong>getPageMode</strong>(string $mode = &#039;UseNone&#039;)
         </code>

@@ -301,7 +301,7 @@ Please read comments on this class source file for full copyright and license in
                                         protected                                        
                 </td>
                 <td>$anTable</td>
-                <td class="last">Alphabet-numeric convesion table.</td>
+                <td class="last">Alphabet-numeric conversion table.</td>
                 <td></td>
             </tr>
                     <tr>
@@ -390,7 +390,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    null|void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_encodeString">encodeString</a>(string $string)
@@ -400,7 +400,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    null|void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_encodeMask">encodeMask</a>(int $mask)
@@ -420,7 +420,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    value
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFrameAt">getFrameAt</a>(array $at)
@@ -770,10 +770,10 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    items
+                    array
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_appendNewInputItem">appendNewInputItem</a>(arrray $items, int $mode, int $size, array $data)
+                    <a href="#method_appendNewInputItem">appendNewInputItem</a>(array $items, int $mode, int $size, array $data)
         
                                             <p>Append data to an input object.</p>                </div>
                 <div class="col-md-2"></div>
@@ -810,12 +810,12 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    value
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_lookAnTable">lookAnTable</a>(int $c)
         
-                                            <p>Look up the alphabet-numeric convesion table (see JIS X0510:2004, pp.19).</p>                </div>
+                                            <p>Look up the alphabet-numeric conversion table (see JIS X0510:2004, pp.19).</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1160,7 +1160,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    BCH
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getVersionPattern">getVersionPattern</a>(int $version)
@@ -1170,7 +1170,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    BCH
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFormatInfo">getFormatInfo</a>(array $mask, int $level)
@@ -1330,7 +1330,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    parity
+                    array
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_encode_rs_char">encode_rs_char</a>(array $rs, array $data, array $parity)
@@ -1346,7 +1346,7 @@ Please read comments on this class source file for full copyright and license in
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L616">at line 616</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L589">at line 589</a></div>
         <code>                    
     <strong>__construct</strong>(string $code, string $eclevel = &#039;L&#039;)
         </code>
@@ -1385,7 +1385,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getBarcodeArray">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L657">at line 657</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L630">at line 630</a></div>
         <code>                    array
     <strong>getBarcodeArray</strong>()
         </code>
@@ -1415,7 +1415,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_binarize">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L666">at line 666</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L639">at line 639</a></div>
         <code>            protected        array
     <strong>binarize</strong>(array $frame)
         </code>
@@ -1455,8 +1455,8 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeString">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L681">at line 681</a></div>
-        <code>            protected        
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L655">at line 655</a></div>
+        <code>            protected        null|void
     <strong>encodeString</strong>(string $string)
         </code>
     </h3>
@@ -1478,6 +1478,15 @@ Please read comments on this class source file for full copyright and license in
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -1486,8 +1495,8 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeMask">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L697">at line 697</a></div>
-        <code>            protected        
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L672">at line 672</a></div>
+        <code>            protected        null|void
     <strong>encodeMask</strong>(int $mask)
         </code>
     </h3>
@@ -1509,6 +1518,15 @@ Please read comments on this class source file for full copyright and license in
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|void</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -1517,7 +1535,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_setFrameAt">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L763">at line 763</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L738">at line 738</a></div>
         <code>            protected        
     <strong>setFrameAt</strong>(array $at, int $val)
         </code>
@@ -1553,8 +1571,8 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getFrameAt">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L772">at line 772</a></div>
-        <code>            protected        value
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L747">at line 747</a></div>
+        <code>            protected        int
     <strong>getFrameAt</strong>(array $at)
         </code>
     </h3>
@@ -1580,7 +1598,7 @@ Please read comments on this class source file for full copyright and license in
 
                     <table class="table table-condensed">
         <tr>
-            <td>value</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -1593,7 +1611,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getNextPosition">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L780">at line 780</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L755">at line 755</a></div>
         <code>            protected        array
     <strong>getNextPosition</strong>()
         </code>
@@ -1623,7 +1641,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_init">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L836">at line 836</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L811">at line 811</a></div>
         <code>            protected        int
     <strong>init</strong>(array $spec)
         </code>
@@ -1663,7 +1681,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getCode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L887">at line 887</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L862">at line 862</a></div>
         <code>            protected        array
     <strong>getCode</strong>()
         </code>
@@ -1693,7 +1711,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_writeFormatInformation">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L918">at line 918</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L893">at line 893</a></div>
         <code>            protected        int
     <strong>writeFormatInformation</strong>(int $width, array $frame, array $mask, int $level)
         </code>
@@ -1748,7 +1766,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_mask0">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L960">at line 960</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L935">at line 935</a></div>
         <code>            protected        int
     <strong>mask0</strong>(int $x, int $y)
         </code>
@@ -1793,7 +1811,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_mask1">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L970">at line 970</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L945">at line 945</a></div>
         <code>            protected        int
     <strong>mask1</strong>(int $x, int $y)
         </code>
@@ -1838,7 +1856,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_mask2">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L980">at line 980</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L955">at line 955</a></div>
         <code>            protected        int
     <strong>mask2</strong>(int $x, int $y)
         </code>
@@ -1883,7 +1901,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_mask3">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L990">at line 990</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L965">at line 965</a></div>
         <code>            protected        int
     <strong>mask3</strong>(int $x, int $y)
         </code>
@@ -1928,7 +1946,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_mask4">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1000">at line 1000</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L975">at line 975</a></div>
         <code>            protected        int
     <strong>mask4</strong>(int $x, int $y)
         </code>
@@ -1973,7 +1991,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_mask5">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1010">at line 1010</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L985">at line 985</a></div>
         <code>            protected        int
     <strong>mask5</strong>(int $x, int $y)
         </code>
@@ -2018,7 +2036,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_mask6">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1020">at line 1020</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L995">at line 995</a></div>
         <code>            protected        int
     <strong>mask6</strong>(int $x, int $y)
         </code>
@@ -2063,7 +2081,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_mask7">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1030">at line 1030</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1005">at line 1005</a></div>
         <code>            protected        int
     <strong>mask7</strong>(int $x, int $y)
         </code>
@@ -2108,7 +2126,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_generateMaskNo">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1041">at line 1041</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1016">at line 1016</a></div>
         <code>            protected        array
     <strong>generateMaskNo</strong>(int $maskNo, int $width, array $frame)
         </code>
@@ -2158,7 +2176,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_makeMaskNo">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1065">at line 1065</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1040">at line 1040</a></div>
         <code>            protected        int
     <strong>makeMaskNo</strong>(int $maskNo, int $width, int $s, int $d, bool $maskGenOnly = false)
         </code>
@@ -2218,7 +2236,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_makeMask">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1092">at line 1092</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1067">at line 1067</a></div>
         <code>            protected        array
     <strong>makeMask</strong>(int $width, array $frame, int $maskNo, int $level)
         </code>
@@ -2273,7 +2291,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_calcN1N3">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1104">at line 1104</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1079">at line 1079</a></div>
         <code>            protected        int
     <strong>calcN1N3</strong>(int $length)
         </code>
@@ -2313,7 +2331,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_evaluateSymbol">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1135">at line 1135</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1110">at line 1110</a></div>
         <code>            protected        int
     <strong>evaluateSymbol</strong>(int $width, array $frame)
         </code>
@@ -2358,7 +2376,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_mask">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1197">at line 1197</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1172">at line 1172</a></div>
         <code>            protected        array
     <strong>mask</strong>(int $width, array $frame, int $level)
         </code>
@@ -2408,7 +2426,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_isdigitat">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1239">at line 1239</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1214">at line 1214</a></div>
         <code>            protected        bool
     <strong>isdigitat</strong>(string $str, int $pos)
         </code>
@@ -2453,7 +2471,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_isalnumat">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1252">at line 1252</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1227">at line 1227</a></div>
         <code>            protected        bool
     <strong>isalnumat</strong>(string $str, int $pos)
         </code>
@@ -2498,7 +2516,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_identifyMode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1264">at line 1264</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1239">at line 1239</a></div>
         <code>            protected        int
     <strong>identifyMode</strong>(int $pos)
         </code>
@@ -2538,7 +2556,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_eatNum">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1289">at line 1289</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1264">at line 1264</a></div>
         <code>            protected        int
     <strong>eatNum</strong>()
         </code>
@@ -2568,7 +2586,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_eatAn">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1321">at line 1321</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1296">at line 1296</a></div>
         <code>            protected        int
     <strong>eatAn</strong>()
         </code>
@@ -2598,7 +2616,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_eatKanji">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1360">at line 1360</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1335">at line 1335</a></div>
         <code>            protected        int
     <strong>eatKanji</strong>()
         </code>
@@ -2628,7 +2646,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_eat8">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1374">at line 1374</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1349">at line 1349</a></div>
         <code>            protected        int
     <strong>eat8</strong>()
         </code>
@@ -2658,7 +2676,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_splitString">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1423">at line 1423</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1398">at line 1398</a></div>
         <code>            protected        int
     <strong>splitString</strong>()
         </code>
@@ -2688,7 +2706,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_toUpper">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1462">at line 1462</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1437">at line 1437</a></div>
         <code>            protected        
     <strong>toUpper</strong>()
         </code>
@@ -2709,7 +2727,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_newInputItem">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1491">at line 1491</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1466">at line 1466</a></div>
         <code>            protected        array
     <strong>newInputItem</strong>(int $mode, int $size, array $data, array $bstream = null)
         </code>
@@ -2764,7 +2782,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeModeNum">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1513">at line 1513</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1488">at line 1488</a></div>
         <code>            protected        array
     <strong>encodeModeNum</strong>(array $inputitem, int $version)
         </code>
@@ -2809,7 +2827,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeModeAn">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1542">at line 1542</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1517">at line 1517</a></div>
         <code>            protected        array
     <strong>encodeModeAn</strong>(array $inputitem, int $version)
         </code>
@@ -2854,7 +2872,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeMode8">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1565">at line 1565</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1540">at line 1540</a></div>
         <code>            protected        array
     <strong>encodeMode8</strong>(array $inputitem, int $version)
         </code>
@@ -2899,7 +2917,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeModeKanji">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1581">at line 1581</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1556">at line 1556</a></div>
         <code>            protected        array
     <strong>encodeModeKanji</strong>(array $inputitem, int $version)
         </code>
@@ -2944,7 +2962,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeModeStructure">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1604">at line 1604</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1579">at line 1579</a></div>
         <code>            protected        array
     <strong>encodeModeStructure</strong>(array $inputitem)
         </code>
@@ -2984,7 +3002,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_encodeBitStream">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1619">at line 1619</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1594">at line 1594</a></div>
         <code>            protected        array
     <strong>encodeBitStream</strong>(array $inputitem, int $version)
         </code>
@@ -3029,9 +3047,9 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_appendNewInputItem">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1674">at line 1674</a></div>
-        <code>            protected        items
-    <strong>appendNewInputItem</strong>(arrray $items, int $mode, int $size, array $data)
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1649">at line 1649</a></div>
+        <code>            protected        array
+    <strong>appendNewInputItem</strong>(array $items, int $mode, int $size, array $data)
         </code>
     </h3>
     <div class="details">
@@ -3045,7 +3063,7 @@ Please read comments on this class source file for full copyright and license in
 
                     <table class="table table-condensed">
                     <tr>
-                <td>arrray</td>
+                <td>array</td>
                 <td>$items</td>
                 <td>input items</td>
             </tr>
@@ -3071,7 +3089,7 @@ Please read comments on this class source file for full copyright and license in
 
                     <table class="table table-condensed">
         <tr>
-            <td>items</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
@@ -3084,7 +3102,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_insertStructuredAppendHeader">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1690">at line 1690</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1665">at line 1665</a></div>
         <code>            protected        array
     <strong>insertStructuredAppendHeader</strong>(array $items, int $size, int $index, int $parity)
         </code>
@@ -3139,7 +3157,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_calcParity">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1708">at line 1708</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1683">at line 1683</a></div>
         <code>            protected        int
     <strong>calcParity</strong>(array $items)
         </code>
@@ -3179,7 +3197,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_checkModeNum">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1726">at line 1726</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1701">at line 1701</a></div>
         <code>            protected        bool
     <strong>checkModeNum</strong>(int $size, array $data)
         </code>
@@ -3224,8 +3242,8 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_lookAnTable">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1740">at line 1740</a></div>
-        <code>            protected        value
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1715">at line 1715</a></div>
+        <code>            protected        int
     <strong>lookAnTable</strong>(int $c)
         </code>
     </h3>
@@ -3234,7 +3252,7 @@ Please read comments on this class source file for full copyright and license in
     
 
                     <div class="method-description">
-                                    <p>Look up the alphabet-numeric convesion table (see JIS X0510:2004, pp.19).</p>                                                </div>
+                                    <p>Look up the alphabet-numeric conversion table (see JIS X0510:2004, pp.19).</p>                                                </div>
                 <div class="tags">
                             <h4>Parameters</h4>
 
@@ -3251,7 +3269,7 @@ Please read comments on this class source file for full copyright and license in
 
                     <table class="table table-condensed">
         <tr>
-            <td>value</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -3264,7 +3282,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_checkModeAn">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1750">at line 1750</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1725">at line 1725</a></div>
         <code>            protected        bool
     <strong>checkModeAn</strong>(int $size, array $data)
         </code>
@@ -3309,7 +3327,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateBitsModeNum">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1764">at line 1764</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1739">at line 1739</a></div>
         <code>            protected        int
     <strong>estimateBitsModeNum</strong>(int $size)
         </code>
@@ -3349,7 +3367,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateBitsModeAn">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1785">at line 1785</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1760">at line 1760</a></div>
         <code>            protected        int
     <strong>estimateBitsModeAn</strong>(int $size)
         </code>
@@ -3389,7 +3407,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateBitsMode8">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1798">at line 1798</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1773">at line 1773</a></div>
         <code>            protected        int
     <strong>estimateBitsMode8</strong>(int $size)
         </code>
@@ -3429,7 +3447,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateBitsModeKanji">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1807">at line 1807</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1782">at line 1782</a></div>
         <code>            protected        int
     <strong>estimateBitsModeKanji</strong>(int $size)
         </code>
@@ -3469,7 +3487,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_checkModeKanji">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1817">at line 1817</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1792">at line 1792</a></div>
         <code>            protected        bool
     <strong>checkModeKanji</strong>(int $size, array $data)
         </code>
@@ -3514,7 +3532,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_check">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1837">at line 1837</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1812">at line 1812</a></div>
         <code>            protected        bool
     <strong>check</strong>(int $mode, int $size, array $data)
         </code>
@@ -3564,7 +3582,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateBitStreamSize">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1870">at line 1870</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1845">at line 1845</a></div>
         <code>            protected        int
     <strong>estimateBitStreamSize</strong>(array $items, int $version)
         </code>
@@ -3609,7 +3627,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_estimateVersion">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1913">at line 1913</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1888">at line 1888</a></div>
         <code>            protected        int
     <strong>estimateVersion</strong>(array $items)
         </code>
@@ -3649,7 +3667,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_lengthOfCode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1934">at line 1934</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1909">at line 1909</a></div>
         <code>            protected        int
     <strong>lengthOfCode</strong>(int $mode, int $version, int $bits)
         </code>
@@ -3699,7 +3717,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_createBitStream">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1989">at line 1989</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1964">at line 1964</a></div>
         <code>            protected        array
     <strong>createBitStream</strong>(array $items)
         </code>
@@ -3739,7 +3757,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_convertData">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2004">at line 2004</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L1979">at line 1979</a></div>
         <code>            protected        array
     <strong>convertData</strong>(array $items)
         </code>
@@ -3779,7 +3797,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_appendPaddingBit">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2033">at line 2033</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2008">at line 2008</a></div>
         <code>            protected        array
     <strong>appendPaddingBit</strong>(array $bstream)
         </code>
@@ -3819,7 +3837,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_mergeBitStream">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2066">at line 2066</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2041">at line 2041</a></div>
         <code>            protected        array
     <strong>mergeBitStream</strong>(array $items)
         </code>
@@ -3859,7 +3877,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getBitStream">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2083">at line 2083</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2058">at line 2058</a></div>
         <code>            protected        array
     <strong>getBitStream</strong>(int $items)
         </code>
@@ -3899,7 +3917,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getByteStream">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2093">at line 2093</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2068">at line 2068</a></div>
         <code>            protected        array
     <strong>getByteStream</strong>(int $items)
         </code>
@@ -3939,7 +3957,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_allocate">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2107">at line 2107</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2082">at line 2082</a></div>
         <code>            protected        array
     <strong>allocate</strong>(int $setLength)
         </code>
@@ -3979,7 +3997,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_newFromNum">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2117">at line 2117</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2092">at line 2092</a></div>
         <code>            protected        array
     <strong>newFromNum</strong>(int $bits, int $num)
         </code>
@@ -4024,7 +4042,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_newFromBytes">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2137">at line 2137</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2112">at line 2112</a></div>
         <code>            protected        array
     <strong>newFromBytes</strong>(int $size, array $data)
         </code>
@@ -4069,7 +4087,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_appendBitstream">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2161">at line 2161</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2136">at line 2136</a></div>
         <code>            protected        array
     <strong>appendBitstream</strong>(array $bitstream, array $append)
         </code>
@@ -4114,7 +4132,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_appendNum">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2178">at line 2178</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2153">at line 2153</a></div>
         <code>            protected        array
     <strong>appendNum</strong>(array $bitstream, int $bits, int $num)
         </code>
@@ -4164,7 +4182,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_appendBytes">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2193">at line 2193</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2168">at line 2168</a></div>
         <code>            protected        array
     <strong>appendBytes</strong>(array $bitstream, int $size, array $data)
         </code>
@@ -4214,7 +4232,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_bitstreamToByte">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2206">at line 2206</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2181">at line 2181</a></div>
         <code>            protected        array
     <strong>bitstreamToByte</strong>(array $bstream)
         </code>
@@ -4254,7 +4272,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_qrstrset">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2251">at line 2251</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2226">at line 2226</a></div>
         <code>            protected        array
     <strong>qrstrset</strong>(array $srctab, int $x, int $y, string $repl, int $replLen = false)
         </code>
@@ -4314,7 +4332,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getDataLength">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2262">at line 2262</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2237">at line 2237</a></div>
         <code>            protected        int
     <strong>getDataLength</strong>(int $version, int $level)
         </code>
@@ -4359,7 +4377,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getECCLength">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2272">at line 2272</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2247">at line 2247</a></div>
         <code>            protected        int
     <strong>getECCLength</strong>(int $version, int $level)
         </code>
@@ -4404,7 +4422,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getWidth">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2281">at line 2281</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2256">at line 2256</a></div>
         <code>            protected        int
     <strong>getWidth</strong>(int $version)
         </code>
@@ -4444,7 +4462,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getRemainder">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2290">at line 2290</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2265">at line 2265</a></div>
         <code>            protected        int
     <strong>getRemainder</strong>(int $version)
         </code>
@@ -4484,7 +4502,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getMinimumVersion">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2300">at line 2300</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2275">at line 2275</a></div>
         <code>            protected        int
     <strong>getMinimumVersion</strong>(int $size, int $level)
         </code>
@@ -4529,7 +4547,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_lengthIndicator">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2317">at line 2317</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2292">at line 2292</a></div>
         <code>            protected        int
     <strong>lengthIndicator</strong>(int $mode, int $version)
         </code>
@@ -4574,7 +4592,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_maximumWords">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2337">at line 2337</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2312">at line 2312</a></div>
         <code>            protected        int
     <strong>maximumWords</strong>(int $mode, int $version)
         </code>
@@ -4619,7 +4637,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getEccSpec">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2363">at line 2363</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2338">at line 2338</a></div>
         <code>            protected        array
     <strong>getEccSpec</strong>(int $version, int $level, array $spec)
         </code>
@@ -4669,7 +4687,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_putAlignmentMarker">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2394">at line 2394</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2369">at line 2369</a></div>
         <code>            protected        array
     <strong>putAlignmentMarker</strong>(array $frame, int $ox, int $oy)
         </code>
@@ -4719,7 +4737,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_putAlignmentPattern">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2417">at line 2417</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2392">at line 2392</a></div>
         <code>            protected        array
     <strong>putAlignmentPattern</strong>(int $version, array $frame, int $width)
         </code>
@@ -4769,8 +4787,8 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getVersionPattern">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2457">at line 2457</a></div>
-        <code>            protected        BCH
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2432">at line 2432</a></div>
+        <code>            protected        int
     <strong>getVersionPattern</strong>(int $version)
         </code>
     </h3>
@@ -4796,7 +4814,7 @@ Please read comments on this class source file for full copyright and license in
 
                     <table class="table table-condensed">
         <tr>
-            <td>BCH</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -4809,8 +4827,8 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_getFormatInfo">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2470">at line 2470</a></div>
-        <code>            protected        BCH
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2445">at line 2445</a></div>
+        <code>            protected        int
     <strong>getFormatInfo</strong>(array $mask, int $level)
         </code>
     </h3>
@@ -4841,7 +4859,7 @@ Please read comments on this class source file for full copyright and license in
 
                     <table class="table table-condensed">
         <tr>
-            <td>BCH</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -4854,7 +4872,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_putFinderPattern">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2487">at line 2487</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2462">at line 2462</a></div>
         <code>            protected        array
     <strong>putFinderPattern</strong>(array $frame, int $ox, int $oy)
         </code>
@@ -4904,7 +4922,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_createFrame">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2508">at line 2508</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2483">at line 2483</a></div>
         <code>            protected        array
     <strong>createFrame</strong>(int $version)
         </code>
@@ -4944,7 +4962,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_newFrame">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2573">at line 2573</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2548">at line 2548</a></div>
         <code>            protected        array
     <strong>newFrame</strong>(int $version)
         </code>
@@ -4984,7 +5002,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_rsBlockNum">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2591">at line 2591</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2566">at line 2566</a></div>
         <code>            protected        int
     <strong>rsBlockNum</strong>(array $spec)
         </code>
@@ -5024,7 +5042,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_rsBlockNum1">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2600">at line 2600</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2575">at line 2575</a></div>
         <code>            protected        int
     <strong>rsBlockNum1</strong>(array $spec)
         </code>
@@ -5064,7 +5082,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_rsDataCodes1">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2609">at line 2609</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2584">at line 2584</a></div>
         <code>            protected        int
     <strong>rsDataCodes1</strong>(array $spec)
         </code>
@@ -5104,7 +5122,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_rsEccCodes1">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2618">at line 2618</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2593">at line 2593</a></div>
         <code>            protected        int
     <strong>rsEccCodes1</strong>(array $spec)
         </code>
@@ -5144,7 +5162,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_rsBlockNum2">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2627">at line 2627</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2602">at line 2602</a></div>
         <code>            protected        int
     <strong>rsBlockNum2</strong>(array $spec)
         </code>
@@ -5184,7 +5202,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_rsDataCodes2">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2636">at line 2636</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2611">at line 2611</a></div>
         <code>            protected        int
     <strong>rsDataCodes2</strong>(array $spec)
         </code>
@@ -5224,7 +5242,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_rsEccCodes2">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2645">at line 2645</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2620">at line 2620</a></div>
         <code>            protected        int
     <strong>rsEccCodes2</strong>(array $spec)
         </code>
@@ -5264,7 +5282,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_rsDataLength">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2654">at line 2654</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2629">at line 2629</a></div>
         <code>            protected        int
     <strong>rsDataLength</strong>(array $spec)
         </code>
@@ -5304,7 +5322,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_rsEccLength">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2663">at line 2663</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2638">at line 2638</a></div>
         <code>            protected        int
     <strong>rsEccLength</strong>(array $spec)
         </code>
@@ -5344,7 +5362,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_init_rs">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2681">at line 2681</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2656">at line 2656</a></div>
         <code>            protected        array
     <strong>init_rs</strong>(int $symsize, int $gfpoly, int $fcr, int $prim, int $nroots, int $pad)
         </code>
@@ -5409,7 +5427,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_modnn">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2704">at line 2704</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2679">at line 2679</a></div>
         <code>            protected        int
     <strong>modnn</strong>(array $rs, int $x)
         </code>
@@ -5454,7 +5472,7 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_init_rs_char">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2722">at line 2722</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2697">at line 2697</a></div>
         <code>            protected        array
     <strong>init_rs_char</strong>(int $symsize, int $gfpoly, int $fcr, int $prim, int $nroots, int $pad)
         </code>
@@ -5519,8 +5537,8 @@ Please read comments on this class source file for full copyright and license in
             </div>
                     <div class="method-item">
                     <h3 id="method_encode_rs_char">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2806">at line 2806</a></div>
-        <code>            protected        parity
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/barcodes/qrcode.php#L2781">at line 2781</a></div>
+        <code>            protected        array
     <strong>encode_rs_char</strong>(array $rs, array $data, array $parity)
         </code>
     </h3>
@@ -5556,7 +5574,7 @@ Please read comments on this class source file for full copyright and license in
 
                     <table class="table table-condensed">
         <tr>
-            <td>parity</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>

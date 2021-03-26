@@ -84,7 +84,7 @@
             <table class="table table-condensed">
                     <tr>
                 <td class="type" id="property_svginheritprop">
-                    static                                                            
+                    static                                                            string[]
                 </td>
                 <td>$svginheritprop</td>
                 <td class="last">Array of hinheritable SVG properties.</td>
@@ -108,37 +108,37 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;resource
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_setGDImageTransparency">setGDImageTransparency</a>(image $new_image, image $image)
+                    <a href="#method_setGDImageTransparency">setGDImageTransparency</a>(resource $new_image, resource $image)
         
                                             <p>Set the transparency for the given GD image.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;array|false
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__toPNG">_toPNG</a>(image $image, string $tempfile)
+                    <a href="#method__toPNG">_toPNG</a>(resource $image, string $tempfile)
         
                                             <p>Convert the loaded image to a PNG and then return a structure for the PDF creator.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;
+                    static&nbsp;array|false
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method__toJPEG">_toJPEG</a>(image $image, int $quality, string $tempfile)
+                    <a href="#method__toJPEG">_toJPEG</a>(resource $image, int $quality, string $tempfile)
         
                                             <p>Convert the loaded image to a JPEG and then return a structure for the PDF creator.</p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;array
+                    static&nbsp;array|false
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method__parsejpeg">_parsejpeg</a>(string $file)
@@ -148,7 +148,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;array
+                    static&nbsp;array|false
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method__parsepng">_parsepng</a>(string $file)
@@ -164,7 +164,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getImageFileType">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L47">at line 47</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L49">at line 49</a></div>
         <code>        static            string
     <strong>getImageFileType</strong>(string $imgfile, array $iminfo = array())
         </code>
@@ -209,9 +209,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_setGDImageTransparency">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L75">at line 75</a></div>
-        <code>        static            
-    <strong>setGDImageTransparency</strong>(image $new_image, image $image)
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L77">at line 77</a></div>
+        <code>        static            resource
+    <strong>setGDImageTransparency</strong>(resource $new_image, resource $image)
         </code>
     </h3>
     <div class="details">
@@ -225,19 +225,27 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>image</td>
+                <td>resource</td>
                 <td>$new_image</td>
                 <td>GD image object</td>
             </tr>
                     <tr>
-                <td>image</td>
+                <td>resource</td>
                 <td>$image</td>
-                <td>GD image object.
-return GD image object.</td>
+                <td>GD image object.</td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>resource</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -246,9 +254,9 @@ return GD image object.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method__toPNG">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L100">at line 100</a></div>
-        <code>        static            
-    <strong>_toPNG</strong>(image $image, string $tempfile)
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L102">at line 102</a></div>
+        <code>        static            array|false
+    <strong>_toPNG</strong>(resource $image, string $tempfile)
         </code>
     </h3>
     <div class="details">
@@ -262,19 +270,27 @@ return GD image object.</td>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>image</td>
+                <td>resource</td>
                 <td>$image</td>
                 <td>Image object.</td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$tempfile</td>
-                <td>Temporary file name.
-return image PNG image object.</td>
+                <td>Temporary file name.</td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|false</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -283,9 +299,9 @@ return image PNG image object.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method__toJPEG">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L123">at line 123</a></div>
-        <code>        static            
-    <strong>_toJPEG</strong>(image $image, int $quality, string $tempfile)
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L125">at line 125</a></div>
+        <code>        static            array|false
+    <strong>_toJPEG</strong>(resource $image, int $quality, string $tempfile)
         </code>
     </h3>
     <div class="details">
@@ -299,7 +315,7 @@ return image PNG image object.</td>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>image</td>
+                <td>resource</td>
                 <td>$image</td>
                 <td>Image object.</td>
             </tr>
@@ -311,12 +327,20 @@ return image PNG image object.</td>
                     <tr>
                 <td>string</td>
                 <td>$tempfile</td>
-                <td>Temporary file name.
-return image JPEG image object.</td>
+                <td>Temporary file name.</td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|false</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
                     </div>
@@ -325,8 +349,8 @@ return image JPEG image object.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method__parsejpeg">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L138">at line 138</a></div>
-        <code>        static            array
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L140">at line 140</a></div>
+        <code>        static            array|false
     <strong>_parsejpeg</strong>(string $file)
         </code>
     </h3>
@@ -352,7 +376,7 @@ return image JPEG image object.</td>
 
                     <table class="table table-condensed">
         <tr>
-            <td>array</td>
+            <td>array|false</td>
             <td></td>
         </tr>
     </table>
@@ -365,8 +389,8 @@ return image JPEG image object.</td>
             </div>
                     <div class="method-item">
                     <h3 id="method__parsepng">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L217">at line 217</a></div>
-        <code>        static            array
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/include/tcpdf_images.php#L219">at line 219</a></div>
+        <code>        static            array|false
     <strong>_parsepng</strong>(string $file)
         </code>
     </h3>
@@ -392,7 +416,7 @@ return image JPEG image object.</td>
 
                     <table class="table table-condensed">
         <tr>
-            <td>array</td>
+            <td>array|false</td>
             <td></td>
         </tr>
     </table>

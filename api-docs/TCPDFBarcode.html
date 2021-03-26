@@ -158,7 +158,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    image
+                    string|Imagick|false
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getBarcodePngData">getBarcodePngData</a>(int $w = 2, int $h = 30, array $color = array(0, 0, 0))
@@ -188,7 +188,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    encoded
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_encode_code39_ext">encode_code39_ext</a>(string $code)
@@ -198,7 +198,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    char
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_checksum_code39">checksum_code39</a>(string $code)
@@ -726,7 +726,7 @@ Intelligent Mail barcode is a 65-bar code for use on mail in the United States.<
                     <div class="method-item">
                     <h3 id="method_getBarcodePngData">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L171">at line 171</a></div>
-        <code>                    image
+        <code>                    string|Imagick|false
     <strong>getBarcodePngData</strong>(int $w = 2, int $h = 30, array $color = array(0, 0, 0))
         </code>
     </h3>
@@ -762,7 +762,7 @@ Intelligent Mail barcode is a 65-bar code for use on mail in the United States.<
 
                     <table class="table table-condensed">
         <tr>
-            <td>image</td>
+            <td>string|Imagick|false</td>
             <td></td>
         </tr>
     </table>
@@ -874,7 +874,7 @@ Intelligent Mail barcode is a 65-bar code for use on mail in the United States.<
                     <div class="method-item">
                     <h3 id="method_encode_code39_ext">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L465">at line 465</a></div>
-        <code>            protected        encoded
+        <code>            protected        string
     <strong>encode_code39_ext</strong>(string $code)
         </code>
     </h3>
@@ -900,7 +900,7 @@ Intelligent Mail barcode is a 65-bar code for use on mail in the United States.<
 
                     <table class="table table-condensed">
         <tr>
-            <td>encoded</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -914,7 +914,7 @@ Intelligent Mail barcode is a 65-bar code for use on mail in the United States.<
                     <div class="method-item">
                     <h3 id="method_checksum_code39">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf_barcodes_1d.php#L516">at line 516</a></div>
-        <code>            protected        char
+        <code>            protected        string
     <strong>checksum_code39</strong>(string $code)
         </code>
     </h3>
@@ -940,7 +940,7 @@ Intelligent Mail barcode is a 65-bar code for use on mail in the United States.<
 
                     <table class="table table-condensed">
         <tr>
-            <td>char</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>

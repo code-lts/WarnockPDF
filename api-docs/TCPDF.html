@@ -2155,7 +2155,7 @@
                     
                 </div>
                 <div class="col-md-8 type">
-                    <a href="#method_getCellHeight">getCellHeight</a>(int $fontsize, bool $padding = TRUE)
+                    <a href="#method_getCellHeight">getCellHeight</a>(int $fontsize, bool $padding = true)
         
                                             <p>Return the cell height</p>                </div>
                 <div class="col-md-2"></div>
@@ -2172,7 +2172,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    last
+                    float
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getLastH">getLastH</a>()
@@ -3008,7 +3008,7 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    array
+                    array|false
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_AddFont">AddFont</a>(string $family, string $style = &#039;&#039;, string $fontfile = &#039;&#039;, mixed $subset = &#039;default&#039;)
@@ -3301,7 +3301,7 @@ If automatic page breaking is enabled and the cell goes beyond the limit, a page
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    image
+                    mixed|false
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_Image">Image</a>(string $file, float $x = &#039;&#039;, float $y = &#039;&#039;, float $w = 0, float $h = 0, string $type = &#039;&#039;, mixed $link = &#039;&#039;, string $align = &#039;&#039;, mixed $resize = false, int $dpi = 300, string $palign = &#039;&#039;, bool $ismask = false, mixed $imgmask = false, mixed $border = 0, mixed $fitbox = false, bool $hidden = false, bool $fitonpage = false, bool $alt = false, array $altimgs = array())
@@ -3481,7 +3481,7 @@ If automatic page breaking is enabled and the cell goes beyond the limit, a page
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    replaced
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_replaceRightShiftPageNumAliases">replaceRightShiftPageNumAliases</a>(string $page, array $aliases, int $diff)
@@ -3963,7 +3963,7 @@ Based on PDF Reference 1.3 (section 5)</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    the
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_addHtmlLink">addHtmlLink</a>(string $url, string $name, bool $fill = false, bool $firstline = false, array $color = &#039;&#039;, string $style = -1, bool $firstblock = false)
@@ -4003,7 +4003,7 @@ Based on PDF Reference 1.3 (section 5)</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    encrypted
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method__encrypt_data">_encrypt_data</a>(int $n, string $s)
@@ -4504,7 +4504,7 @@ Remark: the protection against modification is for people who have the full Acro
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    string|false
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_setDestination">setDestination</a>(string $name, float $y = -1, $page = &#039;&#039;, float $x = -1)
@@ -4827,7 +4827,7 @@ Request TSA for a timestamp</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    alias
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getPageGroupAlias">getPageGroupAlias</a>()
@@ -4837,7 +4837,7 @@ Request TSA for a timestamp</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    alias
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getPageNumGroupAlias">getPageNumGroupAlias</a>()
@@ -4847,7 +4847,7 @@ Request TSA for a timestamp</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    current
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getGroupPageNo">getGroupPageNo</a>()
@@ -4917,7 +4917,7 @@ Request TSA for a timestamp</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    the
+                    int|void
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_addExtGState">addExtGState</a>(array $parms)
@@ -5258,7 +5258,7 @@ Request TSA for a timestamp</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    current
+                    float
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFontSize">getFontSize</a>()
@@ -5268,7 +5268,7 @@ Request TSA for a timestamp</p>                </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    current
+                    int
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFontSizePt">getFontSizePt</a>()
@@ -5719,7 +5719,7 @@ IMPORTANT: The HTML must be well formatted - try to clean-up it using an applica
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    string|false
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getImageBuffer">getImageBuffer</a>(string $image)
@@ -5749,7 +5749,7 @@ IMPORTANT: The HTML must be well formatted - try to clean-up it using an applica
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    string
+                    string|false
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_getFontBuffer">getFontBuffer</a>(string $font)
@@ -5759,7 +5759,7 @@ IMPORTANT: The HTML must be well formatted - try to clean-up it using an applica
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    true
+                    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_movePage">movePage</a>(int $frompage, int $topage)
@@ -5779,7 +5779,7 @@ IMPORTANT: The HTML must be well formatted - try to clean-up it using an applica
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    true
+                    bool
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_copyPage">copyPage</a>(int $page = 0)
@@ -5979,7 +5979,7 @@ IMPORTANT: The HTML must be well formatted - try to clean-up it using an applica
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    left
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_stringLeftTrim">stringLeftTrim</a>(string $str, string $replace = &#039;&#039;)
@@ -5989,7 +5989,7 @@ IMPORTANT: The HTML must be well formatted - try to clean-up it using an applica
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    right
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_stringRightTrim">stringRightTrim</a>(string $str, string $replace = &#039;&#039;)
@@ -5999,7 +5999,7 @@ IMPORTANT: The HTML must be well formatted - try to clean-up it using an applica
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    trimmed
+                    string
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_stringTrim">stringTrim</a>(string $str, string $replace = &#039;&#039;)
@@ -6029,7 +6029,7 @@ IMPORTANT: The HTML must be well formatted - try to clean-up it using an applica
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    int|false
                 </div>
                 <div class="col-md-8 type">
                     <a href="#method_startTemplate">startTemplate</a>(int $w = 0, int $h = 0, mixed $group = false)
@@ -6730,7 +6730,7 @@ if PCRE unicode support is turned ON ("\P" is the negate class of "\p"):
                     <h3 id="method_getCellHeight">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L2399">at line 2399</a></div>
         <code>                    
-    <strong>getCellHeight</strong>(int $fontsize, bool $padding = TRUE)
+    <strong>getCellHeight</strong>(int $fontsize, bool $padding = true)
         </code>
     </h3>
     <div class="details">
@@ -6786,7 +6786,7 @@ if PCRE unicode support is turned ON ("\P" is the negate class of "\p"):
                     <div class="method-item">
                     <h3 id="method_getLastH">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L2422">at line 2422</a></div>
-        <code>                    last
+        <code>                    float
     <strong>getLastH</strong>()
         </code>
     </h3>
@@ -6802,7 +6802,7 @@ if PCRE unicode support is turned ON ("\P" is the negate class of "\p"):
 
                     <table class="table table-condensed">
         <tr>
-            <td>last</td>
+            <td>float</td>
             <td></td>
         </tr>
     </table>
@@ -10221,7 +10221,7 @@ The method can be called before the first page is created and the value is retai
                     <div class="method-item">
                     <h3 id="method_AddFont">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L4146">at line 4146</a></div>
-        <code>                    array
+        <code>                    array|false
     <strong>AddFont</strong>(string $family, string $style = &#039;&#039;, string $fontfile = &#039;&#039;, mixed $subset = &#039;default&#039;)
         </code>
     </h3>
@@ -10266,7 +10266,7 @@ The definition file (and the font file itself when embedding) must be present ei
 
                     <table class="table table-condensed">
         <tr>
-            <td>array</td>
+            <td>array|false</td>
             <td></td>
         </tr>
     </table>
@@ -12111,7 +12111,7 @@ Text can be aligned, centered or justified. The cell block can be framed and the
                     <div class="method-item">
                     <h3 id="method_Image">
         <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L6787">at line 6787</a></div>
-        <code>                    image
+        <code>                    mixed|false
     <strong>Image</strong>(string $file, float $x = &#039;&#039;, float $y = &#039;&#039;, float $w = 0, float $h = 0, string $type = &#039;&#039;, mixed $link = &#039;&#039;, string $align = &#039;&#039;, mixed $resize = false, int $dpi = 300, string $palign = &#039;&#039;, bool $ismask = false, mixed $imgmask = false, mixed $border = 0, mixed $fitbox = false, bool $hidden = false, bool $fitonpage = false, bool $alt = false, array $altimgs = array())
         </code>
     </h3>
@@ -12252,7 +12252,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
 
                     <table class="table table-condensed">
         <tr>
-            <td>image</td>
+            <td>mixed|false</td>
             <td></td>
         </tr>
     </table>
@@ -12378,7 +12378,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_getGDgamma">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7289">at line 7289</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7291">at line 7291</a></div>
         <code>            protected        
     <strong>getGDgamma</strong>(int $img, int $c)
         </code>
@@ -12414,7 +12414,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_Ln">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7314">at line 7314</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7316">at line 7316</a></div>
         <code>                    
     <strong>Ln</strong>(float $h = &#039;&#039;, bool $cell = false)
         </code>
@@ -12461,7 +12461,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_GetX">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7348">at line 7348</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7350">at line 7350</a></div>
         <code>                    float
     <strong>GetX</strong>()
         </code>
@@ -12502,7 +12502,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAbsX">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7364">at line 7364</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7366">at line 7366</a></div>
         <code>                    float
     <strong>GetAbsX</strong>()
         </code>
@@ -12543,7 +12543,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_GetY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7375">at line 7375</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7377">at line 7377</a></div>
         <code>                    float
     <strong>GetY</strong>()
         </code>
@@ -12584,7 +12584,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_SetX">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7388">at line 7388</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7390">at line 7390</a></div>
         <code>                    
     <strong>SetX</strong>(float $x, bool $rtloff = false)
         </code>
@@ -12631,7 +12631,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_SetY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7421">at line 7421</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7423">at line 7423</a></div>
         <code>                    
     <strong>SetY</strong>(float $y, bool $resetx = true, bool $rtloff = false)
         </code>
@@ -12683,7 +12683,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_SetXY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7454">at line 7454</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7456">at line 7456</a></div>
         <code>                    
     <strong>SetXY</strong>(float $x, float $y, bool $rtloff = false)
         </code>
@@ -12735,7 +12735,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_SetAbsX">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7466">at line 7466</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7468">at line 7468</a></div>
         <code>                    
     <strong>SetAbsX</strong>(float $x)
         </code>
@@ -12777,7 +12777,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_SetAbsY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7477">at line 7477</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7479">at line 7479</a></div>
         <code>                    
     <strong>SetAbsY</strong>(float $y)
         </code>
@@ -12819,7 +12819,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_SetAbsXY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7489">at line 7489</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7491">at line 7491</a></div>
         <code>                    
     <strong>SetAbsXY</strong>(float $x, float $y)
         </code>
@@ -12866,7 +12866,7 @@ Remark: if an image is used several times, only one copy will be embedded in the
             </div>
                     <div class="method-item">
                     <h3 id="method_Output">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7505">at line 7505</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7507">at line 7507</a></div>
         <code>                    string
     <strong>Output</strong>(string $name = &#039;doc.pdf&#039;, string $dest = &#039;I&#039;)
         </code>
@@ -12926,7 +12926,7 @@ The method first calls Close() if necessary to terminate the document.</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method__destroy">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7704">at line 7704</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7706">at line 7706</a></div>
         <code>                    
     <strong>_destroy</strong>(bool $destroyall = false, bool $preserve_objcopy = false)
         </code>
@@ -12962,7 +12962,7 @@ The method first calls Close() if necessary to terminate the document.</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method__dochecks">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7760">at line 7760</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7762">at line 7762</a></div>
         <code>            protected        
     <strong>_dochecks</strong>()
         </code>
@@ -12983,7 +12983,7 @@ The method first calls Close() if necessary to terminate the document.</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_getInternalPageNumberAliases">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7777">at line 7777</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7779">at line 7779</a></div>
         <code>            protected        array
     <strong>getInternalPageNumberAliases</strong>(string $a = &#039;&#039;)
         </code>
@@ -13023,7 +13023,7 @@ The method first calls Close() if necessary to terminate the document.</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_getAllInternalPageNumberAliases">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7798">at line 7798</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7800">at line 7800</a></div>
         <code>            protected        array
     <strong>getAllInternalPageNumberAliases</strong>()
         </code>
@@ -13053,8 +13053,8 @@ The method first calls Close() if necessary to terminate the document.</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_replaceRightShiftPageNumAliases">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7816">at line 7816</a></div>
-        <code>            protected        replaced
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7818">at line 7818</a></div>
+        <code>            protected        string
     <strong>replaceRightShiftPageNumAliases</strong>(string $page, array $aliases, int $diff)
         </code>
     </h3>
@@ -13090,7 +13090,7 @@ The method first calls Close() if necessary to terminate the document.</p>      
 
                     <table class="table table-condensed">
         <tr>
-            <td>replaced</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -13103,7 +13103,7 @@ The method first calls Close() if necessary to terminate the document.</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method_setPageBoxTypes">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7851">at line 7851</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7853">at line 7853</a></div>
         <code>            protected        
     <strong>setPageBoxTypes</strong>(array $boxes)
         </code>
@@ -13134,7 +13134,7 @@ The method first calls Close() if necessary to terminate the document.</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method__putpages">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7864">at line 7864</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L7866">at line 7866</a></div>
         <code>            protected        
     <strong>_putpages</strong>()
         </code>
@@ -13155,7 +13155,7 @@ The method first calls Close() if necessary to terminate the document.</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method__getannotsrefs">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8026">at line 8026</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8028">at line 8028</a></div>
         <code>            protected        string
     <strong>_getannotsrefs</strong>(int $n)
         </code>
@@ -13195,7 +13195,7 @@ The method first calls Close() if necessary to terminate the document.</p>      
             </div>
                     <div class="method-item">
                     <h3 id="method__putannotsobjs">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8070">at line 8070</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8072">at line 8072</a></div>
         <code>            protected        
     <strong>_putannotsobjs</strong>()
         </code>
@@ -13217,7 +13217,7 @@ See section 12.5 of PDF 32000_2008 reference.</p>                            </d
             </div>
                     <div class="method-item">
                     <h3 id="method__putAPXObject">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8715">at line 8715</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8717">at line 8717</a></div>
         <code>            protected        int
     <strong>_putAPXObject</strong>(int $w = 0, int $h = 0, string $stream = &#039;&#039;)
         </code>
@@ -13267,7 +13267,7 @@ See section 12.5 of PDF 32000_2008 reference.</p>                            </d
             </div>
                     <div class="method-item">
                     <h3 id="method__putfonts">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8745">at line 8745</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8747">at line 8747</a></div>
         <code>            protected        
     <strong>_putfonts</strong>()
         </code>
@@ -13288,7 +13288,7 @@ See section 12.5 of PDF 32000_2008 reference.</p>                            </d
             </div>
                     <div class="method-item">
                     <h3 id="method__puttruetypeunicode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8894">at line 8894</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8896">at line 8896</a></div>
         <code>            protected        
     <strong>_puttruetypeunicode</strong>(array $font)
         </code>
@@ -13320,7 +13320,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putcidfont0">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L8998">at line 8998</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9000">at line 9000</a></div>
         <code>            protected        
     <strong>_putcidfont0</strong>(array $font)
         </code>
@@ -13351,7 +13351,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putimages">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9068">at line 9068</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9070">at line 9070</a></div>
         <code>            protected        
     <strong>_putimages</strong>()
         </code>
@@ -13372,7 +13372,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putxobjects">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9198">at line 9198</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9200">at line 9200</a></div>
         <code>            protected        
     <strong>_putxobjects</strong>()
         </code>
@@ -13404,7 +13404,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putspotcolors">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9301">at line 9301</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9303">at line 9303</a></div>
         <code>            protected        
     <strong>_putspotcolors</strong>()
         </code>
@@ -13425,7 +13425,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__getxobjectdict">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9321">at line 9321</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9323">at line 9323</a></div>
         <code>            protected        string
     <strong>_getxobjectdict</strong>()
         </code>
@@ -13455,7 +13455,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putresourcedict">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9333">at line 9333</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9335">at line 9335</a></div>
         <code>            protected        
     <strong>_putresourcedict</strong>()
         </code>
@@ -13476,7 +13476,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putresources">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9397">at line 9397</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9399">at line 9399</a></div>
         <code>            protected        
     <strong>_putresources</strong>()
         </code>
@@ -13497,7 +13497,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putinfo">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9420">at line 9420</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9422">at line 9422</a></div>
         <code>            protected        int
     <strong>_putinfo</strong>()
         </code>
@@ -13528,7 +13528,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_setExtraXMP">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9471">at line 9471</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9473">at line 9473</a></div>
         <code>                    
     <strong>setExtraXMP</strong>(string $xmp)
         </code>
@@ -13559,7 +13559,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_setExtraXMPRDF">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9482">at line 9482</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9484">at line 9484</a></div>
         <code>                    
     <strong>setExtraXMPRDF</strong>(string $xmp)
         </code>
@@ -13590,7 +13590,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putXMP">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9492">at line 9492</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9494">at line 9494</a></div>
         <code>            protected        int
     <strong>_putXMP</strong>()
         </code>
@@ -13620,7 +13620,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putcatalog">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9641">at line 9641</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9643">at line 9643</a></div>
         <code>            protected        int
     <strong>_putcatalog</strong>()
         </code>
@@ -13650,7 +13650,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putviewerpreferences">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9828">at line 9828</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9830">at line 9830</a></div>
         <code>            protected        string
     <strong>_putviewerpreferences</strong>()
         </code>
@@ -13680,7 +13680,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putheader">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9900">at line 9900</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9902">at line 9902</a></div>
         <code>            protected        
     <strong>_putheader</strong>()
         </code>
@@ -13701,7 +13701,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__enddoc">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9909">at line 9909</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L9911">at line 9911</a></div>
         <code>            protected        
     <strong>_enddoc</strong>()
         </code>
@@ -13722,7 +13722,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__beginpage">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10000">at line 10000</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10002">at line 10002</a></div>
         <code>            protected        
     <strong>_beginpage</strong>(string $orientation = &#039;&#039;, mixed $format = &#039;&#039;)
         </code>
@@ -13772,7 +13772,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__endpage">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10043">at line 10043</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10045">at line 10045</a></div>
         <code>            protected        
     <strong>_endpage</strong>()
         </code>
@@ -13793,7 +13793,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__newobj">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10053">at line 10053</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10055">at line 10055</a></div>
         <code>            protected        int
     <strong>_newobj</strong>()
         </code>
@@ -13823,7 +13823,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__getobj">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10065">at line 10065</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10067">at line 10067</a></div>
         <code>            protected        string
     <strong>_getobj</strong>(int $objid = &#039;&#039;)
         </code>
@@ -13863,7 +13863,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__dounderline">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10082">at line 10082</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10084">at line 10084</a></div>
         <code>            protected        
     <strong>_dounderline</strong>(int $x, int $y, string $txt)
         </code>
@@ -13904,7 +13904,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__dounderlinew">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10095">at line 10095</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10097">at line 10097</a></div>
         <code>            protected        
     <strong>_dounderlinew</strong>(int $x, int $y, int $w)
         </code>
@@ -13945,7 +13945,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__dolinethrough">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10107">at line 10107</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10109">at line 10109</a></div>
         <code>            protected        
     <strong>_dolinethrough</strong>(int $x, int $y, string $txt)
         </code>
@@ -13986,7 +13986,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__dolinethroughw">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10120">at line 10120</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10122">at line 10122</a></div>
         <code>            protected        
     <strong>_dolinethroughw</strong>(int $x, int $y, int $w)
         </code>
@@ -14027,7 +14027,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__dooverline">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10133">at line 10133</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10135">at line 10135</a></div>
         <code>            protected        
     <strong>_dooverline</strong>(int $x, int $y, string $txt)
         </code>
@@ -14068,7 +14068,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__dooverlinew">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10146">at line 10146</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10148">at line 10148</a></div>
         <code>            protected        
     <strong>_dooverlinew</strong>(int $x, int $y, int $w)
         </code>
@@ -14109,7 +14109,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__datastring">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10159">at line 10159</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10161">at line 10161</a></div>
         <code>            protected        string
     <strong>_datastring</strong>(string $s, int $n = 0)
         </code>
@@ -14154,7 +14154,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_setDocCreationTimestamp">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10173">at line 10173</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10175">at line 10175</a></div>
         <code>                    
     <strong>setDocCreationTimestamp</strong>(mixed $time)
         </code>
@@ -14185,7 +14185,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_setDocModificationTimestamp">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10186">at line 10186</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10188">at line 10188</a></div>
         <code>                    
     <strong>setDocModificationTimestamp</strong>(mixed $time)
         </code>
@@ -14216,7 +14216,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_getDocCreationTimestamp">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10199">at line 10199</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10201">at line 10201</a></div>
         <code>                    int
     <strong>getDocCreationTimestamp</strong>()
         </code>
@@ -14246,7 +14246,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_getDocModificationTimestamp">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10209">at line 10209</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10211">at line 10211</a></div>
         <code>                    int
     <strong>getDocModificationTimestamp</strong>()
         </code>
@@ -14276,7 +14276,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__datestring">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10221">at line 10221</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10223">at line 10223</a></div>
         <code>            protected        string
     <strong>_datestring</strong>(int $n = 0, int $timestamp = 0)
         </code>
@@ -14321,7 +14321,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__textstring">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10235">at line 10235</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10237">at line 10237</a></div>
         <code>            protected        string
     <strong>_textstring</strong>(string $s, int $n = 0)
         </code>
@@ -14366,7 +14366,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__getrawstream">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10251">at line 10251</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10253">at line 10253</a></div>
         <code>            protected        
     <strong>_getrawstream</strong>(string $s, int $n = 0)
         </code>
@@ -14402,7 +14402,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__out">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10264">at line 10264</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10266">at line 10266</a></div>
         <code>            protected        
     <strong>_out</strong>(string $s)
         </code>
@@ -14433,7 +14433,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_setHeaderFont">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10293">at line 10293</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10295">at line 10295</a></div>
         <code>                    
     <strong>setHeaderFont</strong>(array<int,string> $font)
         </code>
@@ -14464,7 +14464,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_getHeaderFont">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10303">at line 10303</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10305">at line 10305</a></div>
         <code>                    array<int,string>
     <strong>getHeaderFont</strong>()
         </code>
@@ -14494,7 +14494,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_setFooterFont">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10313">at line 10313</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10315">at line 10315</a></div>
         <code>                    
     <strong>setFooterFont</strong>(array<int,string> $font)
         </code>
@@ -14525,7 +14525,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_getFooterFont">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10323">at line 10323</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10325">at line 10325</a></div>
         <code>                    array<int,string>
     <strong>getFooterFont</strong>()
         </code>
@@ -14555,7 +14555,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_setLanguageArray">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10333">at line 10333</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10335">at line 10335</a></div>
         <code>                    
     <strong>setLanguageArray</strong>(array $language)
         </code>
@@ -14586,7 +14586,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_getPDFData">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10346">at line 10346</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10348">at line 10348</a></div>
         <code>                    
     <strong>getPDFData</strong>()
         </code>
@@ -14607,8 +14607,8 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_addHtmlLink">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10365">at line 10365</a></div>
-        <code>                    the
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10367">at line 10367</a></div>
+        <code>                    int
     <strong>addHtmlLink</strong>(string $url, string $name, bool $fill = false, bool $firstline = false, array $color = &#039;&#039;, string $style = -1, bool $firstblock = false)
         </code>
     </h3>
@@ -14664,7 +14664,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
 
                     <table class="table table-condensed">
         <tr>
-            <td>the</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -14677,7 +14677,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_pixelsToUnits">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10407">at line 10407</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10409">at line 10409</a></div>
         <code>                    float
     <strong>pixelsToUnits</strong>(int $px)
         </code>
@@ -14728,7 +14728,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_unhtmlentities">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10418">at line 10418</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10420">at line 10420</a></div>
         <code>                    string
     <strong>unhtmlentities</strong>(string $text_to_convert)
         </code>
@@ -14768,7 +14768,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__objectkey">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10433">at line 10433</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10435">at line 10435</a></div>
         <code>            protected        int
     <strong>_objectkey</strong>(int $n)
         </code>
@@ -14808,8 +14808,8 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__encrypt_data">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10453">at line 10453</a></div>
-        <code>            protected        encrypted
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10455">at line 10455</a></div>
+        <code>            protected        string
     <strong>_encrypt_data</strong>(int $n, string $s)
         </code>
     </h3>
@@ -14840,7 +14840,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
 
                     <table class="table table-condensed">
         <tr>
-            <td>encrypted</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -14853,7 +14853,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__putencryption">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10481">at line 10481</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10483">at line 10483</a></div>
         <code>            protected        
     <strong>_putencryption</strong>()
         </code>
@@ -14874,7 +14874,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__Uvalue">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10601">at line 10601</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10603">at line 10603</a></div>
         <code>            protected        string
     <strong>_Uvalue</strong>()
         </code>
@@ -14904,7 +14904,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__UEvalue">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10634">at line 10634</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10636">at line 10636</a></div>
         <code>            protected        string
     <strong>_UEvalue</strong>()
         </code>
@@ -14934,7 +14934,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__Ovalue">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10646">at line 10646</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10648">at line 10648</a></div>
         <code>            protected        string
     <strong>_Ovalue</strong>()
         </code>
@@ -14964,7 +14964,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__OEvalue">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10684">at line 10684</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10686">at line 10686</a></div>
         <code>            protected        string
     <strong>_OEvalue</strong>()
         </code>
@@ -14994,7 +14994,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__fixAES256Password">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10697">at line 10697</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10699">at line 10699</a></div>
         <code>            protected        string
     <strong>_fixAES256Password</strong>(string $password)
         </code>
@@ -15034,7 +15034,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method__generateencryptionkey">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10712">at line 10712</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10714">at line 10714</a></div>
         <code>            protected        
     <strong>_generateencryptionkey</strong>()
         </code>
@@ -15055,7 +15055,7 @@ Based on PDF Reference 1.3 (section 5)</p>                                      
             </div>
                     <div class="method-item">
                     <h3 id="method_SetProtection">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10830">at line 10830</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10832">at line 10832</a></div>
         <code>                    
     <strong>SetProtection</strong>(array $permissions = array(&#039;print&#039;, &#039;modify&#039;, &#039;copy&#039;, &#039;annot-forms&#039;, &#039;fill-forms&#039;, &#039;extract&#039;, &#039;assemble&#039;, &#039;print-high&#039;), string $user_pass = &#039;&#039;, string $owner_pass = null, int $mode = 0, string $pubkeys = null)
         </code>
@@ -15111,7 +15111,7 @@ Note: protecting a document requires to encrypt it, which increases the processi
             </div>
                     <div class="method-item">
                     <h3 id="method_StartTransform">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10936">at line 10936</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10938">at line 10938</a></div>
         <code>                    
     <strong>StartTransform</strong>()
         </code>
@@ -15144,7 +15144,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_StopTransform">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10959">at line 10959</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10961">at line 10961</a></div>
         <code>                    
     <strong>StopTransform</strong>()
         </code>
@@ -15177,7 +15177,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_ScaleX">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10984">at line 10984</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10986">at line 10986</a></div>
         <code>                    
     <strong>ScaleX</strong>(float $s_x, int $x = &#039;&#039;, int $y = &#039;&#039;)
         </code>
@@ -15229,7 +15229,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_ScaleY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10997">at line 10997</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L10999">at line 10999</a></div>
         <code>                    
     <strong>ScaleY</strong>(float $s_y, int $x = &#039;&#039;, int $y = &#039;&#039;)
         </code>
@@ -15281,7 +15281,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_ScaleXY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11010">at line 11010</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11012">at line 11012</a></div>
         <code>                    
     <strong>ScaleXY</strong>(float $s, int $x = &#039;&#039;, int $y = &#039;&#039;)
         </code>
@@ -15333,7 +15333,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_Scale">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11024">at line 11024</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11026">at line 11026</a></div>
         <code>                    
     <strong>Scale</strong>(float $s_x, float $s_y, int $x = &#039;&#039;, int $y = &#039;&#039;)
         </code>
@@ -15390,7 +15390,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_MirrorH">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11057">at line 11057</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11059">at line 11059</a></div>
         <code>                    
     <strong>MirrorH</strong>(int $x = &#039;&#039;)
         </code>
@@ -15432,7 +15432,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_MirrorV">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11068">at line 11068</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11070">at line 11070</a></div>
         <code>                    
     <strong>MirrorV</strong>(int $y = &#039;&#039;)
         </code>
@@ -15474,7 +15474,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_MirrorP">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11080">at line 11080</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11082">at line 11082</a></div>
         <code>                    
     <strong>MirrorP</strong>(int $x = &#039;&#039;, int $y = &#039;&#039;)
         </code>
@@ -15521,7 +15521,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_MirrorL">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11093">at line 11093</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11095">at line 11095</a></div>
         <code>                    
     <strong>MirrorL</strong>(float $angle = 0, int $x = &#039;&#039;, int $y = &#039;&#039;)
         </code>
@@ -15573,7 +15573,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_TranslateX">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11105">at line 11105</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11107">at line 11107</a></div>
         <code>                    
     <strong>TranslateX</strong>(int $t_x)
         </code>
@@ -15615,7 +15615,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_TranslateY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11116">at line 11116</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11118">at line 11118</a></div>
         <code>                    
     <strong>TranslateY</strong>(int $t_y)
         </code>
@@ -15657,7 +15657,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_Translate">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11128">at line 11128</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11130">at line 11130</a></div>
         <code>                    
     <strong>Translate</strong>(int $t_x, int $t_y)
         </code>
@@ -15704,7 +15704,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_Rotate">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11150">at line 11150</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11152">at line 11152</a></div>
         <code>                    
     <strong>Rotate</strong>(float $angle, int $x = &#039;&#039;, int $y = &#039;&#039;)
         </code>
@@ -15756,7 +15756,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_SkewX">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11180">at line 11180</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11182">at line 11182</a></div>
         <code>                    
     <strong>SkewX</strong>(float $angle_x, int $x = &#039;&#039;, int $y = &#039;&#039;)
         </code>
@@ -15808,7 +15808,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_SkewY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11193">at line 11193</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11195">at line 11195</a></div>
         <code>                    
     <strong>SkewY</strong>(float $angle_y, int $x = &#039;&#039;, int $y = &#039;&#039;)
         </code>
@@ -15860,7 +15860,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_Skew">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11207">at line 11207</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11209">at line 11209</a></div>
         <code>                    
     <strong>Skew</strong>(float $angle_x, float $angle_y, int $x = &#039;&#039;, int $y = &#039;&#039;)
         </code>
@@ -15917,7 +15917,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_Transform">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11238">at line 11238</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11240">at line 11240</a></div>
         <code>            protected        
     <strong>Transform</strong>(array $tm)
         </code>
@@ -15959,7 +15959,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_SetLineWidth">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11270">at line 11270</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11272">at line 11272</a></div>
         <code>                    
     <strong>SetLineWidth</strong>(float $width)
         </code>
@@ -16001,7 +16001,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_GetLineWidth">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11286">at line 11286</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11288">at line 11288</a></div>
         <code>                    int
     <strong>GetLineWidth</strong>()
         </code>
@@ -16042,7 +16042,7 @@ Use StartTransform() before, and StopTransform() after the transformations to re
             </div>
                     <div class="method-item">
                     <h3 id="method_SetLineStyle">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11313">at line 11313</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11315">at line 11315</a></div>
         <code>                    string
     <strong>SetLineStyle</strong>(array $style, bool $ret = false)
         </code>
@@ -16104,7 +16104,7 @@ the point at which the pattern starts.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__outPoint">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11375">at line 11375</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11377">at line 11377</a></div>
         <code>            protected        
     <strong>_outPoint</strong>(float $x, float $y)
         </code>
@@ -16140,7 +16140,7 @@ the point at which the pattern starts.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__outLine">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11389">at line 11389</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11391">at line 11391</a></div>
         <code>            protected        
     <strong>_outLine</strong>(float $x, float $y)
         </code>
@@ -16176,7 +16176,7 @@ the point at which the pattern starts.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__outRect">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11405">at line 11405</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11407">at line 11407</a></div>
         <code>            protected        
     <strong>_outRect</strong>(float $x, float $y, float $w, float $h, string $op)
         </code>
@@ -16227,7 +16227,7 @@ the point at which the pattern starts.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__outCurve">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11423">at line 11423</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11425">at line 11425</a></div>
         <code>            protected        
     <strong>_outCurve</strong>(float $x1, float $y1, float $x2, float $y2, float $x3, float $y3)
         </code>
@@ -16283,7 +16283,7 @@ the point at which the pattern starts.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__outCurveV">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11439">at line 11439</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11441">at line 11441</a></div>
         <code>            protected        
     <strong>_outCurveV</strong>(float $x2, float $y2, float $x3, float $y3)
         </code>
@@ -16329,7 +16329,7 @@ the point at which the pattern starts.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__outCurveY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11455">at line 11455</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11457">at line 11457</a></div>
         <code>            protected        
     <strong>_outCurveY</strong>(float $x1, float $y1, float $x3, float $y3)
         </code>
@@ -16375,7 +16375,7 @@ the point at which the pattern starts.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_Line">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11472">at line 11472</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11474">at line 11474</a></div>
         <code>                    
     <strong>Line</strong>(float $x1, float $y1, float $x2, float $y2, array $style = array())
         </code>
@@ -16437,7 +16437,7 @@ the point at which the pattern starts.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_Rect">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11502">at line 11502</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11504">at line 11504</a></div>
         <code>                    
     <strong>Rect</strong>(float $x, float $y, float $w, float $h, string $style = &#039;&#039;, array $border_style = array(), array $fill_color = array())
         </code>
@@ -16516,7 +16516,7 @@ the point at which the pattern starts.</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_Curve">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11573">at line 11573</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11575">at line 11575</a></div>
         <code>                    
     <strong>Curve</strong>(float $x0, float $y0, float $x1, float $y1, float $x2, float $y2, float $x3, float $y3, string $style = &#039;&#039;, array $line_style = array(), array $fill_color = array())
         </code>
@@ -16609,7 +16609,7 @@ either end of the curve.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_Polycurve">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11603">at line 11603</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11605">at line 11605</a></div>
         <code>                    
     <strong>Polycurve</strong>(float $x0, float $y0, float $segments, string $style = &#039;&#039;, array $line_style = array(), array $fill_color = array())
         </code>
@@ -16677,7 +16677,7 @@ either end of the curve.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_Ellipse">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11643">at line 11643</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11645">at line 11645</a></div>
         <code>                    
     <strong>Ellipse</strong>(float $x0, float $y0, float $rx, float $ry = &#039;&#039;, float $angle = 0, float $astart = 0, float $afinish = 360, string $style = &#039;&#039;, array $line_style = array(), array $fill_color = array(), int $nc = 2)
         </code>
@@ -16758,7 +16758,7 @@ either end of the curve.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method__outellipticalarc">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11684">at line 11684</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11686">at line 11686</a></div>
         <code>            protected        array
     <strong>_outellipticalarc</strong>(float $xc, float $yc, float $rx, float $ry, float $xang = 0, float $angs = 0, float $angf = 360, bool $pie = false, int $nc = 2, bool $startpoint = true, bool $ccw = true, bool $svg = false)
         </code>
@@ -16853,7 +16853,7 @@ either end of the curve.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_Circle">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11815">at line 11815</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11817">at line 11817</a></div>
         <code>                    
     <strong>Circle</strong>(float $x0, float $y0, float $r, float $angstr = 0, float $angend = 360, string $style = &#039;&#039;, array $line_style = array(), array $fill_color = array(), int $nc = 2)
         </code>
@@ -16924,7 +16924,7 @@ either end of the curve.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_PolyLine">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11833">at line 11833</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11835">at line 11835</a></div>
         <code>                    
     <strong>PolyLine</strong>(array $p, string $style = &#039;&#039;, array $line_style = array(), array $fill_color = array())
         </code>
@@ -16977,7 +16977,7 @@ either end of the curve.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_Polygon">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11852">at line 11852</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11854">at line 11854</a></div>
         <code>                    
     <strong>Polygon</strong>(array $p, string $style = &#039;&#039;, array $line_style = array(), array $fill_color = array(), bool $closed = true)
         </code>
@@ -17035,7 +17035,7 @@ either end of the curve.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_RegularPolygon">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11953">at line 11953</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L11955">at line 11955</a></div>
         <code>                    
     <strong>RegularPolygon</strong>(float $x0, float $y0, float $r, int $ns, float $angle = 0, bool $draw_circle = false, string $style = &#039;&#039;, array $line_style = array(), array $fill_color = array(), string $circle_style = &#039;&#039;, array $circle_outLine_style = array(), array $circle_fill_color = array())
         </code>
@@ -17137,7 +17137,7 @@ either end of the curve.</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_StarPolygon">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12001">at line 12001</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12003">at line 12003</a></div>
         <code>                    
     <strong>StarPolygon</strong>(float $x0, float $y0, float $r, int $nv, int $ng, float $angle = 0, bool $draw_circle = false, string $style = &#039;&#039;, array $line_style = array(), array $fill_color = array(), string $circle_style = &#039;&#039;, array $circle_outLine_style = array(), array $circle_fill_color = array())
         </code>
@@ -17245,7 +17245,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_RoundedRect">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12043">at line 12043</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12045">at line 12045</a></div>
         <code>                    
     <strong>RoundedRect</strong>(float $x, float $y, float $w, float $h, float $r, string $round_corner = &#039;1111&#039;, string $style = &#039;&#039;, array $border_style = array(), array $fill_color = array())
         </code>
@@ -17316,7 +17316,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_RoundedRectXY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12062">at line 12062</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12064">at line 12064</a></div>
         <code>                    
     <strong>RoundedRectXY</strong>(float $x, float $y, float $w, float $h, float $rx, float $ry, string $round_corner = &#039;1111&#039;, string $style = &#039;&#039;, array $border_style = array(), array $fill_color = array())
         </code>
@@ -17392,7 +17392,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_Arrow">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12132">at line 12132</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12134">at line 12134</a></div>
         <code>                    
     <strong>Arrow</strong>(float $x0, float $y0, float $x1, float $y1, int $head_style = 0, float $arm_size = 5, int $arm_angle = 15)
         </code>
@@ -17453,8 +17453,8 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_setDestination">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12197">at line 12197</a></div>
-        <code>                    string
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12199">at line 12199</a></div>
+        <code>                    string|false
     <strong>setDestination</strong>(string $name, float $y = -1, $page = &#039;&#039;, float $x = -1)
         </code>
     </h3>
@@ -17495,7 +17495,7 @@ SetLineStyle().</li>
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>string|false</td>
             <td></td>
         </tr>
     </table>
@@ -17508,7 +17508,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_getDestination">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12240">at line 12240</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12242">at line 12242</a></div>
         <code>                    array
     <strong>getDestination</strong>()
         </code>
@@ -17538,7 +17538,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__putdests">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12250">at line 12250</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12252">at line 12252</a></div>
         <code>            protected        
     <strong>_putdests</strong>()
         </code>
@@ -17559,7 +17559,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_setBookmark">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12276">at line 12276</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12278">at line 12278</a></div>
         <code>                    
     <strong>setBookmark</strong>(string $txt, int $level = 0, float $y = -1, $page = &#039;&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0), float $x = -1, mixed $link = &#039;&#039;)
         </code>
@@ -17625,7 +17625,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_Bookmark">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12293">at line 12293</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12295">at line 12295</a></div>
         <code>                    
     <strong>Bookmark</strong>(string $txt, int $level = 0, float $y = -1, $page = &#039;&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0), float $x = -1, mixed $link = &#039;&#039;)
         </code>
@@ -17691,7 +17691,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_sortBookmarks">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12341">at line 12341</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12343">at line 12343</a></div>
         <code>            protected        
     <strong>sortBookmarks</strong>()
         </code>
@@ -17712,7 +17712,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__putbookmarks">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12359">at line 12359</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12361">at line 12361</a></div>
         <code>            protected        
     <strong>_putbookmarks</strong>()
         </code>
@@ -17733,7 +17733,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_IncludeJS">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12485">at line 12485</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12487">at line 12487</a></div>
         <code>                    
     <strong>IncludeJS</strong>(string $script)
         </code>
@@ -17764,7 +17764,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_addJavascriptObject">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12498">at line 12498</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12500">at line 12500</a></div>
         <code>                    int
     <strong>addJavascriptObject</strong>(string $script, bool $onload = false)
         </code>
@@ -17809,7 +17809,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__putjavascript">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12514">at line 12514</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12516">at line 12516</a></div>
         <code>            protected        
     <strong>_putjavascript</strong>()
         </code>
@@ -17830,7 +17830,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__addfield">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12572">at line 12572</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12574">at line 12574</a></div>
         <code>            protected        
     <strong>_addfield</strong>(string $type, string $name, int $x, int $y, int $w, int $h, array $prop)
         </code>
@@ -17891,7 +17891,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_setFormDefaultProp">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12608">at line 12608</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12610">at line 12610</a></div>
         <code>                    
     <strong>setFormDefaultProp</strong>(array $prop = array())
         </code>
@@ -17922,7 +17922,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_getFormDefaultProp">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12619">at line 12619</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12621">at line 12621</a></div>
         <code>                    array
     <strong>getFormDefaultProp</strong>()
         </code>
@@ -17952,7 +17952,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_TextField">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12637">at line 12637</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12639">at line 12639</a></div>
         <code>                    
     <strong>TextField</strong>(string $name, float $w, float $h, array $prop = array(), array $opt = array(), float $x = &#039;&#039;, float $y = &#039;&#039;, bool $js = false)
         </code>
@@ -18018,7 +18018,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_RadioButton">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12758">at line 12758</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12760">at line 12760</a></div>
         <code>                    
     <strong>RadioButton</strong>(string $name, int $w, array $prop = array(), array $opt = array(), string $onvalue = &#039;On&#039;, bool $checked = false, float $x = &#039;&#039;, float $y = &#039;&#039;, bool $js = false)
         </code>
@@ -18089,7 +18089,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_ListBox">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12861">at line 12861</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12863">at line 12863</a></div>
         <code>                    
     <strong>ListBox</strong>(string $name, int $w, int $h, array $values, array $prop = array(), array $opt = array(), float $x = &#039;&#039;, float $y = &#039;&#039;, bool $js = false)
         </code>
@@ -18160,7 +18160,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_ComboBox">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12947">at line 12947</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L12949">at line 12949</a></div>
         <code>                    
     <strong>ComboBox</strong>(string $name, int $w, int $h, array $values, array $prop = array(), array $opt = array(), float $x = &#039;&#039;, float $y = &#039;&#039;, bool $js = false)
         </code>
@@ -18231,7 +18231,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_CheckBox">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13034">at line 13034</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13036">at line 13036</a></div>
         <code>                    
     <strong>CheckBox</strong>(string $name, int $w, bool $checked = false, array $prop = array(), array $opt = array(), string $onvalue = &#039;Yes&#039;, float $x = &#039;&#039;, float $y = &#039;&#039;, bool $js = false)
         </code>
@@ -18302,7 +18302,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method_Button">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13114">at line 13114</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13116">at line 13116</a></div>
         <code>                    
     <strong>Button</strong>(string $name, int $w, int $h, string $caption, mixed $action, array $prop = array(), array $opt = array(), float $x = &#039;&#039;, float $y = &#039;&#039;, bool $js = false)
         </code>
@@ -18378,7 +18378,7 @@ SetLineStyle().</li>
             </div>
                     <div class="method-item">
                     <h3 id="method__putsignature">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13281">at line 13281</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13283">at line 13283</a></div>
         <code>            protected        
     <strong>_putsignature</strong>()
         </code>
@@ -18400,7 +18400,7 @@ You can set only one signature type</p>                                         
             </div>
                     <div class="method-item">
                     <h3 id="method_setUserRights">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13369">at line 13369</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13371">at line 13371</a></div>
         <code>                    
     <strong>setUserRights</strong>(bool $enable = true, string $document = &#039;/FullSave&#039;, string $annots = &#039;/Create/Delete/Modify/Copy/Import/Export&#039;, string $form = &#039;/Add/Delete/FillIn/Import/Export/SubmitStandalone/SpawnTemplate&#039;, string $signature = &#039;/Modify&#039;, string $ef = &#039;/Create/Delete/Modify/Import&#039;, string $formex = &#039;&#039;)
         </code>
@@ -18464,7 +18464,7 @@ Names specifying additional embedded-files-related usage rights for the document
             </div>
                     <div class="method-item">
                     <h3 id="method_setSignature">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13406">at line 13406</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13408">at line 13408</a></div>
         <code>                    
     <strong>setSignature</strong>(mixed $signing_cert = &#039;&#039;, mixed $private_key = &#039;&#039;, string $private_key_password = &#039;&#039;, string $extracerts = &#039;&#039;, int $cert_type = 2, array $info = array(), string $approval = &#039;&#039;)
         </code>
@@ -18528,7 +18528,7 @@ To convert pfx certificate to pem: openssl pkcs12 -in tcpdf.pfx -out tcpdf.crt -
             </div>
                     <div class="method-item">
                     <h3 id="method_setSignatureAppearance">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13443">at line 13443</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13445">at line 13445</a></div>
         <code>                    
     <strong>setSignatureAppearance</strong>(float $x = 0, float $y = 0, float $w = 0, float $h = 0, int $page = -1, string $name = &#039;&#039;)
         </code>
@@ -18584,7 +18584,7 @@ To convert pfx certificate to pem: openssl pkcs12 -in tcpdf.pfx -out tcpdf.crt -
             </div>
                     <div class="method-item">
                     <h3 id="method_addEmptySignatureAppearance">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13459">at line 13459</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13461">at line 13461</a></div>
         <code>                    
     <strong>addEmptySignatureAppearance</strong>(float $x = 0, float $y = 0, float $w = 0, float $h = 0, int $page = -1, string $name = &#039;&#039;)
         </code>
@@ -18640,7 +18640,7 @@ To convert pfx certificate to pem: openssl pkcs12 -in tcpdf.pfx -out tcpdf.crt -
             </div>
                     <div class="method-item">
                     <h3 id="method_getSignatureAppearanceArray">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13477">at line 13477</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13479">at line 13479</a></div>
         <code>            protected        array
     <strong>getSignatureAppearanceArray</strong>(float $x = 0, float $y = 0, float $w = 0, float $h = 0, int $page = -1, string $name = &#039;&#039;)
         </code>
@@ -18705,7 +18705,7 @@ To convert pfx certificate to pem: openssl pkcs12 -in tcpdf.pfx -out tcpdf.crt -
             </div>
                     <div class="method-item">
                     <h3 id="method_setTimeStamp">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13509">at line 13509</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13511">at line 13511</a></div>
         <code>                    
     <strong>setTimeStamp</strong>(string $tsa_host = &#039;&#039;, string $tsa_username = &#039;&#039;, string $tsa_password = &#039;&#039;, string $tsa_cert = &#039;&#039;)
         </code>
@@ -18752,7 +18752,7 @@ Use with digital signature only!</p>                            </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_applyTSA">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13537">at line 13537</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13539">at line 13539</a></div>
         <code>            protected        string
     <strong>applyTSA</strong>(string $signature)
         </code>
@@ -18793,7 +18793,7 @@ Request TSA for a timestamp</p>                                                <
             </div>
                     <div class="method-item">
                     <h3 id="method_startPageGroup">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13552">at line 13552</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13554">at line 13554</a></div>
         <code>                    
     <strong>startPageGroup</strong>(int $page = &#039;&#039;)
         </code>
@@ -18824,7 +18824,7 @@ Request TSA for a timestamp</p>                                                <
             </div>
                     <div class="method-item">
                     <h3 id="method_setStartingPageNumber">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13565">at line 13565</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13567">at line 13567</a></div>
         <code>                    
     <strong>setStartingPageNumber</strong>(int $num = 1)
         </code>
@@ -18855,7 +18855,7 @@ Request TSA for a timestamp</p>                                                <
             </div>
                     <div class="method-item">
                     <h3 id="method_getAliasRightShift">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13576">at line 13576</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13578">at line 13578</a></div>
         <code>                    string
     <strong>getAliasRightShift</strong>()
         </code>
@@ -18885,7 +18885,7 @@ Request TSA for a timestamp</p>                                                <
             </div>
                     <div class="method-item">
                     <h3 id="method_getAliasNbPages">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13602">at line 13602</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13604">at line 13604</a></div>
         <code>                    string
     <strong>getAliasNbPages</strong>()
         </code>
@@ -18916,7 +18916,7 @@ This alias will be replaced by the total number of pages in the document.</p>   
             </div>
                     <div class="method-item">
                     <h3 id="method_getAliasNumPage">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13617">at line 13617</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13619">at line 13619</a></div>
         <code>                    string
     <strong>getAliasNumPage</strong>()
         </code>
@@ -18947,8 +18947,8 @@ This alias will be replaced by the page number.</p>                            <
             </div>
                     <div class="method-item">
                     <h3 id="method_getPageGroupAlias">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13632">at line 13632</a></div>
-        <code>                    alias
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13634">at line 13634</a></div>
+        <code>                    string
     <strong>getPageGroupAlias</strong>()
         </code>
     </h3>
@@ -18965,7 +18965,7 @@ This alias will be replaced by the total number of pages in this group.</p>     
 
                     <table class="table table-condensed">
         <tr>
-            <td>alias</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -18978,8 +18978,8 @@ This alias will be replaced by the total number of pages in this group.</p>     
             </div>
                     <div class="method-item">
                     <h3 id="method_getPageNumGroupAlias">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13647">at line 13647</a></div>
-        <code>                    alias
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13649">at line 13649</a></div>
+        <code>                    string
     <strong>getPageNumGroupAlias</strong>()
         </code>
     </h3>
@@ -18996,7 +18996,7 @@ This alias will be replaced by the page number (relative to the belonging group)
 
                     <table class="table table-condensed">
         <tr>
-            <td>alias</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -19009,8 +19009,8 @@ This alias will be replaced by the page number (relative to the belonging group)
             </div>
                     <div class="method-item">
                     <h3 id="method_getGroupPageNo">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13660">at line 13660</a></div>
-        <code>                    current
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13662">at line 13662</a></div>
+        <code>                    int
     <strong>getGroupPageNo</strong>()
         </code>
     </h3>
@@ -19026,7 +19026,7 @@ This alias will be replaced by the page number (relative to the belonging group)
 
                     <table class="table table-condensed">
         <tr>
-            <td>current</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -19039,7 +19039,7 @@ This alias will be replaced by the page number (relative to the belonging group)
             </div>
                     <div class="method-item">
                     <h3 id="method_getGroupPageNoFormatted">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13670">at line 13670</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13672">at line 13672</a></div>
         <code>                    
     <strong>getGroupPageNoFormatted</strong>()
         </code>
@@ -19071,7 +19071,7 @@ This alias will be replaced by the page number (relative to the belonging group)
             </div>
                     <div class="method-item">
                     <h3 id="method_PageNoFormatted">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13680">at line 13680</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13682">at line 13682</a></div>
         <code>                    
     <strong>PageNoFormatted</strong>()
         </code>
@@ -19103,7 +19103,7 @@ This alias will be replaced by the page number (relative to the belonging group)
             </div>
                     <div class="method-item">
                     <h3 id="method__putocg">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13689">at line 13689</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13691">at line 13691</a></div>
         <code>            protected        
     <strong>_putocg</strong>()
         </code>
@@ -19124,7 +19124,7 @@ This alias will be replaced by the page number (relative to the belonging group)
             </div>
                     <div class="method-item">
                     <h3 id="method_startLayer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13717">at line 13717</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13719">at line 13719</a></div>
         <code>                    
     <strong>startLayer</strong>(string $name = &#039;&#039;, $print = true, bool $view = true, bool $lock = true)
         </code>
@@ -19170,7 +19170,7 @@ This alias will be replaced by the page number (relative to the belonging group)
             </div>
                     <div class="method-item">
                     <h3 id="method_endLayer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13737">at line 13737</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13739">at line 13739</a></div>
         <code>                    
     <strong>endLayer</strong>()
         </code>
@@ -19191,7 +19191,7 @@ This alias will be replaced by the page number (relative to the belonging group)
             </div>
                     <div class="method-item">
                     <h3 id="method_setVisibility">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13756">at line 13756</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13758">at line 13758</a></div>
         <code>                    
     <strong>setVisibility</strong>(string $v)
         </code>
@@ -19223,8 +19223,8 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_addExtGState">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13789">at line 13789</a></div>
-        <code>            protected        the
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13791">at line 13791</a></div>
+        <code>            protected        int|void
     <strong>addExtGState</strong>(array $parms)
         </code>
     </h3>
@@ -19250,7 +19250,7 @@ image or color that will show on screen but won't print.</p>                    
 
                     <table class="table table-condensed">
         <tr>
-            <td>the</td>
+            <td>int|void</td>
             <td></td>
         </tr>
     </table>
@@ -19263,7 +19263,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_setExtGState">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13820">at line 13820</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13822">at line 13822</a></div>
         <code>            protected        
     <strong>setExtGState</strong>(array $gs)
         </code>
@@ -19294,7 +19294,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method__putextgstates">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13833">at line 13833</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13835">at line 13835</a></div>
         <code>            protected        
     <strong>_putextgstates</strong>()
         </code>
@@ -19315,7 +19315,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_setOverprint">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13862">at line 13862</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13864">at line 13864</a></div>
         <code>                    
     <strong>setOverprint</strong>(bool $stroking = true, bool $nonstroking = &#039;&#039;, int $mode = 0)
         </code>
@@ -19356,7 +19356,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_getOverprint">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13888">at line 13888</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13890">at line 13890</a></div>
         <code>                    array<string,bool|int>
     <strong>getOverprint</strong>()
         </code>
@@ -19386,7 +19386,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_setAlpha">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13901">at line 13901</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13903">at line 13903</a></div>
         <code>                    
     <strong>setAlpha</strong>(float $stroking = 1, string $bm = &#039;Normal&#039;, float $nonstroking = &#039;&#039;, bool $ais = false)
         </code>
@@ -19432,7 +19432,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_getAlpha">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13933">at line 13933</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13935">at line 13935</a></div>
         <code>                    array<string,bool|string>
     <strong>getAlpha</strong>()
         </code>
@@ -19462,7 +19462,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_setJPEGQuality">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13943">at line 13943</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13945">at line 13945</a></div>
         <code>                    
     <strong>setJPEGQuality</strong>(int $quality)
         </code>
@@ -19493,7 +19493,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_setDefaultTableColumns">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13956">at line 13956</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13958">at line 13958</a></div>
         <code>                    
     <strong>setDefaultTableColumns</strong>(int $cols = 4)
         </code>
@@ -19524,7 +19524,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_setCellHeightRatio">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13966">at line 13966</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13968">at line 13968</a></div>
         <code>                    
     <strong>setCellHeightRatio</strong>(int $h)
         </code>
@@ -19555,7 +19555,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_getCellHeightRatio">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13975">at line 13975</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13977">at line 13977</a></div>
         <code>                    
     <strong>getCellHeightRatio</strong>()
         </code>
@@ -19576,7 +19576,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_setPDFVersion">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13985">at line 13985</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L13987">at line 13987</a></div>
         <code>                    
     <strong>setPDFVersion</strong>(string $version = &#039;1.7&#039;)
         </code>
@@ -19607,7 +19607,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_setViewerPreferences">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14003">at line 14003</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14005">at line 14005</a></div>
         <code>                    
     <strong>setViewerPreferences</strong>(array $preferences)
         </code>
@@ -19641,7 +19641,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_colorRegistrationBar">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14020">at line 14020</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14022">at line 14022</a></div>
         <code>                    
     <strong>colorRegistrationBar</strong>(float $x, float $y, float $w, float $h, bool $transition = true, bool $vertical = false, string $colors = &#039;A,R,G,B,C,M,Y,K&#039;)
         </code>
@@ -19702,7 +19702,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_cropMark">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14160">at line 14160</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14162">at line 14162</a></div>
         <code>                    
     <strong>cropMark</strong>(float $x, float $y, float $w, float $h, string $type = &#039;T,R,B,L&#039;, array $color = array(100, 100, 100, 100, &#039;All&#039;))
         </code>
@@ -19758,7 +19758,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_registrationMark">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14231">at line 14231</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14233">at line 14233</a></div>
         <code>                    
     <strong>registrationMark</strong>(float $x, float $y, float $r, bool $double = false, array $cola = array(100, 100, 100, 100, &#039;All&#039;), array $colb = array(0, 0, 0, 0, &#039;None&#039;))
         </code>
@@ -19814,7 +19814,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_registrationMarkCMYK">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14258">at line 14258</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14260">at line 14260</a></div>
         <code>                    
     <strong>registrationMarkCMYK</strong>(float $x, float $y, float $r)
         </code>
@@ -19855,7 +19855,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_LinearGradient">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14302">at line 14302</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14304">at line 14304</a></div>
         <code>                    
     <strong>LinearGradient</strong>(float $x, float $y, float $w, float $h, array $col1 = array(), array $col2 = array(), array $coords = array(0, 0, 1, 0))
         </code>
@@ -19916,7 +19916,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_RadialGradient">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14320">at line 14320</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14322">at line 14322</a></div>
         <code>                    
     <strong>RadialGradient</strong>(float $x, float $y, float $w, float $h, array $col1 = array(), array $col2 = array(), array $coords = array(0.5, 0.5, 0.5, 0.5, 1))
         </code>
@@ -19977,7 +19977,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_CoonsPatchMesh">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14343">at line 14343</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14345">at line 14345</a></div>
         <code>                    
     <strong>CoonsPatchMesh</strong>(float $x, float $y, float $w, float $h, array $col1 = array(), array $col2 = array(), array $col3 = array(), array $col4 = array(), array $coords = array(0.0, 0.0, 0.33, 0.0, 0.67, 0.0, 1.0, 0.0, 1.0, 0.33, 1.0, 0.67, 1.0, 1.0, 0.67, 1.0, 0.33, 1.0, 0.0, 1.0, 0.0, 0.67, 0.0, 0.33), array $coords_min = 0, array $coords_max = 1, bool $antialias = false)
         </code>
@@ -20064,7 +20064,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_Clip">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14435">at line 14435</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14437">at line 14437</a></div>
         <code>            protected        
     <strong>Clip</strong>(float $x, float $y, float $w, float $h)
         </code>
@@ -20110,7 +20110,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_Gradient">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14462">at line 14462</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14464">at line 14464</a></div>
         <code>                    
     <strong>Gradient</strong>(int $type, array $coords, array $stops, array $background = array(), bool $antialias = false)
         </code>
@@ -20161,7 +20161,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method__putshaders">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14569">at line 14569</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14571">at line 14571</a></div>
         <code>            protected        
     <strong>_putshaders</strong>()
         </code>
@@ -20182,7 +20182,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_PieSector">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14761">at line 14761</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14763">at line 14763</a></div>
         <code>                    
     <strong>PieSector</strong>(float $xc, float $yc, float $r, float $a, float $b, string $style = &#039;FD&#039;, float $cw = true, float $o = 90)
         </code>
@@ -20248,7 +20248,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_PieSectorXY">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14782">at line 14782</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14784">at line 14784</a></div>
         <code>                    
     <strong>PieSectorXY</strong>(float $xc, float $yc, float $rx, float $ry, float $a, float $b, string $style = &#039;FD&#039;, float $cw = false, float $o = 0, int $nc = 2)
         </code>
@@ -20324,7 +20324,7 @@ image or color that will show on screen but won't print.</p>                    
             </div>
                     <div class="method-item">
                     <h3 id="method_ImageEps">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14826">at line 14826</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L14828">at line 14828</a></div>
         <code>                    
     <strong>ImageEps</strong>(string $file, float $x = &#039;&#039;, float $y = &#039;&#039;, float $w = 0, float $h = 0, mixed $link = &#039;&#039;, bool $useBoundingBox = true, string $align = &#039;&#039;, string $palign = &#039;&#039;, mixed $border = 0, bool $fitonpage = false, bool $fixoutvals = false)
         </code>
@@ -20426,7 +20426,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_setBarcode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15143">at line 15143</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15145">at line 15145</a></div>
         <code>                    
     <strong>setBarcode</strong>(string $bc = &#039;&#039;)
         </code>
@@ -20457,7 +20457,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getBarcode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15153">at line 15153</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15155">at line 15155</a></div>
         <code>                    string
     <strong>getBarcode</strong>()
         </code>
@@ -20487,7 +20487,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_write1DBarcode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15187">at line 15187</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15189">at line 15189</a></div>
         <code>                    
     <strong>write1DBarcode</strong>(string $code, string $type, int $x = &#039;&#039;, int $y = &#039;&#039;, int $w = &#039;&#039;, int $h = &#039;&#039;, float $xres = &#039;&#039;, array $style = array(), string $align = &#039;&#039;)
         </code>
@@ -20579,7 +20579,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_write2DBarcode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15505">at line 15505</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15507">at line 15507</a></div>
         <code>                    
     <strong>write2DBarcode</strong>(string $code, string $type, int $x = &#039;&#039;, int $y = &#039;&#039;, int $w = &#039;&#039;, int $h = &#039;&#039;, array $style = array(), string $align = &#039;&#039;, bool $distort = false)
         </code>
@@ -20666,7 +20666,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getMargins">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15734">at line 15734</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15736">at line 15736</a></div>
         <code>                    array
     <strong>getMargins</strong>()
         </code>
@@ -20711,7 +20711,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getOriginalMargins">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15761">at line 15761</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15763">at line 15763</a></div>
         <code>                    array
     <strong>getOriginalMargins</strong>()
         </code>
@@ -20747,8 +20747,8 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getFontSize">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15775">at line 15775</a></div>
-        <code>                    current
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15777">at line 15777</a></div>
+        <code>                    float
     <strong>getFontSize</strong>()
         </code>
     </h3>
@@ -20764,7 +20764,7 @@ Although the script was successfully tested with various AI format versions, bes
 
                     <table class="table table-condensed">
         <tr>
-            <td>current</td>
+            <td>float</td>
             <td></td>
         </tr>
     </table>
@@ -20777,8 +20777,8 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getFontSizePt">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15785">at line 15785</a></div>
-        <code>                    current
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15787">at line 15787</a></div>
+        <code>                    int
     <strong>getFontSizePt</strong>()
         </code>
     </h3>
@@ -20794,7 +20794,7 @@ Although the script was successfully tested with various AI format versions, bes
 
                     <table class="table table-condensed">
         <tr>
-            <td>current</td>
+            <td>int</td>
             <td></td>
         </tr>
     </table>
@@ -20807,7 +20807,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getFontFamily">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15795">at line 15795</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15797">at line 15797</a></div>
         <code>                    string
     <strong>getFontFamily</strong>()
         </code>
@@ -20837,7 +20837,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getFontStyle">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15805">at line 15805</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15807">at line 15807</a></div>
         <code>                    string
     <strong>getFontStyle</strong>()
         </code>
@@ -20867,7 +20867,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_fixHTMLCode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15821">at line 15821</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15823">at line 15823</a></div>
         <code>                    string
     <strong>fixHTMLCode</strong>(string $html, string $default_css = &#039;&#039;, array $tagvs = &#039;&#039;, array $tidy_options = &#039;&#039;)
         </code>
@@ -20933,7 +20933,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSBorderWidth">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15832">at line 15832</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15834">at line 15834</a></div>
         <code>            protected        int
     <strong>getCSSBorderWidth</strong>(string $width)
         </code>
@@ -20973,7 +20973,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSBorderDashStyle">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15852">at line 15852</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15854">at line 15854</a></div>
         <code>            protected        int
     <strong>getCSSBorderDashStyle</strong>(string $style)
         </code>
@@ -21013,7 +21013,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSBorderStyle">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15888">at line 15888</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15890">at line 15890</a></div>
         <code>            protected        array
     <strong>getCSSBorderStyle</strong>(string $cssborder)
         </code>
@@ -21053,7 +21053,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSPadding">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15939">at line 15939</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15941">at line 15941</a></div>
         <code>                    array
     <strong>getCSSPadding</strong>(string $csspadding, float $width = 0)
         </code>
@@ -21098,7 +21098,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSMargin">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15993">at line 15993</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L15995">at line 15995</a></div>
         <code>                    array
     <strong>getCSSMargin</strong>(string $cssmargin, float $width = 0)
         </code>
@@ -21143,7 +21143,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSBorderMargin">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L16047">at line 16047</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L16049">at line 16049</a></div>
         <code>                    array
     <strong>getCSSBorderMargin</strong>(string $cssbspace, float $width = 0)
         </code>
@@ -21188,7 +21188,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSFontSpacing">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L16081">at line 16081</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L16083">at line 16083</a></div>
         <code>            protected        float
     <strong>getCSSFontSpacing</strong>(string $spacing, float $parent = 0)
         </code>
@@ -21233,7 +21233,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getCSSFontStretching">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L16112">at line 16112</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L16114">at line 16114</a></div>
         <code>            protected        float
     <strong>getCSSFontStretching</strong>(string $stretch, float $parent = 100)
         </code>
@@ -21278,7 +21278,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getHTMLFontUnits">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L16184">at line 16184</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L16186">at line 16186</a></div>
         <code>                    float
     <strong>getHTMLFontUnits</strong>(string $val, float $refsize = 12, float $parent_size = 12, string $defaultunit = &#039;pt&#039;)
         </code>
@@ -21333,7 +21333,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getHtmlDomArray">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L16238">at line 16238</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L16240">at line 16240</a></div>
         <code>            protected        array
     <strong>getHtmlDomArray</strong>(string $html)
         </code>
@@ -21373,7 +21373,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getSpaceString">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17026">at line 17026</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17028">at line 17028</a></div>
         <code>            protected        string
     <strong>getSpaceString</strong>()
         </code>
@@ -21403,7 +21403,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_getHashForTCPDFtagParams">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17040">at line 17040</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17042">at line 17042</a></div>
         <code>            protected        string
     <strong>getHashForTCPDFtagParams</strong>(string $data)
         </code>
@@ -21443,7 +21443,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_serializeTCPDFtagParameters">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17050">at line 17050</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17052">at line 17052</a></div>
         <code>                    string
     <strong>serializeTCPDFtagParameters</strong>(array $data)
         </code>
@@ -21483,7 +21483,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_unserializeTCPDFtagParameters">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17061">at line 17061</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17063">at line 17063</a></div>
         <code>            protected        array
     <strong>unserializeTCPDFtagParameters</strong>(string $data)
         </code>
@@ -21523,7 +21523,7 @@ Although the script was successfully tested with various AI format versions, bes
             </div>
                     <div class="method-item">
                     <h3 id="method_writeHTMLCell">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17092">at line 17092</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17094">at line 17094</a></div>
         <code>                    
     <strong>writeHTMLCell</strong>(float $w, float $h, float $x, float $y, string $html = &#039;&#039;, mixed $border = 0, int $ln = 0, bool $fill = false, bool $reseth = true, string $align = &#039;&#039;, bool $autopadding = true)
         </code>
@@ -21634,7 +21634,7 @@ NOTE: all the HTML attributes must be enclosed in double-quote.</p>             
             </div>
                     <div class="method-item">
                     <h3 id="method_writeHTML">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17109">at line 17109</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L17111">at line 17111</a></div>
         <code>                    
     <strong>writeHTML</strong>(string $html, bool $ln = true, bool $fill = false, bool $reseth = false, bool $cell = false, string $align = &#039;&#039;)
         </code>
@@ -21695,7 +21695,7 @@ NOTE: all the HTML attributes must be enclosed in double-quote.</p>             
             </div>
                     <div class="method-item">
                     <h3 id="method_openHTMLTagHandler">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L18667">at line 18667</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L18669">at line 18669</a></div>
         <code>            protected        array
     <strong>openHTMLTagHandler</strong>(array $dom, int $key, bool $cell)
         </code>
@@ -21745,7 +21745,7 @@ NOTE: all the HTML attributes must be enclosed in double-quote.</p>             
             </div>
                     <div class="method-item">
                     <h3 id="method_closeHTMLTagHandler">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L19359">at line 19359</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L19361">at line 19361</a></div>
         <code>            protected        array
     <strong>closeHTMLTagHandler</strong>(array $dom, int $key, bool $cell, int $maxbottomliney = 0)
         </code>
@@ -21800,7 +21800,7 @@ NOTE: all the HTML attributes must be enclosed in double-quote.</p>             
             </div>
                     <div class="method-item">
                     <h3 id="method_addHTMLVertSpace">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L19908">at line 19908</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L19910">at line 19910</a></div>
         <code>            protected        
     <strong>addHTMLVertSpace</strong>(string $hbz = 0, string $hb = 0, bool $cell = false, bool $firsttag = false, bool $lasttag = false)
         </code>
@@ -21851,7 +21851,7 @@ NOTE: all the HTML attributes must be enclosed in double-quote.</p>             
             </div>
                     <div class="method-item">
                     <h3 id="method_getBorderStartPosition">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L19934">at line 19934</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L19936">at line 19936</a></div>
         <code>            protected        array
     <strong>getBorderStartPosition</strong>()
         </code>
@@ -21881,7 +21881,7 @@ NOTE: all the HTML attributes must be enclosed in double-quote.</p>             
             </div>
                     <div class="method-item">
                     <h3 id="method_drawHTMLTagBorder">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L19950">at line 19950</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L19952">at line 19952</a></div>
         <code>            protected        
     <strong>drawHTMLTagBorder</strong>(array $tag, int $xmax)
         </code>
@@ -21917,7 +21917,7 @@ NOTE: all the HTML attributes must be enclosed in double-quote.</p>             
             </div>
                     <div class="method-item">
                     <h3 id="method_setLIsymbol">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20152">at line 20152</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20154">at line 20154</a></div>
         <code>                    
     <strong>setLIsymbol</strong>(string $symbol = &#039;!&#039;)
         </code>
@@ -21948,7 +21948,7 @@ NOTE: all the HTML attributes must be enclosed in double-quote.</p>             
             </div>
                     <div class="method-item">
                     <h3 id="method_SetBooklet">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20175">at line 20175</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20177">at line 20177</a></div>
         <code>                    
     <strong>SetBooklet</strong>(bool $booklet = true, float $inner = -1, float $outer = -1)
         </code>
@@ -21989,7 +21989,7 @@ NOTE: all the HTML attributes must be enclosed in double-quote.</p>             
             </div>
                     <div class="method-item">
                     <h3 id="method_swapMargins">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20191">at line 20191</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20193">at line 20193</a></div>
         <code>            protected        
     <strong>swapMargins</strong>(bool $reverse = true)
         </code>
@@ -22020,7 +22020,7 @@ NOTE: all the HTML attributes must be enclosed in double-quote.</p>             
             </div>
                     <div class="method-item">
                     <h3 id="method_setHtmlVSpace">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20215">at line 20215</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20217">at line 20217</a></div>
         <code>                    
     <strong>setHtmlVSpace</strong>(array $tagvs)
         </code>
@@ -22056,7 +22056,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setListIndentWidth">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20225">at line 20225</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20227">at line 20227</a></div>
         <code>                    
     <strong>setListIndentWidth</strong>(float $width)
         </code>
@@ -22087,7 +22087,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setOpenCell">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20235">at line 20235</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20237">at line 20237</a></div>
         <code>                    
     <strong>setOpenCell</strong>(bool $isopen)
         </code>
@@ -22118,7 +22118,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setHtmlLinksStyle">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20246">at line 20246</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20248">at line 20248</a></div>
         <code>                    
     <strong>setHtmlLinksStyle</strong>(array $color = array(0, 0, 255), string $fontstyle = &#039;U&#039;)
         </code>
@@ -22154,7 +22154,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_getHTMLUnitToUnits">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20261">at line 20261</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20263">at line 20263</a></div>
         <code>                    float
     <strong>getHTMLUnitToUnits</strong>(string $htmlval, string $refsize = 1, string $defaultunit = &#039;px&#039;, bool $points = false)
         </code>
@@ -22209,7 +22209,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_putHtmlListBullet">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20345">at line 20345</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20347">at line 20347</a></div>
         <code>            protected        
     <strong>putHtmlListBullet</strong>(int $listdepth, string $listtype = &#039;&#039;, float $size = 10)
         </code>
@@ -22250,7 +22250,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_getGraphicVars">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20547">at line 20547</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20549">at line 20549</a></div>
         <code>            protected        array
     <strong>getGraphicVars</strong>()
         </code>
@@ -22280,7 +22280,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setGraphicVars">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20608">at line 20608</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20610">at line 20610</a></div>
         <code>            protected        
     <strong>setGraphicVars</strong>(array $gvars, bool $extended = false)
         </code>
@@ -22316,7 +22316,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method__outSaveGraphicsState">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20672">at line 20672</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20674">at line 20674</a></div>
         <code>            protected        
     <strong>_outSaveGraphicsState</strong>()
         </code>
@@ -22337,7 +22337,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method__outRestoreGraphicsState">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20680">at line 20680</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20682">at line 20682</a></div>
         <code>            protected        
     <strong>_outRestoreGraphicsState</strong>()
         </code>
@@ -22358,7 +22358,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20690">at line 20690</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20692">at line 20692</a></div>
         <code>            protected        
     <strong>setBuffer</strong>(string $data)
         </code>
@@ -22389,7 +22389,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_replaceBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20701">at line 20701</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20703">at line 20703</a></div>
         <code>            protected        
     <strong>replaceBuffer</strong>(string $data)
         </code>
@@ -22420,7 +22420,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_getBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20712">at line 20712</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20714">at line 20714</a></div>
         <code>            protected        string
     <strong>getBuffer</strong>()
         </code>
@@ -22450,7 +22450,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setPageBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20724">at line 20724</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20726">at line 20726</a></div>
         <code>            protected        
     <strong>setPageBuffer</strong>(int $page, string $data, bool $append = false)
         </code>
@@ -22491,7 +22491,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_getPageBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20744">at line 20744</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20746">at line 20746</a></div>
         <code>            protected        string
     <strong>getPageBuffer</strong>(int $page)
         </code>
@@ -22531,7 +22531,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setImageBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20759">at line 20759</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20761">at line 20761</a></div>
         <code>            protected        int
     <strong>setImageBuffer</strong>(string $image, array $data)
         </code>
@@ -22576,7 +22576,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setImageSubBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20777">at line 20777</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20779">at line 20779</a></div>
         <code>            protected        
     <strong>setImageSubBuffer</strong>(string $image, string $key, array $data)
         </code>
@@ -22617,8 +22617,8 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_getImageBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20791">at line 20791</a></div>
-        <code>            protected        string
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20793">at line 20793</a></div>
+        <code>            protected        string|false
     <strong>getImageBuffer</strong>(string $image)
         </code>
     </h3>
@@ -22644,7 +22644,7 @@ If the h parameter is not specified, default values are used.</p>               
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>string|false</td>
             <td></td>
         </tr>
     </table>
@@ -22657,7 +22657,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setFontBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20805">at line 20805</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20807">at line 20807</a></div>
         <code>            protected        
     <strong>setFontBuffer</strong>(string $font, array $data)
         </code>
@@ -22693,7 +22693,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_setFontSubBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20824">at line 20824</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20826">at line 20826</a></div>
         <code>            protected        
     <strong>setFontSubBuffer</strong>(string $font, string $key, array $data)
         </code>
@@ -22734,8 +22734,8 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_getFontBuffer">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20838">at line 20838</a></div>
-        <code>            protected        string
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20840">at line 20840</a></div>
+        <code>            protected        string|false
     <strong>getFontBuffer</strong>(string $font)
         </code>
     </h3>
@@ -22761,7 +22761,7 @@ If the h parameter is not specified, default values are used.</p>               
 
                     <table class="table table-condensed">
         <tr>
-            <td>string</td>
+            <td>string|false</td>
             <td></td>
         </tr>
     </table>
@@ -22774,8 +22774,8 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_movePage">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20853">at line 20853</a></div>
-        <code>                    true
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L20855">at line 20855</a></div>
+        <code>                    bool
     <strong>movePage</strong>(int $frompage, int $topage)
         </code>
     </h3>
@@ -22806,7 +22806,7 @@ If the h parameter is not specified, default values are used.</p>               
 
                     <table class="table table-condensed">
         <tr>
-            <td>true</td>
+            <td>bool</td>
             <td></td>
         </tr>
     </table>
@@ -22819,7 +22819,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_deletePage">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21024">at line 21024</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21026">at line 21026</a></div>
         <code>                    true
     <strong>deletePage</strong>(int $page)
         </code>
@@ -22859,8 +22859,8 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_copyPage">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21214">at line 21214</a></div>
-        <code>                    true
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21216">at line 21216</a></div>
+        <code>                    bool
     <strong>copyPage</strong>(int $page = 0)
         </code>
     </h3>
@@ -22886,7 +22886,7 @@ If the h parameter is not specified, default values are used.</p>               
 
                     <table class="table table-condensed">
         <tr>
-            <td>true</td>
+            <td>bool</td>
             <td></td>
         </tr>
     </table>
@@ -22899,7 +22899,7 @@ If the h parameter is not specified, default values are used.</p>               
             </div>
                     <div class="method-item">
                     <h3 id="method_addTOC">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21291">at line 21291</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21293">at line 21293</a></div>
         <code>                    
     <strong>addTOC</strong>(int $page = &#039;&#039;, string $numbersfont = &#039;&#039;, string $filler = &#039;.&#039;, string $toc_name = &#039;TOC&#039;, string $style = &#039;&#039;, array $color = array(0, 0, 0))
         </code>
@@ -22969,7 +22969,7 @@ You can override this method to achieve different styles.</p>                   
             </div>
                     <div class="method-item">
                     <h3 id="method_addHTMLTOC">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21501">at line 21501</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21503">at line 21503</a></div>
         <code>                    
     <strong>addHTMLTOC</strong>(int $page = &#039;&#039;, string $toc_name = &#039;TOC&#039;, array $templates = array(), bool $correct_align = true, string $style = &#039;&#039;, array $color = array(0, 0, 0))
         </code>
@@ -23038,7 +23038,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_startTransaction">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21634">at line 21634</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21636">at line 21636</a></div>
         <code>                    
     <strong>startTransaction</strong>()
         </code>
@@ -23059,7 +23059,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_commitTransaction">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21651">at line 21651</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21653">at line 21653</a></div>
         <code>                    
     <strong>commitTransaction</strong>()
         </code>
@@ -23080,7 +23080,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_rollbackTransaction">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21665">at line 21665</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21667">at line 21667</a></div>
         <code>                    <a href="TCPDF.html">TCPDF</a>
     <strong>rollbackTransaction</strong>(bool $self = false)
         </code>
@@ -23120,7 +23120,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_setEqualColumns">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21689">at line 21689</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21691">at line 21691</a></div>
         <code>                    
     <strong>setEqualColumns</strong>(int $numcols = 0, int $width = 0, int $y = &#039;&#039;)
         </code>
@@ -23161,7 +23161,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_resetColumns">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21721">at line 21721</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21723">at line 21723</a></div>
         <code>                    
     <strong>resetColumns</strong>()
         </code>
@@ -23182,7 +23182,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_setColumnsArray">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21734">at line 21734</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21736">at line 21736</a></div>
         <code>                    
     <strong>setColumnsArray</strong>(array $columns)
         </code>
@@ -23213,7 +23213,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_selectColumn">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21748">at line 21748</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21750">at line 21750</a></div>
         <code>                    
     <strong>selectColumn</strong>(int $col = &#039;&#039;)
         </code>
@@ -23244,7 +23244,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_getColumn">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21827">at line 21827</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21829">at line 21829</a></div>
         <code>                    int
     <strong>getColumn</strong>()
         </code>
@@ -23274,7 +23274,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_getNumberOfColumns">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21837">at line 21837</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21839">at line 21839</a></div>
         <code>                    int
     <strong>getNumberOfColumns</strong>()
         </code>
@@ -23304,7 +23304,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_setTextRenderingMode">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21849">at line 21849</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21851">at line 21851</a></div>
         <code>                    
     <strong>setTextRenderingMode</strong>(int $stroke = 0, bool $fill = true, bool $clip = false)
         </code>
@@ -23345,7 +23345,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_setTextShadow">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21904">at line 21904</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21906">at line 21906</a></div>
         <code>                    
     <strong>setTextShadow</strong>(array $params = array(&#039;enabled&#039; =&gt; false, &#039;depth_w&#039; =&gt; 0, &#039;depth_h&#039; =&gt; 0, &#039;color&#039; =&gt; false, &#039;opacity&#039; =&gt; 1, &#039;blend_mode&#039; =&gt; &#039;Normal&#039;))
         </code>
@@ -23376,7 +23376,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_getTextShadow">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21946">at line 21946</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21948">at line 21948</a></div>
         <code>                    array
     <strong>getTextShadow</strong>()
         </code>
@@ -23406,7 +23406,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_hyphenateWord">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21964">at line 21964</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L21966">at line 21966</a></div>
         <code>            protected        array
     <strong>hyphenateWord</strong>(array $word, array $patterns, array $dictionary = array(), int $leftmin = 1, int $rightmin = 2, int $charmin = 1, int $charmax = 8)
         </code>
@@ -23476,7 +23476,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_hyphenateText">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22044">at line 22044</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22046">at line 22046</a></div>
         <code>                    array
     <strong>hyphenateText</strong>(string $text, mixed $patterns, array $dictionary = array(), int $leftmin = 1, int $rightmin = 2, int $charmin = 1, int $charmax = 8)
         </code>
@@ -23546,7 +23546,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_setRasterizeVectorImages">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22108">at line 22108</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22110">at line 22110</a></div>
         <code>                    
     <strong>setRasterizeVectorImages</strong>(bool $mode)
         </code>
@@ -23577,7 +23577,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_setFontSubsetting">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22119">at line 22119</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22121">at line 22121</a></div>
         <code>                    
     <strong>setFontSubsetting</strong>(bool $enable = true)
         </code>
@@ -23608,7 +23608,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_getFontSubsetting">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22134">at line 22134</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22136">at line 22136</a></div>
         <code>                    bool
     <strong>getFontSubsetting</strong>()
         </code>
@@ -23638,8 +23638,8 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_stringLeftTrim">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22147">at line 22147</a></div>
-        <code>                    left
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22149">at line 22149</a></div>
+        <code>                    string
     <strong>stringLeftTrim</strong>(string $str, string $replace = &#039;&#039;)
         </code>
     </h3>
@@ -23670,7 +23670,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
 
                     <table class="table table-condensed">
         <tr>
-            <td>left</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -23683,8 +23683,8 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_stringRightTrim">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22160">at line 22160</a></div>
-        <code>                    right
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22162">at line 22162</a></div>
+        <code>                    string
     <strong>stringRightTrim</strong>(string $str, string $replace = &#039;&#039;)
         </code>
     </h3>
@@ -23715,7 +23715,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
 
                     <table class="table table-condensed">
         <tr>
-            <td>right</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -23728,8 +23728,8 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_stringTrim">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22173">at line 22173</a></div>
-        <code>                    trimmed
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22175">at line 22175</a></div>
+        <code>                    string
     <strong>stringTrim</strong>(string $str, string $replace = &#039;&#039;)
         </code>
     </h3>
@@ -23760,7 +23760,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
 
                     <table class="table table-condensed">
         <tr>
-            <td>trimmed</td>
+            <td>string</td>
             <td></td>
         </tr>
     </table>
@@ -23773,7 +23773,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_isUnicodeFont">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22186">at line 22186</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22188">at line 22188</a></div>
         <code>                    true
     <strong>isUnicodeFont</strong>()
         </code>
@@ -23803,7 +23803,7 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_getFontFamilyName">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22198">at line 22198</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22200">at line 22200</a></div>
         <code>                    string
     <strong>getFontFamilyName</strong>(string $fontfamily)
         </code>
@@ -23843,8 +23843,8 @@ After calling this method you have to call endTOCPage() to close the TOC page.</
             </div>
                     <div class="method-item">
                     <h3 id="method_startTemplate">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22242">at line 22242</a></div>
-        <code>                    int
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22244">at line 22244</a></div>
+        <code>                    int|false
     <strong>startTemplate</strong>(int $w = 0, int $h = 0, mixed $group = false)
         </code>
     </h3>
@@ -23882,7 +23882,7 @@ Note: X,Y coordinates will be reset to 0,0.</p>                            </div
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
+            <td>int|false</td>
             <td></td>
         </tr>
     </table>
@@ -23906,7 +23906,7 @@ Note: X,Y coordinates will be reset to 0,0.</p>                            </div
             </div>
                     <div class="method-item">
                     <h3 id="method_endTemplate">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22307">at line 22307</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22309">at line 22309</a></div>
         <code>                    int
     <strong>endTemplate</strong>()
         </code>
@@ -23948,7 +23948,7 @@ An XObject Template may be painted multiple times, either on several pages or at
             </div>
                     <div class="method-item">
                     <h3 id="method_printTemplate">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22336">at line 22336</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22338">at line 22338</a></div>
         <code>                    
     <strong>printTemplate</strong>(string $id, int $x = &#039;&#039;, int $y = &#039;&#039;, int $w = 0, int $h = 0, string $align = &#039;&#039;, string $palign = &#039;&#039;, bool $fitonpage = false)
         </code>
@@ -24033,7 +24033,7 @@ An XObject Template may be painted multiple times, either on several pages or at
             </div>
                     <div class="method-item">
                     <h3 id="method_setFontStretching">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22469">at line 22469</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22471">at line 22471</a></div>
         <code>                    
     <strong>setFontStretching</strong>(int $perc = 100)
         </code>
@@ -24064,7 +24064,7 @@ An XObject Template may be painted multiple times, either on several pages or at
             </div>
                     <div class="method-item">
                     <h3 id="method_getFontStretching">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22480">at line 22480</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22482">at line 22482</a></div>
         <code>                    float
     <strong>getFontStretching</strong>()
         </code>
@@ -24094,7 +24094,7 @@ An XObject Template may be painted multiple times, either on several pages or at
             </div>
                     <div class="method-item">
                     <h3 id="method_setFontSpacing">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22491">at line 22491</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22493">at line 22493</a></div>
         <code>                    
     <strong>setFontSpacing</strong>(float $spacing = 0)
         </code>
@@ -24125,7 +24125,7 @@ An XObject Template may be painted multiple times, either on several pages or at
             </div>
                     <div class="method-item">
                     <h3 id="method_getFontSpacing">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22502">at line 22502</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22504">at line 22504</a></div>
         <code>                    int
     <strong>getFontSpacing</strong>()
         </code>
@@ -24155,7 +24155,7 @@ An XObject Template may be painted multiple times, either on several pages or at
             </div>
                     <div class="method-item">
                     <h3 id="method_getPageRegions">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22514">at line 22514</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22516">at line 22516</a></div>
         <code>                    array
     <strong>getPageRegions</strong>()
         </code>
@@ -24196,7 +24196,7 @@ An XObject Template may be painted multiple times, either on several pages or at
             </div>
                     <div class="method-item">
                     <h3 id="method_setPageRegions">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22529">at line 22529</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22531">at line 22531</a></div>
         <code>                    
     <strong>setPageRegions</strong>(array $regions = array())
         </code>
@@ -24240,7 +24240,7 @@ You can set multiple regions for the same page.</p>                            <
             </div>
                     <div class="method-item">
                     <h3 id="method_addPageRegion">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22549">at line 22549</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22551">at line 22551</a></div>
         <code>                    
     <strong>addPageRegion</strong>(array $region)
         </code>
@@ -24284,7 +24284,7 @@ You can set multiple regions for the same page.</p>                            <
             </div>
                     <div class="method-item">
                     <h3 id="method_removePageRegion">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22568">at line 22568</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22570">at line 22570</a></div>
         <code>                    
     <strong>removePageRegion</strong>(int $key)
         </code>
@@ -24326,7 +24326,7 @@ You can set multiple regions for the same page.</p>                            <
             </div>
                     <div class="method-item">
                     <h3 id="method_checkPageRegions">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22586">at line 22586</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22588">at line 22588</a></div>
         <code>            protected        float[]
     <strong>checkPageRegions</strong>(float $h, float $x, float $y)
         </code>
@@ -24377,7 +24377,7 @@ A region is always aligned on the left or right side of the page ad is defined u
             </div>
                     <div class="method-item">
                     <h3 id="method_ImageSVG">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22689">at line 22689</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L22691">at line 22691</a></div>
         <code>                    
     <strong>ImageSVG</strong>(string $file, float $x = &#039;&#039;, float $y = &#039;&#039;, float $w = 0, float $h = 0, mixed $link = &#039;&#039;, string $align = &#039;&#039;, string $palign = &#039;&#039;, mixed $border = 0, bool $fitonpage = false)
         </code>
@@ -24468,7 +24468,7 @@ A region is always aligned on the left or right side of the page ad is defined u
             </div>
                     <div class="method-item">
                     <h3 id="method_convertSVGtMatrix">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23010">at line 23010</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23012">at line 23012</a></div>
         <code>            protected        array
     <strong>convertSVGtMatrix</strong>(array $tm)
         </code>
@@ -24508,7 +24508,7 @@ A region is always aligned on the left or right side of the page ad is defined u
             </div>
                     <div class="method-item">
                     <h3 id="method_SVGTransform">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23030">at line 23030</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23032">at line 23032</a></div>
         <code>            protected        
     <strong>SVGTransform</strong>(array $tm)
         </code>
@@ -24539,7 +24539,7 @@ A region is always aligned on the left or right side of the page ad is defined u
             </div>
                     <div class="method-item">
                     <h3 id="method_setSVGStyles">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23049">at line 23049</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23051">at line 23051</a></div>
         <code>            protected        object
     <strong>setSVGStyles</strong>(array $svgstyle, array $prevsvgstyle, int $x = 0, int $y = 0, int $w = 1, int $h = 1, string $clip_function = &#039;&#039;, array $clip_params = array())
         </code>
@@ -24614,7 +24614,7 @@ A region is always aligned on the left or right side of the page ad is defined u
             </div>
                     <div class="method-item">
                     <h3 id="method_SVGPath">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23344">at line 23344</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23346">at line 23346</a></div>
         <code>            protected        array
     <strong>SVGPath</strong>(string $d, string $style = &#039;&#039;)
         </code>
@@ -24670,7 +24670,7 @@ A region is always aligned on the left or right side of the page ad is defined u
             </div>
                     <div class="method-item">
                     <h3 id="method_removeTagNamespace">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23707">at line 23707</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23709">at line 23709</a></div>
         <code>            protected        
     <strong>removeTagNamespace</strong>(string $name)
         </code>
@@ -24701,7 +24701,7 @@ A region is always aligned on the left or right side of the page ad is defined u
             </div>
                     <div class="method-item">
                     <h3 id="method_startSVGElementHandler">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23725">at line 23725</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L23727">at line 23727</a></div>
         <code>            protected        
     <strong>startSVGElementHandler</strong>(resource $parser, string $name, array $attribs, array $ctm = array())
         </code>
@@ -24747,7 +24747,7 @@ A region is always aligned on the left or right side of the page ad is defined u
             </div>
                     <div class="method-item">
                     <h3 id="method_endSVGElementHandler">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L24395">at line 24395</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L24397">at line 24397</a></div>
         <code>            protected        
     <strong>endSVGElementHandler</strong>(resource $parser, string $name)
         </code>
@@ -24783,7 +24783,7 @@ A region is always aligned on the left or right side of the page ad is defined u
             </div>
                     <div class="method-item">
                     <h3 id="method_segSVGContentHandler">
-        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L24502">at line 24502</a></div>
+        <div class="location"><a href="https://github.com/code-lts/warnockpdf/blob/main/tcpdf.php#L24504">at line 24504</a></div>
         <code>            protected        
     <strong>segSVGContentHandler</strong>(resource $parser, string $data)
         </code>
