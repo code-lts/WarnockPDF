@@ -58,10 +58,7 @@ class Images
             }
         }
         if (empty($type)) {
-            $fileinfo = pathinfo($imgfile);
-            if (isset($fileinfo['extension']) and (!StaticUtils::empty_string($fileinfo['extension']))) {
-                $type = strtolower(trim($fileinfo['extension']));
-            }
+            $type = strtolower(trim(pathinfo(parse_url($imgfile, PHP_URL_PATH), PATHINFO_EXTENSION)));
         }
         if ($type == 'jpg') {
             $type = 'jpeg';

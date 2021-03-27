@@ -1387,6 +1387,10 @@ class StaticUtils
      */
     public static function intToRoman($number) {
         $roman = '';
+        if ($number >= 4000) {
+            // do not represent numbers above 4000 in Roman numerals
+            return strval($number);
+        }
         while ($number >= 1000) {
             $roman .= 'M';
             $number -= 1000;
@@ -1794,6 +1798,10 @@ class StaticUtils
         curl_setopt($crs, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($crs, CURLOPT_SSL_VERIFYHOST, false);
         curl_setopt($crs, CURLOPT_USERAGENT, 'tc-lib-file');
+        curl_setopt($crs, CURLOPT_MAXREDIRS, 5);
+        if (defined('CURLOPT_PROTOCOLS')) {
+            curl_setopt($crs, CURLOPT_PROTOCOLS, CURLPROTO_HTTPS | CURLPROTO_HTTP | CURLPROTO_FTP | CURLPROTO_FTPS);
+        }
         curl_exec($crs);
         $code = curl_getinfo($crs, CURLINFO_HTTP_CODE);
         curl_close($crs);
@@ -1925,6 +1933,10 @@ class StaticUtils
                 curl_setopt($crs, CURLOPT_SSL_VERIFYPEER, false);
                 curl_setopt($crs, CURLOPT_SSL_VERIFYHOST, false);
                 curl_setopt($crs, CURLOPT_USERAGENT, 'tc-lib-file');
+                curl_setopt($crs, CURLOPT_MAXREDIRS, 5);
+                if (defined('CURLOPT_PROTOCOLS')) {
+                    curl_setopt($crs, CURLOPT_PROTOCOLS, CURLPROTO_HTTPS | CURLPROTO_HTTP | CURLPROTO_FTP | CURLPROTO_FTPS);
+                }
                 $ret = curl_exec($crs);
                 curl_close($crs);
                 if ($ret !== false) {

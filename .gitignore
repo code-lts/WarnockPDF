@@ -1,9 +1,10 @@
 .vscode
 .idea
+*.bak
 phpcs.xml
 phpstan.neon
 .php_cs.cache
 .phpcs.cache
 vendor
 composer.lock
-
+.phpdoc
