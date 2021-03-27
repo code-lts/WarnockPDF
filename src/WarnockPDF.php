@@ -2916,7 +2916,8 @@ class WarnockPDF
     /**
      * Whether to allow local file path in image html tags, when prefixed with file://
      *
-     * @param $allowLocalFiles bool true, when local files should be allowed. Otherwise false.
+     * @param bool $allowLocalFiles bool true, when local files should be allowed. Otherwise false.
+     * @return void
      * @public
      * @since 6.4
      */
