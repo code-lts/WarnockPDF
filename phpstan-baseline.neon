@@ -4251,6 +4251,11 @@ parameters:
 			path: src/Images.php
 
 		-
+			message: "#^Parameter \\#1 \\$path of function pathinfo expects string, string\\|false\\|null given\\.$#"
+			count: 1
+			path: src/Images.php
+
+		-
 			message: "#^Cannot access offset 'blue' on array\\|false\\.$#"
 			count: 1
 			path: src/Images.php
@@ -5286,11 +5291,6 @@ parameters:
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Property WarnockPDF\\\\WarnockPDF\\:\\:\\$internal_encoding has no typehint specified\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
 			message: "#^Property WarnockPDF\\\\WarnockPDF\\:\\:\\$rtl has no typehint specified\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
@@ -5986,6 +5986,11 @@ parameters:
 			path: src/WarnockPDF.php
 
 		-
+			message: "#^Property WarnockPDF\\\\WarnockPDF\\:\\:\\$fileContentCache type has no value type specified in iterable type array\\.$#"
+			count: 1
+			path: src/WarnockPDF.php
+
+		-
 			message: "#^Constructor of class WarnockPDF\\\\WarnockPDF has an unused parameter \\$diskcache\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
@@ -6188,11 +6193,6 @@ parameters:
 		-
 			message: "#^Method WarnockPDF\\\\WarnockPDF\\:\\:adjustCellPadding\\(\\) return type has no value type specified in iterable type array\\.$#"
 			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Method WarnockPDF\\\\WarnockPDF\\:\\:adjustCellPadding\\(\\) should return array but empty return statement found\\.$#"
-			count: 2
 			path: src/WarnockPDF.php
 
 		-
@@ -7001,13 +7001,13 @@ parameters:
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Cannot access offset 'h' on string\\|false\\.$#"
-			count: 4
+			message: "#^Offset 'h' does not exist on string\\.$#"
+			count: 1
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Cannot access offset 'w' on string\\|false\\.$#"
-			count: 4
+			message: "#^Offset 'w' does not exist on string\\.$#"
+			count: 1
 			path: src/WarnockPDF.php
 
 		-
@@ -7028,6 +7028,16 @@ parameters:
 		-
 			message: "#^Parameter \\#2 \\$refsize of method WarnockPDF\\\\WarnockPDF\\:\\:getHTMLUnitToUnits\\(\\) expects string, int given\\.$#"
 			count: 71
+			path: src/WarnockPDF.php
+
+		-
+			message: "#^Cannot access offset 'h' on string\\|false\\.$#"
+			count: 3
+			path: src/WarnockPDF.php
+
+		-
+			message: "#^Cannot access offset 'w' on string\\|false\\.$#"
+			count: 3
 			path: src/WarnockPDF.php
 
 		-
@@ -7252,12 +7262,12 @@ parameters:
 
 		-
 			message: "#^Parameter \\#3 \\$subject of function preg_replace expects array\\|string, string\\|null given\\.$#"
-			count: 36
+			count: 37
 			path: src/WarnockPDF.php
 
 		-
 			message: "#^Parameter \\#1 \\$string of function substr expects string, string\\|false given\\.$#"
-			count: 7
+			count: 5
 			path: src/WarnockPDF.php
 
 		-
@@ -7272,7 +7282,7 @@ parameters:
 
 		-
 			message: "#^Parameter \\#1 \\$haystack of function strpos expects string, string\\|false given\\.$#"
-			count: 7
+			count: 3
 			path: src/WarnockPDF.php
 
 		-
@@ -7777,7 +7787,7 @@ parameters:
 
 		-
 			message: "#^Strict comparison using \\=\\=\\= between string and false will always evaluate to false\\.$#"
-			count: 1
+			count: 3
 			path: src/WarnockPDF.php
 
 		-
@@ -9006,11 +9016,6 @@ parameters:
 			path: src/WarnockPDF.php
 
 		-
-			message: "#^Parameter \\#2 \\$subject of function preg_match expects string, string\\|false given\\.$#"
-			count: 3
-			path: src/WarnockPDF.php
-
-		-
 			message: "#^Binary operation \"\\-\" between string and string results in an error\\.$#"
 			count: 9
 			path: src/WarnockPDF.php
@@ -10152,11 +10157,6 @@ parameters:
 
 		-
 			message: "#^Parameter \\#2 \\$hdl of function xml_set_character_data_handler expects callable\\(\\)\\: mixed, 'segSVGContentHandler' given\\.$#"
-			count: 1
-			path: src/WarnockPDF.php
-
-		-
-			message: "#^Parameter \\#2 \\$data of function xml_parse expects string, string\\|false given\\.$#"
 			count: 1
 			path: src/WarnockPDF.php
 
