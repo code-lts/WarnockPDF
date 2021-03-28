@@ -7022,7 +7022,7 @@ class WarnockPDF
             // GD image handler function
             $gdfunction = 'imagecreatefrom' . $type;
             $info = false;
-            if ((method_exists('Images', $mtd)) and (!($resize and (function_exists($gdfunction) or extension_loaded('imagick'))))) {
+            if ((method_exists('\WarnockPDF\Images', $mtd)) and (!($resize and (function_exists($gdfunction) or extension_loaded('imagick'))))) {
                 // WarnockPDF image functions
                 $info = Images::$mtd($file);
                 if (($ismask === false) and ($imgmask === false) and (strpos($file, '__tcpdf_' . $this->file_id . '_imgmask_') === false)
