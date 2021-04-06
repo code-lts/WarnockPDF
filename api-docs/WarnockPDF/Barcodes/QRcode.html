@@ -71,15 +71,17 @@
         <h1>
             QRcode
                 
-        </h1>
+                    </h1>
     </div>
 
+    
     <p>        class
     <strong>QRcode</strong>        (<a href="https://github.com/code-lts/warnockpdf/blob/main/src/Barcodes/QRcode.php">View source</a>)
 </p>
 
         
     
+        
 
             <div class="description">
             <p>Class to create QR-code arrays for WarnockPDF class.</p>            <p>QR Code symbol is a 2D barcode that can be scanned by handy terminals such as a mobile phone with CCD.
@@ -88,7 +90,9 @@ This class supports QR Code model 2, described in JIS (Japanese Industrial Stand
 Currently the following features are not supported: ECI and FNC1 mode, Micro QR Code, QR Code model 1, Structured mode.</p>
 
 <p>This class is derived from "PHP QR Code encoder" by Dominik Dzienia (http://phpqrcode.sourceforge.net/) based on "libqrencode C library 3.1.1." by Kentaro Fukuchi (http://megaui.net/fukuchi/works/qrencode/index.en.html), contains Reed-Solomon code written by Phil Karn, KA9Q. QR Code is registered trademark of DENSO WAVE INCORPORATED (http://www.denso-wave.com/qrcode/index-e.html).
-Please read comments on this class source file for full copyright and license information.</p>                    </div>
+Please read comments on this class source file for full copyright and license information.</p>                    
+        
+        </div>
     
     
     
@@ -98,7 +102,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_barcode_array">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$barcode_array</td>
                 <td class="last">Barcode array to be returned which is readable by WarnockPDF.</td>
                 <td></td>
@@ -106,7 +111,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_version">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$version</td>
                 <td class="last">QR code version. Size of QRcode is defined as version. Version is from 1 to 40. Version 1 is 21<em>21 matrix. And 4 modules increases whenever 1 version increases. So version 40 is 177</em>177 matrix.</td>
                 <td></td>
@@ -114,7 +120,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_level">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$level</td>
                 <td class="last">Levels of error correction. See definitions for possible values.</td>
                 <td></td>
@@ -122,7 +129,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_hint">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$hint</td>
                 <td class="last">Encoding mode.</td>
                 <td></td>
@@ -130,7 +138,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_casesensitive">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$casesensitive</td>
                 <td class="last">Boolean flag, if true the input string will be converted to uppercase.</td>
                 <td></td>
@@ -138,7 +147,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_structured">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$structured</td>
                 <td class="last">Structured QR code (not supported yet).</td>
                 <td></td>
@@ -146,7 +156,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_data">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$data</td>
                 <td class="last">Mask data.</td>
                 <td></td>
@@ -154,7 +165,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_width">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$width</td>
                 <td class="last">Width.</td>
                 <td></td>
@@ -162,7 +174,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_frame">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$frame</td>
                 <td class="last">Frame.</td>
                 <td></td>
@@ -170,7 +183,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_x">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$x</td>
                 <td class="last">X position of bit.</td>
                 <td></td>
@@ -178,7 +192,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_y">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$y</td>
                 <td class="last">Y position of bit.</td>
                 <td></td>
@@ -186,7 +201,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_dir">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$dir</td>
                 <td class="last">Direction.</td>
                 <td></td>
@@ -194,7 +210,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_bit">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$bit</td>
                 <td class="last">Single bit value.</td>
                 <td></td>
@@ -202,7 +219,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_datacode">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$datacode</td>
                 <td class="last">Data code.</td>
                 <td></td>
@@ -210,7 +228,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_ecccode">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$ecccode</td>
                 <td class="last">Error correction code.</td>
                 <td></td>
@@ -218,7 +237,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_blocks">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$blocks</td>
                 <td class="last">Blocks.</td>
                 <td></td>
@@ -226,7 +246,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_rsblocks">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$rsblocks</td>
                 <td class="last">Reed-Solomon blocks.</td>
                 <td></td>
@@ -234,7 +255,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_count">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$count</td>
                 <td class="last">Counter.</td>
                 <td></td>
@@ -242,7 +264,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_dataLength">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$dataLength</td>
                 <td class="last">Data length.</td>
                 <td></td>
@@ -250,7 +273,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_eccLength">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$eccLength</td>
                 <td class="last">Error correction length.</td>
                 <td></td>
@@ -258,7 +282,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_b1">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$b1</td>
                 <td class="last">Value b1.</td>
                 <td></td>
@@ -266,7 +291,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_runLength">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$runLength</td>
                 <td class="last">Run length.</td>
                 <td></td>
@@ -274,7 +300,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_dataStr">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$dataStr</td>
                 <td class="last">Input data string.</td>
                 <td></td>
@@ -282,7 +309,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_items">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$items</td>
                 <td class="last">Input items.</td>
                 <td></td>
@@ -290,7 +318,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_rsitems">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$rsitems</td>
                 <td class="last">Reed-Solomon items.</td>
                 <td></td>
@@ -298,7 +327,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_frames">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$frames</td>
                 <td class="last">Array of frames.</td>
                 <td></td>
@@ -306,7 +336,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_anTable">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$anTable</td>
                 <td class="last">Alphabet-numeric conversion table.</td>
                 <td></td>
@@ -314,7 +345,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_capacity">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$capacity</td>
                 <td class="last">Array Table of the capacity of symbols.</td>
                 <td></td>
@@ -322,7 +354,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_lengthTableBits">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$lengthTableBits</td>
                 <td class="last">Array Length indicator.</td>
                 <td></td>
@@ -330,7 +363,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_eccTable">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$eccTable</td>
                 <td class="last">Array Table of the error correction code (Reed-Solomon block).</td>
                 <td></td>
@@ -338,7 +372,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_alignmentPattern">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$alignmentPattern</td>
                 <td class="last">Array Positions of alignment patterns.</td>
                 <td></td>
@@ -346,7 +381,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_versionPattern">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$versionPattern</td>
                 <td class="last">Array Version information pattern (BCH coded).</td>
                 <td></td>
@@ -354,7 +390,8 @@ Please read comments on this class source file for full copyright and license in
                     <tr>
                 <td class="type" id="property_formatInfo">
                                         protected                                        
-                </td>
+                                                                                
+                        </td>
                 <td>$formatInfo</td>
                 <td class="last">Array Format information</td>
                 <td></td>
@@ -1359,12 +1396,17 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    <i>Since: 1.0.000</i>
+            <br>
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>This is the class constructor.</p>                    <p>Creates a QRcode object</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>This is the class constructor.</p>                <p>Creates a QRcode object</p>                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1386,6 +1428,7 @@ Please read comments on this class source file for full copyright and license in
             
             
             
+            
                     </div>
     </div>
 
@@ -1398,12 +1441,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Returns a barcode array which is readable by WarnockPDF</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Returns a barcode array which is readable by WarnockPDF</p>                                    
+        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1414,6 +1460,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1428,12 +1475,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Convert the frame in binary form</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Convert the frame in binary form</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1456,6 +1506,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -1468,12 +1519,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Encode the input string to QR code</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Encode the input string to QR code</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1496,6 +1550,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -1508,12 +1563,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Encode mask</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Encode mask</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1536,6 +1594,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -1548,12 +1607,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Set frame value at specified position</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Set frame value at specified position</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1572,6 +1634,7 @@ Please read comments on this class source file for full copyright and license in
             
             
             
+            
                     </div>
     </div>
 
@@ -1584,12 +1647,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Get frame value at specified position</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Get frame value at specified position</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1612,6 +1678,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -1624,12 +1691,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the next frame position</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return the next frame position</p>                                    
+        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1640,6 +1710,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1654,12 +1725,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Initialize code.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Initialize code.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1682,6 +1756,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -1694,12 +1769,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return Reed-Solomon block code.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return Reed-Solomon block code.</p>                                    
+        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -1710,6 +1788,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1724,12 +1803,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Write Format Information on frame and returns the number of black bits</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Write Format Information on frame and returns the number of black bits</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1767,6 +1849,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -1779,12 +1862,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>mask0</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>mask0</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1810,6 +1896,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1824,12 +1911,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>mask1</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>mask1</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1855,6 +1945,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1869,12 +1960,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>mask2</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>mask2</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1900,6 +1994,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1914,12 +2009,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>mask3</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>mask3</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1945,6 +2043,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -1959,12 +2058,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>mask4</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>mask4</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -1990,6 +2092,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2004,12 +2107,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>mask5</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>mask5</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2035,6 +2141,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2049,12 +2156,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>mask6</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>mask6</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2080,6 +2190,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2094,12 +2205,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>mask7</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>mask7</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2127,6 +2241,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -2139,12 +2254,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return bitmask</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return bitmask</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2177,6 +2295,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -2189,12 +2308,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>makeMaskNo</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>makeMaskNo</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2237,6 +2359,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -2249,12 +2372,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>makeMask</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>makeMask</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2292,6 +2418,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -2304,12 +2431,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>calcN1N3</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>calcN1N3</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2332,6 +2462,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -2344,12 +2475,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>evaluateSymbol</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>evaluateSymbol</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2377,6 +2511,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -2389,12 +2524,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>mask</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>mask</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2427,6 +2565,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -2439,12 +2578,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return true if the character at specified position is a number</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return true if the character at specified position is a number</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2470,6 +2612,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2484,12 +2627,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return true if the character at specified position is an alphanumeric character</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return true if the character at specified position is an alphanumeric character</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2517,6 +2663,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -2529,12 +2676,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>identifyMode</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>identifyMode</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2557,6 +2707,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -2569,12 +2720,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>eatNum</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>eatNum</p>                                    
+        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -2585,6 +2739,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2599,12 +2754,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>eatAn</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>eatAn</p>                                    
+        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -2615,6 +2773,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2629,12 +2788,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>eatKanji</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>eatKanji</p>                                    
+        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -2645,6 +2807,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2659,12 +2822,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>eat8</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>eat8</p>                                    
+        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -2675,6 +2841,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2689,12 +2856,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>splitString</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>splitString</p>                                    
+        
+        </div>
+        <div class="tags">
             
                             <h4>Return Value</h4>
 
@@ -2705,6 +2875,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2719,12 +2890,16 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>toUpper</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>toUpper</p>                                    
+        
+        </div>
+        <div class="tags">
+            
             
             
             
@@ -2740,12 +2915,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>newInputItem</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>newInputItem</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2783,6 +2961,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -2795,12 +2974,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>encodeModeNum</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>encodeModeNum</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2826,6 +3008,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2840,12 +3023,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>encodeModeAn</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>encodeModeAn</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2871,6 +3057,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2885,12 +3072,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>encodeMode8</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>encodeMode8</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2916,6 +3106,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2930,12 +3121,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>encodeModeKanji</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>encodeModeKanji</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -2961,6 +3155,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -2975,12 +3170,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>encodeModeStructure</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>encodeModeStructure</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3003,6 +3201,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3015,12 +3214,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>encodeBitStream</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>encodeBitStream</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3048,6 +3250,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3060,12 +3263,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Append data to an input object.</p>                    <p>The data is copied and appended to the input object.</p>                            </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Append data to an input object.</p>                <p>The data is copied and appended to the input object.</p>                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3103,6 +3309,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3115,12 +3322,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>insertStructuredAppendHeader</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>insertStructuredAppendHeader</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3158,6 +3368,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3170,12 +3381,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>calcParity</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>calcParity</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3198,6 +3412,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3210,12 +3425,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>checkModeNum</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>checkModeNum</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3243,6 +3461,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3255,12 +3474,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Look up the alphabet-numeric conversion table (see JIS X0510:2004, pp.19).</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Look up the alphabet-numeric conversion table (see JIS X0510:2004, pp.19).</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3283,6 +3505,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3295,12 +3518,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>checkModeAn</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>checkModeAn</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3326,6 +3552,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -3340,12 +3567,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>estimateBitsModeNum</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>estimateBitsModeNum</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3366,6 +3596,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -3380,12 +3611,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>estimateBitsModeAn</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>estimateBitsModeAn</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3406,6 +3640,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -3420,12 +3655,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>estimateBitsMode8</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>estimateBitsMode8</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3446,6 +3684,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -3460,12 +3699,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>estimateBitsModeKanji</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>estimateBitsModeKanji</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3488,6 +3730,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3500,12 +3743,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>checkModeKanji</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>checkModeKanji</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3533,6 +3779,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3545,12 +3792,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Validate the input data.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Validate the input data.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3583,6 +3833,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3595,12 +3846,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>estimateBitStreamSize</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>estimateBitStreamSize</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3628,6 +3882,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3640,12 +3895,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>estimateVersion</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>estimateVersion</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3668,6 +3926,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3680,12 +3939,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>lengthOfCode</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>lengthOfCode</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3718,6 +3980,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3730,12 +3993,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>createBitStream</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>createBitStream</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3758,6 +4024,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3770,12 +4037,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>convertData</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>convertData</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3798,6 +4068,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3810,12 +4081,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Append Padding Bit to bitstream</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Append Padding Bit to bitstream</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3838,6 +4112,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3850,12 +4125,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>mergeBitStream</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>mergeBitStream</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3878,6 +4156,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3890,12 +4169,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Returns a stream of bits.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Returns a stream of bits.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3916,6 +4198,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -3930,12 +4213,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Pack all bit streams padding bits into a byte array.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Pack all bit streams padding bits into a byte array.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3958,6 +4244,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -3970,12 +4257,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return an array with zeros</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return an array with zeros</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -3998,6 +4288,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4010,12 +4301,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return new bitstream from number</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return new bitstream from number</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4043,6 +4337,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4055,12 +4350,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return new bitstream from bytes</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return new bitstream from bytes</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4088,6 +4386,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4100,12 +4399,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Append one bitstream to another</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Append one bitstream to another</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4133,6 +4435,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4145,12 +4448,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Append one bitstream created from number to another</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Append one bitstream created from number to another</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4183,6 +4489,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4195,12 +4502,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Append one bitstream created from bytes to another</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Append one bitstream created from bytes to another</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4233,6 +4543,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4245,12 +4556,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Convert bitstream to bytes</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Convert bitstream to bytes</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4273,6 +4587,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4285,12 +4600,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Replace a value on the array at the specified position</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Replace a value on the array at the specified position</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4333,6 +4651,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4345,12 +4664,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return maximum data code length (bytes) for the version.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return maximum data code length (bytes) for the version.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4378,6 +4700,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4390,12 +4713,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return maximum error correction code length (bytes) for the version.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return maximum error correction code length (bytes) for the version.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4423,6 +4749,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4435,12 +4762,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the width of the symbol for the version.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return the width of the symbol for the version.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4463,6 +4793,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4475,12 +4806,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the numer of remainder bits.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return the numer of remainder bits.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4503,6 +4837,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4515,12 +4850,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return a version number that satisfies the input code length.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return a version number that satisfies the input code length.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4548,6 +4886,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4560,12 +4899,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the size of length indicator for the mode and version.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return the size of length indicator for the mode and version.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4593,6 +4935,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4605,12 +4948,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return the maximum length for the mode and version.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return the maximum length for the mode and version.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4638,6 +4984,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4650,12 +4997,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return an array of ECC specification.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return an array of ECC specification.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4688,6 +5038,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4700,12 +5051,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Put an alignment marker.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Put an alignment marker.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4738,6 +5092,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4750,12 +5105,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Put an alignment pattern.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Put an alignment pattern.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4788,6 +5146,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4800,12 +5159,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return BCH encoded version information pattern that is used for the symbol of version 7 or greater. Use lower 18 bits.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return BCH encoded version information pattern that is used for the symbol of version 7 or greater. Use lower 18 bits.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4828,6 +5190,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4840,12 +5203,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return BCH encoded format information pattern.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return BCH encoded format information pattern.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4873,6 +5239,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4885,12 +5252,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Put a finder pattern.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Put a finder pattern.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4923,6 +5293,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4935,12 +5306,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return a copy of initialized frame.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return a copy of initialized frame.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -4963,6 +5337,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -4975,12 +5350,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Set new frame for the specified version.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Set new frame for the specified version.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5003,6 +5381,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -5015,12 +5394,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return block number 0</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return block number 0</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5041,6 +5423,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -5055,12 +5438,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return block number 1</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return block number 1</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5081,6 +5467,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -5095,12 +5482,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return data codes 1</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return data codes 1</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5121,6 +5511,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -5135,12 +5526,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return ecc codes 1</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return ecc codes 1</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5161,6 +5555,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -5175,12 +5570,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return block number 2</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return block number 2</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5201,6 +5599,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -5215,12 +5614,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return data codes 2</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return data codes 2</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5241,6 +5643,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -5255,12 +5658,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return ecc codes 2</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return ecc codes 2</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5281,6 +5687,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -5295,12 +5702,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return data length</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return data length</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5321,6 +5731,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
@@ -5335,12 +5746,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Return ecc length</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Return ecc length</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5363,6 +5777,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -5375,12 +5790,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Initialize a Reed-Solomon codec and add it to existing rsitems</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Initialize a Reed-Solomon codec and add it to existing rsitems</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5432,6 +5850,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -5444,12 +5863,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>modnn</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>modnn</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5477,6 +5899,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -5489,12 +5912,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Initialize a Reed-Solomon codec and returns an array of values.</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Initialize a Reed-Solomon codec and returns an array of values.</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5546,6 +5972,7 @@ Please read comments on this class source file for full copyright and license in
 
             
             
+            
                     </div>
     </div>
 
@@ -5558,12 +5985,15 @@ Please read comments on this class source file for full copyright and license in
         </code>
     </h3>
     <div class="details">
-            
+                    
     
+            
 
-                    <div class="method-description">
-                                    <p>Encode a Reed-Solomon codec and returns the parity array</p>                                                </div>
-                <div class="tags">
+        <div class="method-description">
+                            <p>Encode a Reed-Solomon codec and returns the parity array</p>                                    
+        
+        </div>
+        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
@@ -5594,6 +6024,7 @@ Please read comments on this class source file for full copyright and license in
         </tr>
     </table>
 
+            
             
             
                     </div>
