@@ -68,10 +68,8 @@
                 <div id="page-content">
                 
     <div class="page-header">
-        <h1>
-            Pdf417
-                
-                    </h1>
+        <h1>Pdf417    
+            </h1>
     </div>
 
     
@@ -84,11 +82,9 @@
         
 
             <div class="description">
-            <p>Class to create PDF417 barcode arrays for WarnockPDF class.</p>            <p>PDF417 (ISO/IEC 15438:2006) is a 2-dimensional stacked bar code created by Symbol Technologies in 1991.</p>                    
+            <p>Class to create PDF417 barcode arrays for WarnockPDF class.</p>            <p>PDF417 (ISO/IEC 15438:2006) is a 2-dimensional stacked bar code created by Symbol Technologies in 1991.</p>        </div>
+            
         
-        </div>
-    
-    
     
             <h2>Properties</h2>
 
@@ -97,7 +93,7 @@
                 <td class="type" id="property_barcode_array">
                                         protected                                        
                                                                                 
-                        </td>
+                                    </td>
                 <td>$barcode_array</td>
                 <td class="last">Barcode array to be returned which is readable by WarnockPDF.</td>
                 <td></td>
@@ -106,7 +102,7 @@
                 <td class="type" id="property_start_pattern">
                                         protected                                        
                                                                                 
-                        </td>
+                                    </td>
                 <td>$start_pattern</td>
                 <td class="last">Start pattern.</td>
                 <td></td>
@@ -115,7 +111,7 @@
                 <td class="type" id="property_stop_pattern">
                                         protected                                        
                                                                                 
-                        </td>
+                                    </td>
                 <td>$stop_pattern</td>
                 <td class="last">Stop pattern.</td>
                 <td></td>
@@ -124,7 +120,7 @@
                 <td class="type" id="property_textsubmodes">
                                         protected                                        
                                                                                 
-                        </td>
+                                    </td>
                 <td>$textsubmodes</td>
                 <td class="last">Array of text Compaction Sub-Modes (values 0xFB - 0xFF are used for submode changers).</td>
                 <td></td>
@@ -133,7 +129,7 @@
                 <td class="type" id="property_textlatch">
                                         protected                                        
                                                                                 
-                        </td>
+                                    </td>
                 <td>$textlatch</td>
                 <td class="last">Array of switching codes for Text Compaction Sub-Modes.</td>
                 <td></td>
@@ -142,7 +138,7 @@
                 <td class="type" id="property_clusters">
                                         protected                                        
                                                                                 
-                        </td>
+                                    </td>
                 <td>$clusters</td>
                 <td class="last">Clusters of codewords (0, 3, 6)<br/>
 Values are hex equivalents of binary representation of bars (1 = bar, 0 = space).<br/>
@@ -171,7 +167,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                 <td class="type" id="property_rsfactors">
                                         protected                                        
                                                                                 
-                        </td>
+                                    </td>
                 <td>$rsfactors</td>
                 <td class="last">Array of factors of the Reed-Solomon polynomial equations used for error correction; one sub array for each correction level (0-8).</td>
                 <td></td>
@@ -255,14 +251,12 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
     <strong>__construct</strong>(string $code, int $ecl = -1, float $aspectratio = 2, array $macro = array())
         </code>
     </h3>
-    <div class="details">
-                    
+    <div class="details">    
     
             
 
         <div class="method-description">
-                            <p>This is the class constructor.</p>                <p>Creates a PDF417 object</p>                    
-        
+                            <p>This is the class constructor.</p>                <p>Creates a PDF417 object</p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -305,14 +299,12 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
     <strong>getBarcodeArray</strong>()
         </code>
     </h3>
-    <div class="details">
-                    
+    <div class="details">    
     
             
 
         <div class="method-description">
-                            <p>Returns a barcode array which is readable by WarnockPDF</p>                                    
-        
+                            <p>Returns a barcode array which is readable by WarnockPDF</p>                        
         </div>
         <div class="tags">
             
@@ -339,14 +331,12 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
     <strong>getErrorCorrectionLevel</strong>(int $ecl, int $numcw)
         </code>
     </h3>
-    <div class="details">
-                    
+    <div class="details">    
     
             
 
         <div class="method-description">
-                            <p>Returns the error correction level (0-8) to be used</p>                                    
-        
+                            <p>Returns the error correction level (0-8) to be used</p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -388,14 +378,12 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
     <strong>getErrorCorrection</strong>(array $cw, int $ecl)
         </code>
     </h3>
-    <div class="details">
-                    
+    <div class="details">    
     
             
 
         <div class="method-description">
-                            <p>Returns the error correction codewords</p>                                    
-        
+                            <p>Returns the error correction codewords</p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -437,14 +425,12 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
     <strong>getInputSequences</strong>(string $code)
         </code>
     </h3>
-    <div class="details">
-                    
+    <div class="details">    
     
             
 
         <div class="method-description">
-                            <p>Create array of sequences from input</p>                                    
-        
+                            <p>Create array of sequences from input</p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -481,14 +467,12 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
     <strong>getCompaction</strong>(int $mode, string $code, bool $addmode = true)
         </code>
     </h3>
-    <div class="details">
-                    
+    <div class="details">    
     
             
 
         <div class="method-description">
-                            <p>Compact data by mode.</p>                                    
-        
+                            <p>Compact data by mode.</p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
