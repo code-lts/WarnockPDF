@@ -82,7 +82,7 @@
         
 
             <div class="description">
-            <p>Class to create PDF417 barcode arrays for WarnockPDF class.</p>            <p>PDF417 (ISO/IEC 15438:2006) is a 2-dimensional stacked bar code created by Symbol Technologies in 1991.</p>        </div>
+            <p><p>Class to create PDF417 barcode arrays for WarnockPDF class.</p></p>            <p><p>PDF417 (ISO/IEC 15438:2006) is a 2-dimensional stacked bar code created by Symbol Technologies in 1991.</p></p>        </div>
             
         
     
@@ -95,7 +95,7 @@
                                                                                 
                                     </td>
                 <td>$barcode_array</td>
-                <td class="last">Barcode array to be returned which is readable by WarnockPDF.</td>
+                <td class="last"><p>Barcode array to be returned which is readable by WarnockPDF.</p></td>
                 <td></td>
             </tr>
                     <tr>
@@ -104,7 +104,7 @@
                                                                                 
                                     </td>
                 <td>$start_pattern</td>
-                <td class="last">Start pattern.</td>
+                <td class="last"><p>Start pattern.</p></td>
                 <td></td>
             </tr>
                     <tr>
@@ -113,7 +113,7 @@
                                                                                 
                                     </td>
                 <td>$stop_pattern</td>
-                <td class="last">Stop pattern.</td>
+                <td class="last"><p>Stop pattern.</p></td>
                 <td></td>
             </tr>
                     <tr>
@@ -122,7 +122,7 @@
                                                                                 
                                     </td>
                 <td>$textsubmodes</td>
-                <td class="last">Array of text Compaction Sub-Modes (values 0xFB - 0xFF are used for submode changers).</td>
+                <td class="last"><p>Array of text Compaction Sub-Modes (values 0xFB - 0xFF are used for submode changers).</p></td>
                 <td></td>
             </tr>
                     <tr>
@@ -131,7 +131,7 @@
                                                                                 
                                     </td>
                 <td>$textlatch</td>
-                <td class="last">Array of switching codes for Text Compaction Sub-Modes.</td>
+                <td class="last"><p>Array of switching codes for Text Compaction Sub-Modes.</p></td>
                 <td></td>
             </tr>
                     <tr>
@@ -140,11 +140,9 @@
                                                                                 
                                     </td>
                 <td>$clusters</td>
-                <td class="last">Clusters of codewords (0, 3, 6)<br/>
+                <td class="last"><p>Clusters of codewords (0, 3, 6)<br/>
 Values are hex equivalents of binary representation of bars (1 = bar, 0 = space).<br/>
-The codewords numbered from 900 to 928 have special meaning, some enable to switch between modes in order to optimise the code:</p>
-
-<ul>
+The codewords numbered from 900 to 928 have special meaning, some enable to switch between modes in order to optimise the code:<ul></p>
 <li>900 : Switch to "Text" mode</li>
 <li>901 : Switch to "Byte" mode</li>
 <li>902 : Switch to "Numeric" mode</li>
@@ -159,8 +157,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
 <li>926 : Identifier for a general purpose ECI format</li>
 <li>927 : Identifier for an ECI of a character set or code page</li>
 <li>928 : Macro marker codeword to indicate the beginning of a Macro PDF Control Block</li>
-</ul>
-</td>
+<p></ul></p></td>
                 <td></td>
             </tr>
                     <tr>
@@ -169,7 +166,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                                                                                 
                                     </td>
                 <td>$rsfactors</td>
-                <td class="last">Array of factors of the Reed-Solomon polynomial equations used for error correction; one sub array for each correction level (0-8).</td>
+                <td class="last"><p>Array of factors of the Reed-Solomon polynomial equations used for error correction; one sub array for each correction level (0-8).</p></td>
                 <td></td>
             </tr>
             </table>
@@ -185,7 +182,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                 <div class="col-md-8 type">
                     <a href="#method___construct">__construct</a>(string $code, int $ecl = -1, float $aspectratio = 2, array $macro = array())
         
-                                            <p>This is the class constructor.</p>                </div>
+                                            <p><p>This is the class constructor.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -195,7 +192,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                 <div class="col-md-8 type">
                     <a href="#method_getBarcodeArray">getBarcodeArray</a>()
         
-                                            <p>Returns a barcode array which is readable by WarnockPDF</p>                </div>
+                                            <p><p>Returns a barcode array which is readable by WarnockPDF</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -205,7 +202,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                 <div class="col-md-8 type">
                     <a href="#method_getErrorCorrectionLevel">getErrorCorrectionLevel</a>(int $ecl, int $numcw)
         
-                                            <p>Returns the error correction level (0-8) to be used</p>                </div>
+                                            <p><p>Returns the error correction level (0-8) to be used</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -215,7 +212,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                 <div class="col-md-8 type">
                     <a href="#method_getErrorCorrection">getErrorCorrection</a>(array $cw, int $ecl)
         
-                                            <p>Returns the error correction codewords</p>                </div>
+                                            <p><p>Returns the error correction codewords</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -225,7 +222,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                 <div class="col-md-8 type">
                     <a href="#method_getInputSequences">getInputSequences</a>(string $code)
         
-                                            <p>Create array of sequences from input</p>                </div>
+                                            <p><p>Create array of sequences from input</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -235,7 +232,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                 <div class="col-md-8 type">
                     <a href="#method_getCompaction">getCompaction</a>(int $mode, string $code, bool $addmode = true)
         
-                                            <p>Compact data by mode.</p>                </div>
+                                            <p><p>Compact data by mode.</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -256,7 +253,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
             
 
         <div class="method-description">
-                            <p>This is the class constructor.</p>                <p>Creates a PDF417 object</p>        
+                            <p><p>This is the class constructor.</p></p>                <p><p>Creates a PDF417 object</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -265,22 +262,22 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                     <tr>
                 <td>string</td>
                 <td>$code</td>
-                <td>code to represent using PDF417</td>
+                <td><p>code to represent using PDF417</p></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$ecl</td>
-                <td>error correction level (0-8); default -1 = automatic correction level</td>
+                <td><p>error correction level (0-8); default -1 = automatic correction level</p></td>
             </tr>
                     <tr>
                 <td>float</td>
                 <td>$aspectratio</td>
-                <td>the width to height of the symbol (excluding quiet zones)</td>
+                <td><p>the width to height of the symbol (excluding quiet zones)</p></td>
             </tr>
                     <tr>
                 <td>array</td>
                 <td>$macro</td>
-                <td>information for macro block</td>
+                <td><p>information for macro block</p></td>
             </tr>
             </table>
 
@@ -304,7 +301,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
             
 
         <div class="method-description">
-                            <p>Returns a barcode array which is readable by WarnockPDF</p>                        
+                            <p><p>Returns a barcode array which is readable by WarnockPDF</p></p>                        
         </div>
         <div class="tags">
             
@@ -313,7 +310,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td>barcode array readable by WarnockPDF;</td>
+            <td><p>barcode array readable by WarnockPDF;</p></td>
         </tr>
     </table>
 
@@ -336,7 +333,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
             
 
         <div class="method-description">
-                            <p>Returns the error correction level (0-8) to be used</p>                        
+                            <p><p>Returns the error correction level (0-8) to be used</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -345,12 +342,12 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                     <tr>
                 <td>int</td>
                 <td>$ecl</td>
-                <td>error correction level</td>
+                <td><p>error correction level</p></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$numcw</td>
-                <td>number of data codewords</td>
+                <td><p>number of data codewords</p></td>
             </tr>
             </table>
 
@@ -360,7 +357,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                     <table class="table table-condensed">
         <tr>
             <td>int</td>
-            <td>error correction level</td>
+            <td><p>error correction level</p></td>
         </tr>
     </table>
 
@@ -383,7 +380,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
             
 
         <div class="method-description">
-                            <p>Returns the error correction codewords</p>                        
+                            <p><p>Returns the error correction codewords</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -392,12 +389,12 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                     <tr>
                 <td>array</td>
                 <td>$cw</td>
-                <td>array of codewords including Symbol Length Descriptor and pad</td>
+                <td><p>array of codewords including Symbol Length Descriptor and pad</p></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$ecl</td>
-                <td>error correction level 0-8</td>
+                <td><p>error correction level 0-8</p></td>
             </tr>
             </table>
 
@@ -407,7 +404,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td>of error correction codewords</td>
+            <td><p>of error correction codewords</p></td>
         </tr>
     </table>
 
@@ -430,7 +427,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
             
 
         <div class="method-description">
-                            <p>Create array of sequences from input</p>                        
+                            <p><p>Create array of sequences from input</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -439,7 +436,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                     <tr>
                 <td>string</td>
                 <td>$code</td>
-                <td>code</td>
+                <td><p>code</p></td>
             </tr>
             </table>
 
@@ -449,7 +446,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td>bi-dimensional array containing characters and classification</td>
+            <td><p>bi-dimensional array containing characters and classification</p></td>
         </tr>
     </table>
 
@@ -472,7 +469,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
             
 
         <div class="method-description">
-                            <p>Compact data by mode.</p>                        
+                            <p><p>Compact data by mode.</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -481,17 +478,17 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                     <tr>
                 <td>int</td>
                 <td>$mode</td>
-                <td>compaction mode number</td>
+                <td><p>compaction mode number</p></td>
             </tr>
                     <tr>
                 <td>string</td>
                 <td>$code</td>
-                <td>data to compact</td>
+                <td><p>data to compact</p></td>
             </tr>
                     <tr>
                 <td>bool</td>
                 <td>$addmode</td>
-                <td>if true add the mode codeword at first position</td>
+                <td><p>if true add the mode codeword at first position</p></td>
             </tr>
             </table>
 
@@ -501,7 +498,7 @@ The codewords numbered from 900 to 928 have special meaning, some enable to swit
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td>of codewords</td>
+            <td><p>of codewords</p></td>
         </tr>
     </table>
 
